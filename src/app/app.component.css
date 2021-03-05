@@ -1,0 +1,53 @@
+.container-fluid {
+    margin-top: 20px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.fondo-s {
+    background: #eeeeee;
+    padding: 15px 30px;
+}
+
+.fondo-s .similares {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+
+.fondo-img {
+    padding: 15px 30px;
+    background-image: url("https://c0.klipartz.com/pngpicture/870/794/gratis-png-patron-blanco-y-negro-ondas-de-agua-clara.png");
+    display: flex;
+    justify-content: start;
+}
+
+.fondo-img .tags {
+    background: #fff;
+    padding: 4px 18px;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    margin-right: 18px;
+    margin-bottom: 5px;
+}
+
+.fondo-img .tags .tag {
+    font-size: 18px;
+}
+
+.info {
+    padding: 15px 30px;
+}
+
+@media screen and (max-width: 680px) {
+    .fondo-s {
+        padding: 15px 5px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .titulo {
+        font-size: 18px;
+    }
+}

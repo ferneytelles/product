@@ -1,0 +1,191 @@
+.card {
+    /* width: 400px; */
+    max-width: 216px;
+    max-height: 339px;
+    border: none;
+    overflow-x: hidden;
+}
+
+.card .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eeeeee;
+    border-radius: 4px 4px 0 0;
+}
+
+.img .descuento {
+    border-top: 24px solid #ff0000;
+    border-right: 12px solid transparent;
+    text-align: center;
+    width: 54px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 4px 0 0 0;
+}
+
+.img .porcentaje {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    text-align: center;
+    z-index: 40;
+}
+
+.img .estrella {
+    position: absolute;
+    top: 179px;
+    left: 3px;
+    /* width: 36px;
+    height: 30px; */
+}
+
+.img .new {
+    position: absolute;
+    left: 3px;
+    top: 184px;
+    width: 40px;
+    z-index: 3;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.img .estrella path {
+    fill: #333333;
+    stroke: #ffffff;
+}
+
+.img .card-img-top {
+    max-height: 220px;
+    width: auto;
+}
+
+.opciones {
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    margin-bottom: 98px;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.opcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: #525252;
+    background: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.opcion.carrito {
+    border-radius: 4px 0 0 0;
+}
+
+.opcion span {
+    font-size: 22px;
+}
+
+.img:hover .opciones {
+    transform: translateX(0%);
+}
+
+.opcion:hover {
+    color: #ff0000;
+}
+
+.card-body {
+    padding: 5px;
+    background: #d7d7d7;
+    border-radius: 0 0 4px 4px;
+}
+
+.card-body .row {
+    padding: 0;
+    margin: 0;
+}
+
+.card-body .colores {
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+    padding: 0;
+}
+
+.card-body .color {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid #ffffff;
+}
+
+.card .card-body .talla {
+    height: 20px;
+    width: auto;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.talla a {
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    line-height: 10px;
+    color: #525252;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p {
+    margin: 0;
+    color: #525252;
+}
+
+.card-body .nombre {
+    max-width: 180px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-body .coleccion {
+    max-width: 180px;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-body .precio {
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+}
+
+.card .precio small {
+    text-decoration: line-through;
+    font-size: 12px;
+    font-weight: bold;
+    color: #525252;
+}
