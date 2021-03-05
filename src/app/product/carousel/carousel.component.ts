@@ -46,7 +46,7 @@ export class CarouselComponent implements OnInit {
         breakpoint: 500,
         settings: {
           arrows: false,
-          slidesToShow: 1.5,
+          slidesToShow: 1.3,
           slidesToScroll: 0.5,
           swipeToSlide: true
         }

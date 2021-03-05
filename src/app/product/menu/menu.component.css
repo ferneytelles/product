@@ -9,13 +9,18 @@
     text-transform: uppercase;
     color: black;
     width: max-content;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link.active {
     color: red;
     border-bottom: 2px solid #ff0000;
     transition: all 0.2s ease;
-    /* opacity: 1; */
+}
+
+.nav-link.active .icon path {
+    fill: #ff0000;
 }
 
 .nav-link:hover {
