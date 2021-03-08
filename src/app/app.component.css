@@ -95,7 +95,11 @@
     padding: 0 20px;
 }
 
-.pagos .col .pagos .titulo {
+.pagos .borde {
+    border-right: 1px solid #cccccc;
+}
+
+.pagos .titulo {
     color: #555555;
     text-align: center;
 }
