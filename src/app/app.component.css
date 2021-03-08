@@ -30,8 +30,9 @@
 }
 
 .fondo-img .tags {
+    display: flex;
     background: #fff;
-    padding: 4px 18px;
+    padding: 6px 18px;
     border: 2px solid #cccccc;
     border-radius: 8px;
     margin-right: 18px;
@@ -39,7 +40,8 @@
 }
 
 .fondo-img .tags .tag {
-    font-size: 18px;
+    font-size: 13px;
+    line-height: 14px;
 }
 
 .info {
