@@ -1,0 +1,51 @@
+.filtros,
+.contenido {
+    padding: 10px 15px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.filtros .buscador,
+.filtros .categorias {
+    margin: 0;
+}
+
+.buscador .form-control,
+.buscador .input-group-text {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.buscador .input-group-text {
+    padding: 4px 5px;
+    color: #ff0000;
+}
+
+.categorias {
+    padding: 10px 0;
+}
+
+.categorias a {
+    width: 100%;
+    color: #000000;
+    background: #d7d7d7;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#collapsemenores,
+#collapsecategorias {
+    padding: 3px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.form-check {
+    margin-top: 1px;
+}
+
+.form-check input[type=checkbox]:checked {
+    background-color: #ff0000;
+}

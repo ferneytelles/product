@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 filtros">
+            <!-- buscador -->
+            <div class="row buscador">
+                <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Encuentra tu diseño">
+                    <div class="input-group-append">
+                        <button class="input-group-text" type="submit" id="suscribirse">
+                            <span class="material-icons">search</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row categorias">
+                <a href="#">TODOS</a>
+                <a class="" data-toggle="collapse" href="#collapsemenores" role="button" aria-expanded="true" aria-controls="collapsemenores">Menores de edad</a>
+                <div class="collapse show" id="collapsemenores">
+                    <div *ngFor="let menor of menores" class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Check{{menores.indexOf(menor)}}">
+                        <label class="form-check-label" for="Check{{menores.indexOf(menor)}}">
+                          {{menor}}
+                        </label>
+                    </div>
+                </div>
+
+                <a class="" data-toggle="collapse" href="#collapsecategorias" role="button" aria-expanded="true" aria-controls="collapsecategorias">Categorias</a>
+                <div class="collapse show" id="collapsecategorias">
+                    <div *ngFor="let categoria of categorias" class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Check{{categorias.indexOf(categoria)}}">
+                        <label class="form-check-label" for="Check{{categorias.indexOf(categoria)}}">
+                          {{categoria}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-9 contenido">
+            <p>col 9</p>
+        </div>
+    </div>
+</div>
