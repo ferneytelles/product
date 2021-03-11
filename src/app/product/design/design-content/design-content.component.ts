@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-design-content',
@@ -7,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesignContentComponent implements OnInit {
 
+  @ViewChild('slider', {static: true}) slider: ElementRef;
+  // slider: any;
+  activeMenores = true;
+  activeCateg = true;
+  activeColecc = true;
+  activeFondos = true;
+  activeEstilos = true;
+  activePropiedades = true;
+  activePrecio = true;
   menores = ['Diseño apto para menores de edad'];
-  categorias = ['Hombre','Mujer','Niño y bebé','Acesorios y más','Fechas especiales'];
+  categorias = ['Hombre', 'Mujer', 'Niño y bebé', 'Acesorios y más', 'Fechas especiales'];
+  colecciones = ['Colombia', 'Cristiano', 'Minimal', 'Asia', 'Viajes'];
+  fondos = ['Colores claros', 'Colores oscuros', 'Colores ácidos', 'Colores pastel'];
+  estilos = ['Acuarela', 'Lettering', 'Comic', 'Digital', 'Manga'];
+  propiedades = ['Diseño de color editable', 'Diseño multicara'];
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
   }

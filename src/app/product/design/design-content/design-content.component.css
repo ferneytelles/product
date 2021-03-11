@@ -1,7 +1,18 @@
+.container-fluid {
+    height: 100%;
+    max-height: 100%;
+    padding: 0px;
+}
+
+.diseño {
+    max-height: 100%;
+    margin: 0px;
+}
+
 .filtros,
 .contenido {
     padding: 10px 15px;
-    height: 100%;
+    max-height: calc(90vh - 40px);
     overflow-y: auto;
 }
 
@@ -21,6 +32,9 @@
     color: #ff0000;
 }
 
+
+/* CATEGORIAS */
+
 .categorias {
     padding: 10px 0;
 }
@@ -33,17 +47,117 @@
     margin-top: 3px;
     font-size: 14px;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px 4px 4px 4px;
+    transition: all .3s ease;
 }
+
+.categorias .precio,
+.categorias .todos {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.categorias a .col {
+    padding: 0px 5px;
+}
+
+.categorias a .col-auto {
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.categorias a .col-auto span {
+    font-size: 13px;
+    transform: rotate(90deg);
+    color: #ff0000;
+    transition: all .3s ease;
+}
+
+
+/* interacciones del grupo */
+
+.categorias .menores.active {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.categorias .menores.active .col-auto span {
+    transform: rotate(-90deg);
+}
+
+.categorias .categ.active {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.categorias .categ.active .col-auto span {
+    transform: rotate(-90deg);
+}
+
+.categorias .colecciones.active {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.categorias .colecciones.active .col-auto span {
+    transform: rotate(-90deg);
+}
+
+.categorias .fondos.active {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.categorias .fondos.active .col-auto span {
+    transform: rotate(-90deg);
+}
+
+.categorias .estilos.active {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.categorias .estilos.active .col-auto span {
+    transform: rotate(-90deg);
+}
+
+.categorias .propiedades.active {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.categorias .propiedades.active .col-auto span {
+    transform: rotate(-90deg);
+}
+
+.categorias .precio.active {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.categorias .precio.active .col-auto span {
+    transform: rotate(-90deg);
+}
+
+
+/* interacciones del grupo 
+
+*/
 
 #collapsemenores,
-#collapsecategorias {
-    padding: 3px;
+#collapsecategorias,
+#collapsecolecciones,
+#collapsefondos,
+#collapseestilos,
+#collapsepropiedades,
+#collapseprecio {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 4px;
     font-size: 14px;
-    line-height: 16px;
+    border: 1px solid #d7d7d7;
+    border-radius: 0px 0px 4px 4px;
+    border-top: none;
+    transition: all .3s ease;
 }
 
-.form-check {
-    margin-top: 1px;
+.form-check-label {
+    line-height: 15px;
 }
 
 .form-check input[type=checkbox]:checked {

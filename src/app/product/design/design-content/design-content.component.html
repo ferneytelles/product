@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row diseño">
         <div class="col-3 filtros">
             <!-- buscador -->
             <div class="row buscador">
@@ -14,8 +14,13 @@
             </div>
 
             <div class="row categorias">
-                <a href="#">TODOS</a>
-                <a class="" data-toggle="collapse" href="#collapsemenores" role="button" aria-expanded="true" aria-controls="collapsemenores">Menores de edad</a>
+                <a class="todos" href="#">TODOS</a>
+                <a class="menores" data-toggle="collapse" href="#collapsemenores" role="button" [class.active]="activeMenores" (click)="activeMenores=!activeMenores">
+                    <div class="col">Menores de edad</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
                 <div class="collapse show" id="collapsemenores">
                     <div *ngFor="let menor of menores" class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="Check{{menores.indexOf(menor)}}">
@@ -25,7 +30,12 @@
                     </div>
                 </div>
 
-                <a class="" data-toggle="collapse" href="#collapsecategorias" role="button" aria-expanded="true" aria-controls="collapsecategorias">Categorias</a>
+                <a class="categ" data-toggle="collapse" href="#collapsecategorias" role="button" [class.active]="activeCateg" (click)="activeCateg=!activeCateg">
+                    <div class="col">Categorias</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
                 <div class="collapse show" id="collapsecategorias">
                     <div *ngFor="let categoria of categorias" class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="Check{{categorias.indexOf(categoria)}}">
@@ -34,11 +44,101 @@
                         </label>
                     </div>
                 </div>
-            </div>
 
+                <a class="colecciones" data-toggle="collapse" href="#collapsecolecciones" role="button" [class.active]="activeColecc" (click)="activeColecc=!activeColecc">
+                    <div class="col">Colecciones</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsecolecciones">
+                    <div *ngFor="let coleccion of colecciones" class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Check{{colecciones.indexOf(coleccion)}}">
+                        <label class="form-check-label" for="Check{{colecciones.indexOf(coleccion)}}">
+                          {{coleccion}}
+                        </label>
+                    </div>
+                </div>
+
+                <a class="fondos" data-toggle="collapse" href="#collapsefondos" role="button" [class.active]="activeFondos" (click)="activeFondos=!activeFondos">
+                    <div class="col">Fondos recomendados</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsefondos">
+                    <div *ngFor="let fondo of fondos" class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Check{{fondos.indexOf(fondo)}}">
+                        <label class="form-check-label" for="Check{{fondos.indexOf(fondo)}}">
+                          {{fondo}}
+                        </label>
+                    </div>
+                </div>
+
+                <a class="estilos" data-toggle="collapse" href="#collapseestilos" role="button" [class.active]="activeEstilos" (click)="activeEstilos=!activeEstilos">
+                    <div class="col">Estilos</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapseestilos">
+                    <div *ngFor="let estilo of estilos" class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Check{{estilos.indexOf(estilo)}}">
+                        <label class="form-check-label" for="Check{{estilos.indexOf(estilo)}}">
+                          {{estilo}}
+                        </label>
+                    </div>
+                </div>
+
+                <a class="propiedades" data-toggle="collapse" href="#collapsepropiedades" role="button" [class.active]="activePropiedades" (click)="activePropiedades=!activePropiedades">
+                    <div class="col">Propiedades</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsepropiedades">
+                    <div *ngFor="let propiedad of propiedades" class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Check{{propiedades.indexOf(propiedad)}}">
+                        <label class="form-check-label" for="Check{{propiedades.indexOf(propiedad)}}">
+                          {{propiedad}}
+                        </label>
+                    </div>
+                </div>
+
+                <a class="precio" data-toggle="collapse" href="#collapseprecio" role="button" [class.active]="activePrecio" (click)="activePrecio=!activePrecio">
+                    <div class="col">Precio</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapseprecio">
+
+                    <div class="mdc-slider mdc-slider--range">
+                        <input class="mdc-slider__input" type="range" min="0" max="70" value="30" name="rangeStart" aria-label="Continuous range slider demo">
+                        <input class="mdc-slider__input" type="range" min="30" max="100" value="70" name="rangeEnd" aria-label="Continuous range slider demo">
+                        <div class="mdc-slider__track">
+                            <div class="mdc-slider__track--inactive"></div>
+                            <div class="mdc-slider__track--active">
+                                <div class="mdc-slider__track--active_fill"></div>
+                            </div>
+                        </div>
+                        <div class="mdc-slider__thumb">
+                            <div class="mdc-slider__thumb-knob"></div>
+                        </div>
+                        <div class="mdc-slider__thumb">
+                            <div class="mdc-slider__thumb-knob"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
         </div>
+
         <div class="col-9 contenido">
             <p>col 9</p>
         </div>
+
     </div>
 </div>
