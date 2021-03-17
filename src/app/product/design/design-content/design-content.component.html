@@ -113,26 +113,39 @@
                 </a>
                 <div class="collapse show" id="collapseprecio">
 
-                    <div class="mdc-slider mdc-slider--range">
-                        <input class="mdc-slider__input" type="range" min="0" max="70" value="30" name="rangeStart" aria-label="Continuous range slider demo">
-                        <input class="mdc-slider__input" type="range" min="30" max="100" value="70" name="rangeEnd" aria-label="Continuous range slider demo">
-                        <div class="mdc-slider__track">
-                            <div class="mdc-slider__track--inactive"></div>
-                            <div class="mdc-slider__track--active">
-                                <div class="mdc-slider__track--active_fill"></div>
+                    <div class="container-slider">
+
+                        <div class="row valores">
+                            <div class="col min">
+                                <input #min_value type="number" class="min" value="0" (change)="setInputLeft()">
+                            </div>
+                            <div class="col max">
+                                <input #max_value type="number" class="max" value="100" (change)="setInputRight()">
                             </div>
                         </div>
-                        <div class="mdc-slider__thumb">
-                            <div class="mdc-slider__thumb-knob"></div>
+
+                        <div class="middle">
+                            <div class="multi-range-slider">
+                                <input #input_left type="range" id="input-left" min="0" max="100" step="5" value="0">
+                                <input #input_right type="range" id="input-right" min="0" max="100" step="5" value="100">
+
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div #range class="range"></div>
+                                    <div #thumb_left class="thumb left"></div>
+                                    <div #thumb_right class="thumb right"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mdc-slider__thumb">
-                            <div class="mdc-slider__thumb-knob"></div>
-                        </div>
+
                     </div>
 
                 </div>
 
 
+            </div>
+            <div class="row aplicar">
+                <button class="btn-aplicar">Aplicar filtro</button>
             </div>
         </div>
 

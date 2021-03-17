@@ -23,7 +23,7 @@
                             "src/favicon.ico",
                             "src/assets"
                         ],
-                        "styles": ["node_modules/@material/slider/styles.scss", "node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
+                        "styles": ["node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
                             "node_modules/slick-carousel/slick/slick.scss",
                             "node_modules/slick-carousel/slick/slick-theme.scss",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",

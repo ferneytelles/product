@@ -9,15 +9,17 @@
     margin: 0px;
 }
 
-.filtros,
+.filtros {
+    padding: 10px 15px;
+}
+
 .contenido {
     padding: 10px 15px;
     max-height: calc(90vh - 40px);
     overflow-y: auto;
 }
 
-.filtros .buscador,
-.filtros .categorias {
+.filtros .buscador {
     margin: 0;
 }
 
@@ -36,7 +38,10 @@
 /* CATEGORIAS */
 
 .categorias {
-    padding: 10px 0;
+    margin: 10px 0px;
+    padding: 0px 5px;
+    max-height: calc(73vh - 40px);
+    overflow-y: auto;
 }
 
 .categorias a {
@@ -150,10 +155,12 @@
     padding: 4px;
     margin-bottom: 4px;
     font-size: 14px;
-    border: 1px solid #d7d7d7;
-    border-radius: 0px 0px 4px 4px;
     border-top: none;
     transition: all .3s ease;
+}
+
+#collapseprecio {
+    border-bottom: 1px solid #d7d7d7;
 }
 
 .form-check-label {
@@ -162,4 +169,174 @@
 
 .form-check input[type=checkbox]:checked {
     background-color: #ff0000;
+}
+
+
+/* scroll */
+
+.categorias::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.categorias::-webkit-scrollbar:vertical {
+    width: 6px;
+}
+
+.categorias::-webkit-scrollbar-button:increment,
+.categorias::-webkit-scrollbar-button {
+    display: none;
+}
+
+.categorias::-webkit-scrollbar-thumb {
+    background-color: #d7d7d7;
+    border-radius: 20px;
+}
+
+.categorias::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+
+/* SLIDER PERSONALIZADO */
+
+.container-slider {
+    max-width: 100%;
+    margin: 10px 5px;
+}
+
+.row.valores {
+    margin: 0px 0px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col.min,
+.col.max {
+    padding: 0px 5px;
+}
+
+input[type=number] {
+    width: 100%;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+}
+
+.middle {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.slider {
+    position: relative;
+    z-index: 1;
+    height: 5px;
+    margin: 0 15px;
+}
+
+.slider>.track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d7d7d7;
+}
+
+.slider>.range {
+    position: absolute;
+    z-index: 2;
+    left: 0%;
+    right: 0%;
+    top: 0;
+    bottom: 0;
+    border-radius: 1px;
+    background-color: #ff0000;
+}
+
+.slider>.thumb {
+    position: absolute;
+    z-index: 3;
+    top: 100%;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    box-shadow: 0 0 0 0 rgba(98, 0, 238, .1);
+    transition: box-shadow .3s ease-in-out;
+}
+
+.slider>.thumb.left {
+    left: 0%;
+    transform: translate(-15px, -10px);
+}
+
+.slider>.thumb.right {
+    right: 0%;
+    transform: translate(15px, -10px);
+}
+
+.slider>.thumb.hover {
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.205);
+}
+
+.slider>.thumb.active {
+    box-shadow: 0 0 0 8px rgba(255, 0, 0, 0.308);
+}
+
+input[type=range] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 100%;
+    opacity: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 15px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    -webkit-appearance: none;
+}
+
+
+/*  BOTON APLICAR FILTRO */
+
+.aplicar {
+    margin: 5px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-aplicar {
+    width: 80%;
+    background: #ffffff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    font-weight: bold;
+}
+
+.btn-aplicar:hover {
+    background: #ff0000;
+    color: #ffffff;
+}
+
+.btn-aplicar:focus {
+    border: none;
 }
