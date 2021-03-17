@@ -12,6 +12,7 @@ import { DesignComponent } from './product/design/design.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DesignContentComponent } from './product/design/design-content/design-content.component';
 import { ResultsComponent } from './product/design/results/results.component';
+import { CkeckboxComponent } from './product/design/ckeckbox/ckeckbox.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResultsComponent } from './product/design/results/results.component';
     CardComponent,
     DesignComponent,
     DesignContentComponent,
-    ResultsComponent
+    ResultsComponent,
+    CkeckboxComponent
   ],
   imports: [
     BrowserModule,
