@@ -1,0 +1,22 @@
+.check {
+    width: 100%;
+}
+
+::ng-deep label.mat-checkbox-layout {
+    white-space: initial !important;
+    margin-bottom: 0px;
+    padding-top: 2px;
+}
+
+::nd-deep span.mat-checkbox-inner-container {
+    border-color: #d7d7d7 !important;
+}
+
+::ng-deep span.mat-checkbox-label {
+    line-height: 16px !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: #FF0000;
+}

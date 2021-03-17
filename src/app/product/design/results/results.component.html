@@ -1,14 +1,57 @@
 <div class="container-fluid p-0 m-0">
-    <div *ngIf="!filtros">
+    <div *ngIf="!(filtros.length > 0)">
         <div class="row m-0">
             <h6 class="titulo">Selecciona una colección de diseños:</h6>
         </div>
         <div class="row m-0">
-            <a *ngFor="let coleccion of colecciones" href="#" [style.background]="colores[colecciones.indexOf(coleccion)]" class="col-4 col-lg-3 col coleccion{{colecciones.indexOf(coleccion)+1}}">
+            <a *ngFor="let coleccion of colecciones" href="#" [style.background]="colores[colecciones.indexOf(coleccion)]" class="col-4 col-lg-3 coleccion">
                 <span class="material-icons-outlined">crop_original</span>
                 <span class="texto">{{coleccion}}</span>
             </a>
         </div>
+    </div>
+
+    <div *ngIf="filtros.length > 0">
+        <div class="row m-0">
+            <div class="col contenedor">
+                <div class="row m-0">
+                    <div class="col-auto resultados">
+                        <span class="cant">40 resultados</span>
+                        <a href="#" class="borrar_filtros">
+                            <span class="material-icons">delete_forever</span>
+                            <span class="borrar">Borrar filtros</span>
+                        </a>
+                    </div>
+                    <div class="col filtros">
+                        <div *ngFor="let filtro of filtros" class="filtro">
+                            <span class="nombre">{{filtro}}</span>
+                            <a href="#" class="cerrar">
+                                <span class="material-icons">close</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0 mt-2">
+                    <div class="col-auto tags">
+                        <span>Te puede interesar:</span>
+                    </div>
+                    <div class="col tags">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto select">
+                <select class="custom-select">
+                <option value="0" selected>Más popular</option>
+                <option value="1">Mayor precio</option>
+                <option value="2">Menor precio</option>
+                <option value="3">Orden alfabético</option>
+              </select>
+            </div>
+        </div>
+
+
+
     </div>
 
 </div>

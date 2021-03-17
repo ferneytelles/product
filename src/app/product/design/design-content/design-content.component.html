@@ -22,12 +22,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapsemenores">
-                    <div *ngFor="let menor of menores" class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Check{{menores.indexOf(menor)}}">
-                        <label class="form-check-label" for="Check{{menores.indexOf(menor)}}">
-                          {{menor}}
-                        </label>
-                    </div>
+                    <app-checkbox [checks]="menores"></app-checkbox>
                 </div>
 
                 <a class="categ" data-toggle="collapse" href="#collapsecategorias" role="button" [class.active]="activeCateg" (click)="activeCateg=!activeCateg">
@@ -37,12 +32,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapsecategorias">
-                    <div *ngFor="let categoria of categorias" class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Check{{categorias.indexOf(categoria)}}">
-                        <label class="form-check-label" for="Check{{categorias.indexOf(categoria)}}">
-                          {{categoria}}
-                        </label>
-                    </div>
+                    <app-checkbox [checks]="categorias"></app-checkbox>
                 </div>
 
                 <a class="colecciones" data-toggle="collapse" href="#collapsecolecciones" role="button" [class.active]="activeColecc" (click)="activeColecc=!activeColecc">
@@ -52,12 +42,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapsecolecciones">
-                    <div *ngFor="let coleccion of colecciones" class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Check{{colecciones.indexOf(coleccion)}}">
-                        <label class="form-check-label" for="Check{{colecciones.indexOf(coleccion)}}">
-                          {{coleccion}}
-                        </label>
-                    </div>
+                    <app-checkbox [checks]="colecciones"></app-checkbox>
                 </div>
 
                 <a class="fondos" data-toggle="collapse" href="#collapsefondos" role="button" [class.active]="activeFondos" (click)="activeFondos=!activeFondos">
@@ -67,12 +52,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapsefondos">
-                    <div *ngFor="let fondo of fondos" class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Check{{fondos.indexOf(fondo)}}">
-                        <label class="form-check-label" for="Check{{fondos.indexOf(fondo)}}">
-                          {{fondo}}
-                        </label>
-                    </div>
+                    <app-checkbox [checks]="fondos"></app-checkbox>
                 </div>
 
                 <a class="estilos" data-toggle="collapse" href="#collapseestilos" role="button" [class.active]="activeEstilos" (click)="activeEstilos=!activeEstilos">
@@ -82,12 +62,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapseestilos">
-                    <div *ngFor="let estilo of estilos" class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Check{{estilos.indexOf(estilo)}}">
-                        <label class="form-check-label" for="Check{{estilos.indexOf(estilo)}}">
-                          {{estilo}}
-                        </label>
-                    </div>
+                    <app-checkbox [checks]="estilos"></app-checkbox>
                 </div>
 
                 <a class="propiedades" data-toggle="collapse" href="#collapsepropiedades" role="button" [class.active]="activePropiedades" (click)="activePropiedades=!activePropiedades">
@@ -97,12 +72,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapsepropiedades">
-                    <div *ngFor="let propiedad of propiedades" class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Check{{propiedades.indexOf(propiedad)}}">
-                        <label class="form-check-label" for="Check{{propiedades.indexOf(propiedad)}}">
-                          {{propiedad}}
-                        </label>
-                    </div>
+                    <app-checkbox [checks]="propiedades"></app-checkbox>
                 </div>
 
                 <a class="precio" data-toggle="collapse" href="#collapseprecio" role="button" [class.active]="activePrecio" (click)="activePrecio=!activePrecio">
@@ -112,40 +82,15 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapseprecio">
-
-                    <div class="container-slider">
-
-                        <div class="row valores">
-                            <div class="col min">
-                                <input #min_value type="number" class="min" value="0" (change)="setInputLeft()">
-                            </div>
-                            <div class="col max">
-                                <input #max_value type="number" class="max" value="100" (change)="setInputRight()">
-                            </div>
-                        </div>
-
-                        <div class="middle">
-                            <div class="multi-range-slider">
-                                <input #input_left type="range" id="input-left" min="0" max="100" step="5" value="0">
-                                <input #input_right type="range" id="input-right" min="0" max="100" step="5" value="100">
-
-                                <div class="slider">
-                                    <div class="track"></div>
-                                    <div #range class="range"></div>
-                                    <div #thumb_left class="thumb left"></div>
-                                    <div #thumb_right class="thumb right"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
+                    <app-slider></app-slider>
                 </div>
-
 
             </div>
             <div class="row aplicar">
-                <button class="btn-aplicar">Aplicar filtro</button>
+                <button class="btn-aplicar">
+                    <span class="material-icons-outlined">filter_alt</span>
+                    Aplicar filtro
+                </button>
             </div>
         </div>
 

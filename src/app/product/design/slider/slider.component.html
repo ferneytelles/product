@@ -1,0 +1,26 @@
+<div class="container-slider">
+
+    <div class="row valores">
+        <div class="col min">
+            <input #min_value type="number" class="min" value="0" (change)="setInputLeft()">
+        </div>
+        <div class="col max">
+            <input #max_value type="number" class="max" value="100" (change)="setInputRight()">
+        </div>
+    </div>
+
+    <div class="middle">
+        <div class="multi-range-slider">
+            <input #input_left type="range" id="input-left" min="0" max="100" step="5" value="0">
+            <input #input_right type="range" id="input-right" min="0" max="100" step="5" value="100">
+
+            <div class="slider">
+                <div class="track"></div>
+                <div #range class="range"></div>
+                <div #thumb_left class="thumb left"></div>
+                <div #thumb_right class="thumb right"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

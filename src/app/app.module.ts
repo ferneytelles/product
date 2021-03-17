@@ -12,7 +12,10 @@ import { DesignComponent } from './product/design/design.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DesignContentComponent } from './product/design/design-content/design-content.component';
 import { ResultsComponent } from './product/design/results/results.component';
-import { CkeckboxComponent } from './product/design/ckeckbox/ckeckbox.component';
+import { CheckboxComponent } from './product/design/checkbox/checkbox.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { SliderComponent } from './product/design/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,16 @@ import { CkeckboxComponent } from './product/design/ckeckbox/ckeckbox.component'
     DesignComponent,
     DesignContentComponent,
     ResultsComponent,
-    CkeckboxComponent
+    CheckboxComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
-    NgbModule
+    NgbModule,
+    NoopAnimationsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

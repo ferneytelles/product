@@ -9,7 +9,9 @@ export class ResultsComponent implements OnInit {
 
   @Input() colecciones: Array<any>;
   colores = [];
-  filtros = false;
+  // filtros = [];
+  filtros = ['Menores', 'Hombre', 'Mujer', 'Minimal', 'Oscuros'];
+  etiquetas = ['Fútbol', 'balón', 'Deportivo', 'Juego', 'Número'];
 
   constructor() { }
 

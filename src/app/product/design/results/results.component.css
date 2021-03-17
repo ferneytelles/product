@@ -3,7 +3,7 @@
     color: #555555;
 }
 
-.col {
+.coleccion {
     padding: 0px;
     height: 110px;
     border: 5px solid #ffffff;
@@ -24,4 +24,93 @@
     background: #00000098;
     padding: 0px 10px;
     color: #ffffff;
+}
+
+.contenedor {
+    background: #d7d7d7;
+    font-size: 13px;
+    padding: 5px;
+    max-width: calc(100% - 148px);
+}
+
+.resultados {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    align-items: center;
+}
+
+.resultados .cant {
+    font-size: 14px;
+}
+
+.borrar_filtros {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    padding-left: 4px;
+    border-left: 1px solid #555555;
+    text-decoration: none;
+}
+
+.borrar_filtros .borrar {
+    text-decoration: underline;
+}
+
+.borrar_filtros .material-icons {
+    color: #555555;
+    font-size: 20px;
+}
+
+.filtros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+.filtros .filtro {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    background: #ffffff;
+    padding-left: 4px;
+    margin: 3px;
+}
+
+.filtro .nombre {
+    line-height: 14px;
+}
+
+.filtro .cerrar {
+    max-height: 18px;
+}
+
+.filtro .material-icons {
+    color: #555555;
+    font-size: 18px;
+}
+
+.tags {
+    padding: 0px 5px;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    background: #d7d7d7;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.select .custom-select {
+    width: fit-content;
+    font-size: 13px;
+    border-radius: 8px;
+    border: 2px solid #c8c8c8;
 }
