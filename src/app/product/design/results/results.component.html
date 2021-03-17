@@ -1,0 +1,14 @@
+<div class="container-fluid p-0 m-0">
+    <div *ngIf="!filtros">
+        <div class="row m-0">
+            <h6 class="titulo">Selecciona una colección de diseños:</h6>
+        </div>
+        <div class="row m-0">
+            <a *ngFor="let coleccion of colecciones" href="#" [style.background]="colores[colecciones.indexOf(coleccion)]" class="col-4 col-lg-3 col coleccion{{colecciones.indexOf(coleccion)+1}}">
+                <span class="material-icons-outlined">crop_original</span>
+                <span class="texto">{{coleccion}}</span>
+            </a>
+        </div>
+    </div>
+
+</div>

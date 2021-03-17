@@ -26,7 +26,7 @@ export class DesignContentComponent implements OnInit {
   activePrecio = true;
   menores = ['Diseño apto para menores de edad'];
   categorias = ['Hombre', 'Mujer', 'Niño y bebé', 'Acesorios y más', 'Fechas especiales'];
-  colecciones = ['Colombia', 'Cristiano', 'Minimal', 'Asia', 'Viajes'];
+  colecciones = ['Deportes', 'Animales', 'Colombia', 'Personas', 'Cine', 'Figuras', 'Mascotas', 'Militar', 'Comidas', 'Amor'];
   fondos = ['Colores claros', 'Colores oscuros', 'Colores ácidos', 'Colores pastel'];
   estilos = ['Acuarela', 'Lettering', 'Comic', 'Digital', 'Manga'];
   propiedades = ['Diseño de color editable', 'Diseño multicara'];

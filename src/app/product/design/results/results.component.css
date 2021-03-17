@@ -1,0 +1,27 @@
+.titulo {
+    padding: 0px 10px;
+    color: #555555;
+}
+
+.col {
+    padding: 0px;
+    height: 100px;
+    border: 5px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-icons-outlined {
+    position: absolute;
+    font-size: 90px;
+    color: #000000;
+}
+
+.texto {
+    position: absolute;
+    z-index: 2;
+    background: #00000098;
+    padding: 0px 10px;
+    color: #ffffff;
+}

@@ -11,6 +11,7 @@ import { CardComponent } from './product/card/card.component';
 import { DesignComponent } from './product/design/design.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DesignContentComponent } from './product/design/design-content/design-content.component';
+import { ResultsComponent } from './product/design/results/results.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DesignContentComponent } from './product/design/design-content/design-c
     CarouselComponent,
     CardComponent,
     DesignComponent,
-    DesignContentComponent
+    DesignContentComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
