@@ -24,6 +24,7 @@ export class DesignContentComponent implements OnInit {
   activeEstilos = true;
   activePropiedades = true;
   activePrecio = true;
+  
   menores = ['Diseño apto para menores de edad'];
   categorias = ['Hombre', 'Mujer', 'Niño y bebé', 'Acesorios y más', 'Fechas especiales'];
   colecciones = ['Deportes', 'Animales', 'Colombia', 'Personas', 'Cine', 'Figuras', 'Mascotas', 'Militar', 'Comidas', 'Amor'];
