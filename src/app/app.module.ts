@@ -16,6 +16,7 @@ import { CheckboxComponent } from './product/design/checkbox/checkbox.component'
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SliderComponent } from './product/design/slider/slider.component';
+import { ResultsContentComponent } from './product/design/results-content/results-content.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SliderComponent } from './product/design/slider/slider.component';
     DesignContentComponent,
     ResultsComponent,
     CheckboxComponent,
-    SliderComponent
+    SliderComponent,
+    ResultsContentComponent
   ],
   imports: [
     BrowserModule,

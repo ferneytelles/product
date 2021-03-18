@@ -27,10 +27,9 @@
 }
 
 .contenedor {
-    background: #d7d7d7;
+    background: #eeeeee;
     font-size: 13px;
     padding: 5px;
-    max-width: calc(100% - 148px);
 }
 
 .resultados {
@@ -77,7 +76,7 @@
     width: max-content;
     height: max-content;
     border: 1px solid #c8c8c8;
-    border-radius: 4px;
+    border-radius: 3px;
     background: #ffffff;
     padding-left: 4px;
     margin: 3px;
@@ -96,21 +95,76 @@
     font-size: 18px;
 }
 
-.tags {
+.etiquetas {
     padding: 0px 5px;
+}
+
+.tags {
+    padding: 0px;
+}
+
+.col.tags {
+    flex-wrap: wrap;
+}
+
+.tag {
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;
+    padding: 0px 3px;
+    margin: 2px;
+    text-decoration: none;
+}
+
+.ordenar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.columnas {
+    padding: 0px 5px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5px;
+    padding: 0px 1px;
+}
+
+.nav-link .cols {
+    margin: 0px 1px;
+    height: 15px;
+    width: 7px;
+    background: #d7d7d7;
+}
+
+.nav-link.active .cols {
+    background: #ff0000;
 }
 
 .select {
     display: flex;
     align-items: center;
-    background: #d7d7d7;
     font-size: 13px;
-    padding: 5px;
+    padding: 0px 5px;
 }
 
 .select .custom-select {
     width: fit-content;
+    height: fit-content;
+    padding: 5px 28px 5px 10px;
     font-size: 13px;
+    line-height: 15px;
     border-radius: 8px;
     border: 2px solid #c8c8c8;
+}
+
+#content {
+    width: 100%;
 }

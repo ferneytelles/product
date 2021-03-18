@@ -1,0 +1,36 @@
+.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0px;
+}
+
+.contenedor {
+    width: 20%;
+    height: max-content;
+    padding: 3px;
+}
+
+.card {
+    width: 100%;
+    border: none;
+}
+
+.card .img {
+    background: #d7d7d7;
+}
+
+.card-body {
+    padding: 0px;
+    background: #c8c8c8;
+}
+
+.detalles span {
+    font-size: 13px;
+}
+
+.nombre {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

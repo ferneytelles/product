@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div *ngFor="let item of imgs" class="contenedor">
+        <div class="card">
+            <div class="img">
+                <img [src]="item" class="card-img-top" alt="...">
+            </div>
+
+            <div class="card-body">
+                <div class="detalles">
+                    <div class="row m-0">
+                        <div class="col px-1">
+                            <span #nombre class="nombre">Nombre del diseño</span>
+                        </div>
+                        <div #precio class="col-auto px-1">
+                            <span class="precio">$ 5.000</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

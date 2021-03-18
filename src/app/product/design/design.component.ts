@@ -14,7 +14,7 @@ export class DesignComponent implements OnInit {
   openModal(content: any) {
     this.modalService.open(content);
   }
-// , { centered: true }
+
   ngOnInit(): void {
   }
 

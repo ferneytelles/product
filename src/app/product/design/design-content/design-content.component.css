@@ -39,7 +39,7 @@
 /* CATEGORIAS */
 
 .categorias {
-    margin: 10px 0px;
+    margin: 10px 0px 0px 0px;
     padding: 0px 5px;
     max-height: calc(73vh - 40px);
     overflow-y: auto;
@@ -130,24 +130,30 @@
 
 /* scroll */
 
+.contenido::-webkit-scrollbar,
 .categorias::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
+.contenido::-webkit-scrollbar:vertical,
 .categorias::-webkit-scrollbar:vertical {
     width: 6px;
 }
 
+.contenido::-webkit-scrollbar-button:increment,
+.contenido::-webkit-scrollbar-button,
 .categorias::-webkit-scrollbar-button:increment,
 .categorias::-webkit-scrollbar-button {
     display: none;
 }
 
+.contenido::-webkit-scrollbar-thumb,
 .categorias::-webkit-scrollbar-thumb {
     background-color: #d7d7d7;
     border-radius: 20px;
 }
 
+.contenido::-webkit-scrollbar-track,
 .categorias::-webkit-scrollbar-track {
     background-color: #eeeeee;
     border-radius: 10px;
@@ -157,7 +163,8 @@
 /*  BOTON APLICAR FILTRO */
 
 .aplicar {
-    margin: 5px 0px;
+    margin: 0px;
+    padding: 10px 0px;
     display: flex;
     justify-content: center;
 }
@@ -172,10 +179,6 @@
     align-items: center;
     justify-content: center;
     height: 35px;
-}
-
-.btn-aplicar .material-icons-outlined {
-    font-size: 20px;
 }
 
 .btn-aplicar:hover {
