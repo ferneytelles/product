@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     background: #d7d7d7;
-    height: calc(100% - 2px);
+    height: calc(100% - 18px);
     /* max-height: 100px; */
 }
 
@@ -36,6 +36,7 @@
 .card-body {
     padding: 0px;
     background: #c8c8c8;
+    height: max-content;
 }
 
 .detalles .precio {
@@ -48,7 +49,7 @@
 }
 
 .col-nombre {
-    max-width: calc(100% - 54px);
+    max-width: calc(100% - 59px);
     height: fit-content;
 }
 
