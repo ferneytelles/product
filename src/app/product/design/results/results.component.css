@@ -121,6 +121,7 @@
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
+    border-bottom: 1px solid #c8c8c8;
 }
 
 .columnas {
@@ -167,4 +168,5 @@
 
 #content {
     width: 100%;
+    margin-top: 5px;
 }

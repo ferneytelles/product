@@ -7,13 +7,10 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class ResultsContentComponent implements OnInit {
 
-  @ViewChild('nombre', {static: true}) nombre: ElementRef;
-  
-  imgs = ['assets/img/copa.png', 'assets/img/basketball.png', 'assets/img/basketball2.png', 'assets/img/bandera.png', 'assets/img/garra.png', 'assets/img/deportista.png'];
+  imgs = ['assets/img/copa.png', 'assets/img/basketball.png', 'assets/img/basketball2.png', 'assets/img/bandera.png', 'assets/img/garra.png', 'assets/img/deportista.png', 'assets/img/espirales.png'];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

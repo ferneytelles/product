@@ -7,17 +7,30 @@
 
 .contenedor {
     width: 20%;
-    height: max-content;
+    height: auto;
     padding: 3px;
 }
 
 .card {
     width: 100%;
     border: none;
+    height: 100%;
 }
 
 .card .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #d7d7d7;
+    height: calc(100% - 2px);
+    /* max-height: 100px; */
+}
+
+.card .img img {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .card-body {
@@ -25,12 +38,24 @@
     background: #c8c8c8;
 }
 
-.detalles span {
+.detalles .precio {
     font-size: 13px;
 }
 
+.detalle {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-nombre {
+    max-width: calc(100% - 54px);
+    height: fit-content;
+}
+
 .nombre {
+    font-size: 13px;
     max-width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
