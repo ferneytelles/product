@@ -49,28 +49,28 @@
                 <span class="">Columnas</span>
                 <ul class="nav" role="tablist">
                     <li>
-                        <a href="#content" class="nav-link" data-toggle="tab" role="tab">
+                        <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
                             <div class="cols"></div>
                             <div class="cols"></div>
                         </a>
                     </li>
                     <li>
-                        <a href="#content" class="nav-link" data-toggle="tab" role="tab">
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#content" class="nav-link" data-toggle="tab" role="tab">
-                            <div class="cols"></div>
+                        <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(3)">
                             <div class="cols"></div>
                             <div class="cols"></div>
                             <div class="cols"></div>
                         </a>
                     </li>
                     <li>
-                        <a href="#content" class="nav-link active" data-toggle="tab" role="tab">
+                        <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(4)">
+                            <div class="cols"></div>
+                            <div class="cols"></div>
+                            <div class="cols"></div>
+                            <div class="cols"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#content" class="nav-link active" data-toggle="tab" role="tab" (click)="cambiarCols(5)">
                             <div class="cols"></div>
                             <div class="cols"></div>
                             <div class="cols"></div>
@@ -91,7 +91,7 @@
         </div>
         <div class="row mx-0 contenido">
             <div class="tab-pane fade show active" id="content" role="tabpanel">
-                <app-results-content></app-results-content>
+                <app-results-content [columnas]="cols"></app-results-content>
             </div>
         </div>
     </div>

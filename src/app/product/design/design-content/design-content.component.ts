@@ -23,7 +23,7 @@ export class DesignContentComponent implements OnInit {
   propiedades = ['Diseño de color editable', 'Diseño multicara'];
 
   constructor() {
-    
+
    }
 
   ngOnInit(): void {

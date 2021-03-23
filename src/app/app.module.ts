@@ -17,6 +17,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SliderComponent } from './product/design/slider/slider.component';
 import { ResultsContentComponent } from './product/design/results-content/results-content.component';
+import { BorradorComponent } from './product/borrador/borrador.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ResultsContentComponent } from './product/design/results-content/result
     ResultsComponent,
     CheckboxComponent,
     SliderComponent,
-    ResultsContentComponent
+    ResultsContentComponent,
+    BorradorComponent
   ],
   imports: [
     BrowserModule,

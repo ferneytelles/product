@@ -1,0 +1,17 @@
+<button class="btn btn-outline-primary" (click)="openModal(borrador)">
+    Borrador
+</button>
+
+
+<!-- Modal de Diseños-->
+<ng-template #borrador let-modal class="borrador">
+    <div class="modal-header">
+        <span class="material-icons save">save</span>
+        <h6 class="title">Borrador guardado</h6>
+        <button type="button" class="cerrar" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span class="material-icons">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+    </div>
+</ng-template>

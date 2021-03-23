@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -9,10 +9,21 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class DesignComponent implements OnInit {
 
+  resizeTime: NodeJS.Timer;
   constructor(private modalService: NgbModal) { }
 
-  openModal(content: any) {
-    this.modalService.open(content);
+  @HostListener('window:resize', ['$event'])
+  onResize(): any {
+    clearTimeout(this.resizeTime);
+    this.resizeTime = setTimeout(() => {
+      if (window.innerWidth <= 960){
+        this.modalService.dismissAll();
+      }
+    }, 100);
+  }
+
+  openModal(content: any): void{
+      this.modalService.open(content);
   }
 
   ngOnInit(): void {
