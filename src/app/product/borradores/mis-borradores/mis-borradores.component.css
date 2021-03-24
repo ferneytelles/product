@@ -1,0 +1,117 @@
+.container-fluid {
+    max-height: calc(90vh - 46px);
+    overflow-y: auto;
+}
+
+.texto {
+    font-size: 14px;
+    margin: 10px 5px;
+    color: #555555;
+}
+
+.masInfo {
+    font-size: 14px;
+    color: #000000;
+    margin: 10px 0px;
+    text-decoration: underline;
+}
+
+.borradores {
+    margin: 0px;
+}
+
+.contenedor {
+    width: 50%;
+    padding: 5px;
+}
+
+.contenedor .borrador {
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.borrador .img {
+    max-width: 30%;
+    background: #eeeeee;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.borrador .img .camiseta {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.borrador .detalles {
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.detalles .carrito {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.botones {
+    padding: 0px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones button {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.botones button:hover {
+    background: #eeeeee;
+}
+
+
+/* SCROLL */
+
+.container-fluid::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.container-fluid::-webkit-scrollbar:vertical {
+    width: 6px;
+}
+
+.container-fluid::-webkit-scrollbar-button:increment,
+.container-fluid::-webkit-scrollbar-button {
+    display: none;
+}
+
+.container-fluid::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+.container-fluid::-webkit-scrollbar-thumb {
+    background-color: #d7d7d7;
+    border-radius: 20px;
+}
+
+.container-fluid::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #eeeeee;
+}

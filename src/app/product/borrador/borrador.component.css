@@ -1,17 +1,17 @@
-/* ::ng-deep.modal-dialog {
+::ng-deep.modal-borrador .modal-dialog {
     max-width: 40% !important;
-    max-height: 60vh !important;
-    margin: 20vh auto !important;
+    max-height: 70vh !important;
+    margin: 15vh auto !important;
     border-radius: 5px;
 }
 
-::ng-deep.modal-content {
+::ng-deep.modal-borrador .modal-dialog .modal-content {
     border-radius: 8px;
-    height: 60vh;
+    height: 70vh;
 }
 
 .modal-header {
-    padding: 5px 5px 5px 20px;
+    padding: 3px 5px 3px 20px;
     justify-content: start;
     align-items: center;
     background: #d7d7d7;
@@ -42,11 +42,59 @@
 }
 
 .modal-body {
-    padding: 0;
+    padding: 15px 5px;
+}
+
+.modal-body .titulo {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-body .texto {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.modal-body .img {
+    width: 55%;
+    height: 38vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eeeeee;
+    margin-bottom: 15px;
+}
+
+.modal-body .img .camiseta {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-body .btn {
+    margin: 0px 3px;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 6px 0px;
+    width: 120px;
+    border: 1px solid #d7d7d7;
+    background: #eeeeee;
+}
+
+.modal-body .btn.seguirEditando {
+    color: #ff0000;
 }
 
 @media screen and (max-width: 960px) {
     .btn {
         display: none;
     }
-} */
+}

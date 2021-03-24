@@ -18,6 +18,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SliderComponent } from './product/design/slider/slider.component';
 import { ResultsContentComponent } from './product/design/results-content/results-content.component';
 import { BorradorComponent } from './product/borrador/borrador.component';
+import { BorradoresComponent } from './product/borradores/borradores.component';
+import { MisBorradoresComponent } from './product/borradores/mis-borradores/mis-borradores.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { BorradorComponent } from './product/borrador/borrador.component';
     CheckboxComponent,
     SliderComponent,
     ResultsContentComponent,
-    BorradorComponent
+    BorradorComponent,
+    BorradoresComponent,
+    MisBorradoresComponent
   ],
   imports: [
     BrowserModule,

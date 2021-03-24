@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row mx-0">
+        <p class="texto">{{texto}}</p>
+        <a href="#" class="masInfo">Más info...</a>
+    </div>
+    <div class="row borradores">
+        <div *ngFor="let item of borradores" class="contenedor">
+            <div class="borrador">
+                <div class="row mx-0">
+                    <div class="col img">
+                        <img class="camiseta" [src]="item" alt="">
+                    </div>
+                    <div class="col detalles">
+                        <strong class="nombre">Características del producto:</strong>
+                        <p class="m-0">* Camiseta premium hombre - cuello redondo</p>
+                        <p class="m-0">* <strong class="talla">Talla:</strong> S</p>
+                        <p class="m-0">* <strong class="color">Color:</strong> Negro</p>
+                        <button class="carrito">
+                            <span class="material-icons-outlined">shopping_cart</span>
+                            <span class="ml-1">Añadir a carrito</span> 
+                        </button>
+                    </div>
+                </div>
+                <div class="row mx-0">
+                    <div class="col botones">
+                        <button class="editar">
+                            <span class="material-icons-outlined">create</span>
+                            <span class="ml-1">Editar</span>
+                        </button>
+                        <button class="compartir">
+                            <span class="material-icons-outlined">share</span>
+                            <span class="ml-1">Compartir</span>
+                        </button>
+                        <button class="borrar">
+                            <span class="material-icons">delete_forever</span>
+                            <span class="ml-1">borrar</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

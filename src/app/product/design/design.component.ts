@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -9,6 +9,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class DesignComponent implements OnInit {
 
+  @ViewChild('content') content: any;
   resizeTime: NodeJS.Timer;
   constructor(private modalService: NgbModal) { }
 
@@ -22,8 +23,8 @@ export class DesignComponent implements OnInit {
     }, 100);
   }
 
-  openModal(content: any): void{
-      this.modalService.open(content);
+  openModal(): void{
+      this.modalService.open(this.content, { windowClass: 'modal-design' });
   }
 
   ngOnInit(): void {

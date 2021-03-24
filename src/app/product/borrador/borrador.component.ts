@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -8,12 +8,13 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class BorradorComponent implements OnInit {
 
+  @ViewChild('borrador') borrador: any;
   constructor(private modalBorrador: NgbModal) {}
 
   ngOnInit(): void {
   }
-  openModal(borrador: any): void{
-    this.modalBorrador.open(borrador);
+  openModal(): void{
+    this.modalBorrador.open(this.borrador, { windowClass: 'modal-borrador' });
   }
 
 }

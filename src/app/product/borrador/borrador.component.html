@@ -1,7 +1,6 @@
-<button class="btn btn-outline-primary" (click)="openModal(borrador)">
+<button class="btn btn-outline-primary" (click)="openModal()">
     Borrador
 </button>
-
 
 <!-- Modal de Diseños-->
 <ng-template #borrador let-modal class="borrador">
@@ -13,5 +12,19 @@
       </button>
     </div>
     <div class="modal-body">
+        <div class="row mx-0">
+            <p class="titulo">¡Borrador de diseño guardado!</p>
+            <p class="texto">Hace poco creaste un borrado de diseño. ¿Deseas continuar editándolo?</p>
+        </div>
+        <div class="row mx-0 justify-content-center">
+            <div class="img">
+                <img class="camiseta" src="assets/img/3.png" alt="">
+            </div>
+        </div>
+        <div class="row mx-0 justify-content-center">
+            <button class="btn seguirEditando" (click)="modal.close('Close click')">Seguir editando</button>
+            <button class="btn borradores">Ver mis borradores</button>
+            <button class="btn ignorar" (click)="modal.dismiss('Cross click')">Ignorar</button>
+        </div>
     </div>
 </ng-template>
