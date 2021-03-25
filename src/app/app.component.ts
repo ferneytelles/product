@@ -14,6 +14,9 @@ export class AppComponent {
 
   }
 
+  modalProducto(): void{
+    this.modalService.producto.next(true);
+  }
   modalDisenio(): void{
     this.modalService.disenio.next(true);
   }

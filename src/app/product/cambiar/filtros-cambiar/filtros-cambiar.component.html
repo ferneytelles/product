@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <div class="row diseño">
+        <div class="col-3 filtros">
+            <!-- buscador -->
+            <div class="row buscador">
+                <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Encuentra tu diseño">
+                    <div class="input-group-append">
+                        <button class="input-group-text" type="submit" id="suscribirse">
+                            <span class="material-icons">search</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row categorias">
+
+                <a class="todos" href="#">TODOS</a>
+
+                <a class="categ" data-toggle="collapse" href="#collapsecategorias" role="button" [class.active]="activeCategorias" (click)="activeCategorias=!activeCategorias">
+                    <div class="col">Categorias</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsecategorias">
+                    <app-checkbox [checks]="categorias"></app-checkbox>
+                </div>
+
+                <a class="productos" data-toggle="collapse" href="#collapseproductos" role="button" [class.active]="activeProductos" (click)="activeProductos=!activeProductos">
+                    <div class="col">Productos</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapseproductos">
+                    <app-checkbox [checks]="productos"></app-checkbox>
+                </div>
+
+                <a class="colores" data-toggle="collapse" href="#collapsecolores" role="button" [class.active]="activeColores" (click)="activeColores=!activeColores">
+                    <div class="col">Colores</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsecolores">
+                    <app-checkbox [checks]="colores"></app-checkbox>
+                </div>
+
+
+
+                <a class="precio" data-toggle="collapse" href="#collapseprecio" role="button" [class.active]="activePrecio" (click)="activePrecio=!activePrecio">
+                    <div class="col">Precio</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapseprecio">
+                    <app-slider></app-slider>
+                </div>
+
+            </div>
+            <div class="row aplicar">
+                <button class="btn-aplicar">
+                    <span class="material-icons-outlined">filter_alt</span>
+                    Aplicar filtro
+                </button>
+            </div>
+        </div>
+
+        <div class="col-9 contenido">
+
+        </div>
+
+    </div>
+</div>

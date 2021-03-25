@@ -84,22 +84,16 @@
 
 /* interacciones del grupo */
 
-.categorias .menores.active,
 .categorias .categ.active,
-.categorias .colecciones.active,
-.categorias .fondos.active,
-.categorias .estilos.active,
-.categorias .propiedades.active,
+.categorias .productos.active,
+.categorias .colores.active,
 .categorias .precio.active {
     border-radius: 4px 4px 0px 0px;
 }
 
-.categorias .menores.active .col-auto span,
 .categorias .categ.active .col-auto span,
-.categorias .colecciones.active .col-auto span,
-.categorias .fondos.active .col-auto span,
-.categorias .estilos.active .col-auto span,
-.categorias .propiedades.active .col-auto span,
+.categorias .productos.active .col-auto span,
+.categorias .colores.active .col-auto span,
 .categorias .precio.active .col-auto span {
     transform: rotate(-90deg);
 }
@@ -109,12 +103,9 @@
 
 */
 
-#collapsemenores,
 #collapsecategorias,
-#collapsecolecciones,
-#collapsefondos,
-#collapseestilos,
-#collapsepropiedades,
+#collapseproductos,
+#collapsecolores,
 #collapseprecio {
     width: 100%;
     padding: 4px;

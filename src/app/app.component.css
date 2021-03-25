@@ -120,6 +120,12 @@
     border-right-color: #ff0000;
 }
 
+@media screen and (max-width: 960px) {
+    .modales {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .pagos .borde {
         border-right: none;

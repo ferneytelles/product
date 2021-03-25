@@ -7,6 +7,7 @@ import { Subject } from 'rxjs';
 export class ModalService {
 
   // modales
+  producto: Subject<boolean> = new Subject<boolean>();
   disenio: Subject<boolean> = new Subject<boolean>();
   borrador: Subject<boolean> = new Subject<boolean>();
   borradores: Subject<boolean> = new Subject<boolean>();

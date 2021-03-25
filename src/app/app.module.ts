@@ -20,6 +20,8 @@ import { ResultsContentComponent } from './product/design/results-content/result
 import { BorradorComponent } from './product/borrador/borrador.component';
 import { BorradoresComponent } from './product/borradores/borradores.component';
 import { MisBorradoresComponent } from './product/borradores/mis-borradores/mis-borradores.component';
+import { CambiarComponent } from './product/cambiar/cambiar.component';
+import { FiltrosCambiarComponent } from './product/cambiar/filtros-cambiar/filtros-cambiar.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { MisBorradoresComponent } from './product/borradores/mis-borradores/mis-
     ResultsContentComponent,
     BorradorComponent,
     BorradoresComponent,
-    MisBorradoresComponent
+    MisBorradoresComponent,
+    CambiarComponent,
+    FiltrosCambiarComponent
   ],
   imports: [
     BrowserModule,

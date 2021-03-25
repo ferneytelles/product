@@ -1,0 +1,13 @@
+<ng-template #cambiar let-modal class="cambiar">
+    <div class="modal-header">
+        <span class="material-icons-outlined">shopping_bag</span>
+        <h6 class="title">Producto:</h6>
+        <h6 class="subtitle">Seleccionar producto para personalización</h6>
+        <button type="button" class="cerrar" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span class="material-icons">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <app-filtros-cambiar></app-filtros-cambiar>
+    </div>
+</ng-template>

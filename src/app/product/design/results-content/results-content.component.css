@@ -32,6 +32,23 @@
     max-width: 100%;
 }
 
+.img .info {
+    display: none;
+    font-size: 11px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    bottom: 0;
+    margin-bottom: 24px;
+    padding: 5px;
+    background: #ffffff85;
+    transition: all .3s ease;
+}
+
+.img:hover .info {
+    display: block;
+}
+
 .card-body {
     padding: 0px;
     background: #c8c8c8;

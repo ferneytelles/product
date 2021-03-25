@@ -1,0 +1,53 @@
+::ng-deep.modal-producto .modal-dialog {
+    max-width: 90% !important;
+    max-height: 90vh !important;
+    margin: 5vh auto !important;
+    border-radius: 5px;
+}
+
+::ng-deep.modal-producto .modal-dialog .modal-content {
+    border-radius: 8px;
+    height: 90vh;
+}
+
+.modal-header {
+    padding: 3px 5px 3px 20px;
+    justify-content: start;
+    align-items: center;
+    background: #d7d7d7;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.modal-header .material-icons-outlined {
+    font-size: 28px;
+}
+
+.modal-header .title {
+    margin-bottom: 0;
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+.modal-header .subtitle {
+    margin-bottom: 0;
+    margin-left: 5px;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.modal-header .cerrar {
+    padding: 5px;
+    margin-left: auto;
+    border: none;
+    background: none;
+    display: flex;
+    outline: none;
+}
+
+.modal-header .cerrar span {
+    font-size: 20px;
+}
+
+.modal-body {
+    padding: 0;
+}
