@@ -51,6 +51,8 @@
     padding: 0px 10px;
     font-size: 14px;
     color: #555555;
+    display: flex;
+    flex-direction: column;
 }
 
 .detalles .carrito {
@@ -62,6 +64,13 @@
     padding: 10px;
     font-weight: bold;
     margin-top: 10px;
+    max-width: max-content;
+    outline: none;
+}
+
+.detalles .carrito:hover {
+    padding: 9px;
+    border: 2px solid #ff0000;
 }
 
 .botones {
@@ -80,6 +89,7 @@
     color: #555555;
     font-size: 14px;
     font-weight: bold;
+    outline: none;
 }
 
 .botones button:hover {

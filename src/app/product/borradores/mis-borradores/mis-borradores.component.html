@@ -7,14 +7,16 @@
         <div *ngFor="let item of borradores" class="contenedor">
             <div class="borrador">
                 <div class="row mx-0">
-                    <div class="col img">
+                    <div class="col img" [style.height]="height">
                         <img class="camiseta" [src]="item" alt="">
                     </div>
                     <div class="col detalles">
+
                         <strong class="nombre">Características del producto:</strong>
                         <p class="m-0">* Camiseta premium hombre - cuello redondo</p>
                         <p class="m-0">* <strong class="talla">Talla:</strong> S</p>
                         <p class="m-0">* <strong class="color">Color:</strong> Negro</p>
+
                         <button class="carrito">
                             <span class="material-icons-outlined">shopping_cart</span>
                             <span class="ml-1">Añadir a carrito</span> 

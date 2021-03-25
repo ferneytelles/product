@@ -1,6 +1,6 @@
-<button class="btn btn-outline-primary" (click)="openModal()">
+<!-- <button class="btn btn-outline-primary" (click)="openModal()">
     Borrador
-</button>
+</button> -->
 
 <!-- Modal de Diseños-->
 <ng-template #borrador let-modal class="borrador">
@@ -23,7 +23,7 @@
         </div>
         <div class="row mx-0 justify-content-center">
             <button class="btn seguirEditando" (click)="modal.close('Close click')">Seguir editando</button>
-            <button class="btn borradores">Ver mis borradores</button>
+            <button class="btn borradores" (click)="modalBorradores()">Ver mis borradores</button>
             <button class="btn ignorar" (click)="modal.dismiss('Cross click')">Ignorar</button>
         </div>
     </div>
