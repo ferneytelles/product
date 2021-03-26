@@ -1,0 +1,23 @@
+.colores {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.colores .check {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.colores .check .caja {
+    width: 100%;
+    height: 100%;
+}
+
+.colores .check .color {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}

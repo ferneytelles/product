@@ -24,7 +24,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapsecategorias">
-                    <app-checkbox [checks]="categorias"></app-checkbox>
+                    <app-radio [radios]="categorias"></app-radio>
                 </div>
 
                 <a class="productos" data-toggle="collapse" href="#collapseproductos" role="button" [class.active]="activeProductos" (click)="activeProductos=!activeProductos">
@@ -34,7 +34,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapseproductos">
-                    <app-checkbox [checks]="productos"></app-checkbox>
+                    <app-radio [radios]="productos"></app-radio>
                 </div>
 
                 <a class="colores" data-toggle="collapse" href="#collapsecolores" role="button" [class.active]="activeColores" (click)="activeColores=!activeColores">
@@ -47,7 +47,15 @@
                     <app-checkbox [checks]="colores"></app-checkbox>
                 </div>
 
-
+                <a class="talla" data-toggle="collapse" href="#collapsetalla" role="button" [class.active]="activeTalla" (click)="activeTalla=!activeTalla">
+                    <div class="col">Talla</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsetalla">
+                    <app-checkbox [checks]="talla"></app-checkbox>
+                </div>
 
                 <a class="precio" data-toggle="collapse" href="#collapseprecio" role="button" [class.active]="activePrecio" (click)="activePrecio=!activePrecio">
                     <div class="col">Precio</div>
@@ -57,6 +65,56 @@
                 </a>
                 <div class="collapse show" id="collapseprecio">
                     <app-slider></app-slider>
+                </div>
+
+                <a class="caras" data-toggle="collapse" href="#collapsecaras" role="button" [class.active]="activeCaras" (click)="activeCaras=!activeCaras">
+                    <div class="col">Caras imprimibles</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsecaras">
+                    <app-checkbox [checks]="caras"></app-checkbox>
+                </div>
+
+                <a class="material" data-toggle="collapse" href="#collapsematerial" role="button" [class.active]="activeMaterial" (click)="activeMaterial=!activeMaterial">
+                    <div class="col">Material</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsematerial">
+                    <app-checkbox [checks]="material"></app-checkbox>
+                </div>
+
+                <a class="cuello" data-toggle="collapse" href="#collapsecuello" role="button" [class.active]="activeCuello" (click)="activeCuello=!activeCuello">
+                    <div class="col">Tipo de cuello</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsecuello">
+                    <app-checkbox [checks]="cuello"></app-checkbox>
+                </div>
+
+                <a class="manga" data-toggle="collapse" href="#collapsemanga" role="button" [class.active]="activeManga" (click)="activeManga=!activeManga">
+                    <div class="col">Tipo de manga</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapsemanga">
+                    <app-checkbox [checks]="manga"></app-checkbox>
+                </div>
+
+                <a class="impresion" data-toggle="collapse" href="#collapseimpresion" role="button" [class.active]="activeImpresion" (click)="activeImpresion=!activeImpresion">
+                    <div class="col">Metodo de impresión</div>
+                    <div class="col-auto">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapseimpresion">
+                    <app-checkbox [checks]="impresion"></app-checkbox>
                 </div>
 
             </div>

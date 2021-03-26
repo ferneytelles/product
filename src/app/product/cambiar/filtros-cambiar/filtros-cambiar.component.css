@@ -87,6 +87,12 @@
 .categorias .categ.active,
 .categorias .productos.active,
 .categorias .colores.active,
+.categorias .talla.active,
+.categorias .caras.active,
+.categorias .material.active,
+.categorias .cuello.active,
+.categorias .manga.active,
+.categorias .impresion.active,
 .categorias .precio.active {
     border-radius: 4px 4px 0px 0px;
 }
@@ -94,6 +100,12 @@
 .categorias .categ.active .col-auto span,
 .categorias .productos.active .col-auto span,
 .categorias .colores.active .col-auto span,
+.categorias .talla.active .col-auto span,
+.categorias .caras.active .col-auto span,
+.categorias .material.active .col-auto span,
+.categorias .cuello.active .col-auto span,
+.categorias .manga.active .col-auto span,
+.categorias .impresion.active .col-auto span,
 .categorias .precio.active .col-auto span {
     transform: rotate(-90deg);
 }
@@ -106,17 +118,20 @@
 #collapsecategorias,
 #collapseproductos,
 #collapsecolores,
+#collapsetalla,
+#collapsecaras,
+#collapsematerial,
+#collapsecuello,
+#collapsemanga,
+#collapseimpresion,
 #collapseprecio {
     width: 100%;
     padding: 4px;
     margin-bottom: 4px;
     font-size: 14px;
-    border-top: none;
+    background: #eeeeee;
+    border-radius: 0px 0px 4px 4px;
     transition: all .3s ease;
-}
-
-#collapseprecio {
-    border-bottom: 1px solid #d7d7d7;
 }
 
 

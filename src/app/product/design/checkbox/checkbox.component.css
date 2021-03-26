@@ -16,6 +16,13 @@
     line-height: 16px !important;
 }
 
+::ng-deep .mat-checkbox span.mat-checkbox-ripple {
+    left: calc(50% - 12px);
+    top: calc(50% - 12px);
+    height: 24px;
+    width: 24px;
+}
+
 ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
 .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
     background-color: #FF0000;

@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './product/menu/menu.component';
 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CarouselComponent } from './product/carousel/carousel.component';
 import { CardComponent } from './product/card/card.component';
@@ -14,7 +16,6 @@ import { DesignContentComponent } from './product/design/design-content/design-c
 import { ResultsComponent } from './product/design/results/results.component';
 import { CheckboxComponent } from './product/design/checkbox/checkbox.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SliderComponent } from './product/design/slider/slider.component';
 import { ResultsContentComponent } from './product/design/results-content/results-content.component';
 import { BorradorComponent } from './product/borrador/borrador.component';
@@ -22,6 +23,8 @@ import { BorradoresComponent } from './product/borradores/borradores.component';
 import { MisBorradoresComponent } from './product/borradores/mis-borradores/mis-borradores.component';
 import { CambiarComponent } from './product/cambiar/cambiar.component';
 import { FiltrosCambiarComponent } from './product/cambiar/filtros-cambiar/filtros-cambiar.component';
+import { RadioComponent } from './product/radio/radio.component';
+import { ColoresComponent } from './product/colores/colores.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import { FiltrosCambiarComponent } from './product/cambiar/filtros-cambiar/filtr
     BorradoresComponent,
     MisBorradoresComponent,
     CambiarComponent,
-    FiltrosCambiarComponent
+    FiltrosCambiarComponent,
+    RadioComponent,
+    ColoresComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,8 @@ import { FiltrosCambiarComponent } from './product/cambiar/filtros-cambiar/filtr
     SlickCarouselModule,
     NgbModule,
     NoopAnimationsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
