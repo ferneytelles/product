@@ -26,4 +26,7 @@ export class AppComponent {
   modalBorradores(): void{
     this.modalService.borradores.next(true);
   }
+  modalDetalle(): void{
+    this.modalService.detalle2.next(true);
+  }
 }

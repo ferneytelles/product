@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { ModalService } from 'src/app/services/modal.service';
   templateUrl: './design.component.html',
   styleUrls: ['./design.component.css']
 })
-export class DesignComponent implements OnInit {
+export class DesignComponent implements OnInit, OnDestroy {
 
   unsubscribe = new Subject();
   @ViewChild('content') content: any;
@@ -38,6 +38,12 @@ export class DesignComponent implements OnInit {
 
   openModal(): void{
     this.modalDisenio.open(this.content, { windowClass: 'modal-design' });
-}
+  }
 
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
+  }
 }

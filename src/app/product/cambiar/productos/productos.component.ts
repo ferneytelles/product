@@ -84,6 +84,7 @@ export class ProductosComponent implements OnInit {
         this.height = '270px';
       }
     }else if (this.columnas === 4){
+      this.font = '13px'
       if (window.innerWidth >= 960 && window.innerWidth < 1150){
         this.height = '155px';
       }else if (window.innerWidth >= 1150 && window.innerWidth < 1260){
@@ -102,6 +103,7 @@ export class ProductosComponent implements OnInit {
         this.height = '330px';
       }
     }else if (this.columnas === 3){
+      this.font = '13px'
       if (window.innerWidth >= 960 && window.innerWidth < 1150){
         this.height = '200px';
       }else if (window.innerWidth >= 1150 && window.innerWidth < 1260){
@@ -120,6 +122,7 @@ export class ProductosComponent implements OnInit {
         this.height = '445px';
       }
     }else if (this.columnas === 2){
+      this.font = '13px'
       if (window.innerWidth >= 960 && window.innerWidth < 1150){
         this.height = '305px';
       }else if (window.innerWidth >= 1150 && window.innerWidth < 1260){

@@ -1,24 +1,23 @@
 <div class="container-fluid">
     <div class="row modales">
-        <app-detalle></app-detalle>
-        <div class="col-auto">
+        <div class="col-auto px-1">
             <button class="btn btn-outline-primary" (click)="modalProducto()">Cambiar producto</button>
             <app-cambiar></app-cambiar>
         </div>
-        <div class="col-auto">
+        <div class="col-auto px-1">
+            <button class="btn btn-outline-primary" (click)="modalDetalle()">Detalles del producto</button>
+            <app-detalle></app-detalle>
+        </div>
+        <div class="col-auto px-1">
             <button class="btn btn-outline-primary" (click)="modalDisenio()">Diseño</button>
             <app-design></app-design>
         </div>
-        <div class="col-auto">
-            <button class="btn btn-outline-primary" (click)="modalBorrador()">
-                Borrador
-            </button>
+        <div class="col-auto px-1">
+            <button class="btn btn-outline-primary" (click)="modalBorrador()">Borrador</button>
             <app-borrador></app-borrador>
         </div>
-        <div class="col-auto">
-            <button class="btn btn-outline-primary" (click)="modalBorradores()">
-                Borradores
-            </button>
+        <div class="col-auto px-1">
+            <button class="btn btn-outline-primary" (click)="modalBorradores()">Borradores</button>
             <app-borradores></app-borradores>
         </div>
     </div>

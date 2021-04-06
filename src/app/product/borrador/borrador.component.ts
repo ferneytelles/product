@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalService } from '../../services/modal.service';
 import { Subject } from 'rxjs';
@@ -9,7 +9,7 @@ import { takeUntil } from 'rxjs/operators';
   templateUrl: './borrador.component.html',
   styleUrls: ['./borrador.component.css']
 })
-export class BorradorComponent implements OnInit {
+export class BorradorComponent implements OnInit, OnDestroy {
 
   unsubscribe = new Subject();
   @ViewChild('borrador') borrador: any;
@@ -29,7 +29,12 @@ export class BorradorComponent implements OnInit {
     this.modalBorrador.dismissAll();
     this.modalService.borradores.next(true);
   }
-  // closeModal(): void{
-  // }
+  
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
+  }
 
 }
