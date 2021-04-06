@@ -31,7 +31,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   }
   openModal(): void{
     this.seleccionar = true;
-    this.modalDetalle.open(this.detalle, {windowClass: 'modal-detalle'})
+    this.modalDetalle.open(this.detalle, {windowClass: 'modal-detalle', backdropClass: 'backdrop-detalle'})
   }
   openModal2(): void{
     this.seleccionar = false;

@@ -93,9 +93,3 @@
 .modal-body .btn.seguirEditando {
     color: #ff0000;
 }
-
-@media screen and (max-width: 960px) {
-    /* .btn {
-        display: none;
-    } */
-}
