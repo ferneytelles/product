@@ -1,0 +1,59 @@
+.container-fluid {
+    max-height: calc(90vh - 46px);
+    overflow-y: auto;
+}
+
+.encabezado {
+    padding: 15px 0px 10px 0px;
+    margin: 0;
+}
+
+.nombre {
+    margin: 0px;
+}
+
+.imprimir,
+.descargar {
+    display: flex;
+    align-items: center;
+    color: #ff0000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.imprimir .icono,
+.descargar .icono {
+    font-size: 20px;
+    margin-right: 2px;
+}
+
+.imprimir .texto,
+.descargar .texto {
+    text-decoration: underline;
+}
+
+.boton {
+    width: 100%;
+    padding: 10px 0px;
+    background: #eeeeee;
+    display: flex;
+    justify-content: center;
+}
+
+.boton .seleccionar {
+    display: flex;
+    align-items: center;
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.seleccionar .icono {
+    font-size: 30px;
+}
+
+.seleccionar .texto {
+    font-size: 14px;
+}

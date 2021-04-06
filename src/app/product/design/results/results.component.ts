@@ -13,9 +13,9 @@ export class ResultsComponent implements OnInit {
   // filtros = [];
   filtros = ['Menores', 'Hombre', 'Mujer', 'Minimal', 'Oscuros'];
   etiquetas = ['Fútbol', 'balón', 'Deportivo', 'Juego', 'Número'];
+  imgs = ['assets/img/copa.png', 'assets/img/basketball.png', 'assets/img/basketball2.png', 'assets/img/bandera.png', 'assets/img/garra.png', 'assets/img/deportista.png', 'assets/img/espirales.png', 'assets/img/copa.png', 'assets/img/basketball.png', 'assets/img/basketball2.png', 'assets/img/bandera.png', 'assets/img/garra.png', 'assets/img/deportista.png', 'assets/img/espirales.png'];
 
   constructor() {
-    console.log(this.cols);
   }
 
   ngOnInit(): void {

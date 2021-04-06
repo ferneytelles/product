@@ -1,20 +1,21 @@
-import { Component, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, HostListener, Input, OnInit, SimpleChanges } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
-  selector: 'app-results-content',
-  templateUrl: './results-content.component.html',
-  styleUrls: ['./results-content.component.css']
+  selector: 'app-productos',
+  templateUrl: './productos.component.html',
+  styleUrls: ['./productos.component.css']
 })
-export class ResultsContentComponent implements OnInit, OnChanges {
+export class ProductosComponent implements OnInit {
 
   @Input() columnas: number;
   @Input() imgs: Array<any>;
   resizeTime: NodeJS.Timer;
-  height = '130px';
-  width = '20%';
+  height = '155px';
+  width = '25%';
+  font = '13px';
   
-  constructor() {
-  }
+  constructor(private modalService: ModalService) { }
 
   @HostListener('window:resize', ['$event'])
   onResize(): any {
@@ -34,6 +35,10 @@ export class ResultsContentComponent implements OnInit, OnChanges {
     this.setImgHeight();
   }
 
+  modalDetalle(): void{
+    this.modalService.detalle.next(true);
+  }
+
   setCardWidth(): void{
     if (this.columnas === 5) {
       this.width = '20%';
@@ -48,6 +53,19 @@ export class ResultsContentComponent implements OnInit, OnChanges {
 
   setImgHeight(): void{
     if (this.columnas === 5){
+      // tamaño del texto de los botones del hover
+      if (window.innerWidth >= 960 && window.innerWidth < 1000){
+        this.font = '9px'
+      }else if (window.innerWidth >= 1000 && window.innerWidth < 1100){
+        this.font = '10px'
+      }else if (window.innerWidth >= 1100 && window.innerWidth < 1150){
+        this.font = '11px'
+      }else if (window.innerWidth >= 1150 && window.innerWidth < 1240){
+        this.font = '12px'
+      }else{
+        this.font = '13px'
+      }
+      // tamaño de alto del contenedor de la imagen
       if (window.innerWidth >= 960 && window.innerWidth < 1150){
         this.height = '130px';
       }else if (window.innerWidth >= 1150 && window.innerWidth < 1260){
@@ -121,45 +139,5 @@ export class ResultsContentComponent implements OnInit, OnChanges {
       }
     }
   }
-
-  // columnas 5
-  // screen 960-1150px  h 130
-  // srreen 1150-1260px  h 145
-  // screen 1260-1400px  h 165
-  // screen 1400-1550px  h 185
-  // screen 1550-1690px  h 210
-  // screen 1690-1800px  h 225
-  // screen 1800-1950px  h 250
-  // screen 1950-2080px  h 270
-
-  // columnas 4
-  // screen 960-1150px  h 155
-  // srreen 1150-1260px  h 170
-  // screen 1260-1400px  h 195
-  // screen 1400-1550px  h 220
-  // screen 1550-1690px  h 260
-  // screen 1690-1800px  h 290
-  // screen 1800-1950px  h 306
-  // screen 1950-2080px  h 330
-
-  // columnas 3
-  // screen 960-1150px  h 200
-  // srreen 1150-1260px  h 245
-  // screen 1260-1400px  h 275
-  // screen 1400-1550px  h 310
-  // screen 1550-1690px  h 345
-  // screen 1690-1800px  h 380
-  // screen 1800-1950px  h 410
-  // screen 1950-2080px  h 445
-
-  // columnas 2
-  // screen 960-1150px  h 305
-  // srreen 1150-1260px  h 370
-  // screen 1260-1400px  h 410
-  // screen 1400-1550px  h 465
-  // screen 1550-1690px  h 520
-  // screen 1690-1800px  h 570
-  // screen 1800-1950px  h 610
-  // screen 1950-2080px  h 670
 
 }

@@ -1,0 +1,13 @@
+<ng-template #detalle let-modal class="detalle">
+    <div class="modal-header">
+        <span class="material-icons-outlined">shopping_bag</span>
+        <h6 class="title">Producto:</h6>
+        <h6 class="subtitle">Detalles del producto</h6>
+        <button type="button" class="cerrar" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span class="material-icons">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <app-info></app-info>
+    </div>
+</ng-template>

@@ -44,7 +44,7 @@
                     </div>
                 </a>
                 <div class="collapse show" id="collapsecolores">
-                    <app-checkbox [checks]="colores"></app-checkbox>
+                    <app-colores [colores]="colores"></app-colores>
                 </div>
 
                 <a class="talla" data-toggle="collapse" href="#collapsetalla" role="button" [class.active]="activeTalla" (click)="activeTalla=!activeTalla">
@@ -127,7 +127,7 @@
         </div>
 
         <div class="col-9 contenido">
-
+            <app-resultados></app-resultados>
         </div>
 
     </div>

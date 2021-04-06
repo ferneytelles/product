@@ -11,6 +11,7 @@ export class ModalService {
   disenio: Subject<boolean> = new Subject<boolean>();
   borrador: Subject<boolean> = new Subject<boolean>();
   borradores: Subject<boolean> = new Subject<boolean>();
+  detalle: Subject<boolean> = new Subject<boolean>();
 
   constructor() { }
 }

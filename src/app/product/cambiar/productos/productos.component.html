@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div *ngFor="let item of imgs" class="contenedor" [style.width]="width">
+        <div class="card">
+
+            <div class="img" [style.height]="height">
+                <img [src]=" item " class="card-img-top " alt=" ">
+                <div class="info">
+                    <div class="row m-0">
+                        <div class="col-6 botones">
+                            <button class="seleccionar" [style.font-size]="font">Seleccionar</button>
+                        </div>
+                        <div class="col-6 botones">
+                            <button class="verDetalle" [style.font-size]="font" (click)="modalDetalle()">Ver detalle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body ">
+                <div class="detalles">
+                    <div class="row m-0 detalle">
+                        <div class="col px-1 col-nombre">
+                            <p class="nombre m-0">Nombre del diseño</p>
+                        </div>
+                        <div class="col-auto px-1">
+                            <span class="precio ">$ 999.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -25,6 +25,10 @@ import { CambiarComponent } from './product/cambiar/cambiar.component';
 import { FiltrosCambiarComponent } from './product/cambiar/filtros-cambiar/filtros-cambiar.component';
 import { RadioComponent } from './product/radio/radio.component';
 import { ColoresComponent } from './product/colores/colores.component';
+import { ResultadosComponent } from './product/cambiar/resultados/resultados.component';
+import { ProductosComponent } from './product/cambiar/productos/productos.component';
+import { DetalleComponent } from './product/detalle/detalle.component';
+import { InfoComponent } from './product/detalle/info/info.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { ColoresComponent } from './product/colores/colores.component';
     CambiarComponent,
     FiltrosCambiarComponent,
     RadioComponent,
-    ColoresComponent
+    ColoresComponent,
+    ResultadosComponent,
+    ProductosComponent,
+    DetalleComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
