@@ -6,6 +6,10 @@
     top: 100px !important;
 }
 
+.carousel .slide {
+    outline: none;
+}
+
 
 /* .prev-slide.slick-disabled,
 .next-slide.slick-disabled {
