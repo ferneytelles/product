@@ -28,14 +28,22 @@
     <div class="card-body">
 
         <div class="row contenedor">
-            <div *ngFor="let color of colores" class="col-auto colores">
-                <div *ngIf="menorde8" [style.background]="color" class="color"></div>
+            <div *ngIf="menorde8" class="col-auto colores">
+                <div *ngFor="let color of colores" [style.background]="color" class="color"></div>
+            </div>
+            <div *ngIf="mayorde8" class="col-auto colores">
+                <div *ngFor="let item of colores1" [style.background]="item" class="color"></div>
+                <div *ngIf="mostrarMas" [style.background]="colores[7]" class="color"></div>
+                <div *ngFor="let item of colores2" [style.background]="item" [class.ocultar]="!mostrarMas" class="color"></div>
+                <button *ngIf="(!mostrarMas && !mayorde15) || (mostrarMas && !mayorde15) || (!mostrarMas && mayorde15)" class="color mas" (click)="mas()">{{cantidad}}</button>
+                <a *ngIf="mostrarMas && mayorde15" href="#" class="color mas">{{cantidad}}</a>
+
             </div>
         </div>
 
         <div class="row d-flex justify-content-center">
             <div *ngFor="let talla of tallas" class="col talla">
-                <a href="#">{{talla}}</a>
+                <a href="#" [class.disabled]="!disponible[(tallas.indexOf(talla))]">{{talla}}</a>
             </div>
         </div>
 

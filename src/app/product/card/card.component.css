@@ -1,6 +1,5 @@
 .card {
-    /* width: 400px; */
-    max-width: 216px;
+    max-width: 194px;
     max-height: 347px;
     border: none;
     overflow-x: hidden;
@@ -10,7 +9,7 @@
 }
 
 .card .img {
-    width: 100%;
+    width: 194px;
     height: 220px;
     display: flex;
     justify-content: center;
@@ -126,23 +125,39 @@
 }
 
 .card-body .contenedor {
-    display: flex;
-    justify-content: center;
-    margin: 0px -3px;
+    margin: 0px -2px;
 }
 
-.card-body .colores {
+.contenedor .colores {
     display: flex;
     justify-content: center;
-    margin: 2px 4px;
+    flex-wrap: wrap;
+    width: 100%;
     padding: 0;
+    margin: 0;
 }
 
-.card-body .color {
+.contenedor .color {
     width: 15px;
     height: 15px;
+    margin: 2px 4px;
     border-radius: 3px;
     border: 1px solid #ffffff;
+}
+
+.contenedor .color.ocultar {
+    display: none;
+}
+
+.contenedor .color.mas {
+    background: #ffffff;
+    font-size: 10px;
+    line-height: 11px;
+    color: #555555;
+    text-align: center;
+    padding: 0px;
+    outline: none;
+    text-decoration: none;
 }
 
 .card .card-body .talla {
@@ -167,6 +182,11 @@
     align-items: center;
     justify-content: center;
     outline: none;
+}
+
+.talla a.disabled {
+    color: #a1a1a1;
+    text-decoration: line-through;
 }
 
 .card p {
