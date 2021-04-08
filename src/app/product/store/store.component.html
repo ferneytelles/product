@@ -1,0 +1,25 @@
+<div class="container-fluid">
+
+    <div class="row busqueda">
+
+        <div class="col-3 filtros">
+            <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>
+            <app-filtros-color *ngFor="let filtro of colorFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-color>
+            <app-filtro-precio [nombre]="'Precio'"></app-filtro-precio>
+            <app-filtros-check *ngFor="let filtro of checkFilter" [active]="false" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+            <app-filtros-check *ngFor="let filtro of checkFilter2" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+        </div>
+
+        <div class="col-9">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Página de inicio</a></li>
+                    <li class="breadcrumb-item"><a href="#">Comprar</a></li>
+                    <li class="breadcrumb-item"><a href="#">Hombres</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Camisetas</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+</div>

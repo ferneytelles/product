@@ -1,0 +1,51 @@
+.filtro {
+    width: 100%;
+    color: #000000;
+    background: #d7d7d7;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px 4px 4px 4px;
+    transition: all .3s ease;
+}
+
+.filtro .col {
+    padding: 0px 5px;
+}
+
+.filtro .col-auto {
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.filtro .col-auto span {
+    font-size: 13px;
+    transform: rotate(90deg);
+    color: #ff0000;
+    transition: all .3s ease;
+}
+
+.filtro.active {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.filtro.active .col-auto span {
+    transform: rotate(-90deg);
+}
+
+.opciones {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    background: #eeeeee;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.opciones:not(.show) {
+    display: none;
+}

@@ -1,0 +1,10 @@
+<a class="filtro" role="button" [class.active]="active" (click)="active=!active">
+    <div class="col">{{nombre}}</div>
+    <div class="col-auto">
+        <span class="material-icons">arrow_forward_ios</span>
+    </div>
+</a>
+
+<div class="opciones" [class.show]="active">
+    <app-colores [colores]="items"></app-colores>
+</div>

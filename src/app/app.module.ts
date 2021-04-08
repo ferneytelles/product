@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +29,14 @@ import { ResultadosComponent } from './product/cambiar/resultados/resultados.com
 import { ProductosComponent } from './product/cambiar/productos/productos.component';
 import { DetalleComponent } from './product/detalle/detalle.component';
 import { InfoComponent } from './product/detalle/info/info.component';
+import { StoreComponent } from './product/store/store.component';
+import { MainComponent } from './product/main/main.component';
+import { FiltrosRadioComponent } from './product/filtros-radio/filtros-radio.component';
+import { FiltrosCheckComponent } from './product/filtros-check/filtros-check.component';
+import { FiltrosColorComponent } from './product/filtros-color/filtros-color.component';
+import { FiltroPrecioComponent } from './product/filtro-precio/filtro-precio.component';
+
+
 
 @NgModule({
   declarations: [
@@ -52,7 +60,13 @@ import { InfoComponent } from './product/detalle/info/info.component';
     ResultadosComponent,
     ProductosComponent,
     DetalleComponent,
-    InfoComponent
+    InfoComponent,
+    StoreComponent,
+    MainComponent,
+    FiltrosRadioComponent,
+    FiltrosCheckComponent,
+    FiltrosColorComponent,
+    FiltroPrecioComponent    
   ],
   imports: [
     BrowserModule,
@@ -64,6 +78,7 @@ import { InfoComponent } from './product/detalle/info/info.component';
     MatRadioModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

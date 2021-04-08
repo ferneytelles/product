@@ -1,0 +1,16 @@
+.busqueda {
+    margin: 15px 0px;
+}
+
+.breadcrumb {
+    justify-content: center;
+    background: none;
+    margin: 0px;
+    padding: 10px 0px;
+    font-size: 14px;
+}
+
+.breadcrumb .active,
+.breadcrumb a {
+    color: #555555;
+}
