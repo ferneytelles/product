@@ -35,8 +35,8 @@
                 <div *ngFor="let item of colores1" [style.background]="item" class="color"></div>
                 <div *ngIf="mostrarMas" [style.background]="colores[7]" class="color"></div>
                 <div *ngFor="let item of colores2" [style.background]="item" [class.ocultar]="!mostrarMas" class="color"></div>
-                <button *ngIf="(!mostrarMas && !mayorde15) || (mostrarMas && !mayorde15) || (!mostrarMas && mayorde15)" class="color mas" (click)="mas()">{{cantidad}}</button>
-                <a *ngIf="mostrarMas && mayorde15" href="#" class="color mas">{{cantidad}}</a>
+                <div *ngIf="mostrarMas && mayorde15" class="color mas if">Más...</div>
+                <button class="color mas" (click)="mas()">{{cantidad}}</button>
 
             </div>
         </div>
@@ -46,7 +46,6 @@
                 <a href="#" [class.disabled]="!disponible[(tallas.indexOf(talla))]">{{talla}}</a>
             </div>
         </div>
-
 
         <p class="card-text nombre">Nombre del producto "camiseta personalizada"</p>
         <p class="card-text coleccion">Coleccion del producto</p>

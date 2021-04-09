@@ -15,7 +15,6 @@ export class CardComponent implements OnInit {
   colores = ["#000000","#ffffff","#009136","#ff0000","#feed01","#f29400","#e2017b","#93117e","#182983","#009de0","#ffffff","#009136","#ff0000","#feed01","#f29400","#e2017b","#93117e","#182983","#009de0","#009de0","#ffffff","#009136","#ff0000"];
   colores1 = [];
   colores2 = [];
-  colores3 = [];
   menorde8 = false;
   mayorde8 = false;
   mayorde15 = false;
@@ -35,35 +34,28 @@ export class CardComponent implements OnInit {
       this.mayorde8 = true;
       this.colores1 = this.colores.slice(0,7);
       this.colores2 = this.colores.slice(8,15);
-      this.colores3 = this.colores.slice(15);
       if (this.colores.length<=15){
         this.cantidad = `+${this.colores2.length + 1}`;
       }else{
         this.mayorde15 = true;
-        if(this.colores3.length>1){
+        this.colores2 = this.colores.slice(8,13);
+        if(this.colores.length>16){
           this.cantidad = '+9';
         }else{
-          this.cantidad = `+${this.colores2.length + this.colores3.length + 1}`;
-        }
-        
+          this.cantidad = `+${this.colores2.length + 2}`;
+        }  
       }      
     }
   }
   mas(): void{
     this.mostrarMas = !this.mostrarMas;
-    if (this.mostrarMas && !this.mayorde15){
+    if (this.mostrarMas){
       this.cantidad = '-';
-    }else if(this.mostrarMas && this.mayorde15){
-      if(this.colores3.length>9){
-        this.cantidad = '+9';
-      }else{
-        this.cantidad = `+${this.colores3.length}`;
-      }
     }else if(!this.mostrarMas && this.mayorde15){
-      if(this.colores3.length>1){
+      if(this.colores.length>16){
         this.cantidad = '+9';
       }else{
-        this.cantidad = `+${this.colores2.length + this.colores3.length + 1}`;
+        this.cantidad = `+${this.colores2.length + 2}`;
       }
     }else{
       this.cantidad = `+${this.colores2.length + 1}`;

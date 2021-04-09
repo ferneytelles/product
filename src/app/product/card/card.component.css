@@ -152,12 +152,20 @@
 .contenedor .color.mas {
     background: #ffffff;
     font-size: 10px;
-    line-height: 11px;
+    line-height: 13px;
     color: #555555;
     text-align: center;
     padding: 0px;
     outline: none;
     text-decoration: none;
+}
+
+.contenedor .color.mas.if {
+    width: 38px;
+    background: none;
+    border: none;
+    font-size: 11px;
+    line-height: 17px;
 }
 
 .card .card-body .talla {
