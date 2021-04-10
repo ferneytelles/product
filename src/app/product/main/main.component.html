@@ -1,4 +1,26 @@
 <div class="container-fluid">
+    <div class="row botones">
+        <div class="col-auto px-1">
+            <a [routerLink]="['/store']" class="btn btn-outline-primary">tienda</a>
+        </div>
+        <div class="col-auto px-1">
+            <button class="btn btn-outline-primary">Cambiar producto</button>
+        </div>
+        <div class="col-auto px-1">
+            <button class="btn btn-outline-primary">Detalles del producto</button>
+        </div>
+        <div class="col-auto px-1">
+            <button class="btn btn-outline-primary" (click)="modalMovile('diseño')">Diseño</button>
+            <!-- <app-design-content *ngIf="controlModal=='diseño'"></app-design-content> -->
+        </div>
+        <div class="col-auto px-1">
+            <button class="btn btn-outline-primary">Borrador</button>
+        </div>
+        <div class="col-auto px-1">
+            <button class="btn btn-outline-primary">Borradores</button>
+        </div>
+    </div>
+
     <div class="row modales">
         <div class="col-auto px-1">
             <a [routerLink]="['/store']" class="btn btn-outline-primary">tienda</a>

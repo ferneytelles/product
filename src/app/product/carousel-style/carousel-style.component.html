@@ -1,0 +1,5 @@
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="productSlideConfig">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide d-flex justify-content-center">
+        <button class="estilos">{{slide}}</button>
+    </div>
+</ngx-slick-carousel>

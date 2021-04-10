@@ -35,6 +35,7 @@ import { FiltrosRadioComponent } from './product/filtros-radio/filtros-radio.com
 import { FiltrosCheckComponent } from './product/filtros-check/filtros-check.component';
 import { FiltrosColorComponent } from './product/filtros-color/filtros-color.component';
 import { FiltroPrecioComponent } from './product/filtro-precio/filtro-precio.component';
+import { CarouselStyleComponent } from './product/carousel-style/carousel-style.component';
 
 
 
@@ -66,7 +67,8 @@ import { FiltroPrecioComponent } from './product/filtro-precio/filtro-precio.com
     FiltrosRadioComponent,
     FiltrosCheckComponent,
     FiltrosColorComponent,
-    FiltroPrecioComponent    
+    FiltroPrecioComponent,
+    CarouselStyleComponent    
   ],
   imports: [
     BrowserModule,

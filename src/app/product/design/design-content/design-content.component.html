@@ -11,79 +11,15 @@
                         </button>
                     </div>
                 </div>
+                <button class="filtrar">Filtrar</button>
             </div>
 
             <div class="row categorias">
                 <a class="todos" href="#">TODOS</a>
-                <a class="menores" data-toggle="collapse" href="#collapsemenores" role="button" [class.active]="activeMenores" (click)="activeMenores=!activeMenores">
-                    <div class="col">Menores de edad</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsemenores">
-                    <app-checkbox [checks]="menores"></app-checkbox>
-                </div>
 
-                <a class="categ" data-toggle="collapse" href="#collapsecategorias" role="button" [class.active]="activeCateg" (click)="activeCateg=!activeCateg">
-                    <div class="col">Categorias</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsecategorias">
-                    <app-checkbox [checks]="categorias"></app-checkbox>
-                </div>
+                <app-filtros-check class="box" *ngFor="let filtro of checkFilter" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
 
-                <a class="colecciones" data-toggle="collapse" href="#collapsecolecciones" role="button" [class.active]="activeColecc" (click)="activeColecc=!activeColecc">
-                    <div class="col">Colecciones</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsecolecciones">
-                    <app-checkbox [checks]="colecciones"></app-checkbox>
-                </div>
-
-                <a class="fondos" data-toggle="collapse" href="#collapsefondos" role="button" [class.active]="activeFondos" (click)="activeFondos=!activeFondos">
-                    <div class="col">Fondos recomendados</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsefondos">
-                    <app-checkbox [checks]="fondos"></app-checkbox>
-                </div>
-
-                <a class="estilos" data-toggle="collapse" href="#collapseestilos" role="button" [class.active]="activeEstilos" (click)="activeEstilos=!activeEstilos">
-                    <div class="col">Estilos</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapseestilos">
-                    <app-checkbox [checks]="estilos"></app-checkbox>
-                </div>
-
-                <a class="propiedades" data-toggle="collapse" href="#collapsepropiedades" role="button" [class.active]="activePropiedades" (click)="activePropiedades=!activePropiedades">
-                    <div class="col">Propiedades</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsepropiedades">
-                    <app-checkbox [checks]="propiedades"></app-checkbox>
-                </div>
-
-                <a class="precio" data-toggle="collapse" href="#collapseprecio" role="button" [class.active]="activePrecio" (click)="activePrecio=!activePrecio">
-                    <div class="col">Precio</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapseprecio">
-                    <app-slider></app-slider>
-                </div>
+                <app-filtro-precio class="box" [nombre]="'Precio'"></app-filtro-precio>
 
             </div>
             <div class="row aplicar">
@@ -95,7 +31,7 @@
         </div>
 
         <div class="col-9 contenido">
-            <app-results [colecciones]="colecciones"></app-results>
+            <app-results [colecciones]="checkFilter[1].items"></app-results>
         </div>
 
     </div>

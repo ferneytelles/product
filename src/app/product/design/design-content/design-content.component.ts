@@ -7,20 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesignContentComponent implements OnInit {
 
-  activeMenores = true;
-  activeCateg = true;
-  activeColecc = true;
-  activeFondos = true;
-  activeEstilos = true;
-  activePropiedades = true;
-  activePrecio = true;
+  /**
+   * arreglo que contiene objetos con los filtros chequeables,
+   * los objetos tienen los siguientes atributos:
+   * 1. cadena con el nombre del filtro,
+   * 2. arreglo con las opciones de dicho filtro.
+   */
+  checkFilter = [{name: 'Menores de edad', items: ['Apto para menores de edad']}, {name: 'Colecciones', items: ['Deportes', 'Animales', 'Colombia', 'Personas', 'Cine', 'Figuras', 'Mascotas', 'Militar', 'Comidas', 'Amor']}, {name: 'Fondos recomendados', items: ['Colores claros', 'Colores oscuros', 'Colores ácidos', 'Colores pastel', 'Texturas']}, {name: 'Estilos', items: ['Acuarela', 'Lettering', 'Comic', 'Digital', 'Manga']}, {name: 'Propiedades', items: ['Diseño de color editable']}];
 
-  menores = ['Diseño apto para menores de edad'];
-  categorias = ['Hombre', 'Mujer', 'Niño y bebé', 'Acesorios y más', 'Fechas especiales'];
-  colecciones = ['Deportes', 'Animales', 'Colombia', 'Personas', 'Cine', 'Figuras', 'Mascotas', 'Militar', 'Comidas', 'Amor'];
-  fondos = ['Colores claros', 'Colores oscuros', 'Colores ácidos', 'Colores pastel'];
-  estilos = ['Acuarela', 'Lettering', 'Comic', 'Digital', 'Manga'];
-  propiedades = ['Diseño de color editable', 'Diseño multicara'];
+  activeDesign = false;
 
   constructor() {
 
@@ -28,5 +23,12 @@ export class DesignContentComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  /**
+   * funcion que para abrir o cerrar la seleccion de diseños en mobiles
+   */
+  abrirDiseño(): void{
+    this.activeDesign = !this.activeDesign;
   }
 }

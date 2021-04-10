@@ -15,7 +15,15 @@ export class StoreComponent implements OnInit {
 
   checkFilter2 = [{name: 'Menores de edad', items: ['Apto para menores de edad']}, {name: 'Colecciones', items: ['Deportes', 'Animales', 'Colombia', 'Personas', 'Cine', 'Figuras', 'Mascotas', 'Militar', 'Comidas', 'Amor']}, {name: 'Fondos recomendados', items: ['Colores claros', 'Colores oscuros', 'Colores ácidos', 'Colores pastel', 'Texturas']}, {name: 'Estilos', items: ['Acuarela', 'Lettering', 'Comic', 'Digital', 'Manga']}, {name: 'Propiedades', items: ['Diseño de color editable']}];
 
-  constructor() { }
+  carousel = [];
+
+  constructor() {
+    // this.carousel.push(this.checkFilter[3].items);
+    // this.carousel.push(this.checkFilter[4].items);
+    // this.carousel.push(this.checkFilter[5].items);
+    this.carousel = [...this.checkFilter[3].items, ...this.checkFilter[4].items];
+
+   }
 
   ngOnInit(): void {
   }
