@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
+/**
+ * contenido de la modal de diseños
+ */
 @Component({
   selector: 'app-design-content',
   templateUrl: './design-content.component.html',
@@ -7,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesignContentComponent implements OnInit {
 
+  @Output() activeDesign = new EventEmitter<string>();
   /**
    * arreglo que contiene objetos con los filtros chequeables,
    * los objetos tienen los siguientes atributos:
@@ -15,11 +19,9 @@ export class DesignContentComponent implements OnInit {
    */
   checkFilter = [{name: 'Menores de edad', items: ['Apto para menores de edad']}, {name: 'Colecciones', items: ['Deportes', 'Animales', 'Colombia', 'Personas', 'Cine', 'Figuras', 'Mascotas', 'Militar', 'Comidas', 'Amor']}, {name: 'Fondos recomendados', items: ['Colores claros', 'Colores oscuros', 'Colores ácidos', 'Colores pastel', 'Texturas']}, {name: 'Estilos', items: ['Acuarela', 'Lettering', 'Comic', 'Digital', 'Manga']}, {name: 'Propiedades', items: ['Diseño de color editable']}];
 
-  activeDesign = false;
+  activeFiltros = false;
 
-  constructor() {
-
-   }
+  constructor() {}
 
   ngOnInit(): void {
 
@@ -28,7 +30,11 @@ export class DesignContentComponent implements OnInit {
   /**
    * funcion que para abrir o cerrar la seleccion de diseños en mobiles
    */
-  abrirDiseño(): void{
-    this.activeDesign = !this.activeDesign;
+  abrirDisenio(valor: string): void{
+    this.activeDesign.emit(valor);
+  }
+
+  abrirFiltros(valor: boolean): void{
+    this.activeFiltros = valor;
   }
 }

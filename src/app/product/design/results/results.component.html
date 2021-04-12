@@ -4,7 +4,7 @@
             <h6 class="titulo">Selecciona una colección de diseños:</h6>
         </div>
         <div class="row m-0">
-            <a *ngFor="let coleccion of colecciones" href="#" [style.background]="colores[colecciones.indexOf(coleccion)]" class="col-4 col-lg-3 coleccion">
+            <a *ngFor="let coleccion of colecciones" href="#" [style.background]="colores[colecciones.indexOf(coleccion)]" class="col-6 col-md-4 col-lg-3 coleccion">
                 <span class="material-icons-outlined">crop_original</span>
                 <span class="texto">{{coleccion}}</span>
             </a>
@@ -30,70 +30,80 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="row mx-0 mt-2 etiquetas">
-                    <div class="col-auto tags">
-                        <span>Te puede interesar:</span>
+                    <div class="col prueba">
+                        <button *ngFor="let item of filtros" style="min-width: 200px; height: 15px;"></button>
                     </div>
-                    <div class="col tags">
-                        <a *ngFor="let item of etiquetas" href="#" class="tag">
+                </div>
+
+
+            </div>
+            <div class="row mx-0 mt-2 etiquetas">
+                <div class="col-auto tags">
+                    <span>Te puede interesar:</span>
+                </div>
+                <div class="col tags">
+                    <a *ngFor="let item of etiquetas" href="#" class="tag">
                             {{item}}
                         </a>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="row m-0 ordenar">
-            <div class="col-auto columnas">
-                <span class="">Columnas</span>
-                <ul class="nav" role="tablist">
-                    <li>
+    <div class="row m-0 ordenar">
+        <div class="col-auto columnas">
+            <span class="">Columnas</span>
+            <ul class="nav" role="tablist">
+                <!-- <li>
                         <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
                             <div class="cols"></div>
                             <div class="cols"></div>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(3)">
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(4)">
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#content" class="nav-link active" data-toggle="tab" role="tab" (click)="cambiarCols(5)">
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-auto select">
-                <select class="custom-select">
+                    </li> -->
+                <li>
+                    <a href="#content" class="nav-link" [ngClass]="dosCol" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(3)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(4)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#content" class="nav-link active" data-toggle="tab" role="tab" (click)="cambiarCols(5)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-auto select">
+            <select class="custom-select">
                     <option value="0" selected>Más popular</option>
                     <option value="1">Mayor precio</option>
                     <option value="2">Menor precio</option>
                     <option value="3">Orden alfabético</option>
                 </select>
-            </div>
-        </div>
-        <div class="row mx-0 contenido">
-            <div class="tab-pane fade show active" id="content" role="tabpanel">
-                <app-results-content [columnas]="cols" [imgs]="imgs"></app-results-content>
-            </div>
         </div>
     </div>
-
+    <div class="row mx-0 contenido">
+        <div class="tab-pane fade show active" id="content" role="tabpanel">
+            <app-results-content [columnas]="cols" [imgs]="imgs"></app-results-content>
+        </div>
+    </div>
 </div>

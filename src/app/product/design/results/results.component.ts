@@ -14,11 +14,19 @@ export class ResultsComponent implements OnInit {
   filtros = ['Menores', 'Hombre', 'Mujer', 'Minimal', 'Oscuros'];
   etiquetas = ['Fútbol', 'balón', 'Deportivo', 'Juego', 'Número'];
   imgs = ['assets/img/copa.png', 'assets/img/basketball.png', 'assets/img/basketball2.png', 'assets/img/bandera.png', 'assets/img/garra.png', 'assets/img/deportista.png', 'assets/img/espirales.png', 'assets/img/copa.png', 'assets/img/basketball.png', 'assets/img/basketball2.png', 'assets/img/bandera.png', 'assets/img/garra.png', 'assets/img/deportista.png', 'assets/img/espirales.png'];
+  dosCol = '';
 
   constructor() {
+    if (window.innerWidth <= 960){
+      this.cols = 2;
+      this.dosCol = 'active';
+    }else{
+      this.dosCol = '';
+    }
   }
 
   ngOnInit(): void {
+
     if (this.colecciones.length > 0) {
       for (let x = 0; x < this.colecciones.length; x++) {
         this.colores[x] = this.generarNuevoColor();

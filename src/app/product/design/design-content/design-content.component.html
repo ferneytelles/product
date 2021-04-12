@@ -1,6 +1,20 @@
 <div class="container-fluid">
     <div class="row diseño">
-        <div class="col-3 filtros">
+        <div class="filtros">
+            <div class="row encabezado">
+                <div class="col ruta">
+                    <strong>Editar:</strong>
+                    <a href="#" class="anterior">añadir</a>
+                    <span class="actual">diseño</span>
+                </div>
+                <div class="col-auto px-0">
+                    <button class="cerrar" (click)="abrirDisenio('Null')">
+                        <span class="material-icons">close</span>
+                    </button>
+
+                </div>
+
+            </div>
             <!-- buscador -->
             <div class="row buscador">
                 <div class="input-group">
@@ -11,10 +25,25 @@
                         </button>
                     </div>
                 </div>
-                <button class="filtrar">Filtrar</button>
+                <button class="filtrar" (click)="abrirFiltros(true)">Filtrar</button>
             </div>
 
-            <div class="row categorias">
+            <div class="row categorias" [class.active]="activeFiltros">
+
+                <div class="encabezado">
+                    <div class="col ruta">
+                        <strong>Editar:</strong>
+                        <a href="#" class="anterior">añadir</a>
+                        <a href="#" class="anterior">diseño</a>
+                        <span class="actual">filtros</span>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="cerrar" (click)="abrirFiltros(false)">
+                            <span class="material-icons">close</span>
+                        </button>
+                    </div>
+                </div>
+
                 <a class="todos" href="#">TODOS</a>
 
                 <app-filtros-check class="box" *ngFor="let filtro of checkFilter" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
@@ -22,7 +51,7 @@
                 <app-filtro-precio class="box" [nombre]="'Precio'"></app-filtro-precio>
 
             </div>
-            <div class="row aplicar">
+            <div class="row aplicar" [class.active]="activeFiltros">
                 <button class="btn-aplicar">
                     <span class="material-icons-outlined">filter_alt</span>
                     Aplicar filtro
@@ -30,7 +59,7 @@
             </div>
         </div>
 
-        <div class="col-9 contenido">
+        <div class="contenido">
             <app-results [colecciones]="checkFilter[1].items"></app-results>
         </div>
 

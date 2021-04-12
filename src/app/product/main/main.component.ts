@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
    */
   tags = ['Samurai X', 'Japan', 'Otaku', 'Paisaje japonés', 'Naruto', 'Manga', 'Anime'];
 
-  controlModal = 'false';
+  controlModal = 'Null';
 
   /**
    * Constructor que llama el servicio de modales

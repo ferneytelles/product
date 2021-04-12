@@ -11,7 +11,7 @@
         </div>
         <div class="col-auto px-1">
             <button class="btn btn-outline-primary" (click)="modalMovile('diseño')">Diseño</button>
-            <!-- <app-design-content *ngIf="controlModal=='diseño'"></app-design-content> -->
+            <app-design-content *ngIf="controlModal=='diseño'" (activeDesign)="modalMovile($event)"></app-design-content>
         </div>
         <div class="col-auto px-1">
             <button class="btn btn-outline-primary">Borrador</button>
