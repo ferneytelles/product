@@ -164,6 +164,10 @@
         width: 100vw;
         overflow-y: auto;
     }
+    .container-fluid.noscroll {
+        max-height: 100vh;
+        overflow-y: hidden;
+    }
     .filtros {
         flex: 0 0 100%;
         width: 100%;

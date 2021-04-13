@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" [ngClass]="{'noscroll': controlModal!='Null'}">
     <div class="row botones">
         <div class="col-auto px-1">
             <a [routerLink]="['/store']" class="btn btn-outline-primary">tienda</a>
@@ -49,7 +49,7 @@
 </div>
 
 
-<div class="container-fluid">
+<div class="container-fluid" [ngClass]="{'noscroll': controlModal!='Null'}">
     <div class="row">
         <h4 class="titulo">Este diseño en otros productos</h4>
     </div>

@@ -131,6 +131,11 @@
     .botones {
         display: flex;
     }
+    .container-fluid.noscroll {
+        max-height: 50vh;
+        overflow: hidden;
+        margin-top: 0px;
+    }
 }
 
 @media screen and (max-width: 767px) {
