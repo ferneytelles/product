@@ -30,7 +30,7 @@
                 <button class="filtrar" (click)="abrirFiltros(true)">Filtrar</button>
             </div>
             <!-- contenedor de los filtros -->
-            <div class="row categorias" [class.active]="activeFiltros">
+            <div #categorias class="row categorias" [class.active]="activeFiltros">
 
                 <!-- encabezado de los filtros en movil -->
                 <div class="encabezado">
