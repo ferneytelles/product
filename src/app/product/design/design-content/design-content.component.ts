@@ -35,7 +35,7 @@ export class DesignContentComponent implements OnInit {
      */
     if (/iPad|iPhone/.test(navigator.userAgent)) {
       console.log('iphone');
-      this.filtros.nativeElement.style.marginBottom = "55px";
+      this.filtros.nativeElement.style.paddingBottom = "55px";
     }
     console.log(navigator.userAgent);
   }
