@@ -244,7 +244,7 @@
     }
     .filtros .aplicar {
         position: fixed;
-        z-index: 31;
+        z-index: 30;
         background: #ffffff;
         width: 100vw;
         bottom: 0;
