@@ -40,7 +40,9 @@ export class DesignContentComponent implements OnInit {
       console.log('iphone');
       this.filtros.nativeElement.style.paddingBottom = "75px";
     }
-    console.log(navigator.userAgent);
+    if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
+      alert("El navegador es Chrome");
+    }
   }
 
   /**
