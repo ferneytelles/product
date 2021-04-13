@@ -43,6 +43,8 @@ export class ResultsContentComponent implements OnInit, OnChanges {
       this.width = '33.3%';
     }else if (this.columnas === 2) {
       this.width = '50%';
+    }else if (this.columnas === 1) {
+      this.width = '100%';
     }
   }
 
@@ -102,7 +104,25 @@ export class ResultsContentComponent implements OnInit, OnChanges {
         this.height = '445px';
       }
     }else if (this.columnas === 2){
-      if (window.innerWidth >= 960 && window.innerWidth < 1150){
+      if (window.innerWidth < 350){
+        this.height = '130px';
+      }else if (window.innerWidth >= 350 && window.innerWidth < 400){
+        this.height = '150px';
+      }else if (window.innerWidth >= 400 && window.innerWidth < 450){
+        this.height = '170px';
+      }else if (window.innerWidth >= 450 && window.innerWidth < 500){
+        this.height = '200px';
+      }else if (window.innerWidth >= 500 && window.innerWidth < 550){
+        this.height = '220px';
+      }else if (window.innerWidth >= 550 && window.innerWidth < 600){
+        this.height = '250px';
+      }else if (window.innerWidth >= 600 && window.innerWidth < 700){
+        this.height = '270px';
+      }else if (window.innerWidth >= 700 && window.innerWidth < 830){
+        this.height = '320px';
+      }else if (window.innerWidth >= 830 && window.innerWidth < 960){
+        this.height = '380px';
+      }else if (window.innerWidth >= 960 && window.innerWidth < 1150){
         this.height = '305px';
       }else if (window.innerWidth >= 1150 && window.innerWidth < 1260){
         this.height = '370px';
@@ -118,6 +138,26 @@ export class ResultsContentComponent implements OnInit, OnChanges {
         this.height = '610px';
       }else if (window.innerWidth >= 1950){
         this.height = '670px';
+      }
+    }else if (this.columnas === 1){
+      if (window.innerWidth < 350){
+        this.height = '280px';
+      }else if (window.innerWidth >= 350 && window.innerWidth < 400){
+        this.height = '310px';
+      }else if (window.innerWidth >= 400 && window.innerWidth < 450){
+        this.height = '360px';
+      }else if (window.innerWidth >= 450 && window.innerWidth < 500){
+        this.height = '410px';
+      }else if (window.innerWidth >= 500 && window.innerWidth < 550){
+        this.height = '460px';
+      }else if (window.innerWidth >= 550 && window.innerWidth < 600){
+        this.height = '510px';
+      }else if (window.innerWidth >= 600 && window.innerWidth < 700){
+        this.height = '560px';
+      }else if (window.innerWidth >= 700 && window.innerWidth < 830){
+        this.height = '660px';
+      }else if (window.innerWidth >= 830 && window.innerWidth < 960){
+        this.height = '790px';
       }
     }
   }
@@ -161,5 +201,28 @@ export class ResultsContentComponent implements OnInit, OnChanges {
   // screen 1690-1800px  h 570
   // screen 1800-1950px  h 610
   // screen 1950-2080px  h 670
+
+  // mobile
+  // columnas 2
+  // screen 320-350px  h 130
+  // srreen 350-400px  h 150
+  // screen 400-450px  h 170
+  // screen 450-500px  h 200
+  // screen 500-550px  h 220
+  // screen 550-600px  h 250
+  // screen 600-700px  h 270
+  // screen 700-830px  h 320
+  // screen 830-960px  h 380
+
+  // columnas 1
+  // screen 320-350px  h 280
+  // srreen 350-400px  h 310
+  // screen 400-450px  h 360
+  // screen 450-500px  h 410
+  // screen 500-550px  h 460
+  // screen 550-600px  h 510
+  // screen 600-700px  h 560
+  // screen 700-830px  h 660
+  // screen 830-960px  h 790
 
 }

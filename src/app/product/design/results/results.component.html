@@ -30,23 +30,19 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col prueba">
-                        <button *ngFor="let item of filtros" style="min-width: 200px; height: 15px;"></button>
+                </div>
+                <div class="row mx-0 mt-2 etiquetas">
+                    <div class="col-auto tags">
+                        <span>Te puede interesar:</span>
+                    </div>
+                    <div class="col tags">
+                        <a *ngFor="let item of etiquetas" href="#" class="tag">
+                                {{item}}
+                            </a>
                     </div>
                 </div>
-
-
             </div>
-            <div class="row mx-0 mt-2 etiquetas">
-                <div class="col-auto tags">
-                    <span>Te puede interesar:</span>
-                </div>
-                <div class="col tags">
-                    <a *ngFor="let item of etiquetas" href="#" class="tag">
-                            {{item}}
-                        </a>
-                </div>
-            </div>
+
         </div>
     </div>
 
@@ -54,12 +50,11 @@
         <div class="col-auto columnas">
             <span class="">Columnas</span>
             <ul class="nav" role="tablist">
-                <!-- <li>
-                        <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
-                            <div class="cols"></div>
-                            <div class="cols"></div>
-                        </a>
-                    </li> -->
+                <li>
+                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(1)">
+                        <div class="cols"></div>
+                    </a>
+                </li>
                 <li>
                     <a href="#content" class="nav-link" [ngClass]="dosCol" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
                         <div class="cols"></div>
