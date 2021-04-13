@@ -10,6 +10,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class DesignContentComponent implements OnInit {
 
+  /**
+   * cadena utilizada para cerrar diseños en movil
+   */
   @Output() activeDesign = new EventEmitter<string>();
   /**
    * arreglo que contiene objetos con los filtros chequeables,

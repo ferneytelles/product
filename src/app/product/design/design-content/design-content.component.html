@@ -1,6 +1,7 @@
 <div class="container-fluid">
     <div class="row diseño">
         <div class="filtros">
+            <!-- encabezado de diseños en movil -->
             <div class="row encabezado">
                 <div class="col ruta">
                     <strong>Editar:</strong>
@@ -15,7 +16,7 @@
                 </div>
 
             </div>
-            <!-- buscador -->
+            <!-- campo de busqueda -->
             <div class="row buscador">
                 <div class="input-group">
                     <input type="search" class="form-control" placeholder="Encuentra tu diseño">
@@ -25,11 +26,13 @@
                         </button>
                     </div>
                 </div>
+                <!-- boton para ver filtros en movil -->
                 <button class="filtrar" (click)="abrirFiltros(true)">Filtrar</button>
             </div>
-
+            <!-- contenedor de los filtros -->
             <div class="row categorias" [class.active]="activeFiltros">
 
+                <!-- encabezado de los filtros en movil -->
                 <div class="encabezado">
                     <div class="col ruta">
                         <strong>Editar:</strong>
@@ -49,8 +52,9 @@
                 <app-filtros-check class="box" *ngFor="let filtro of checkFilter" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
 
                 <app-filtro-precio class="box" [nombre]="'Precio'"></app-filtro-precio>
-
             </div>
+
+            <!-- boton para aplicar filtros seleccionados -->
             <div class="row aplicar" [class.active]="activeFiltros">
                 <button class="btn-aplicar">
                     <span class="material-icons-outlined">filter_alt</span>
@@ -58,7 +62,7 @@
                 </button>
             </div>
         </div>
-
+        <!-- contenedor de los diseños encontrados-->
         <div class="contenido">
             <app-results [colecciones]="checkFilter[1].items"></app-results>
         </div>
