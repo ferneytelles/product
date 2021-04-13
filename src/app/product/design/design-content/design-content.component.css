@@ -178,6 +178,7 @@
     }
     .categorias .encabezado {
         width: 100%;
+        height: fit-content;
     }
     .encabezado .ruta {
         display: flex;
@@ -221,7 +222,7 @@
         position: fixed;
         z-index: 30;
         height: calc(100vh - 55px);
-        /* max-height: calc(100vh - 55px); */
+        max-height: calc(100vh - 55px);
         width: 100vw;
         top: 0;
         left: 0px;
@@ -233,11 +234,13 @@
     }
     .filtros .categorias.active {
         display: flex;
+        align-content: flex-start;
     }
     .categorias .todos,
     .categorias .box {
         margin-left: 10px;
         margin-right: 10px;
+        height: fit-content;
     }
     .filtros .aplicar {
         position: fixed;
