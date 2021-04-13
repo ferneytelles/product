@@ -10,6 +10,9 @@ import { Component, EventEmitter, OnInit, Output, ViewChild, ElementRef } from '
 })
 export class DesignContentComponent implements OnInit {
 
+  /**
+   * elemento contenedor de los filtros
+   */
   @ViewChild('categorias', {static: true}) filtros: ElementRef;
   /**
    * cadena utilizada para cerrar diseños en movil
@@ -35,7 +38,7 @@ export class DesignContentComponent implements OnInit {
      */
     if (/iPad|iPhone/.test(navigator.userAgent)) {
       console.log('iphone');
-      this.filtros.nativeElement.style.paddingBottom = "65px";
+      this.filtros.nativeElement.style.paddingBottom = "75px";
     }
     console.log(navigator.userAgent);
   }
