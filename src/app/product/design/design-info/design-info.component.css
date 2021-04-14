@@ -1,0 +1,167 @@
+.container-fluid {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0px;
+}
+
+
+/* estilos del menu superior */
+
+.encabezado {
+    display: flex;
+    background: #d7d7d7;
+    padding: 0px 7px 0px 15px;
+    margin: 0px;
+}
+
+
+/* estilos de la miga de pan */
+
+.encabezado .ruta {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+
+/* estilos de las secciones anteriores a la actual */
+
+.ruta .anterior {
+    margin: 0px;
+    padding: 0px 7px;
+    width: fit-content;
+    border-right: 1px solid #555555;
+    color: #000000;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 0px;
+    text-decoration: underline;
+}
+
+
+/* estilos de la seccion actual */
+
+.ruta .actual {
+    padding: 0px 7px;
+}
+
+
+/* estilos del boton cerrar */
+
+.encabezado .cerrar {
+    padding: 6px;
+    background: none;
+    border: none;
+    height: 40px;
+}
+
+
+/* estilos del icono dentro del boton cerrar */
+
+.cerrar .material-icons {
+    font-size: 28px;
+}
+
+
+/* estilos del contenedor de la imagen */
+
+.imagen {
+    width: 100%;
+    height: 50vh;
+    background: #eeeeee;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* estilos para la imagen de diseño */
+
+.imagen img {
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+
+/* estilos para el contenedor del nombre y precio del diseño */
+
+.informacion {
+    margin: 0px;
+    padding: 15px 0px;
+}
+
+
+/* estilos para el nombre del diseño */
+
+.informacion .nombre {
+    white-space: pre-wrap;
+    font-weight: bold;
+}
+
+
+/* estilos del contenedor del concepto del diseño */
+
+.concepto {
+    margin: 0px 15px;
+    background: #eeeeee;
+    font-size: 14px;
+}
+
+
+/* estilos para el contenedor de las propiedades del diseño */
+
+.propiedades {
+    margin: 15px 0px 0px 0px;
+    font-size: 14px;
+}
+
+
+/* estilos para los titulos dentro de propiedades */
+
+.propiedades .titulo,
+.concepto .titulo {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+/* estilos para los textos dentro de propiedades */
+
+.propiedades .texto,
+.concepto .texto {
+    line-height: 16px;
+}
+
+
+/* estilos para el contenedor del boton seleccionar */
+
+.boton {
+    justify-content: center;
+    margin: 0px;
+    padding: 15px 0px;
+}
+
+
+/* estilos para el boton seleccionar */
+
+.boton .seleccionar {
+    display: flex;
+    align-items: center;
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+
+/* estilos para el icono del boton seleccionar */
+
+.seleccionar .material-icons {
+    font-size: 30px;
+    margin-right: 5px;
+}

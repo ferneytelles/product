@@ -1,26 +1,4 @@
 <div class="container-fluid" [ngClass]="{'noscroll': controlModal!='Null'}">
-    <div class="row botones">
-        <div class="col-auto px-1">
-            <a [routerLink]="['/store']" class="btn btn-outline-primary">tienda</a>
-        </div>
-        <div class="col-auto px-1">
-            <button class="btn btn-outline-primary">Cambiar producto</button>
-        </div>
-        <div class="col-auto px-1">
-            <button class="btn btn-outline-primary">Detalles del producto</button>
-        </div>
-        <div class="col-auto px-1">
-            <button class="btn btn-outline-primary" (click)="modalMovile('diseño')">Diseño</button>
-            <app-design-content *ngIf="controlModal=='diseño'" (activeDesign)="modalMovile($event)"></app-design-content>
-        </div>
-        <div class="col-auto px-1">
-            <button class="btn btn-outline-primary">Borrador</button>
-        </div>
-        <div class="col-auto px-1">
-            <button class="btn btn-outline-primary">Borradores</button>
-        </div>
-    </div>
-
     <div class="row modales">
         <div class="col-auto px-1">
             <a [routerLink]="['/store']" class="btn btn-outline-primary">tienda</a>
@@ -34,7 +12,8 @@
             <app-detalle></app-detalle>
         </div>
         <div class="col-auto px-1">
-            <button class="btn btn-outline-primary" (click)="modalDisenio()">Diseño</button>
+            <button class="btn btn-outline-primary" (click)="modalDisenio();modalMovile('diseño')">Diseño</button>
+            <app-design-content *ngIf="controlModal=='diseño'" (activeDesign)="modalMovile($event)"></app-design-content>
             <app-design></app-design>
         </div>
         <div class="col-auto px-1">

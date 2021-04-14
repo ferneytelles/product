@@ -36,6 +36,7 @@ import { FiltrosCheckComponent } from './product/filtros-check/filtros-check.com
 import { FiltrosColorComponent } from './product/filtros-color/filtros-color.component';
 import { FiltroPrecioComponent } from './product/filtro-precio/filtro-precio.component';
 import { CarouselStyleComponent } from './product/carousel-style/carousel-style.component';
+import { DesignInfoComponent } from './product/design/design-info/design-info.component';
 
 
 
@@ -68,7 +69,8 @@ import { CarouselStyleComponent } from './product/carousel-style/carousel-style.
     FiltrosCheckComponent,
     FiltrosColorComponent,
     FiltroPrecioComponent,
-    CarouselStyleComponent    
+    CarouselStyleComponent,
+    DesignInfoComponent    
   ],
   imports: [
     BrowserModule,

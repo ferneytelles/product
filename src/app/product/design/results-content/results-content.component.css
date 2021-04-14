@@ -6,7 +6,6 @@
 }
 
 .contenedor {
-    /* width: 20%; */
     height: max-content;
     padding: 3px;
 }
@@ -30,6 +29,7 @@
     width: auto;
     max-height: 100%;
     max-width: 100%;
+    border-radius: 0px;
 }
 
 .img .info {
@@ -75,4 +75,19 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+@media screen and (max-width: 960px) {
+    .img:hover .info {
+        display: none;
+    }
+    .informacion {
+        position: fixed;
+        background: #ffffff;
+        z-index: 4;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+    }
 }

@@ -2,12 +2,16 @@
     <div *ngFor="let item of imgs" class="contenedor" [style.width]="width">
         <div class="card">
 
-            <div class="img" [style.height]="height">
+            <div class="img" [style.height]="height" (click)="abrirInfo(true, item)">
+
                 <img [src]=" item " class="card-img-top " alt=" ">
                 <div class="info">
                     <p class="m-0"><strong>Fondos: </strong>claros, pastel</p>
                     <p class="m-0">*color editable, multicara.</p>
                 </div>
+            </div>
+            <div class="informacion" *ngIf="informacion">
+                <app-design-info (cerrar)="abrirInfo(false, '')" [imagen]="img"></app-design-info>
             </div>
 
             <div class="card-body ">

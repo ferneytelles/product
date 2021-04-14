@@ -120,17 +120,7 @@
     border-right-color: #ff0000;
 }
 
-.botones {
-    display: none;
-}
-
 @media screen and (max-width: 960px) {
-    .modales {
-        display: none;
-    }
-    .botones {
-        display: flex;
-    }
     .container-fluid.noscroll {
         max-height: 50vh;
         overflow: hidden;

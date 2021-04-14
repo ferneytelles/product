@@ -30,23 +30,35 @@ export class MainComponent implements OnInit {
    * funcion que ejecuta la modal de cambiar productos
    */
   modalProducto(): void{
+    if(window.innerWidth > 960){
     this.modalService.producto.next(true);
+    }
   }
   modalDisenio(): void{
+    if(window.innerWidth > 960){
     this.modalService.disenio.next(true);
+    }
   }
   modalBorrador(): void{
+    if(window.innerWidth > 960){
     this.modalService.borrador.next(true);
+    }
   }
   modalBorradores(): void{
-    this.modalService.borradores.next(true);
+    if(window.innerWidth > 960){
+      this.modalService.borradores.next(true);
+    }
   }
   modalDetalle(): void{
+    if(window.innerWidth > 960){
     this.modalService.detalle2.next(true);
+    }
   }
 
   modalMovile(valor: string): void{
-    this.controlModal = valor;
+    if(window.innerWidth <= 960){
+      this.controlModal = valor;
+    }    
   }
 
 }

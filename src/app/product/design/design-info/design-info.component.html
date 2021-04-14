@@ -1,0 +1,65 @@
+<div #contenedor class="container-fluid">
+
+    <!-- contenedor del menu superior  -->
+    <div class="row encabezado">
+        <div class="col ruta">
+            <strong>Editar:</strong>
+            <a href="#" class="anterior">añadir</a>
+            <a href="#" class="anterior">diseño</a>
+            <span class="actual">selección</span>
+        </div>
+        <div class="col-auto px-0">
+            <button class="cerrar" (click)="cerrarInfo(false)">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- contendor de la imagen del diseño-->
+    <div class="row imagen">
+        <img [src]="imagen" alt="">
+    </div>
+
+    <!-- contenedor del nombre y el precio del diseño -->
+    <div class="row informacion">
+        <div class="col">
+            <!-- nombre del diseño -->
+            <p class="nombre m-0">Nombre del diseño</p>
+        </div>
+        <div class="col-auto">
+            <!-- precio del diseño -->
+            <span>$ 999.000</span>
+        </div>
+    </div>
+
+    <!-- contenedor del texto del concepto -->
+    <div class="row concepto">
+        <div class="col p-2">
+            <!-- concepto del diseño -->
+            <span class="titulo">Concepto:</span>
+            <span class="texto">{{concepto}}</span>
+        </div>
+    </div>
+    <!-- contenedor de las propiedades del diseño -->
+    <div class="row propiedades">
+
+        <!-- propiedades del diseño -->
+        <div class="col-12">
+            <span class="titulo">Fondos recomendados: </span>
+            <span class="texto">claros, pastel.</span>
+        </div>
+        <div class="col-12">
+            <span class="titulo">Propiedades:</span>
+            <span class="texto">Color editable, multicara.</span>
+        </div>
+
+    </div>
+    <!-- contenedor del boton seleccionar -->
+    <div class="row boton">
+        <button class="seleccionar">
+            <span class="material-icons">check</span>
+            Seleccionar
+        </button>
+    </div>
+
+</div>

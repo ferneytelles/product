@@ -38,10 +38,14 @@ export class DesignContentComponent implements OnInit {
      */
     if (/iPad|iPhone/.test(navigator.userAgent)) {
       console.log('iphone');
-      this.filtros.nativeElement.style.paddingBottom = "75px";
+      this.filtros.nativeElement.style.paddingBottom = '75px';
     }
-    if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
-      alert("El navegador es Chrome");
+    /**
+     * condicion que detecta si se accede desde chrome en dispositivos
+     * android
+     */
+    if (/Android/.test(navigator.userAgent) && navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
+      this.filtros.nativeElement.style.paddingBottom = '75px';
     }
   }
 

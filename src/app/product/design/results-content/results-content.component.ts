@@ -1,37 +1,99 @@
 import { Component, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
+/**
+ * componente que contiene los diseños encontrados segun los filtros aplicados
+ */
 @Component({
   selector: 'app-results-content',
   templateUrl: './results-content.component.html',
   styleUrls: ['./results-content.component.css']
 })
+
 export class ResultsContentComponent implements OnInit, OnChanges {
 
+  /**
+   * numero que recibe la cantidad de columnas seleccionadas 
+   */
   @Input() columnas: number;
+  /**
+   * arreglo que recibe las rutas de las imagenes de los diseños encontrados
+   */
   @Input() imgs: Array<any>;
+  /**
+   *variable que permite reiniciar el tiempo en la funcion onResize()
+   */
   resizeTime: NodeJS.Timer;
+  /**
+   * cadena que determina el alto de los contenedores de la imagen
+   */
   height = '130px';
+  /**
+   * cadena que determina el ancho de los contenedores de la imagen
+   */
   width = '20%';
-  
+  /**
+   * boolean que permite abrir los detalles del diseño
+   */
+  informacion = false;
+  /**
+   * cadena que contiene la imagen del diseño seleccionado
+   */
+  img = '';
+
   constructor() {
   }
 
+  /**
+   * funcion que escucha el cambio de los pixeles en el ancho de la ventana
+   */
   @HostListener('window:resize', ['$event'])
   onResize(): any {
+    /**
+     * funcion que detiene la ejecucion programada de la funcion asignada
+     * a la variable resizeTime
+     */
     clearTimeout(this.resizeTime);
+    /**
+     * asignacion que permite ejecutar la funcion setImgHeight() despues de 200 milisegundos
+     */
     this.resizeTime = setTimeout(() => {
       this.setImgHeight();
     }, 200);
   }
 
+  /**
+   * permite ejecutar las funciones para la asignacion de alto y acho de los contenedores
+   * de las imaganes de los diseños cuando carga el componente
+   */
   ngOnInit(): void {
     this.setCardWidth();
     this.setImgHeight();
   }
 
+  /**
+   * permite ejecutar las funciones para la asignacion de alto y acho de los contenedores
+   * de las imaganes de los diseños cuando hay una cambio en alguno de los Input's
+   * @param changes recibe los cambios generados por el componente padre
+   */
   ngOnChanges(changes: SimpleChanges): void {
     this.setCardWidth();
     this.setImgHeight();
+  }
+
+  /**
+   * funcion que permite abrir los detalles del diseño cuando se selecciona un diseño
+   * @param valor boolean que se asigna a la variable que permite abrir los detalles
+   * del diseño
+   * @param img cadena que recibe la ruta de la imagen del diseo seleccionado
+   */
+  abrirInfo(valor: boolean, img: string): void{
+    /**
+     * condición que verifica que se ejecuta desde versiones de pantalla móvil
+     */
+    if (window.innerWidth <= 960){
+      this.informacion = valor;
+      this.img = img;
+    }
   }
 
   setCardWidth(): void{
