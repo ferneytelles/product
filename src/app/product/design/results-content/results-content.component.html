@@ -1,20 +1,25 @@
 <div class="container-fluid">
+    <!-- N contenedores de la trajeta de diseños  -->
     <div *ngFor="let item of imgs" class="contenedor" [style.width]="width">
+        <!-- tarjeta de diseño -->
         <div class="card">
-
-            <div class="img" [style.height]="height" (click)="abrirInfo(true, item)">
-
+            <!-- contenedor de la imagen del diseño -->
+            <div class="img" [style.height]="height" (click)="abrirDetalles(true, item)">
                 <img [src]=" item " class="card-img-top " alt=" ">
+                <!-- destalles del diseño que se muestra con el hover sobre el contenedor de la imagen en la version web -->
                 <div class="info">
                     <p class="m-0"><strong>Fondos: </strong>claros, pastel</p>
                     <p class="m-0">*color editable, multicara.</p>
                 </div>
             </div>
+            <!-- contenedor de los detalles del diseño en version movil  -->
             <div class="informacion" *ngIf="informacion">
-                <app-design-info (cerrar)="abrirInfo(false, '')" [imagen]="img"></app-design-info>
+                <!-- componende de los detalles del diseño en version movil -->
+                <app-design-info (cerrar)="abrirDetalles(false, '')" [imagen]="img"></app-design-info>
             </div>
 
             <div class="card-body ">
+                <!-- contenedor de la informacion del diseño: nombre y precio del diseño-->
                 <div class="detalles">
                     <div class="row m-0 detalle">
                         <div class="col px-1 col-nombre">

@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input, ViewChild, ElementRef } from '@angular/core';
 
 /**
- * componente que contiene lod detallas del diseño
+ * componente que contiene los detallas del diseño para la version móvil
  */
 @Component({
   selector: 'app-design-info',

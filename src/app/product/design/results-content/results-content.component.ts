@@ -47,15 +47,10 @@ export class ResultsContentComponent implements OnInit, OnChanges {
    * funcion que escucha el cambio de los pixeles en el ancho de la ventana
    */
   @HostListener('window:resize', ['$event'])
-  onResize(): any {
-    /**
-     * funcion que detiene la ejecucion programada de la funcion asignada
-     * a la variable resizeTime
-     */
-    clearTimeout(this.resizeTime);
-    /**
-     * asignacion que permite ejecutar la funcion setImgHeight() despues de 200 milisegundos
-     */
+  onResize(): any {    
+    // funcion que detiene la ejecucion programada de la funcion asignada a la variable resizeTime     
+    clearTimeout(this.resizeTime);    
+    // asignacion que permite ejecutar la funcion setImgHeight() despues de 200 milisegundos
     this.resizeTime = setTimeout(() => {
       this.setImgHeight();
     }, 200);
@@ -86,16 +81,17 @@ export class ResultsContentComponent implements OnInit, OnChanges {
    * del diseño
    * @param img cadena que recibe la ruta de la imagen del diseo seleccionado
    */
-  abrirInfo(valor: boolean, img: string): void{
-    /**
-     * condición que verifica que se ejecuta desde versiones de pantalla móvil
-     */
+  abrirDetalles(valor: boolean, img: string): void{
+    //  condición que verifica que se ejecuta desde versiones de pantalla móvil     
     if (window.innerWidth <= 960){
       this.informacion = valor;
       this.img = img;
     }
   }
-
+  /**
+   * funcion que hace la asignación del tamaño de ancho del contenedor de la imagen
+   * dependiendo del numero de columnas seleccionadas
+   */
   setCardWidth(): void{
     if (this.columnas === 5) {
       this.width = '20%';
@@ -110,6 +106,10 @@ export class ResultsContentComponent implements OnInit, OnChanges {
     }
   }
 
+  /**
+   * funcion que hace la asignación del tamaño de alto del contenedor de la imagen dependiendo
+   * del numero de ccolumnas seleccionadas y del ancho en pixeles de la ventana
+   */
   setImgHeight(): void{
     if (this.columnas === 5){
       if (window.innerWidth >= 960 && window.innerWidth < 1150){

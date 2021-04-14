@@ -5,10 +5,16 @@
     padding: 0px;
 }
 
+
+/* estilos del contenedor del diseño */
+
 .contenedor {
     height: max-content;
     padding: 3px;
 }
+
+
+/* estilos de la terjeta de diseño */
 
 .card {
     width: 100%;
@@ -16,13 +22,18 @@
     height: 100%;
 }
 
+
+/* estilos del contenedor de la imagen del diseño */
+
 .card .img {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #d7d7d7;
-    /* max-height: 100px; */
 }
+
+
+/* estilos de la imagen del diseño */
 
 .card .img img {
     height: auto;
@@ -31,6 +42,9 @@
     max-width: 100%;
     border-radius: 0px;
 }
+
+
+/* estilos del contenedor de los detalles del diseño en version web */
 
 .img .info {
     display: none;
@@ -45,9 +59,15 @@
     transition: all .3s ease;
 }
 
+
+/* estilos del contenedor de los detalles cuando ocurre el evento hover sobre el contenedor de la imagen */
+
 .img:hover .info {
     display: block;
 }
+
+
+/* estilos del contenedor del cuerpo de la tarjeta */
 
 .card-body {
     padding: 0px;
@@ -55,19 +75,24 @@
     height: max-content;
 }
 
-.detalles .precio {
-    font-size: 13px;
-}
+
+/* estilosdel contenedor de la informacion del diseño */
 
 .detalle {
     align-items: center;
     justify-content: space-between;
 }
 
+
+/* estilos del contenedor del nombre del diseño */
+
 .col-nombre {
     max-width: calc(100% - 66px);
     height: fit-content;
 }
+
+
+/* estilos para el nombre del diseño */
 
 .nombre {
     font-size: 13px;
@@ -77,10 +102,22 @@
     overflow: hidden;
 }
 
+
+/* estolos para el precio del diseño */
+
+.detalle .precio {
+    font-size: 13px;
+}
+
+
+/* estilos para la version movil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para los detalles del diseño en version web; el contenedor desaparece para la version  */
     .img:hover .info {
         display: none;
     }
+    /* contenedor de los detalles del diseño en version movil */
     .informacion {
         position: fixed;
         background: #ffffff;
