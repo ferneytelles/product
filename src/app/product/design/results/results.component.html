@@ -6,7 +6,9 @@
         </div>
         <div class="row m-0">
             <a *ngFor="let coleccion of colecciones" href="#" [style.background]="colores[colecciones.indexOf(coleccion)]" class="col-6 col-md-4 col-lg-3 coleccion">
+                <!-- icono de la coleccion -->
                 <span class="material-icons-outlined">crop_original</span>
+                <!-- nombre de la coleccion -->
                 <span class="texto">{{coleccion}}</span>
             </a>
         </div>
@@ -14,8 +16,10 @@
     <!-- contenedor de los resultados de diseños -->
     <div *ngIf="filtros.length > 0">
         <div class="row m-0">
+            <!-- contenedor de los filtros aplicados y las etiquetas de los diseños -->
             <div class="col contenedor">
                 <div class="row m-0">
+                    <!-- contenedor de la cantidad de resultados y el boton borrar filtros -->
                     <div class="col-auto resultados">
                         <span class="cant">{{ imgs.length }} resultados</span>
                         <a href="#" class="borrar_filtros">
@@ -23,15 +27,19 @@
                             <span class="borrar">Borrar filtros</span>
                         </a>
                     </div>
+                    <!-- contenedor de los filtros aplicados -->
                     <div class="col filtros">
                         <div *ngFor="let filtro of filtros" class="filtro">
+                            <!-- nombre del filtro -->
                             <span class="nombre">{{filtro}}</span>
-                            <a href="#" class="cerrar">
+                            <!-- bobotn para eliminar filtro -->
+                            <a href="#" class="delete">
                                 <span class="material-icons">close</span>
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- contenedor de las etiquetas de los diseños encontrados -->
                 <div class="row mx-0 mt-2 etiquetas">
                     <div class="col-auto tags">
                         <span>Te puede interesar:</span>
@@ -46,10 +54,12 @@
 
         </div>
 
-
+        <!-- contenedor de la seccion que permite ordenar los resultados -->
         <div class="row m-0 ordenar">
+            <!-- contenedor de la cantidad se columnas seleccionables -->
             <div class="col-auto columnas">
                 <span class="">Columnas</span>
+                <!-- lista que contiene las opciones de columnas -->
                 <ul class="nav" role="tablist">
                     <li>
                         <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(1)">
@@ -88,7 +98,9 @@
                     </li>
                 </ul>
             </div>
+
             <div class="col-auto select">
+                <!-- selector para definir el orden de los resultados -->
                 <select class="custom-select">
                     <option value="0" selected>Más popular</option>
                     <option value="1">Mayor precio</option>
@@ -97,6 +109,7 @@
                 </select>
             </div>
         </div>
+        <!-- contenedor del componente de los resultados de diseños -->
         <div class="row mx-0 contenido">
             <div class="tab-pane fade show active" id="content" role="tabpanel">
                 <app-results-content [columnas]="cols" [imgs]="imgs"></app-results-content>

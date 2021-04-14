@@ -1,7 +1,12 @@
+/* estilos para el titulo, visible cuando no hay filtros aplicados */
+
 .titulo {
     padding: 0px 10px;
     color: #555555;
 }
+
+
+/* estilos para el contenedor de la coleccion */
 
 .coleccion {
     padding: 0px;
@@ -12,11 +17,17 @@
     align-items: center;
 }
 
-.material-icons-outlined {
+
+/* estilos para los iconos de de las colecciones */
+
+.coleccion .material-icons-outlined {
     position: absolute;
     font-size: 95px;
     color: #000000;
 }
+
+
+/* estilos para el nombre de la coleccion */
 
 .texto {
     position: absolute;
@@ -26,12 +37,18 @@
     color: #ffffff;
 }
 
+
+/* estilos del contenedor de los filtros aplicados y las etiquetas de los diseños */
+
 .contenedor {
     background: #eeeeee;
     font-size: 13px;
     padding: 5px;
     width: 100%;
 }
+
+
+/* estilos para el contenedor de la cantidad de resultados y  el boton de borrar filtros */
 
 .contenedor .resultados {
     padding: 5px;
@@ -42,9 +59,15 @@
     align-items: center;
 }
 
+
+/* estilos para el span que muestra la cantidad de resultados  */
+
 .resultados .cant {
     font-size: 14px;
 }
+
+
+/* estilos para el boton de borrar filtros */
 
 .borrar_filtros {
     color: #000000;
@@ -56,14 +79,23 @@
     text-decoration: none;
 }
 
+
+/* estilos para el texto del boton borrar filtros */
+
 .borrar_filtros .borrar {
     text-decoration: underline;
 }
+
+
+/* estilo para el icono del boton borrar filtros  */
 
 .borrar_filtros .material-icons {
     color: #555555;
     font-size: 20px;
 }
+
+
+/* estilo para el contenedor de los filtros aplicados */
 
 .contenedor .filtros {
     display: flex;
@@ -71,6 +103,9 @@
     flex-wrap: wrap;
     padding: 0px;
 }
+
+
+/* estilo para el contenedor del filtro */
 
 .filtros .filtro {
     display: flex;
@@ -84,30 +119,51 @@
     margin: 3px;
 }
 
+
+/* estilo para el nombre del filtro */
+
 .filtro .nombre {
     line-height: 14px;
 }
 
-.filtro .cerrar {
+
+/* estilo para el boton de eliminar filtro */
+
+.filtro .delete {
     max-height: 18px;
 }
+
+
+/* estilo para el icono del boton eliminar filtro */
 
 .filtro .material-icons {
     color: #555555;
     font-size: 18px;
 }
 
+
+/* estilo del contenedor de las seccion de etiquetas */
+
 .etiquetas {
     padding: 0px 5px;
 }
+
+
+/* estilo para el contenedor del titulo de las etiquetas */
 
 .tags {
     padding: 0px;
 }
 
+
+/* estilo para el contenedor de las etiquetas */
+
 .col.tags {
     flex-wrap: wrap;
 }
+
+
+/* estilos para cada etiqueta */
 
 .tag {
     color: #000000;
@@ -119,12 +175,18 @@
     text-decoration: none;
 }
 
+
+/* estilos para la seccion de ordenar los resultados */
+
 .ordenar {
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
     border-bottom: 1px solid #c8c8c8;
 }
+
+
+/* estilos para el contenedor de las opciones de columnas */
 
 .columnas {
     padding: 0px 5px;
@@ -133,9 +195,15 @@
     align-items: center;
 }
 
+
+/* estilo para el primera opcion de columnas, deshabilitada en version web  */
+
 .columnas .nav li:nth-child(1) {
     display: none;
 }
+
+
+/* estilos para las opciones de columnas */
 
 .nav-link {
     display: flex;
@@ -144,6 +212,9 @@
     padding: 0px 1px;
 }
 
+
+/* estilo para los iconos dentro que cada opcion de columnas */
+
 .nav-link .cols {
     margin: 0px 1px;
     height: 15px;
@@ -151,9 +222,15 @@
     background: #d7d7d7;
 }
 
+
+/* estilo para la opcion de columnas seleccionadas */
+
 .nav-link.active .cols {
     background: #ff0000;
 }
+
+
+/* estilo para el contenedor del selector de ordenamiento */
 
 .select {
     display: flex;
@@ -161,6 +238,9 @@
     font-size: 13px;
     padding: 0px 5px;
 }
+
+
+/* estilo del selector de ordenamiento */
 
 .select .custom-select {
     width: fit-content;
@@ -172,20 +252,29 @@
     border: 2px solid #c8c8c8;
 }
 
+
+/* estilos para el contenedor del componente de los resultados de diseños */
+
 #content {
     width: 100%;
     margin-top: 5px;
 }
 
+
+/* estilos para la version movil del componente */
+
 @media screen and (max-width: 960px) {
+    /* estilo para el contenedor de la cantidad de resultados y el boton de borrar filtros */
     .contenedor .resultados {
         flex: 0 0 100%;
         width: 100%;
         justify-content: space-between;
     }
+    /* estilo para el boton de borrar filtros */
     .resultados .borrar_filtros {
         border-left: none;
     }
+    /* estilos para el contenedor de los filtros aplicados */
     .contenedor .filtros {
         flex: 0 0 100%;
         width: 100%;
@@ -193,12 +282,15 @@
         flex-wrap: nowrap;
         overflow-x: auto;
     }
+    /* estilo para el contenedor de las etiquetas */
     .etiquetas {
         display: none;
     }
+    /* estilo para la primera opcion de columnas disponibles */
     .columnas .nav li:nth-child(1) {
         display: block;
     }
+    /* ocultar las tres ultimas opciones de columnas */
     .columnas .nav li:nth-child(3),
     .columnas .nav li:nth-child(4),
     .columnas .nav li:nth-child(5) {
