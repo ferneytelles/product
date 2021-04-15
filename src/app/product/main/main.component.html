@@ -1,4 +1,5 @@
 <div class="container-fluid" [ngClass]="{'noscroll': controlModal!='Null'}">
+    <!-- contenedor de los botones para las modales -->
     <div class="row modales">
         <div class="col-auto px-1">
             <a [routerLink]="['/store']" class="btn btn-outline-primary">tienda</a>
@@ -27,54 +28,65 @@
     </div>
 </div>
 
-
+<!-- contenedor de la parte de abajo del editor -->
 <div class="container-fluid" [ngClass]="{'noscroll': controlModal!='Null'}">
+    <!-- contenedor del titulo de la venta cruzada -->
     <div class="row">
         <h4 class="titulo">Este diseño en otros productos</h4>
     </div>
+    <!-- contenedor del componente del menu con los carousel de cada item del menu -->
     <div class="row">
         <app-menu class="w-100"></app-menu>
     </div>
     <div class="row">
+        <!-- contenedor de otros usuarios tambien compraron -->
         <div class="col otros">
             <h4 class="titulo mb-2">Otros usuarios también compraron:</h4>
             <app-carousel></app-carousel>
         </div>
     </div>
     <div class="row">
+        <!-- contenedor de diseños similares -->
         <div class="col fondo-s">
             <h4 class="titulo similares mb-2">Diseños similares:</h4>
             <app-carousel></app-carousel>
         </div>
     </div>
+    <!-- contenedor de las etiquetas del producto actual -->
     <div class="row fondo-img">
         <h4 class="titulo w-100 mb-3">Te puede interesar:</h4>
         <div *ngFor="let tag of tags" class="col-auto tags">
             <span class="tag">{{tag}}</span>
         </div>
     </div>
+    <!-- contenedor de la seccion de las garantias de venta -->
     <div class="row info">
+        <!-- contenedor del titulo de la seccion  -->
         <div class="col-12 px-0">
             <h4 class="titulo text-center mb-2 mb-md-4">Satisfacción 100% garantizada</h4>
         </div>
+        <!-- contenedor de pagos seguros -->
         <div class="col-lg-3 col-6">
             <span class="material-icons">security</span>
             <p class="bold">Pagos seguros</p>
             <p class="texto">Compra con total seguridad a través de crédito, débito o efectivo</p>
             <a class="mas-info" href="#">Más información</a>
         </div>
+        <!-- contenedor de devoluciones gratuitas -->
         <div class="col-lg-3 col-6">
             <span class="material-icons">compare_arrows</span>
             <p class="bold">Devoluciones gratuitas</p>
             <p class="texto">15 días para efectuar cambios gratuitos en cualquier penda</p>
             <a class="mas-info" href="#">Más información</a>
         </div>
+        <!-- contenedor de acesoria personalizada -->
         <div class="col-lg-3 col-6">
             <span class="material-icons">headset_mic</span>
             <p class="bold">Acesoría personalizada</p>
             <p class="texto">Estamos disponibles de lunes a viernes de 9:00 am a 6:00 pm</p>
             <a class="mas-info" href="#">Más información</a>
         </div>
+        <!-- contenedor de envios a toda colombia -->
         <div class="col-lg-3 col-6">
             <span class="material-icons-outlined">local_shipping</span>
             <p class="bold">Envíos a toda Colombia</p>
@@ -83,12 +95,14 @@
         </div>
 
     </div>
-
+    <!-- contenedor de la seccion de suscribirse y metodos de pago  -->
     <div class="row pagos">
+        <!-- contenedor de suscribirse al boletin -->
         <div class="col-12 col-md-6 pagos-col borde">
             <h4 class="titulo mb-2 mb-md-4">Suscríbete a nuestro boletín</h4>
             <p class="texto">Para enterarte de todas nuestras ofertas, promociones y sorteos</p>
             <a class="mas-info" href="#">Más información sobre nuestro boletín</a>
+            <!-- contenedor del campo para el correo y el boton suscribirse -->
             <div class="input-group my-2">
                 <input type="email" class="form-control" placeholder="Tu correo electrónico">
                 <div class="input-group-append">
@@ -96,13 +110,15 @@
                 </div>
             </div>
         </div>
+        <!-- contenedor de metodos de pago -->
         <div class="col-12 col-md-6 pagos-col">
             <h4 class="titulo">Métodos de pago</h4>
+            <!-- imagen de los metodos de pago -->
             <img class="img-fluid" src="assets/img/pagos.png" alt="">
         </div>
-
     </div>
 
+    <!-- parte inferior oscura simulando el espacio del footer -->
     <div class="row py-5 bg-dark">
         <h4 class="text-center text-white">footer</h4>
     </div>

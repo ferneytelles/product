@@ -1,17 +1,16 @@
-<!-- Button trigger modal -->
-<!-- <button class="btn btn-outline-primary" (click)="openModal()">Diseño</button> -->
-
-
-<!-- Modal de Diseños-->
+<!-- contenedor de la Modal de Diseños-->
 <ng-template #content let-modal class="design">
+    <!-- contenedor del encabezado de la modal de diseños -->
     <div class="modal-header">
         <span class="material-icons-outlined">perm_media</span>
         <h6 class="title">Diseño:</h6>
         <h6 class="subtitle">añadir diseño para personalización</h6>
+        <!-- boton de cerrar la modal de diseños -->
         <button type="button" class="cerrar" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span class="material-icons">close</span>
       </button>
     </div>
+    <!-- contenedor del cuerpo de la modal de diseños -->
     <div class="modal-body">
         <app-design-content></app-design-content>
     </div>

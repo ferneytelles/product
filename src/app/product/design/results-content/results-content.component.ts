@@ -12,7 +12,7 @@ import { Component, HostListener, Input, OnChanges, OnInit, SimpleChanges } from
 export class ResultsContentComponent implements OnInit, OnChanges {
 
   /**
-   * numero que recibe la cantidad de columnas seleccionadas 
+   * numero que recibe la cantidad de columnas seleccionadas
    */
   @Input() columnas: number;
   /**
@@ -20,7 +20,7 @@ export class ResultsContentComponent implements OnInit, OnChanges {
    */
   @Input() imgs: Array<any>;
   /**
-   *variable que permite reiniciar el tiempo en la funcion onResize()
+   * variable que permite reiniciar el tiempo en la funcion onResize()
    */
   resizeTime: NodeJS.Timer;
   /**
@@ -47,9 +47,9 @@ export class ResultsContentComponent implements OnInit, OnChanges {
    * funcion que escucha el cambio de los pixeles en el ancho de la ventana
    */
   @HostListener('window:resize', ['$event'])
-  onResize(): any {    
-    // funcion que detiene la ejecucion programada de la funcion asignada a la variable resizeTime     
-    clearTimeout(this.resizeTime);    
+  onResize(): any {
+    // funcion que detiene la ejecucion programada de la funcion asignada a la variable resizeTime
+    clearTimeout(this.resizeTime);
     // asignacion que permite ejecutar la funcion setImgHeight() despues de 200 milisegundos
     this.resizeTime = setTimeout(() => {
       this.setImgHeight();

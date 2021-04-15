@@ -15,7 +15,7 @@ export class DesignContentComponent implements OnInit {
    */
   @ViewChild('categorias', {static: true}) filtros: ElementRef;
   /**
-   * cadena utilizada para cerrar diseños en movil
+   * cadena utilizada que se emite para cerrar diseños en movil
    */
   @Output() activeDesign = new EventEmitter<string>();
   /**
@@ -50,7 +50,7 @@ export class DesignContentComponent implements OnInit {
   }
 
   /**
-   * funcion que para abrir o cerrar la seleccion de diseños en mobiles
+   * funcion que permite cerrar la seleccion de diseños en mobiles emitiendo una variable
    */
   abrirDisenio(valor: string): void{
     this.activeDesign.emit(valor);

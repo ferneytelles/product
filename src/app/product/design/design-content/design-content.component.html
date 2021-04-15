@@ -1,7 +1,8 @@
 <div class="container-fluid" [ngClass]="{'noscroll': activeFiltros}">
+    <!-- contenedor del contenido de la modal de diseños -->
     <div class="row diseño">
         <div class="filtros">
-            <!-- encabezado de diseños en movil -->
+            <!-- contenedor del encabezado de diseños en movil -->
             <div class="row encabezado">
                 <div class="col ruta">
                     <strong>Editar:</strong>
@@ -16,8 +17,9 @@
                 </div>
 
             </div>
-            <!-- campo de busqueda -->
+            <!-- contenedor del campo de busqueda -->
             <div class="row buscador">
+                <!-- contenedor del busacador -->
                 <div class="input-group">
                     <input type="search" class="form-control" placeholder="Encuentra tu diseño">
                     <div class="input-group-append">
@@ -48,13 +50,13 @@
                 </div>
 
                 <a class="todos" href="#">TODOS</a>
-
+                <!-- componente de los filtros chequeables -->
                 <app-filtros-check class="box" *ngFor="let filtro of checkFilter" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
-
+                <!-- componente del filtro de rango de precio -->
                 <app-filtro-precio class="box" [nombre]="'Precio'"></app-filtro-precio>
             </div>
 
-            <!-- boton para aplicar filtros seleccionados -->
+            <!-- contenedor del boton para aplicar filtros seleccionados -->
             <div class="row aplicar" [class.active]="activeFiltros">
                 <button class="btn-aplicar">
                     <span class="material-icons-outlined">filter_alt</span>
@@ -62,7 +64,7 @@
                 </button>
             </div>
         </div>
-        <!-- contenedor de los diseños encontrados-->
+        <!-- contenedor de los resultados de diseños-->
         <div class="contenido">
             <app-results [colecciones]="checkFilter[1].items"></app-results>
         </div>
