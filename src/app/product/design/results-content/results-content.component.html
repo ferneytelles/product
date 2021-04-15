@@ -1,12 +1,12 @@
 <div class="container-fluid">
-    <!-- N contenedores de la trajeta de diseños  -->
+    <!-- N contenedores de las trajetas de diseños  -->
     <div *ngFor="let item of imgs" class="contenedor" [style.width]="width">
         <!-- tarjeta de diseño -->
         <div class="card">
             <!-- contenedor de la imagen del diseño -->
             <div class="img" [style.height]="height" (click)="abrirDetalles(true, item)">
                 <img [src]=" item " class="card-img-top " alt=" ">
-                <!-- destalles del diseño que se muestra con el hover sobre el contenedor de la imagen en la version web -->
+                <!-- contenedor de los detalles del diseño que se muestra con el hover sobre el contenedor de la imagen en la version web -->
                 <div class="info">
                     <p class="m-0"><strong>Fondos: </strong>claros, pastel</p>
                     <p class="m-0">*color editable, multicara.</p>

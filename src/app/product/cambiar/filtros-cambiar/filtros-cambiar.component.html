@@ -1,8 +1,25 @@
-<div class="container-fluid">
-    <div class="row diseño">
-        <div class="col-3 filtros">
-            <!-- buscador -->
+<div class="container-fluid" [ngClass]="{'noscroll': activeFiltros}">
+    <!-- contenedor del contenido de la modal de cambiar producto -->
+    <div class="row producto">
+        <div class="filtros">
+            <!-- contenedor del encabezado de cambiar producto en movil -->
+            <div class="row encabezado">
+                <div class="col ruta">
+                    <strong>Editar:</strong>
+                    <a href="#" class="anterior">añadir</a>
+                    <span class="actual">diseño</span>
+                </div>
+                <div class="col-auto px-0">
+                    <button class="cerrar" (click)="abrirProducto('Null')">
+                        <span class="material-icons">close</span>
+                    </button>
+
+                </div>
+
+            </div>
+            <!-- contenedor del campo de busqueda -->
             <div class="row buscador">
+                <!-- contenedor del busacador -->
                 <div class="input-group">
                     <input type="search" class="form-control" placeholder="Encuentra tu diseño">
                     <div class="input-group-append">
@@ -11,122 +28,48 @@
                         </button>
                     </div>
                 </div>
+                <!-- boton para ver filtros en movil -->
+                <button class="filtrar" (click)="abrirFiltros(true)">Filtrar</button>
             </div>
+            <!-- contenedor de los filtros -->
+            <div #categorias class="row categorias" [class.active]="activeFiltros">
 
-            <div class="row categorias">
+                <!-- encabezado de los filtros en movil -->
+                <div class="encabezado">
+                    <div class="col ruta">
+                        <strong>Editar:</strong>
+                        <a href="#" class="anterior">añadir</a>
+                        <a href="#" class="anterior">diseño</a>
+                        <span class="actual">filtros</span>
+                    </div>
+                    <div class="col-auto px-0">
+                        <button class="cerrar" (click)="abrirFiltros(false)">
+                            <span class="material-icons">close</span>
+                        </button>
+                    </div>
+                </div>
 
                 <a class="todos" href="#">TODOS</a>
-
-                <a class="categ" data-toggle="collapse" href="#collapsecategorias" role="button" [class.active]="activeCategorias" (click)="activeCategorias=!activeCategorias">
-                    <div class="col">Categorias</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsecategorias">
-                    <app-radio [radios]="categorias"></app-radio>
-                </div>
-
-                <a class="productos" data-toggle="collapse" href="#collapseproductos" role="button" [class.active]="activeProductos" (click)="activeProductos=!activeProductos">
-                    <div class="col">Productos</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapseproductos">
-                    <app-radio [radios]="productos"></app-radio>
-                </div>
-
-                <a class="colores" data-toggle="collapse" href="#collapsecolores" role="button" [class.active]="activeColores" (click)="activeColores=!activeColores">
-                    <div class="col">Colores</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsecolores">
-                    <app-colores [colores]="colores"></app-colores>
-                </div>
-
-                <a class="talla" data-toggle="collapse" href="#collapsetalla" role="button" [class.active]="activeTalla" (click)="activeTalla=!activeTalla">
-                    <div class="col">Talla</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsetalla">
-                    <app-checkbox [checks]="talla"></app-checkbox>
-                </div>
-
-                <a class="precio" data-toggle="collapse" href="#collapseprecio" role="button" [class.active]="activePrecio" (click)="activePrecio=!activePrecio">
-                    <div class="col">Precio</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapseprecio">
-                    <app-slider></app-slider>
-                </div>
-
-                <a class="caras" data-toggle="collapse" href="#collapsecaras" role="button" [class.active]="activeCaras" (click)="activeCaras=!activeCaras">
-                    <div class="col">Caras imprimibles</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsecaras">
-                    <app-checkbox [checks]="caras"></app-checkbox>
-                </div>
-
-                <a class="material" data-toggle="collapse" href="#collapsematerial" role="button" [class.active]="activeMaterial" (click)="activeMaterial=!activeMaterial">
-                    <div class="col">Material</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsematerial">
-                    <app-checkbox [checks]="material"></app-checkbox>
-                </div>
-
-                <a class="cuello" data-toggle="collapse" href="#collapsecuello" role="button" [class.active]="activeCuello" (click)="activeCuello=!activeCuello">
-                    <div class="col">Tipo de cuello</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsecuello">
-                    <app-checkbox [checks]="cuello"></app-checkbox>
-                </div>
-
-                <a class="manga" data-toggle="collapse" href="#collapsemanga" role="button" [class.active]="activeManga" (click)="activeManga=!activeManga">
-                    <div class="col">Tipo de manga</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapsemanga">
-                    <app-checkbox [checks]="manga"></app-checkbox>
-                </div>
-
-                <a class="impresion" data-toggle="collapse" href="#collapseimpresion" role="button" [class.active]="activeImpresion" (click)="activeImpresion=!activeImpresion">
-                    <div class="col">Metodo de impresión</div>
-                    <div class="col-auto">
-                        <span class="material-icons">arrow_forward_ios</span>
-                    </div>
-                </a>
-                <div class="collapse show" id="collapseimpresion">
-                    <app-checkbox [checks]="impresion"></app-checkbox>
-                </div>
+                <!-- componente de los filtros radiobuttom -->
+                <app-filtros-radio class="box" *ngFor="let item of radioFilter" [nombre]="item.name" [items]="item.items"></app-filtros-radio>
+                <!-- componente del filtro de los colores -->
+                <app-filtros-color class="box" [nombre]="'Colores'" [items]="colores"></app-filtros-color>
+                <!-- componente del filtro de rango de precio -->
+                <app-filtro-precio class="box" [nombre]="'Precio'"></app-filtro-precio>
+                <!-- componente de los filtros chequeables -->
+                <app-filtros-check class="box" *ngFor="let item of checkFilter" [nombre]="item.name" [items]="item.items" [active]="true"></app-filtros-check>
 
             </div>
-            <div class="row aplicar">
+            <!-- contenedor del boton para aplicar filtros seleccionados -->
+            <div class="row aplicar" [class.active]="activeFiltros">
                 <button class="btn-aplicar">
                     <span class="material-icons-outlined">filter_alt</span>
                     Aplicar filtro
                 </button>
             </div>
         </div>
-
-        <div class="col-9 contenido">
+        <!-- contenedor de los resultados de productos-->
+        <div class="contenido">
             <app-resultados></app-resultados>
         </div>
 

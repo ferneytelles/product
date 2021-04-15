@@ -4,30 +4,59 @@
     padding: 0px;
 }
 
-.diseño {
+
+/* estilos para el contenedor del contenido de la modal de cambiar producto */
+
+.producto {
     max-height: 100%;
     margin: 0px;
 }
 
+
+/* estilos del contenedor de los filtros y el campo de busqueda*/
+
 .filtros {
     padding: 10px 15px;
+    flex: 0 0 25%;
+    max-width: 25%;
 }
 
+
+/* estilos para el contenedor de los resultados de cambiar producto */
+
 .contenido {
+    flex: 0 0 75%;
+    max-width: 75%;
     padding: 10px 5px;
     max-height: calc(90vh - 46px);
     overflow-y: auto;
 }
 
+
+/* estilos de los encabezados para movil */
+
+.filtros .encabezado {
+    display: none;
+}
+
+
+/* estilos para el contenedor del campo de busqueda */
+
 .filtros .buscador {
     margin: 0;
 }
+
+
+/* estilos para el buscador y el boton buscar */
 
 .buscador .form-control,
 .buscador .input-group-text {
     font-size: 14px;
     line-height: 14px;
 }
+
+
+/* estilos para boton buscar */
 
 .buscador .input-group-text {
     padding: 4px 5px;
@@ -37,7 +66,23 @@
 }
 
 
-/* CATEGORIAS */
+/* estilos para el boton de los filtros en movil */
+
+.buscador .filtrar {
+    display: none;
+    width: fit-content;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 14px;
+    background: #d7d7d7;
+    color: #ff0000;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    outline: none;
+}
+
+
+/* estilos para el contenedor de los filtros */
 
 .categorias {
     margin: 10px 0px 0px 0px;
@@ -46,7 +91,17 @@
     overflow-y: auto;
 }
 
-.categorias a {
+
+/* estilos para los componentes de los filtros radios, checbox, precio y colores */
+
+.categorias .box {
+    width: 100%;
+}
+
+
+/* estilos para el titulo de los filtros */
+
+.categorias .todos {
     width: 100%;
     color: #000000;
     background: #d7d7d7;
@@ -56,86 +111,12 @@
     text-decoration: none;
     display: flex;
     justify-content: center;
-    border-radius: 4px 4px 4px 4px;
-    transition: all .3s ease;
-}
-
-.categorias .todos {
     border-radius: 4px 4px 0px 0px;
-}
-
-.categorias a .col {
-    padding: 0px 5px;
-}
-
-.categorias a .col-auto {
-    padding: 0px 5px;
-    display: flex;
-    align-items: center;
-}
-
-.categorias a .col-auto span {
-    font-size: 13px;
-    transform: rotate(90deg);
-    color: #ff0000;
     transition: all .3s ease;
 }
 
 
-/* interacciones del grupo */
-
-.categorias .categ.active,
-.categorias .productos.active,
-.categorias .colores.active,
-.categorias .talla.active,
-.categorias .caras.active,
-.categorias .material.active,
-.categorias .cuello.active,
-.categorias .manga.active,
-.categorias .impresion.active,
-.categorias .precio.active {
-    border-radius: 4px 4px 0px 0px;
-}
-
-.categorias .categ.active .col-auto span,
-.categorias .productos.active .col-auto span,
-.categorias .colores.active .col-auto span,
-.categorias .talla.active .col-auto span,
-.categorias .caras.active .col-auto span,
-.categorias .material.active .col-auto span,
-.categorias .cuello.active .col-auto span,
-.categorias .manga.active .col-auto span,
-.categorias .impresion.active .col-auto span,
-.categorias .precio.active .col-auto span {
-    transform: rotate(-90deg);
-}
-
-
-/* interacciones del grupo 
-
-*/
-
-#collapsecategorias,
-#collapseproductos,
-#collapsecolores,
-#collapsetalla,
-#collapsecaras,
-#collapsematerial,
-#collapsecuello,
-#collapsemanga,
-#collapseimpresion,
-#collapseprecio {
-    width: 100%;
-    padding: 4px;
-    margin-bottom: 4px;
-    font-size: 14px;
-    background: #eeeeee;
-    border-radius: 0px 0px 4px 4px;
-    transition: all .3s ease;
-}
-
-
-/* scroll */
+/* estilos para el scroll del contenedor de los filtros y el contenedor de los resultados de diseños*/
 
 .contenido::-webkit-scrollbar,
 .categorias::-webkit-scrollbar {
@@ -167,7 +148,7 @@
 }
 
 
-/*  BOTON APLICAR FILTRO */
+/* estilos para el contenedor del boton para aplicar filtros */
 
 .aplicar {
     margin: 0px;
@@ -175,6 +156,9 @@
     display: flex;
     justify-content: center;
 }
+
+
+/* estilos para el boton de aplicar filtros */
 
 .btn-aplicar {
     width: 80%;
@@ -189,11 +173,139 @@
     outline: none;
 }
 
-.btn-aplicar:hover {
-    background: #ff0000;
-    color: #ffffff;
-}
 
-.btn-aplicar:focus {
-    border: none;
+/* estilos para dispositivos moviles */
+
+@media screen and (max-width: 960px) {
+    /* estilos para el contenedor general de cambiar producto */
+    .container-fluid {
+        position: fixed;
+        background: #ffffff;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+    }
+    /* estilos para el contenedor general de la modal cuando se agrega la clase noscroll */
+    .container-fluid.noscroll {
+        max-height: 100vh;
+        overflow-y: hidden;
+    }
+    /* estilos para el contenedor del contenido de la modal */
+    .filtros {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0px;
+    }
+    /* estilos para los encabezados de cambiar producto y filtros en version movil */
+    .filtros .encabezado,
+    .categorias .encabezado {
+        display: flex;
+        background: #d7d7d7;
+        padding: 0px 7px 0px 15px;
+    }
+    /* estilos para el encabezado de los filtros */
+    .categorias .encabezado {
+        width: 100%;
+        height: fit-content;
+    }
+    /* estilos para el contenedor de la miga de pan */
+    .encabezado .ruta {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+    }
+    /* estilos para las rutas anteriores a la actual */
+    .ruta .anterior {
+        margin: 0px;
+        padding: 0px 7px;
+        width: fit-content;
+        border-right: 1px solid #555555;
+        color: #000000;
+        font-size: 16px;
+        line-height: 16px;
+        border-radius: 0px;
+        text-decoration: underline;
+    }
+    /* estilos para la ruta actual */
+    .ruta .actual {
+        padding: 0px 7px;
+    }
+    /* estilos para el boton de cerrar cambiar producto en movil */
+    .encabezado .cerrar {
+        padding: 6px;
+        background: none;
+        border: none;
+        height: 40px;
+    }
+    /* estilos para el icono del boton de cerrar */
+    .cerrar .material-icons {
+        font-size: 28px;
+    }
+    /* estilos para el contenedor del campo de busqueda */
+    .filtros .buscador {
+        margin-top: 10px;
+    }
+    /* estilos para el contenedor del buscador */
+    .buscador .input-group {
+        width: calc(100% - 62px);
+        padding-right: 5px;
+    }
+    /* estilos para el boton de abrir los filtros */
+    .buscador .filtrar {
+        display: block;
+    }
+    /* estilos para el contenedor de los filtros */
+    .filtros .categorias {
+        position: fixed;
+        z-index: 30;
+        height: calc(100vh - 55px);
+        max-height: calc(100vh - 55px);
+        width: 100vw;
+        top: 0;
+        left: 0px;
+        display: none;
+        background: #ffffff;
+        overflow-y: auto;
+        margin-top: 0px;
+        padding: 0px;
+    }
+    /* estilos para el contenedor de los filtros cuando se abren en movil */
+    .filtros .categorias.active {
+        display: flex;
+        align-content: flex-start;
+    }
+    /* estilos para los contenedores de los filtros y el titulo */
+    .categorias .todos,
+    .categorias .box {
+        margin-left: 10px;
+        margin-right: 10px;
+        height: fit-content;
+    }
+    /* estilos para el contenedor del boton de aplicar filtros */
+    .filtros .aplicar {
+        position: fixed;
+        z-index: 30;
+        background: #ffffff;
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0px 0px 7px 0px #555555;
+        display: none;
+    }
+    /* estilos para el contenedor del boton aplicar filtros cuando se abren los filtros */
+    .filtros .aplicar.active {
+        display: flex;
+    }
+    /* estilos para el contenedor de los resultados de los productos */
+    .contenido {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: fit-content;
+        padding-top: 0px;
+    }
 }

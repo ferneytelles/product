@@ -1,14 +1,19 @@
 <div class="container-fluid">
+    <!-- N contenedores de las trajetas de producto  -->
     <div *ngFor="let item of imgs" class="contenedor" [style.width]="width">
+        <!-- tarjeta de producto -->
         <div class="card">
-
+            <!-- contenedor de la imagen del producto -->
             <div class="img" [style.height]="height">
                 <img [src]=" item " class="card-img-top " alt=" ">
+                <!-- contenedor de los botones del producto que se muestra con el hover sobre el contenedor de la imagen en la version web -->
                 <div class="info">
                     <div class="row m-0">
+                        <!-- contenedor del boton seleccionar -->
                         <div class="col-6 botones">
                             <button class="seleccionar" [style.font-size]="font">Seleccionar</button>
                         </div>
+                        <!-- contenedor del boton ver detalles -->
                         <div class="col-6 botones">
                             <button class="verDetalle" [style.font-size]="font" (click)="modalDetalle()">Ver detalle</button>
                         </div>

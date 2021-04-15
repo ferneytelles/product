@@ -36,7 +36,9 @@ export class ProductosComponent implements OnInit {
   }
 
   modalDetalle(): void{
-    this.modalService.detalle.next(true);
+    if (window.innerWidth > 960){
+      this.modalService.detalle.next(true);
+    }    
   }
 
   setCardWidth(): void{
@@ -48,6 +50,8 @@ export class ProductosComponent implements OnInit {
       this.width = '33.3%';
     }else if (this.columnas === 2) {
       this.width = '50%';
+    }else if (this.columnas === 1) {
+      this.width = '100%';
     }
   }
 
@@ -123,7 +127,25 @@ export class ProductosComponent implements OnInit {
       }
     }else if (this.columnas === 2){
       this.font = '13px'
-      if (window.innerWidth >= 960 && window.innerWidth < 1150){
+      if (window.innerWidth < 350){
+        this.height = '130px';
+      }else if (window.innerWidth >= 350 && window.innerWidth < 400){
+        this.height = '150px';
+      }else if (window.innerWidth >= 400 && window.innerWidth < 450){
+        this.height = '170px';
+      }else if (window.innerWidth >= 450 && window.innerWidth < 500){
+        this.height = '200px';
+      }else if (window.innerWidth >= 500 && window.innerWidth < 550){
+        this.height = '220px';
+      }else if (window.innerWidth >= 550 && window.innerWidth < 600){
+        this.height = '250px';
+      }else if (window.innerWidth >= 600 && window.innerWidth < 700){
+        this.height = '270px';
+      }else if (window.innerWidth >= 700 && window.innerWidth < 830){
+        this.height = '320px';
+      }else if (window.innerWidth >= 830 && window.innerWidth < 960){
+        this.height = '380px';
+      }else if (window.innerWidth >= 960 && window.innerWidth < 1150){
         this.height = '305px';
       }else if (window.innerWidth >= 1150 && window.innerWidth < 1260){
         this.height = '370px';
@@ -139,6 +161,26 @@ export class ProductosComponent implements OnInit {
         this.height = '610px';
       }else if (window.innerWidth >= 1950){
         this.height = '670px';
+      }
+    }else if (this.columnas === 1){
+      if (window.innerWidth < 350){
+        this.height = '280px';
+      }else if (window.innerWidth >= 350 && window.innerWidth < 400){
+        this.height = '310px';
+      }else if (window.innerWidth >= 400 && window.innerWidth < 450){
+        this.height = '360px';
+      }else if (window.innerWidth >= 450 && window.innerWidth < 500){
+        this.height = '410px';
+      }else if (window.innerWidth >= 500 && window.innerWidth < 550){
+        this.height = '460px';
+      }else if (window.innerWidth >= 550 && window.innerWidth < 600){
+        this.height = '510px';
+      }else if (window.innerWidth >= 600 && window.innerWidth < 700){
+        this.height = '560px';
+      }else if (window.innerWidth >= 700 && window.innerWidth < 830){
+        this.height = '660px';
+      }else if (window.innerWidth >= 830 && window.innerWidth < 960){
+        this.height = '790px';
       }
     }
   }

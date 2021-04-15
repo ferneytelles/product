@@ -82,7 +82,7 @@ export class ResultsContentComponent implements OnInit, OnChanges {
    * @param img cadena que recibe la ruta de la imagen del diseo seleccionado
    */
   abrirDetalles(valor: boolean, img: string): void{
-    //  condición que verifica que se ejecuta desde versiones de pantalla móvil     
+    //  condición que verifica que se ejecuta desde versiones de pantalla móvil
     if (window.innerWidth <= 960){
       this.informacion = valor;
       this.img = img;

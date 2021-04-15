@@ -92,7 +92,7 @@
 }
 
 
-/* estilos para  */
+/* estilos para los componentes de los filtros checbox y precio */
 
 .categorias .box {
     width: 100%;
@@ -194,12 +194,12 @@
         width: 100vw;
         overflow-y: auto;
     }
-    /* estilos para el contenedor general de diseños cuando se agrega la clase noscroll */
+    /* estilos para el contenedor general de la modal cuando se agrega la clase noscroll */
     .container-fluid.noscroll {
         max-height: 100vh;
         overflow-y: hidden;
     }
-    /* estilos para el contenedor del contenido de la modal de diseños */
+    /* estilos para el contenedor del contenido de la modal */
     .filtros {
         flex: 0 0 100%;
         width: 100%;

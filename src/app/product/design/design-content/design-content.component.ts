@@ -15,7 +15,7 @@ export class DesignContentComponent implements OnInit {
    */
   @ViewChild('categorias', {static: true}) filtros: ElementRef;
   /**
-   * cadena utilizada que se emite para cerrar diseños en movil
+   * cadena que se emite para cerrar diseños en movil
    */
   @Output() activeDesign = new EventEmitter<string>();
   /**
@@ -33,17 +33,12 @@ export class DesignContentComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    /**
-     * condicion que detecta si el dispositivo es iPhone
-     */
+    // condicion que detecta si el dispositivo es iPhone
     if (/iPad|iPhone/.test(navigator.userAgent)) {
       console.log('iphone');
       this.filtros.nativeElement.style.paddingBottom = '75px';
     }
-    /**
-     * condicion que detecta si se accede desde chrome en dispositivos
-     * android
-     */
+    // condicion que detecta si se accede desde chrome en dispositivos android
     if (/Android/.test(navigator.userAgent) && navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
       this.filtros.nativeElement.style.paddingBottom = '75px';
     }

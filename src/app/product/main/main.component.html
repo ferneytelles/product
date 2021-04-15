@@ -5,7 +5,8 @@
             <a [routerLink]="['/store']" class="btn btn-outline-primary">tienda</a>
         </div>
         <div class="col-auto px-1">
-            <button class="btn btn-outline-primary" (click)="modalProducto()">Cambiar producto</button>
+            <button class="btn btn-outline-primary" (click)="modalProducto();modalMovile('cambiar')">Cambiar producto</button>
+            <app-filtros-cambiar *ngIf="controlModal=='cambiar'" (activeProduct)="modalMovile($event)"></app-filtros-cambiar>
             <app-cambiar></app-cambiar>
         </div>
         <div class="col-auto px-1">
@@ -54,10 +55,15 @@
     </div>
     <!-- contenedor de las etiquetas del producto actual -->
     <div class="row fondo-img">
+        <!-- titulo de las etiquetas -->
         <h4 class="titulo w-100 mb-3">Te puede interesar:</h4>
-        <div *ngFor="let tag of tags" class="col-auto tags">
-            <span class="tag">{{tag}}</span>
+        <!-- contenedor de las etiquetas -->
+        <div class="container-tags">
+            <div *ngFor="let tag of tags" class="col-auto tags">
+                <span class="tag">{{tag}}</span>
+            </div>
         </div>
+
     </div>
     <!-- contenedor de la seccion de las garantias de venta -->
     <div class="row info">

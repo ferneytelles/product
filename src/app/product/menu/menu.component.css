@@ -1,9 +1,14 @@
+/* estilos para el contenedor del menu */
+
 .nav {
     margin: 0 30px;
     border-bottom: 1px solid #dddddd;
     display: flex;
     justify-content: center;
 }
+
+
+/* estilos para los items del menu */
 
 .nav-link {
     text-transform: uppercase;
@@ -13,15 +18,24 @@
     align-items: center;
 }
 
+
+/* estilos para los items cuando estan selecionados*/
+
 .nav-link.active {
     color: red;
     border-bottom: 2px solid #ff0000;
     transition: all 0.2s ease;
 }
 
+
+/* estilos para el la path de los iconos del menu */
+
 .nav-link.active .icon path {
     fill: #ff0000;
 }
+
+
+/* estilos para los items del menu cuando ocurreel evento hover */
 
 .nav-link:hover {
     text-decoration: none;
@@ -29,15 +43,25 @@
     font-weight: bold;
 }
 
+
+/* estilos para los iconos del menu */
+
 .icon {
     font-size: 17px;
 }
+
+
+/* estilos para el contenedor del carousel que contiene los productos relacionados */
 
 .tab-content {
     padding: 15px 30px;
 }
 
+
+/* estilos para la version movil */
+
 @media screen and (max-width: 680px) {
+    /* estilos para el contenedor del menu */
     .nav {
         margin: 0;
         width: 100%;
@@ -46,15 +70,16 @@
         padding: 0 10px;
         justify-content: start;
     }
-    /* .nav-item {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    } */
+    /* estilos para los items del menu */
     .nav-link {
         text-align: center;
         width: max-content;
     }
+    /* estilos para en efecto hover de los items del menu */
+    .nav-link:hover {
+        font-weight: normal;
+    }
+    /* estilos para en contenedor de los productos relacionados */
     .tab-content {
         padding: 15px 5px;
     }

@@ -36,6 +36,16 @@
 }
 
 
+/* estilos para el contenedor de las etiquetas */
+
+.fondo-img .container-tags {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
 /* estilos para las etiquetas mostradas */
 
 .fondo-img .tags {
@@ -176,6 +186,11 @@
         max-height: 50vh;
         overflow: hidden;
         margin-top: 0px;
+    }
+    .fondo-img .container-tags {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        list-style: none;
     }
 }
 

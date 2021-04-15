@@ -5,11 +5,16 @@
     padding: 0px;
 }
 
+
+/* estilos del contenedor del producto */
+
 .contenedor {
-    /* width: 20%; */
     height: max-content;
     padding: 3px;
 }
+
+
+/* estilos de la terjeta de producto */
 
 .card {
     width: 100%;
@@ -17,17 +22,25 @@
     height: 100%;
 }
 
+
+/* estilos del contenedor de la imagen del producto */
+
 .card .img {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #eeeeee;
-    /* max-height: 100px; */
 }
+
+
+/* estilos del efecto hover sobre la imagen del producto */
 
 .card .img:hover {
     background: #d7d7d7;
 }
+
+
+/* estilos de la imagen del producto */
 
 .card .img img {
     height: auto;
@@ -36,9 +49,8 @@
     max-width: 100%;
 }
 
-.img:hover .info {
-    display: block;
-}
+
+/* estilos del contenedor de los botones del producto en version web */
 
 .img .info {
     display: none;
@@ -53,11 +65,24 @@
     transition: all .3s ease;
 }
 
+
+/* estilos del contenedor de los botones cuando ocurre el evento hover sobre el contenedor de la imagen */
+
+.img:hover .info {
+    display: block;
+}
+
+
+/* estilos para el contenedor */
+
 .info .botones {
     padding: 4px 1px;
     display: flex;
     justify-content: center;
 }
+
+
+/* estilos para los botones de seleccionar y ver detalles */
 
 .botones button {
     padding: 2px 4px;
@@ -67,13 +92,22 @@
     color: #ffffff;
 }
 
+
+/* estilos para el boton de seleccionar  */
+
 .botones .seleccionar {
     background: #ff0000;
 }
 
+
+/* estilos para el boton de ver detalles */
+
 .botones .verDetalle {
     background: #303030;
 }
+
+
+/* estilos del contenedor del cuerpo de la tarjeta */
 
 .card-body {
     padding: 0px;
@@ -81,19 +115,24 @@
     height: max-content;
 }
 
-.detalles .precio {
-    font-size: 13px;
-}
+
+/* estilos del contenedor de la informacion del producto */
 
 .detalle {
     align-items: center;
     justify-content: space-between;
 }
 
+
+/* estilos del contenedor del nombre del producto */
+
 .col-nombre {
     max-width: calc(100% - 66px);
     height: fit-content;
 }
+
+
+/* estilos para el nombre del diseño */
 
 .nombre {
     font-size: 13px;
@@ -101,4 +140,25 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+
+/* estilos para el precio del producto */
+
+.detalles .precio {
+    font-size: 13px;
+}
+
+
+/* estilos para la version movil */
+
+@media screen and (max-width: 960px) {
+    /* estilos para los detalles del diseño en version web; el contenedor desaparece para la version  */
+    .img:hover .info {
+        display: none;
+    }
+    /* estilos del efecto hover sobre la imagen del producto */
+    .card .img:hover {
+        background: #eeeeee;
+    }
 }

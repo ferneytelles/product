@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 /**
  * componente que contiene la parte superior de la busqueda de los diseños:
- * filtros aplicados, etiquetas de los diseño encontrados, 
+ * filtros aplicados, etiquetas de los diseño encontrados.
  */
 @Component({
   selector: 'app-results',
@@ -17,13 +17,13 @@ export class ResultsComponent implements OnInit {
    */
   @Input() colecciones: Array<any>;
   /**
-   * numero de columnas en las que se muestran ordenadoslos diseños,
+   * numero de columnas en las que se muestran ordenados los diseños,
    * inicialmente se muestra en cinco (5) columnas en version web
    */
   cols = 5;
   /**
-   * arreglo de colores para el fondo de las colecciones disponibles 
-   */ 
+   * arreglo de colores para el fondo de las colecciones disponibles
+   */
   colores = [];
   /**
    * arreglo que contiene los filtros que se han aplicado
@@ -56,7 +56,7 @@ export class ResultsComponent implements OnInit {
   }
 
   /**
-   * genera los colores de fondo 
+   * genera los colores de fondo
    */
   ngOnInit(): void {
     if (this.colecciones.length > 0) {

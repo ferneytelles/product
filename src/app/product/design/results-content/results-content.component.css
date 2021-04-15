@@ -76,7 +76,7 @@
 }
 
 
-/* estilosdel contenedor de la informacion del diseño */
+/* estilos del contenedor de la informacion del diseño */
 
 .detalle {
     align-items: center;
@@ -103,7 +103,7 @@
 }
 
 
-/* estolos para el precio del diseño */
+/* estilos para el precio del diseño */
 
 .detalle .precio {
     font-size: 13px;
