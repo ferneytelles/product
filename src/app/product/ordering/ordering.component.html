@@ -1,0 +1,81 @@
+<div class="container">
+    <!-- contenedor de la cantidad de resultados y los filtros aplicados -->
+
+    <div class="row m-0">
+        <!-- contenedor de la cantidad de resultados y el boton borrar filtros -->
+        <div class="col-auto resultados">
+            <span class="cant">60 resultados</span>
+            <a href="#" class="borrar_filtros">
+                <span class="material-icons">delete_forever</span>
+                <span class="borrar">Borrar filtros</span>
+            </a>
+        </div>
+        <!-- contenedor de los filtros aplicados -->
+        <div class="col filtros">
+            <div *ngFor="let filtro of filtros" class="filtro">
+                <!-- nombre del filtro -->
+                <span class="nombre">{{filtro}}</span>
+                <!-- boton para eliminar el filtro -->
+                <a href="#" class="cerrar">
+                    <span class="material-icons">close</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- contenedor de la seccion que permite ordenar los resultados -->
+    <div class="row m-0 ordenar">
+        <!-- contenedor de la cantidad se columnas seleccionables -->
+        <div class="col-auto columnas">
+            <span class="">Columnas</span>
+            <!-- lista que contiene las opciones de columnas -->
+            <ul class="nav" role="tablist">
+                <li>
+                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(1)">
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#content" class="nav-link" [ngClass]="dosCol" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(3)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#content" class="nav-link active" data-toggle="tab" role="tab" (click)="cambiarCols(4)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(5)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- contenedor del selector para ordenar los resultados -->
+        <div class="col-auto select">
+            <!-- selector para definir el orden de los resultados -->
+            <select class="custom-select">
+                <option value="0" selected>Más popular</option>
+                <option value="1">Mayor precio</option>
+                <option value="2">Menor precio</option>
+                <option value="3">Orden alfabético</option>
+            </select>
+        </div>
+    </div>
+</div>

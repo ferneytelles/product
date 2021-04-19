@@ -2,15 +2,11 @@
 
     <div class="row busqueda">
 
-        <div class="col-3 filtros">
-            <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>
-            <app-filtros-color *ngFor="let filtro of colorFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-color>
-            <app-filtro-precio [nombre]="'Precio'"></app-filtro-precio>
-            <app-filtros-check *ngFor="let filtro of checkFilter" [active]="false" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
-            <app-filtros-check *ngFor="let filtro of checkFilter2" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+        <div class="filtros">
+            <app-filtros></app-filtros>
         </div>
 
-        <div class="col-9">
+        <div class="contenedor">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Página de inicio</a></li>
@@ -20,6 +16,7 @@
                 </ol>
             </nav>
             <app-carousel-style [slides]="carousel"></app-carousel-style>
+            <app-ordering></app-ordering>
         </div>
     </div>
 

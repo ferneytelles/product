@@ -38,6 +38,8 @@ import { FiltroPrecioComponent } from './product/filtro-precio/filtro-precio.com
 import { CarouselStyleComponent } from './product/carousel-style/carousel-style.component';
 import { DesignInfoComponent } from './product/design/design-info/design-info.component';
 import { BorradorContentComponent } from './product/borrador/borrador-content/borrador-content.component';
+import { FiltrosComponent } from './product/filtros/filtros.component';
+import { OrderingComponent } from './product/ordering/ordering.component';
 
 
 
@@ -72,7 +74,9 @@ import { BorradorContentComponent } from './product/borrador/borrador-content/bo
     FiltroPrecioComponent,
     CarouselStyleComponent,
     DesignInfoComponent,
-    BorradorContentComponent    
+    BorradorContentComponent,
+    FiltrosComponent,
+    OrderingComponent    
   ],
   imports: [
     BrowserModule,

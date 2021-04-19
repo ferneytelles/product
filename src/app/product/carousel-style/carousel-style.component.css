@@ -6,13 +6,6 @@
     outline: none;
 }
 
-
-/* .next-slide {
-    background: #344343 no-repeat scroll -24px 0px;
-    right: -33px;
-    border: 1px solid #ff0000;
-} */
-
 ::ng-deep .slick-prev:before {
     content: "<";
 }

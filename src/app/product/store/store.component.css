@@ -2,6 +2,16 @@
     margin: 15px 0px;
 }
 
+.busqueda .filtros {
+    max-width: 25%;
+    padding: 0px 15px;
+}
+
+.busqueda .contenedor {
+    max-width: 75%;
+    padding: 0px 15px;
+}
+
 .breadcrumb {
     justify-content: center;
     background: none;
