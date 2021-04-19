@@ -1,3 +1,60 @@
+/* estilos del menu superior */
+
+.encabezado {
+    display: none;
+    background: #d7d7d7;
+    padding: 0px 7px 0px 15px;
+    margin: 0px -15px;
+}
+
+
+/* estilos de la miga de pan */
+
+.encabezado .ruta {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+
+/* estilos de las secciones anteriores a la actual */
+
+.ruta .anterior {
+    margin: 0px;
+    padding: 0px 7px;
+    width: fit-content;
+    border-right: 1px solid #555555;
+    color: #000000;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 0px;
+    text-decoration: underline;
+}
+
+
+/* estilos de la seccion actual */
+
+.ruta .actual {
+    padding: 0px 7px;
+}
+
+
+/* estilos del boton cerrar */
+
+.encabezado .cerrar {
+    padding: 6px;
+    background: none;
+    border: none;
+    height: 40px;
+}
+
+
+/* estilos del icono dentro del boton cerrar */
+
+.cerrar .material-icons {
+    font-size: 28px;
+}
+
 .container-fluid {
     max-height: calc(90vh - 46px);
     overflow-y: auto;
@@ -74,6 +131,7 @@
 }
 
 .botones {
+    max-width: 100%;
     padding: 0px;
     margin-top: 10px;
     display: flex;
@@ -124,4 +182,45 @@
 .container-fluid::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: #eeeeee;
+}
+
+@media screen and (max-width: 960px) {
+    .container-fluid {
+        position: fixed;
+        background: #ffffff;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        height: 100vh;
+        max-height: 100vh;
+        width: 100vw;
+    }
+    .encabezado {
+        display: flex;
+    }
+    .container-fluid .row.info {
+        display: none;
+    }
+    .contenedor {
+        width: 100%;
+        padding: 0px;
+        border-bottom: 1px solid #d7d7d7;
+    }
+    .contenedor .borrador {
+        border: none;
+        padding: 10px 0;
+    }
+    .borrador .img {
+        max-width: 50%;
+        padding: 5px 0px;
+    }
+    .detalles .titulo {
+        display: none;
+    }
+    .detalles .nombre {
+        font-weight: bold;
+    }
+    .botones button {
+        padding: 1px 4px;
+    }
 }

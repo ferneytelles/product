@@ -8,7 +8,7 @@
 }
 
 
-/* estilos para en contenedor de la modal */
+/* estilos para el contenedor de la modal */
 
 ::ng-deep.modal-design .modal-dialog .modal-content {
     border-radius: 8px;

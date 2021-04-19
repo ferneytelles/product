@@ -7,7 +7,7 @@
         <div class="row m-0">
             <a *ngFor="let coleccion of colecciones" href="#" [style.background]="colores[colecciones.indexOf(coleccion)]" class="col-6 col-md-4 col-lg-3 coleccion">
                 <!-- icono de la coleccion -->
-                <span class="material-icons-outlined">crop_original</span>
+                <span class="material-icons-outlined notranslate">crop_original</span>
                 <!-- nombre de la coleccion -->
                 <span class="texto">{{coleccion}}</span>
             </a>
@@ -23,7 +23,7 @@
                     <div class="col-auto resultados">
                         <span class="cant">{{ imgs.length }} resultados</span>
                         <a href="#" class="borrar_filtros">
-                            <span class="material-icons">delete_forever</span>
+                            <span class="material-icons notranslate">delete_forever</span>
                             <span class="borrar">Borrar filtros</span>
                         </a>
                     </div>
@@ -34,7 +34,7 @@
                             <span class="nombre">{{filtro}}</span>
                             <!-- boton para eliminar filtro -->
                             <a href="#" class="delete">
-                                <span class="material-icons">close</span>
+                                <span class="material-icons notranslate">close</span>
                             </a>
                         </div>
                     </div>

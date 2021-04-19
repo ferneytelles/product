@@ -282,6 +282,10 @@
         flex-wrap: nowrap;
         overflow-x: auto;
     }
+    .contenedor .filtros::-webkit-scrollbar {
+        -webkit-appearance: none;
+        appearance: none;
+    }
     /* estilo para el contenedor de las etiquetas */
     .etiquetas {
         display: none;

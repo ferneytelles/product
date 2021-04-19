@@ -37,6 +37,7 @@ import { FiltrosColorComponent } from './product/filtros-color/filtros-color.com
 import { FiltroPrecioComponent } from './product/filtro-precio/filtro-precio.component';
 import { CarouselStyleComponent } from './product/carousel-style/carousel-style.component';
 import { DesignInfoComponent } from './product/design/design-info/design-info.component';
+import { BorradorContentComponent } from './product/borrador/borrador-content/borrador-content.component';
 
 
 
@@ -70,7 +71,8 @@ import { DesignInfoComponent } from './product/design/design-info/design-info.co
     FiltrosColorComponent,
     FiltroPrecioComponent,
     CarouselStyleComponent,
-    DesignInfoComponent    
+    DesignInfoComponent,
+    BorradorContentComponent    
   ],
   imports: [
     BrowserModule,

@@ -1,69 +1,112 @@
-<div class="container-fluid">
+<div #contenedor class="container-fluid">
 
+    <!-- contenedor del menu superior  -->
     <div class="row encabezado">
+        <div class="col ruta">
+            <strong>Editar:</strong>
+            <a href="#" class="anterior">añadir</a>
+            <a href="#" class="anterior">diseño</a>
+            <span class="actual">detalles</span>
+        </div>
+        <div class="col-auto px-0">
+            <button class="cerrar" (click)="closeDetails(false)">
+                <span class="material-icons notranslate">close</span>
+            </button>
+        </div>
+    </div>
+    <!-- contenedor del nombre del pruducto y los botones para imprimir y descargar -->
+    <div class="row titulo">
         <div class="col px-1">
+            <!-- nombre del produto -->
             <h6 class="nombre">Camiseta premium hombre - cuello redondo</h6>
         </div>
         <div class="col-auto px-2">
+            <!-- boton de descargar los detalles del producto -->
             <a class="descargar" href="#">
-                <span class="material-icons-outlined icono">file_download</span>
+                <span class="material-icons-outlined icono notranslate">file_download</span>
                 <span class="texto">Descargar</span>
             </a>
         </div>
         <div class="col-auto px-2">
+            <!-- boton de imprimir los detalles del producto -->
             <a class="imprimir" href="#">
-                <span class="material-icons-outlined icono">print</span>
+                <span class="material-icons-outlined icono notranslate">print</span>
                 <span class="texto">Imprimir</span>
             </a>
         </div>
     </div>
-
-    <div class="row m-0">
-
-        <div class="col-6 px-1">
+    <!-- contenedor de la informacion del producto -->
+    <div class="row m-0 contenido">
+        <!-- contenedor de la columna izquierda en web -->
+        <div class="col-izquierda px-1">
             <div *ngIf="seleccionar" class="boton">
+                <!-- boton para seleccionar producto -->
                 <button class="seleccionar">
-                    <span class="material-icons-outlined icono">check</span>
+                    <span class="material-icons-outlined icono notranslate">check</span>
                     <span class="texto">Seleccionar producto</span>
                 </button>
             </div>
+            <!-- contenedor de los colores chequeables -->
+            <div class="colores" *ngIf="seleccionar">
+                <app-colores [colores]="colores"></app-colores>
+            </div>
+            <!-- contenedor de los colores -->
+            <div class="colores2" *ngIf="!seleccionar">
+                <div *ngFor="let item of colores" class="color" [style.background]="item">
+                </div>
+            </div>
+            <!-- contenedor del texto de confeccion de garantias de confeccion-->
             <div class="confeccion">
                 <span class="texto1">¡Confección colombiana de alta calidad!</span>
                 <span class="texto2">excelentes resultados de estampado.</span>
             </div>
+            <!-- contenedor de la sugerencia de tallas en movil -->
+            <div class="sugerencia">
+                <span class="titulo">Encontrar la talla adecuada:</span>
+                <span class="texto">{{ parrafo }}</span>
+            </div>
+            <!-- contenedor de las propiedades del producto -->
             <div class="caracteristicas">
                 <img src="assets/img/atributos.png" class="atributos" alt="">
             </div>
-            <div class="colores">
-                <div *ngFor="let item of colores" class="color" [style.background]="item">
-                </div>
-            </div>
+            <!-- contenedor de las tallas -->
             <div class="tallas">
-                <img src="assets/img/tallas.png" class="" alt="">
+                <img [src]="tallas" class="" alt="">
             </div>
+            <!-- contenedor de los cuidados del producto en web -->
+            <div class="cuidados">
+                <p class="texto">Cuidados de la prenda:</p>
+                <img src="assets/img/cuidados.png" alt="">
+            </div>
+        </div>
+        <!-- contenedor de la columna derecha en web -->
+        <div class="col-derecha px-1">
+            <!-- contenedor de la sugerencia de tallas en web -->
+            <div class="sugerencia">
+                <span class="titulo">Encontrar la talla adecuada:</span>
+                <span class="texto">{{ parrafo }}</span>
+            </div>
+            <!-- contenedor del ejemplo d las tallas -->
+            <div class="tallas2">
+                <p class="texto">Ejemplo de tallas:</p>
+                <img src="assets/img/tallas2.png" class="" alt="">
+            </div>
+            <!-- contenedor de los cuidados del producto en movil -->
             <div class="cuidados">
                 <p class="texto">Cuidados de la prenda:</p>
                 <img src="assets/img/cuidados.png" alt="">
             </div>
         </div>
 
-        <div class="col-6 px-1">
-            <div class="sugerencia">
-                <span class="titulo">Encontrar la talla adecuada:</span>
-                <span class="texto">{{ parrafo }}</span>
-            </div>
-            <div class="tallas2">
-                <p class="texto">Ejemplo de tallas:</p>
-                <img src="assets/img/tallas2.png" class="" alt="">
-            </div>
-        </div>
-
     </div>
+    <!-- contenedor del pie de pagina -->
     <div class="row m-0 footer">
+        <!-- contenedor del enlace de la web y el contacto telefonico -->
         <div class="col-auto mt-1">
             <a href="http://www.fueradelmolde.com/" class="link">www.fueradelmolde.com</a>
             <a href="#" class="numero">+573102836520</a>
         </div>
+        <!-- contenedor del logo de fdm -->
         <div class="col-auto">
             <img src="assets/img/Logo.png" class="logo" alt="">
         </div>

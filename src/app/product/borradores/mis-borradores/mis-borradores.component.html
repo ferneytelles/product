@@ -1,5 +1,18 @@
-<div class="container-fluid">
-    <div class="row mx-0">
+<div #contenedor class="container-fluid">
+    <!-- contenedor del menu superior  -->
+    <div class="row encabezado">
+        <div class="col ruta">
+            <strong>Editar:</strong>
+            <a href="#" class="anterior">Guardar</a>
+            <span class="actual">mis borradores</span>
+        </div>
+        <div class="col-auto px-0">
+            <button class="cerrar" (click)="closeBorradores('Null')">
+                <span class="material-icons notranslate">close</span>
+            </button>
+        </div>
+    </div>
+    <div class="row mx-0 info">
         <p class="texto">{{texto}}</p>
         <a href="#" class="masInfo">Más info...</a>
     </div>
@@ -12,13 +25,13 @@
                     </div>
                     <div class="col detalles">
 
-                        <strong class="nombre">Características del producto:</strong>
-                        <p class="m-0">* Camiseta premium hombre - cuello redondo</p>
+                        <strong class="titulo">Características del producto:</strong>
+                        <p class="m-0 nombre">Camiseta premium hombre - cuello redondo</p>
                         <p class="m-0">* <strong class="talla">Talla:</strong> S</p>
                         <p class="m-0">* <strong class="color">Color:</strong> Negro</p>
 
                         <button class="carrito">
-                            <span class="material-icons-outlined">shopping_cart</span>
+                            <span class="material-icons-outlined notranslate">shopping_cart</span>
                             <span class="ml-1">Añadir a carrito</span> 
                         </button>
                     </div>
@@ -26,15 +39,15 @@
                 <div class="row mx-0">
                     <div class="col botones">
                         <button class="editar">
-                            <span class="material-icons-outlined">create</span>
+                            <span class="material-icons-outlined notranslate">create</span>
                             <span class="ml-1">Editar</span>
                         </button>
                         <button class="compartir">
-                            <span class="material-icons-outlined">share</span>
+                            <span class="material-icons-outlined notranslate">share</span>
                             <span class="ml-1">Compartir</span>
                         </button>
                         <button class="borrar">
-                            <span class="material-icons">delete_forever</span>
+                            <span class="material-icons notranslate">delete_forever</span>
                             <span class="ml-1">borrar</span>
                         </button>
                     </div>

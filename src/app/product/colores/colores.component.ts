@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+/**
+ * componente que contiene los ckechbox de los colores
+ */
 @Component({
   selector: 'app-colores',
   templateUrl: './colores.component.html',
@@ -7,7 +10,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ColoresComponent implements OnInit {
 
-  @Input() colores: Array<any>; 
+  /**
+   * arreglo  que recibe los colores a mostrar en los check
+   */
+  @Input() colores: Array<any>;
   constructor() { }
 
   ngOnInit(): void {

@@ -70,6 +70,10 @@
         padding: 0 10px;
         justify-content: start;
     }
+    .nav::-webkit-scrollbar {
+        -webkit-appearance: none;
+        appearance: none;
+    }
     /* estilos para los items del menu */
     .nav-link {
         text-align: center;

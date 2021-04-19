@@ -3,15 +3,82 @@
     overflow-y: auto;
 }
 
+
+/* estilos del menu superior */
+
 .encabezado {
+    display: none;
+    background: #d7d7d7;
+    padding: 0px 7px 0px 15px;
+    margin: 0px -15px;
+}
+
+
+/* estilos de la miga de pan */
+
+.encabezado .ruta {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+
+/* estilos de las secciones anteriores a la actual */
+
+.ruta .anterior {
+    margin: 0px;
+    padding: 0px 7px;
+    width: fit-content;
+    border-right: 1px solid #555555;
+    color: #000000;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 0px;
+    text-decoration: underline;
+}
+
+
+/* estilos de la seccion actual */
+
+.ruta .actual {
+    padding: 0px 7px;
+}
+
+
+/* estilos del boton cerrar */
+
+.encabezado .cerrar {
+    padding: 6px;
+    background: none;
+    border: none;
+    height: 40px;
+}
+
+
+/* estilos del icono dentro del boton cerrar */
+
+.cerrar .material-icons {
+    font-size: 28px;
+}
+
+
+/* estilos para el contenedor del nombre del prooducto y los botones de descargar e imprimir */
+
+.titulo {
     padding: 15px 0px 10px 0px;
     margin: 0;
 }
+
+
+/* estilos para el contenedor del nombre del producto */
 
 .nombre {
     margin: 0px;
     color: #555555;
 }
+
+
+/* estilos para los botones de descargar e imprimir */
 
 .imprimir,
 .descargar {
@@ -22,24 +89,45 @@
     text-decoration: none;
 }
 
+
+/* estilos para el icono de los botones de imprimir y descargar */
+
 .imprimir .icono,
 .descargar .icono {
     font-size: 20px;
     margin-right: 2px;
 }
 
+
+/* estilos para el texto de los botones imprimir y descargar */
+
 .imprimir .texto,
 .descargar .texto {
     text-decoration: underline;
 }
 
-.boton {
+
+/* estilos para las dos columnas mostradas en version web */
+
+.contenido .col-izquierda,
+.contenido .col-derecha {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+
+/* estilos para el contenedor del boton de seleccionar */
+
+.col-izquierda .boton {
     width: 100%;
     padding: 10px 0px;
     background: #eeeeee;
     display: flex;
     justify-content: center;
 }
+
+
+/* estilos para el boton de seleccionar */
 
 .boton .seleccionar {
     display: flex;
@@ -52,38 +140,33 @@
     outline: none;
 }
 
+
+/* estilos para el icono del boton seleccionar */
+
 .seleccionar .icono {
     font-size: 30px;
 }
+
+
+/* estilos para el texto del boton de seleccionar */
 
 .seleccionar .texto {
     font-size: 14px;
     margin-left: 5px;
 }
 
-.confeccion {
-    padding: 10px 0px;
-    font-size: 13px;
-}
 
-.confeccion .texto1 {
-    color: #000000;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.confeccion .texto2 {
-    color: #555555;
-    margin-left: 5px;
-}
-
-.caracteristicas .atributos {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-}
+/* estilo para el contenedor de los colores chequeabeles */
 
 .colores {
+    width: 100%;
+    padding: 5px 0px;
+}
+
+
+/* estilo para el contenedor de los colores que no son chequeables */
+
+.colores2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -91,7 +174,10 @@
     padding: 5px 0px;
 }
 
-.colores .color {
+
+/* estilos para los colores */
+
+.colores2 .color {
     width: 34px;
     height: 34px;
     margin: 3px;
@@ -99,17 +185,61 @@
     border-radius: 4px;
 }
 
+
+/* estilos para el contenedor del texto de la confeccion */
+
+.confeccion {
+    padding: 10px 0px;
+    font-size: 13px;
+}
+
+
+/* estilos para el primer texto de la garantia de confeccion */
+
+.confeccion .texto1 {
+    color: #000000;
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+/*  estilos para el segundo texto de la garantia de confeccion */
+
+.confeccion .texto2 {
+    color: #555555;
+    margin-left: 5px;
+}
+
+
+/* estilos para el contenedor de los atributos del producto */
+
+.caracteristicas .atributos {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* estilos para el contenedor de las tallas */
+
 .tallas {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+/* estilos para la imagen de las tallas */
 
 .tallas img {
     width: auto;
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
 }
+
+
+/* estilos para el texto de los cuidados de la prenda */
 
 .cuidados .texto {
     font-size: 14px;
@@ -117,33 +247,66 @@
     margin: 10px 0px 0px 0px;
 }
 
+
+/* estilo para la imagen de lo cuidados de la prenda */
+
 .cuidados img {
     width: auto;
     max-width: 100%;
     height: auto;
 }
 
-.sugerencia {
+
+/* estilos para el contenedor de los cuidados de la prenda mostrados en movil */
+
+.col-derecha .cuidados {
+    display: none;
+}
+
+
+/* estilos para el contenedor de la sugerencia mostrada en movil */
+
+.col-izquierda .sugerencia {
+    display: none;
+}
+
+
+/* estilos para el contenedor de la sugerencia de tallas */
+
+.col-izquierda .sugerencia,
+.col-derecha .sugerencia {
     font-size: 14px;
     padding: 0px 4px;
 }
+
+
+/* estios para el titulo de la sugerencia de tallas */
 
 .sugerencia .titulo {
     color: #000000;
     font-weight: 500;
 }
 
+
+/* estilos para el texto de la sugerencia de tallas */
+
 .sugerencia .texto {
     margin-left: 4px;
     color: #555555;
 }
 
+
+/* estilos para el contenedor del ejemplo de las tallas */
+
 .tallas2 {
     padding: 10px 4px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
+
+
+/* estilos para el titulo del ejempplo de las tallas  */
 
 .tallas2 .texto {
     width: 100%;
@@ -152,11 +315,17 @@
     margin-bottom: 5px;
 }
 
+
+/* estilos para la imagen del ejemplo de las tallas */
+
 .tallas2 img {
     width: auto;
     max-width: 100%;
     height: auto;
 }
+
+
+/* estilos para el contenedor del pie de pagina de los detalles del producto */
 
 .footer {
     display: flex;
@@ -166,16 +335,25 @@
     padding: 15px 0px;
 }
 
+
+/* estilos para el enlace de la web */
+
 .footer .link {
     color: #ff0000;
     text-decoration: underline;
     margin-right: 20px;
 }
 
+
+/* estilos para el numero telefonico */
+
 .footer .numero {
     color: #ff0000;
     text-decoration: none;
 }
+
+
+/* estilos para la imagen del logo */
 
 .footer .logo {
     width: 120px;
@@ -183,7 +361,7 @@
 }
 
 
-/* SCROLL PERSONALIZADO */
+/* estilos para el scroll personalizado */
 
 .container-fluid::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -206,4 +384,66 @@
 .container-fluid::-webkit-scrollbar-track {
     background-color: #eeeeee;
     border-radius: 10px;
+}
+
+
+/* estilos para version movil */
+
+@media screen and (max-width: 960px) {
+    /* estilos para el contenedor de todos los elementos del componente */
+    .container-fluid {
+        position: fixed;
+        background: #ffffff;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        height: 100vh;
+        max-height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+    }
+    /* estilos para el contenedor del encabezado */
+    .encabezado {
+        display: flex;
+    }
+    /* estilos para el contenedor del boton de imprimir */
+    .titulo div:nth-child(3) {
+        display: none;
+    }
+    /* estilos para  las columnas del contenido de detalles */
+    .contenido .col-izquierda,
+    .contenido .col-derecha {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    /* estilos para los contenedores de cuidados de la prenda y sugerencia de talla mostrados en movil */
+    .col-derecha .cuidados,
+    .col-izquierda .sugerencia {
+        display: block;
+    }
+    /* estilos para los contenedores de cuidados de la prenda y sugerencia de talla mostrados en movil */
+    .col-izquierda .cuidados,
+    .col-derecha .sugerencia {
+        display: none;
+    }
+    /* estilo para los contenedores dentro del footer */
+    .footer div:nth-child(1),
+    .footer div:nth-child(2) {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    /* estilos para el contenedor del logo */
+    .footer div:nth-child(2) {
+        order: 1;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* estilos para el contenedor del enlace de la web y el numero telefonico */
+    .footer div:nth-child(1) {
+        order: 2;
+    }
 }

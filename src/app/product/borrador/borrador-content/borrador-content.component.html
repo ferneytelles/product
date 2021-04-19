@@ -1,0 +1,39 @@
+<div class="contenedor">
+
+    <!-- contenedor del menu superior  -->
+    <div class="row encabezado">
+        <div class="col ruta">
+            <strong>Diseño y producto guardado</strong>
+        </div>
+        <div class="col-auto px-0">
+            <button class="cerrar" (click)="closeBorrador()">
+                <span class="material-icons notranslate">close</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- contenedor del texto y imagen del borrador -->
+    <div class="row mx-0">
+        <!-- contenedor del texto del borrador -->
+        <div class="text">
+            <p class="titulo">¡Borrador de diseño guardado!</p>
+            <p class="texto">Hace poco creaste un borrado de diseño. ¿Deseas continuar editándolo?</p>
+        </div>
+        <!-- contenedor de la imagen del borrador -->
+        <div class="imagen">
+            <div class="img">
+                <img class="camiseta" src="assets/img/3.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- contenedor de los botones -->
+    <div class="row mx-0 justify-content-center">
+        <!-- boton de seguir editando -->
+        <button class="btn seguirEditando" (click)="closeModal('Close click')">Seguir editando</button>
+        <!-- boton de ver mis borradores -->
+        <button class="btn borradores" (click)="modalBorradores()">Ver mis borradores</button>
+        <!-- boton de ignorar -->
+        <!-- <button class="btn ignorar" (click)="dismissModal('Cross click')">Ignorar</button> -->
+    </div>
+</div>

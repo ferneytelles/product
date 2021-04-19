@@ -4,7 +4,7 @@
         <!-- tarjeta de producto -->
         <div class="card">
             <!-- contenedor de la imagen del producto -->
-            <div class="img" [style.height]="height">
+            <div class="img" [style.height]="height" (click)="openDetails(true)">
                 <img [src]=" item " class="card-img-top " alt=" ">
                 <!-- contenedor de los botones del producto que se muestra con el hover sobre el contenedor de la imagen en la version web -->
                 <div class="info">
@@ -20,13 +20,21 @@
                     </div>
                 </div>
             </div>
-
+            <!-- contenedor de los detalles del producto en version movil  -->
+            <div class="informacion" *ngIf="details">
+                <!-- componente de los detalles del producto en version movil -->
+                <app-info (close)="openDetails(false)" [seleccionar]="true"></app-info>
+            </div>
+            <!-- contenedor del cuerpo de la tarjeta del producto -->
             <div class="card-body ">
+                <!-- contenedor de la informacion del producto -->
                 <div class="detalles">
                     <div class="row m-0 detalle">
+                        <!-- contenedor del nombre del producto -->
                         <div class="col px-1 col-nombre">
                             <p class="nombre m-0">Nombre del diseño</p>
                         </div>
+                        <!-- contenedor del precio del producto -->
                         <div class="col-auto px-1">
                             <span class="precio ">$ 999.000</span>
                         </div>

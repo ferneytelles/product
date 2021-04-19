@@ -192,6 +192,10 @@
         overflow-x: auto;
         list-style: none;
     }
+    .fondo-img .container-tags::-webkit-scrollbar {
+        -webkit-appearance: none;
+        appearance: none;
+    }
 }
 
 @media screen and (max-width: 767px) {

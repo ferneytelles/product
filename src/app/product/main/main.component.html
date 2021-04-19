@@ -10,7 +10,8 @@
             <app-cambiar></app-cambiar>
         </div>
         <div class="col-auto px-1">
-            <button class="btn btn-outline-primary" (click)="modalDetalle()">Detalles del producto</button>
+            <button class="btn btn-outline-primary" (click)="modalDetalle();modalMovile('detalles')">Detalles del producto</button>
+            <app-info *ngIf="controlModal=='detalles'" (close)="modalMovile('Null')"></app-info>
             <app-detalle></app-detalle>
         </div>
         <div class="col-auto px-1">
@@ -19,11 +20,13 @@
             <app-design></app-design>
         </div>
         <div class="col-auto px-1">
-            <button class="btn btn-outline-primary" (click)="modalBorrador()">Borrador</button>
+            <button class="btn btn-outline-primary" (click)="modalBorrador();modalMovile('borrador')">Borrador</button>
+            <app-borrador-content *ngIf="controlModal=='borrador'" (close)="modalMovile('Null')" (openBorradores)="modalMovile('borradores')"></app-borrador-content>
             <app-borrador></app-borrador>
         </div>
         <div class="col-auto px-1">
-            <button class="btn btn-outline-primary" (click)="modalBorradores()">Borradores</button>
+            <button class="btn btn-outline-primary" (click)="modalBorradores();modalMovile('borradores')">Borradores</button>
+            <app-mis-borradores *ngIf="controlModal=='borradores'" (close)="modalMovile($event)"></app-mis-borradores>
             <app-borradores></app-borradores>
         </div>
     </div>
@@ -73,28 +76,28 @@
         </div>
         <!-- contenedor de pagos seguros -->
         <div class="col-lg-3 col-6">
-            <span class="material-icons">security</span>
+            <span class="material-icons notranslate">security</span>
             <p class="bold">Pagos seguros</p>
             <p class="texto">Compra con total seguridad a través de crédito, débito o efectivo</p>
             <a class="mas-info" href="#">Más información</a>
         </div>
         <!-- contenedor de devoluciones gratuitas -->
         <div class="col-lg-3 col-6">
-            <span class="material-icons">compare_arrows</span>
+            <span class="material-icons notranslate">compare_arrows</span>
             <p class="bold">Devoluciones gratuitas</p>
             <p class="texto">15 días para efectuar cambios gratuitos en cualquier penda</p>
             <a class="mas-info" href="#">Más información</a>
         </div>
         <!-- contenedor de acesoria personalizada -->
         <div class="col-lg-3 col-6">
-            <span class="material-icons">headset_mic</span>
+            <span class="material-icons notranslate">headset_mic</span>
             <p class="bold">Acesoría personalizada</p>
             <p class="texto">Estamos disponibles de lunes a viernes de 9:00 am a 6:00 pm</p>
             <a class="mas-info" href="#">Más información</a>
         </div>
         <!-- contenedor de envios a toda colombia -->
         <div class="col-lg-3 col-6">
-            <span class="material-icons-outlined">local_shipping</span>
+            <span class="material-icons-outlined notranslate">local_shipping</span>
             <p class="bold">Envíos a toda Colombia</p>
             <p class="texto">Sigue tu pedido con nuestros proveedores de envió</p>
             <a class="mas-info" href="#">Más información</a>

@@ -1,0 +1,208 @@
+/* estilos del menu superior */
+
+.encabezado {
+    display: none;
+    background: #d7d7d7;
+    padding: 0px 7px 0px 15px;
+    margin: 0px 0px;
+}
+
+
+/* estilos de la miga de pan */
+
+.encabezado .ruta {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+
+/* estilos de las secciones anteriores a la actual */
+
+.ruta .anterior {
+    margin: 0px;
+    padding: 0px 7px;
+    width: fit-content;
+    border-right: 1px solid #555555;
+    color: #000000;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 0px;
+    text-decoration: underline;
+}
+
+
+/* estilos de la seccion actual */
+
+.ruta .actual {
+    padding: 0px 7px;
+}
+
+
+/* estilos del boton cerrar */
+
+.encabezado .cerrar {
+    padding: 6px;
+    background: none;
+    border: none;
+    height: 40px;
+}
+
+
+/* estilos del icono dentro del boton cerrar */
+
+.cerrar .material-icons {
+    font-size: 28px;
+}
+
+
+/* estilos para el contenedor del texto de la modal */
+
+.contenedor .text {
+    width: 100%;
+}
+
+
+/* estilos para el titulo del texto */
+
+.text .titulo {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/* estilos para el texto */
+
+.text .texto {
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* estilos para la columna que contiene la imagen del borrado */
+
+.contenedor .imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* estilos para el contenedor de la imagen del borrador */
+
+.imagen .img {
+    width: 55%;
+    height: 38vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eeeeee;
+    margin-bottom: 15px;
+}
+
+
+/* estilos para la imagen del borrados */
+
+.imagen .img .camiseta {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* estilos para los botones */
+
+.contenedor .btn {
+    margin: 0px 2px;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 6px 0px;
+    width: 120px;
+    border: 1px solid #d7d7d7;
+    background: #eeeeee;
+    outline: none;
+}
+
+
+/* estilos para el boton de seguir editando */
+
+.contenedor .btn.seguirEditando {
+    color: #ff0000;
+}
+
+
+/* estilos para version movil */
+
+@media screen and (max-width: 960px) {
+    /* estilos para el contenedor del general del componente */
+    .contenedor {
+        position: fixed;
+        background: #ffffffd5;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        height: 60vh;
+        width: 100vw;
+        overflow-y: auto;
+    }
+    /* estilos para el contenedor del encabezado de version movil */
+    .encabezado {
+        display: flex;
+    }
+    /* estilos para el contenedor del texto */
+    .contenedor .text {
+        width: 50%;
+        padding: 15px 15px 0 0;
+    }
+    /* estilos para el titulo del texto */
+    .text .titulo {
+        font-size: 15px;
+        margin-bottom: 10px;
+        text-align: start;
+        font-weight: bold;
+    }
+    /* estilos para el texto */
+    .text .texto {
+        font-size: 14px;
+        text-align: start;
+        white-space: pre-wrap;
+    }
+    /* estilos para la columna que contiene la imagen */
+    .contenedor .imagen {
+        width: 50%;
+        padding-right: 10px;
+    }
+    /* cambio de orden de la columna del texto */
+    .row .text {
+        order: 2;
+    }
+    /* cambio de orden de la columna de la imagen */
+    .row .imagen {
+        order: 1;
+    }
+    /* estilos para el contenedor de la imagen */
+    .imagen .img {
+        background: none;
+        width: 100%;
+        height: 34vh;
+        margin-bottom: 15px;
+    }
+    /* estilos para los botones */
+    .contenedor .btn {
+        margin: 0px 4px;
+        font-size: 14px;
+        width: 132px;
+    }
+    /* estilos para el boton de ignorar */
+    .contenedor .btn.ignorar {
+        display: none;
+    }
+}

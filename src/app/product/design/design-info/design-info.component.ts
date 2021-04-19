@@ -29,27 +29,21 @@ export class DesignInfoComponent implements OnInit {
 
   constructor() { }
 
+  /**
+   * se agrega espacio de relleno para dispositivos iphone
+   * y navegadores chrome en android
+   */
   ngOnInit(): void {
-    /**
-     * condicion que detecta si el dispositivo es iPhone
-     */
+    // condicion que detecta si el dispositivo es iPhone
     if (/iPad|iPhone/.test(navigator.userAgent)) {
       console.log('iphone');
-      /**
-       * asignacion de relleno en la parte inferior para dispositivos
-       * iphone
-       */
+      
+      //  asignacion de relleno en la parte inferior para dispositivos iphone      
       this.contenedor.nativeElement.style.paddingBottom = '75px';
     }
-    /**
-     * condicion que detecta si se accede desde chrome en dispositivos
-     * android
-     */
+    //  condicion que detecta si se accede desde chrome en dispositivos android     
     if (/Android/.test(navigator.userAgent) && navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-      /**
-       * asignacion de relleno en la parte inferior para chrome
-       * en dispositivos android
-       */
+      // asignacion de relleno en la parte inferior para chrome en dispositivos android      
       this.contenedor.nativeElement.style.paddingBottom = '75px';
     }
   }

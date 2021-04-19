@@ -161,4 +161,8 @@
     .card .img:hover {
         background: #eeeeee;
     }
+    /* estilos para el contenedor del componente de los detalles del producto */
+    .card .informacion {
+        height: 15px;
+    }
 }
