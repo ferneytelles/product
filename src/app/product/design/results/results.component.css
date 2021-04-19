@@ -284,7 +284,9 @@
     }
     .contenedor .filtros::-webkit-scrollbar {
         -webkit-appearance: none;
-        appearance: none;
+    }
+    .contenedor .filtros::-webkit-scrollbar:horizontal {
+        height: 0px;
     }
     /* estilo para el contenedor de las etiquetas */
     .etiquetas {

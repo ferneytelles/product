@@ -223,6 +223,12 @@
         flex-wrap: nowrap;
         overflow-x: auto;
     }
+    .contenedor .filtros::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    .contenedor .filtros::-webkit-scrollbar:horizontal {
+        height: 0px;
+    }
     /* estilo para la primera opcion de columnas disponibles */
     .columnas .nav li:nth-child(1) {
         display: block;

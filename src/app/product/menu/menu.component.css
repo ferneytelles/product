@@ -70,9 +70,13 @@
         padding: 0 10px;
         justify-content: start;
     }
+    /* estilos para el escroll personalizado del menu */
     .nav::-webkit-scrollbar {
         -webkit-appearance: none;
         appearance: none;
+    }
+    .nav::-webkit-scrollbar:horizontal {
+        height: 0px;
     }
     /* estilos para los items del menu */
     .nav-link {

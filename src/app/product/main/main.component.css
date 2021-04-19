@@ -182,21 +182,30 @@
 /* estilos para la version movil */
 
 @media screen and (max-width: 960px) {
+    /* estilos para el contenedor de los botones y del contenido*/
     .container-fluid.noscroll {
         max-height: 50vh;
         overflow: hidden;
         margin-top: 0px;
     }
+    /* estilos para el contenedor de las etiquetas del producto */
     .fondo-img .container-tags {
         flex-wrap: nowrap;
         overflow-x: auto;
         list-style: none;
     }
+    /* estilos para el scroll del contenedor de las etiquetas */
     .fondo-img .container-tags::-webkit-scrollbar {
         -webkit-appearance: none;
         appearance: none;
     }
+    .fondo-img .container-tags::-webkit-scrollbar:horizontal {
+        height: 0px;
+    }
 }
+
+
+/* estilos para movil con menos de 767 pixeles de ancho */
 
 @media screen and (max-width: 767px) {
     /* estilos para del borde separador entre la seccion de suscribirse y metodos de pago */
@@ -205,6 +214,9 @@
         border-bottom: 1px solid #cccccc;
     }
 }
+
+
+/* estilos para movil con menos de 680 pixeles de ancho */
 
 @media screen and (max-width: 680px) {
     /* estilos para los contenedores de las secciones: cambio de espacios en las pantallas mas pequeñas */
@@ -239,6 +251,9 @@
         height: 25px;
     }
 }
+
+
+/* estilos para movil con menos de 425 pixeles de ancho */
 
 @media screen and (max-width: 425px) {
     /* estilos para los titulos en los dispositivos mas pequeños */

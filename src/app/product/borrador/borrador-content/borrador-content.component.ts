@@ -27,15 +27,29 @@ export class BorradorContentComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  /**
+   * funcion que sirve para abrir la modal borradores
+   */
   modalBorradores(): void{
     this.openBorradores.emit();
   }
+  /**
+   * funcion que permite cerrar la modal
+   * @param valor cadena que se emite para cerrar
+   */
   closeModal(valor: string): void{
     this.close.emit(valor);
   }
+  /**
+   * funcion que permite cerrar la modal
+   * @param valor cadena emitida para cerrar la modal
+   */
   dismissModal(valor: string): void{
     this.dismiss.emit(valor);
   }
+  /**
+   * funcion que permite cerrar la modal en version movil
+   */
   closeBorrador(): void{
     this.close.emit();
   }

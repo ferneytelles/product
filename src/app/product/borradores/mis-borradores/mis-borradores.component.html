@@ -12,24 +12,28 @@
             </button>
         </div>
     </div>
+    <!-- contenedor del texto informativo superior -->
     <div class="row mx-0 info">
         <p class="texto">{{texto}}</p>
         <a href="#" class="masInfo">Más info...</a>
     </div>
+    <!-- contenedor de los borradores guardados -->
     <div class="row borradores">
+        <!-- contenedor del borrador -->
         <div *ngFor="let item of borradores" class="contenedor">
             <div class="borrador">
                 <div class="row mx-0">
+                    <!-- contenedor de la imagen del borrador -->
                     <div class="col img" [style.height]="height">
-                        <img class="camiseta" [src]="item" alt="">
+                        <img class="producto" [src]="item" alt="">
                     </div>
+                    <!-- contenedor de la informacion del producto -->
                     <div class="col detalles">
-
                         <strong class="titulo">Características del producto:</strong>
                         <p class="m-0 nombre">Camiseta premium hombre - cuello redondo</p>
                         <p class="m-0">* <strong class="talla">Talla:</strong> S</p>
                         <p class="m-0">* <strong class="color">Color:</strong> Negro</p>
-
+                        <!-- boton para añadir al carrito -->
                         <button class="carrito">
                             <span class="material-icons-outlined notranslate">shopping_cart</span>
                             <span class="ml-1">Añadir a carrito</span> 
@@ -37,15 +41,19 @@
                     </div>
                 </div>
                 <div class="row mx-0">
+                    <!-- contenedor de los botones inferiores del borrador -->
                     <div class="col botones">
+                        <!-- boton de editar el borrador -->
                         <button class="editar">
                             <span class="material-icons-outlined notranslate">create</span>
                             <span class="ml-1">Editar</span>
                         </button>
+                        <!-- boton para compartir el borrador -->
                         <button class="compartir">
                             <span class="material-icons-outlined notranslate">share</span>
                             <span class="ml-1">Compartir</span>
                         </button>
+                        <!-- boton para borrar el borrador -->
                         <button class="borrar">
                             <span class="material-icons notranslate">delete_forever</span>
                             <span class="ml-1">borrar</span>

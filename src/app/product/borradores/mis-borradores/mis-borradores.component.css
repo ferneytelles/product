@@ -55,16 +55,25 @@
     font-size: 28px;
 }
 
+
+/* estilos para el contenedor general del componente */
+
 .container-fluid {
     max-height: calc(90vh - 46px);
     overflow-y: auto;
 }
+
+
+/* estilos para el texto informativo superior */
 
 .texto {
     font-size: 14px;
     margin: 10px 5px;
     color: #555555;
 }
+
+
+/* estilos para el enlace de mas informacion */
 
 .masInfo {
     font-size: 14px;
@@ -73,20 +82,32 @@
     text-decoration: underline;
 }
 
+
+/* estilos para el contenedor de los borradores */
+
 .borradores {
     margin: 0px;
 }
+
+
+/* estilos para el contenedor de cada borrador */
 
 .contenedor {
     width: 50%;
     padding: 5px;
 }
 
+
+/* contenedor de borrador */
+
 .contenedor .borrador {
     border: 1px solid #d7d7d7;
     border-radius: 10px;
     padding: 10px;
 }
+
+
+/* contenedor de la imagen del borrador */
 
 .borrador .img {
     max-width: 30%;
@@ -97,12 +118,18 @@
     align-items: center;
 }
 
-.borrador .img .camiseta {
+
+/* estilos para la imagen */
+
+.borrador .img .producto {
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
 }
+
+
+/* estilos para el contenedor de la informacion del producto*/
 
 .borrador .detalles {
     padding: 0px 10px;
@@ -111,6 +138,9 @@
     display: flex;
     flex-direction: column;
 }
+
+
+/* estilos para el boton de añadir al carrito */
 
 .detalles .carrito {
     display: flex;
@@ -125,10 +155,16 @@
     outline: none;
 }
 
+
+/* estilos para el efecto hover sobre el boto de añadir al carrito */
+
 .detalles .carrito:hover {
     padding: 9px;
     border: 2px solid #ff0000;
 }
+
+
+/* estilos para el contenedor de los botones inferiores del borrador */
 
 .botones {
     max-width: 100%;
@@ -137,6 +173,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+/* estilos para los botones */
 
 .botones button {
     display: flex;
@@ -150,12 +189,15 @@
     outline: none;
 }
 
+
+/* estilos para el efecto hover de los botones */
+
 .botones button:hover {
     background: #eeeeee;
 }
 
 
-/* SCROLL */
+/* estilos para el escroll personalizado del contenedor general */
 
 .container-fluid::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -184,7 +226,11 @@
     background-color: #eeeeee;
 }
 
+
+/* estilos para la version movil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el contenedor general del componente */
     .container-fluid {
         position: fixed;
         background: #ffffff;
@@ -195,31 +241,39 @@
         max-height: 100vh;
         width: 100vw;
     }
+    /* estilos para el encabezado version movil */
     .encabezado {
         display: flex;
     }
+    /* estilos para el contenedor del texto informativo superior */
     .container-fluid .row.info {
         display: none;
     }
+    /* esilos para el contenedor del borrador */
     .contenedor {
         width: 100%;
         padding: 0px;
         border-bottom: 1px solid #d7d7d7;
     }
+    /* estilos para el borrador */
     .contenedor .borrador {
         border: none;
         padding: 10px 0;
     }
+    /* estilos para el contenedor de la imagen */
     .borrador .img {
         max-width: 50%;
         padding: 5px 0px;
     }
+    /* estilos para el titulo de la informacion del borrador */
     .detalles .titulo {
         display: none;
     }
+    /* estilos para el nombre del producto */
     .detalles .nombre {
         font-weight: bold;
     }
+    /* estilos para los botones inferiores del borrador */
     .botones button {
         padding: 1px 4px;
     }
