@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-ordering',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderingComponent implements OnInit {
 
+  @Output() columnas = new EventEmitter<number>();
   /**
    * numero de columnas en las que se muestran ordenados los productos,
    * inicialmente se muestra en cuatro (4) columnas en version web
@@ -32,6 +33,7 @@ export class OrderingComponent implements OnInit {
     }else{
       this.dosCol = '';
     }
+    this.columnas.emit(this.cols);
    }
 
   ngOnInit(): void {
@@ -43,6 +45,7 @@ export class OrderingComponent implements OnInit {
    */
    cambiarCols(col: number): void{
     this.cols = col;
+    this.columnas.emit(this.cols);
   }
 
 }

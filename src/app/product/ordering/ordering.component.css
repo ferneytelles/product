@@ -1,10 +1,9 @@
-.container {
-    width: 100%;
+.container-fluid {
     padding: 0px;
     font-size: 14px;
 }
 
-.container .row:nth-child(1) {
+.container-fluid .row:nth-child(1) {
     border-bottom: 1px solid #d7d7d7;
 }
 
@@ -12,7 +11,7 @@
 /* estilos para el contenedor de la cantidad de resultados y  el boton de borrar filtros */
 
 .resultados {
-    padding: 5px;
+    padding: 2px 5px;
     display: flex;
     flex-direction: row;
     height: max-content;
@@ -30,7 +29,7 @@
 /* estilos para el boton de borrar filtros */
 
 .borrar_filtros {
-    color: #000000;
+    color: #ff0000;
     display: flex;
     align-items: center;
     margin-left: 8px;
@@ -50,7 +49,7 @@
 /* estilo para el icono del boton borrar filtros  */
 
 .borrar_filtros .material-icons {
-    color: #555555;
+    color: #ff0000;
     font-size: 20px;
 }
 
@@ -107,14 +106,14 @@
 .ordenar {
     display: flex;
     justify-content: space-between;
-    padding: 5px 10px;
-    border-bottom: 1px solid #c8c8c8;
+    padding: 8px 0px;
 }
 
 
 /* estilos para el contenedor de las opciones de columnas */
 
-.columnas {
+.columnas,
+.columnas2 {
     padding: 0px 5px;
     font-size: 13px;
     display: flex;
@@ -124,7 +123,7 @@
 
 /* estilo para el primera opcion de columnas, deshabilitada en version web  */
 
-.columnas .nav li:nth-child(1) {
+.columnas {
     display: none;
 }
 
@@ -145,7 +144,7 @@
     margin: 0px 1px;
     height: 15px;
     width: 7px;
-    background: #d7d7d7;
+    background: #555555;
 }
 
 
@@ -153,6 +152,33 @@
 
 .nav-link.active .cols {
     background: #ff0000;
+}
+
+
+/* estilos para el contenedor de la vista de los productos */
+
+.vista {
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.nav-link .icon-shirt {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(1);
+}
+
+.nav-link .icon {
+    color: #555555;
+}
+
+.nav-link.active .icon-shirt {
+    filter: none;
+}
+
+.nav-link.active .icon {
+    color: #ff0000;
 }
 
 
@@ -200,20 +226,42 @@
         flex-wrap: nowrap;
         overflow-x: auto;
     }
-    .contenedor .filtros::-webkit-scrollbar {
+    /* estilos para el scroll personalizado del contenedor de los filtros */
+    .filtros::-webkit-scrollbar {
         -webkit-appearance: none;
     }
-    .contenedor .filtros::-webkit-scrollbar:horizontal {
+    .filtros::-webkit-scrollbar:horizontal {
         height: 0px;
     }
     /* estilo para la primera opcion de columnas disponibles */
-    .columnas .nav li:nth-child(1) {
-        display: block;
+    .columnas {
+        display: flex;
     }
     /* ocultar las tres ultimas opciones de columnas */
-    .columnas .nav li:nth-child(3),
-    .columnas .nav li:nth-child(4),
-    .columnas .nav li:nth-child(5) {
+    .columnas2 {
+        display: none;
+    }
+    .ordenar .columnas {
+        order: 2;
+    }
+    .columnas span {
+        display: none;
+    }
+    .ordenar .vista {
+        order: 1;
+    }
+    .ordenar .select {
+        order: 3;
+    }
+    .columnas,
+    .vista,
+    .select {
+        padding: 0px 2px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .vista .texto {
         display: none;
     }
 }

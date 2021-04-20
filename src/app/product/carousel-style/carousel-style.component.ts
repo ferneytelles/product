@@ -30,12 +30,21 @@ export class CarouselStyleComponent implements OnInit {
         breakpoint: 960,
         settings: {
           arrows: false,
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1
         }
       },
       {
-        breakpoint: 700,
+        breakpoint: 830,
+        settings: {
+          centerMode: false,
+          arrows: false,
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 690,
         settings: {
           arrows: false,
           slidesToShow: 2,
@@ -43,12 +52,12 @@ export class CarouselStyleComponent implements OnInit {
         }
       },
       {
-        breakpoint: 500,
+        breakpoint: 400,
         settings: {
+          centerMode: false,
           arrows: false,
-          slidesToShow: 1.3,
-          slidesToScroll: 0.5,
-          swipeToSlide: true
+          slidesToShow: 2.5,
+          slidesToScroll: 1
         }
       }
     ]

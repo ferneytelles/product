@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 
 /**
@@ -15,7 +15,11 @@ export class MainComponent implements OnInit {
    * Arreglo que contiene las etiquetas del producto actual
    */
   tags = ['Samurai X', 'Japan', 'Otaku', 'Paisaje japonés', 'Naruto', 'Manga', 'Anime'];
-
+  /**
+   * variable de tiempo que permite reiniciar el tiempo de ejecucion
+   * en la funcion onResize()
+   */
+   resizeTime: NodeJS.Timer;
   /**
    * cadena que determina la modal abierta en movil
    */
@@ -26,6 +30,20 @@ export class MainComponent implements OnInit {
    * @param modalService  servicio que permite ejecutar las modales
    */
   constructor(private modalService: ModalService) { }
+
+  /**
+   * funcion que ejecuta la funcion seImgHeight() despues de 200 miliseguntos
+   * de que se cambien la cantidad de pixeles de ancho de la ventana
+   */
+  @HostListener('window:resize', ['$event'])
+  onResize(): any {
+    clearTimeout(this.resizeTime);
+    this.resizeTime = setTimeout(() => {
+      if (window.innerWidth > 960){
+        this.controlModal = 'Null';
+      }
+    }, 200);
+  }
 
   ngOnInit(): void {
   }

@@ -50,7 +50,7 @@
     left: 0;
     width: 45px;
     text-align: center;
-    z-index: 40;
+    z-index: 3;
 }
 
 
@@ -74,14 +74,6 @@
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-}
-
-
-/* estilos para el icono de nuevo producto */
-
-.img .estrella path {
-    fill: #333333;
-    stroke: #ffffff;
 }
 
 

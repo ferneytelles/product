@@ -1,69 +1,35 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 /**
- * componente que contiene la tarjeta del producto utilizada en venta cruzada
+ * componente que contiene la tarjeda de producto utilizada
+ * en la tienda
  */
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-card-store',
+  templateUrl: './card-store.component.html',
+  styleUrls: ['./card-store.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardStoreComponent implements OnInit {
+
   /**
    * cadena que recibe la ruta de la imagen del producto
    */
   @Input() url: string;
-  /**
-   * arreglo que contiene las tallas definidas para el producto
-   */
   tallas = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'];
-  /**
-   * arreglo que contiene valores binarios que determinan la disponibilidad
-   * de las tallas
-   */
   disponible = [true, true, false, true, true, false, true];
-  /**
-   * arreglo que contiene los colores disponibles del producto
-   */
   // colores = ["#000000","#ffffff","#009136","#ff0000","#feed01"];
   // colores = ["#000000","#ffffff","#009136","#ff0000","#feed01","#f29400","#e2017b","#93117e","#182983","#009de0"];
   colores = ['#000000', '#ffffff', '#009136', '#ff0000', '#feed01', '#f29400', '#e2017b', '#93117e', '#182983', '#009de0', '#ffffff', '#009136', '#ff0000', '#feed01', '#f29400', '#e2017b', '#93117e', '#182983', '#009de0', '#009de0', '#ffffff', '#009136', '#ff0000'];
-  /**
-   * arreglo que contiene los primeros 7 colores del producto
-   */
   colores1 = [];
-  /**
-   * arreglo que contiene los siguientes colores a mostrar del producto
-   */
   colores2 = [];
-  /**
-   * boolean que determina si hay menos de 8 colores
-   */
   menorde8 = false;
-  /**
-   * boolean que determina si hay mas de 8 colores
-   */
   mayorde8 = false;
-  /**
-   * boolean que determina si hay mas de 15 colores
-   */
   mayorde15 = false;
-  /**
-   * boolean que determina el desplegado de los demas colores
-   */
   mostrarMas = false;
-  /**
-   * cadena que contiene la cantidad de colores adicionales
-   */
   cantidad = '';
 
+  constructor() { }
 
-  constructor() {
-  }
-
-  /**
-   * se obtiene la cantidad de colores y se asignan los colores a los arreglos
-   */
   ngOnInit(): void {
     if (this.colores.length <= 8){
       this.menorde8 = true;
@@ -86,10 +52,6 @@ export class CardComponent implements OnInit {
     }
   }
 
-  /**
-   * funcion que redefine la cantidad de colores adicionales
-   * cuando de desplega la segunda fila de colores
-   */
   mas(): void{
     this.mostrarMas = !this.mostrarMas;
     if (this.mostrarMas){
@@ -104,4 +66,5 @@ export class CardComponent implements OnInit {
       this.cantidad = `+${this.colores2.length + 1}`;
     }
   }
+
 }

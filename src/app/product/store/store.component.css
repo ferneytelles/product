@@ -24,3 +24,52 @@
 .breadcrumb a {
     color: #555555;
 }
+
+.boton-filtrar {
+    display: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.boton-filtrar .filtrar {
+    display: flex;
+    align-items: center;
+    padding: 1px 15px;
+    color: #555555;
+    background: #ffffff;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+}
+
+.resultados {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.resultados .producto {
+    height: fit-content;
+    width: fit-content;
+    padding: 4px;
+}
+
+@media screen and (max-width: 960px) {
+    .busqueda .contenedor {
+        max-width: 100%;
+        padding: 0px;
+    }
+    .contenedor .slider {
+        margin: 0 -15px;
+    }
+    .breadcrumb {
+        margin: 0 -15px;
+    }
+    .boton-filtrar {
+        display: block;
+    }
+    .ordenamiento {
+        margin: 0 -5px;
+    }
+}

@@ -15,8 +15,24 @@
                     <li class="breadcrumb-item active" aria-current="page">Camisetas</li>
                 </ol>
             </nav>
-            <app-carousel-style [slides]="carousel"></app-carousel-style>
-            <app-ordering></app-ordering>
+            <div class="slider">
+                <app-carousel-style [slides]="carousel"></app-carousel-style>
+            </div>
+            <div class="boton-filtrar">
+                <button class="filtrar">
+                    <span class="material-icons-outlined notranslate">filter_alt</span>
+                    Filtrar
+                </button>
+            </div>
+            <div class="ordenamiento">
+                <app-ordering (columnas)="columnas=$event"></app-ordering>
+            </div>
+
+            <div class="resultados">
+                <div *ngFor="let item of productos" class="producto">
+                    <app-card-store [url]="item"></app-card-store>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,6 +1,9 @@
-<div class="fondo">
+<div class="fondo" [ngClass]="{'active': filtrar}">
 </div>
-<div class="contenedor">
+<div class="contenedor" [ngClass]="{'active': filtrar}">
+    <div class="cerrar">
+
+    </div>
     <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>
     <app-filtros-color *ngFor="let filtro of colorFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-color>
     <app-filtro-precio [nombre]="'Precio'"></app-filtro-precio>

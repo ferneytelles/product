@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container-fluid">
     <!-- contenedor de la cantidad de resultados y los filtros aplicados -->
 
-    <div class="row m-0">
+    <div class="row m-0 pb-2">
         <!-- contenedor de la cantidad de resultados y el boton borrar filtros -->
         <div class="col-auto resultados">
             <span class="cant">60 resultados</span>
@@ -17,7 +17,7 @@
                 <span class="nombre">{{filtro}}</span>
                 <!-- boton para eliminar el filtro -->
                 <a href="#" class="cerrar">
-                    <span class="material-icons">close</span>
+                    <span class="material-icons notranslate">close</span>
                 </a>
             </div>
         </div>
@@ -27,29 +27,41 @@
     <div class="row m-0 ordenar">
         <!-- contenedor de la cantidad se columnas seleccionables -->
         <div class="col-auto columnas">
+            <!-- lista que contiene las opciones de columnas -->
+            <ul class="nav" role="tablist">
+                <li>
+                    <a href="#" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(1)">
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link" [ngClass]="dosCol" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- contenedor de la cantidad se columnas seleccionables en version movil-->
+        <div class="col-auto columnas2">
             <span class="">Columnas</span>
             <!-- lista que contiene las opciones de columnas -->
             <ul class="nav" role="tablist">
                 <li>
-                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(1)">
-                        <div class="cols"></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#content" class="nav-link" [ngClass]="dosCol" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
+                    <a href="#" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
                         <div class="cols"></div>
                         <div class="cols"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(3)">
+                    <a href="#" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(3)">
                         <div class="cols"></div>
                         <div class="cols"></div>
                         <div class="cols"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#content" class="nav-link active" data-toggle="tab" role="tab" (click)="cambiarCols(4)">
+                    <a href="#" class="nav-link active" data-toggle="tab" role="tab" (click)="cambiarCols(4)">
                         <div class="cols"></div>
                         <div class="cols"></div>
                         <div class="cols"></div>
@@ -57,12 +69,31 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#content" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(5)">
+                    <a href="#" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(5)">
                         <div class="cols"></div>
                         <div class="cols"></div>
                         <div class="cols"></div>
                         <div class="cols"></div>
                         <div class="cols"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- contenedor de la vista de los productos -->
+        <div class="col-auto vista">
+            <span class="texto mx-1">Vista</span>
+            <ul class="nav" role="tablist">
+                <li>
+                    <a href="#" class="nav-link active" data-toggle="tab" role="tab">
+                        <!-- icono de la vista del producto -->
+                        <img class="icon-shirt" src="assets/icons/shirt.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link" data-toggle="tab" role="tab">
+                        <!-- icono de la vista del diseño -->
+                        <span class="material-icons-outlined icon notranslate">filter
+                        </span>
                     </a>
                 </li>
             </ul>

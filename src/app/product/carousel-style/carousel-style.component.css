@@ -20,8 +20,8 @@
     line-height: 19px;
     font-weight: bold;
     font-family: monospace;
-    color: #ffffff;
-    background-color: #ff0000;
+    color: #ff0000;
+    background-color: #eeeeee;
     border-radius: 3px;
     opacity: 1;
     display: flex;
@@ -37,10 +37,18 @@
 
 .estilos {
     max-width: 100%;
+    font-size: 14px;
     padding: 3px 15px;
     text-align: center;
     background: #ffffff;
     border: 1px solid #d7d7d7;
     color: #555555;
     border-radius: 4px;
+    outline: none;
+}
+
+@media screen and (max-width: 960px) {
+    .carousel {
+        margin: 10px 0px;
+    }
 }

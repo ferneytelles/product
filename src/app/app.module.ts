@@ -40,6 +40,7 @@ import { DesignInfoComponent } from './product/design/design-info/design-info.co
 import { BorradorContentComponent } from './product/borrador/borrador-content/borrador-content.component';
 import { FiltrosComponent } from './product/filtros/filtros.component';
 import { OrderingComponent } from './product/ordering/ordering.component';
+import { CardStoreComponent } from './product/card-store/card-store.component';
 
 
 
@@ -76,7 +77,8 @@ import { OrderingComponent } from './product/ordering/ordering.component';
     DesignInfoComponent,
     BorradorContentComponent,
     FiltrosComponent,
-    OrderingComponent    
+    OrderingComponent,
+    CardStoreComponent    
   ],
   imports: [
     BrowserModule,

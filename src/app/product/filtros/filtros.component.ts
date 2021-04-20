@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-filtros',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltrosComponent implements OnInit {
 
+  @Input() filtrar: boolean;
   radioFilter = [{name: 'Categoría', items: ['Hombre', 'Mujer', 'Niño y bebé', 'Acesorios y más']}, {name: 'Producto', items: ['Camisetas', 'Camisetas polo', 'Chaquetas', 'Sudaderas', 'Gorros', 'Hoodies', 'Tazas', 'Bolsas ecológicas', 'Posters', 'Mochilas']}];
 
   colorFilter = [{name: 'Colores', items: ['#000000', '#ffffff', '#595959','#009136', '#feed01', '#f29400', '#ff0000', '#e2017b', '#93117e', '#182983', '#009de0', '#e0ff77', '#b6e9ff']}];
