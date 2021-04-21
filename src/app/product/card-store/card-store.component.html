@@ -41,7 +41,8 @@
                 <div *ngFor="let color of colores" [style.background]="color" class="color"></div>
             </div> -->
             <div class="col-auto colores">
-                <div *ngFor="let color of colores" [style.background]="color" class="color"></div>
+                <div *ngFor="let color of colores1" [style.background]="color" class="color"></div>
+                <button *ngIf="colores.length > 5" class="color mas">{{cantidad}}</button>
             </div>
             <!-- contenedor de los colores cuando son mas de 8 -->
             <!-- <div *ngIf="mayorde8" class="col-auto colores">
