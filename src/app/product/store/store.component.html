@@ -33,7 +33,7 @@
 
             <div class="resultados">
                 <div *ngFor="let item of productos" class="producto" [ngStyle]="{width: width}">
-                    <app-card-store [url]="item"></app-card-store>
+                    <app-card-store [url]="item" [height]="height"></app-card-store>
                 </div>
             </div>
         </div>

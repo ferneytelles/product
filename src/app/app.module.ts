@@ -41,6 +41,7 @@ import { BorradorContentComponent } from './product/borrador/borrador-content/bo
 import { FiltrosComponent } from './product/filtros/filtros.component';
 import { OrderingComponent } from './product/ordering/ordering.component';
 import { CardStoreComponent } from './product/card-store/card-store.component';
+import { ColoresRadioComponent } from './product/detalle/colores-radio/colores-radio.component';
 
 
 
@@ -78,7 +79,8 @@ import { CardStoreComponent } from './product/card-store/card-store.component';
     BorradorContentComponent,
     FiltrosComponent,
     OrderingComponent,
-    CardStoreComponent    
+    CardStoreComponent,
+    ColoresRadioComponent    
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,6 @@
 
 .card .img {
     width: 100%;
-    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,8 +57,8 @@
 
 .img .estrella {
     position: absolute;
-    top: 179px;
-    left: 3px;
+    bottom: 120px;
+    left: 5px;
 }
 
 
@@ -67,8 +66,8 @@
 
 .img .new {
     position: absolute;
-    left: 3px;
-    top: 185px;
+    left: 5px;
+    bottom: 127px;
     width: 40px;
     z-index: 3;
     font-size: 14px;
@@ -96,8 +95,7 @@
     flex-direction: column;
     position: absolute;
     right: 0;
-    top: 100px;
-    margin-bottom: 98px;
+    bottom: 113px;
     z-index: 2;
     transition: all 0.5s ease;
 }
@@ -177,6 +175,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 19px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -187,6 +187,7 @@
 
 .contenedor .color {
     width: 15px;
+    min-width: 15px;
     height: 15px;
     margin: 2px 4px;
     border-radius: 3px;

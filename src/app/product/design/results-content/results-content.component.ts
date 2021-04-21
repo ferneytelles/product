@@ -73,6 +73,7 @@ export class ResultsContentComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     this.setCardWidth();
     this.setImgHeight();
+
   }
 
   /**

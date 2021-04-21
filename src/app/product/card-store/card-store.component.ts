@@ -15,6 +15,7 @@ export class CardStoreComponent implements OnInit {
    * cadena que recibe la ruta de la imagen del producto
    */
   @Input() url: string;
+  @Input() height: string;
   tallas = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'];
   disponible = [true, true, false, true, true, false, true];
   // colores = ["#000000","#ffffff","#009136","#ff0000","#feed01"];
