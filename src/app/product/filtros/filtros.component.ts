@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-filtros',
@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FiltrosComponent implements OnInit {
 
+  @Output() close = new EventEmitter<boolean>();
   @Input() filtrar: boolean;
   radioFilter = [{name: 'Categoría', items: ['Hombre', 'Mujer', 'Niño y bebé', 'Acesorios y más']}, {name: 'Producto', items: ['Camisetas', 'Camisetas polo', 'Chaquetas', 'Sudaderas', 'Gorros', 'Hoodies', 'Tazas', 'Bolsas ecológicas', 'Posters', 'Mochilas']}];
 
@@ -19,6 +20,9 @@ export class FiltrosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  closeFilters(valor: boolean): void{
+    this.close.emit(valor);
   }
 
 }

@@ -1,7 +1,11 @@
-<div class="fondo" [ngClass]="{'active': filtrar}">
+<div class="fondo" [ngClass]="{'active': filtrar}" (click)="closeFilters(false)">
 </div>
 <div class="contenedor" [ngClass]="{'active': filtrar}">
     <div class="cerrar">
+        <span class="titulo">Filtros</span>
+        <button class="btn-cerrar" (click)="closeFilters(false)">
+            <span class="material-icons notranslate">close</span>
+        </button>
 
     </div>
     <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>

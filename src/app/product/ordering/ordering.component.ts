@@ -33,10 +33,10 @@ export class OrderingComponent implements OnInit {
     }else{
       this.dosCol = '';
     }
-    this.columnas.emit(this.cols);
    }
 
   ngOnInit(): void {
+    this.columnas.emit(this.cols);
   }
 
   /**

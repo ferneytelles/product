@@ -25,43 +25,32 @@
 
     <!-- contenedor de la seccion que permite ordenar los resultados -->
     <div class="row m-0 ordenar">
-        <!-- contenedor de la cantidad se columnas seleccionables -->
+
+        <!-- contenedor de la cantidad se columnas seleccionables-->
         <div class="col-auto columnas">
-            <!-- lista que contiene las opciones de columnas -->
-            <ul class="nav" role="tablist">
-                <li>
-                    <a href="#" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(1)">
-                        <div class="cols"></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link" [ngClass]="dosCol" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
-                        <div class="cols"></div>
-                        <div class="cols"></div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <!-- contenedor de la cantidad se columnas seleccionables en version movil-->
-        <div class="col-auto columnas2">
             <span class="">Columnas</span>
             <!-- lista que contiene las opciones de columnas -->
-            <ul class="nav" role="tablist">
+            <ul class="nav">
                 <li>
-                    <a href="#" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(2)">
+                    <a class="nav-link" [ngClass]="{'active': cols==1}" (click)="cambiarCols(1)">
+                        <div class="cols"></div>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" [ngClass]="{'active': cols==2}" (click)="cambiarCols(2)">
                         <div class="cols"></div>
                         <div class="cols"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(3)">
+                    <a class="nav-link" [ngClass]="{'active': cols==3}" (click)="cambiarCols(3)">
                         <div class="cols"></div>
                         <div class="cols"></div>
                         <div class="cols"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link active" data-toggle="tab" role="tab" (click)="cambiarCols(4)">
+                    <a class="nav-link" [ngClass]="{'active': cols==4}" (click)="cambiarCols(4)">
                         <div class="cols"></div>
                         <div class="cols"></div>
                         <div class="cols"></div>
@@ -69,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link" data-toggle="tab" role="tab" (click)="cambiarCols(5)">
+                    <a class="nav-link" [ngClass]="{'active': cols==5}" (click)="cambiarCols(5)">
                         <div class="cols"></div>
                         <div class="cols"></div>
                         <div class="cols"></div>

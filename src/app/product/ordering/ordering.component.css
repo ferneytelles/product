@@ -112,18 +112,14 @@
 
 /* estilos para el contenedor de las opciones de columnas */
 
-.columnas,
-.columnas2 {
+.columnas {
     padding: 0px 5px;
     font-size: 13px;
     display: flex;
     align-items: center;
 }
 
-
-/* estilo para el primera opcion de columnas, deshabilitada en version web  */
-
-.columnas {
+.nav li:nth-child(1) {
     display: none;
 }
 
@@ -135,6 +131,7 @@
     flex-direction: row;
     margin: 0px 5px;
     padding: 0px 1px;
+    cursor: pointer;
 }
 
 
@@ -145,6 +142,7 @@
     height: 15px;
     width: 7px;
     background: #555555;
+    transition: all .3s ease;
 }
 
 
@@ -233,16 +231,16 @@
     .filtros::-webkit-scrollbar:horizontal {
         height: 0px;
     }
-    /* estilo para la primera opcion de columnas disponibles */
-    .columnas {
-        display: flex;
-    }
-    /* ocultar las tres ultimas opciones de columnas */
-    .columnas2 {
-        display: none;
-    }
     .ordenar .columnas {
         order: 2;
+    }
+    .nav li:nth-child(1) {
+        display: block;
+    }
+    .nav li:nth-child(3),
+    .nav li:nth-child(4),
+    .nav li:nth-child(5) {
+        display: none;
     }
     .columnas span {
         display: none;

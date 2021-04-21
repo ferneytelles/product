@@ -1,3 +1,8 @@
+.container-fdm {
+    width: 100%;
+    padding: 0px 15px;
+}
+
 .busqueda {
     margin: 15px 0px;
 }
@@ -39,10 +44,10 @@
     background: #ffffff;
     border: 1px solid #ff0000;
     border-radius: 4px;
+    outline: none;
 }
 
 .resultados {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -51,7 +56,6 @@
 
 .resultados .producto {
     height: fit-content;
-    width: fit-content;
     padding: 4px;
 }
 
@@ -71,5 +75,15 @@
     }
     .ordenamiento {
         margin: 0 -5px;
+    }
+    .resultados {
+        margin: 0px -10px;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    .container-fdm {
+        max-width: 1450px;
+        margin: 0px auto;
     }
 }

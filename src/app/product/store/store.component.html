@@ -1,11 +1,11 @@
-<div class="container-fluid">
-
+<div class="container-fdm">
+    <!-- contenedor de la seccion de busqueda -->
     <div class="row busqueda">
-
+        <!-- contenedor del componente de los filtros -->
         <div class="filtros">
-            <app-filtros></app-filtros>
+            <app-filtros [filtrar]="filtros" (close)="openFiltros(false)"></app-filtros>
         </div>
-
+        <!-- contenedor de la miga de pan -->
         <div class="contenedor">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -15,21 +15,24 @@
                     <li class="breadcrumb-item active" aria-current="page">Camisetas</li>
                 </ol>
             </nav>
+            <!-- contenedor del carrusel de los estilos -->
             <div class="slider">
                 <app-carousel-style [slides]="carousel"></app-carousel-style>
             </div>
+
             <div class="boton-filtrar">
-                <button class="filtrar">
+                <button class="filtrar" (click)="openFiltros(true)">
                     <span class="material-icons-outlined notranslate">filter_alt</span>
-                    Filtrar
+                    <span>Filtrar</span>
                 </button>
             </div>
+
             <div class="ordenamiento">
-                <app-ordering (columnas)="columnas=$event"></app-ordering>
+                <app-ordering (columnas)="setColumns($event)"></app-ordering>
             </div>
 
             <div class="resultados">
-                <div *ngFor="let item of productos" class="producto">
+                <div *ngFor="let item of productos" class="producto" [ngStyle]="{width: width}">
                     <app-card-store [url]="item"></app-card-store>
                 </div>
             </div>
