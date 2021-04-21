@@ -51,7 +51,7 @@
             </div>
         </div>
         <!-- contenedor de las tallas del producto -->
-        <div class="row d-flex justify-content-center">
+        <div class="row tallas">
             <!-- contenedor de la talla -->
             <div *ngFor="let talla of tallas" class="col talla">
                 <a href="#" [class.disabled]="!disponible[(tallas.indexOf(talla))]">{{talla}}</a>

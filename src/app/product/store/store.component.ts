@@ -30,9 +30,7 @@ export class StoreComponent implements OnInit {
   }
 
   setCardWidth(): void{
-    if (this.columnas === 5) {
-      this.width = '20%';
-    }else if (this.columnas === 4) {
+    if (this.columnas === 4) {
       this.width = '25%';
     }else if (this.columnas === 3) {
       this.width = '33.3%';
