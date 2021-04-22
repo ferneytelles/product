@@ -8,9 +8,18 @@
         </button>
 
     </div>
-    <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>
-    <app-filtros-color *ngFor="let filtro of colorFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-color>
-    <app-filtro-precio [nombre]="'Precio'"></app-filtro-precio>
-    <app-filtros-check *ngFor="let filtro of checkFilter" [active]="false" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
-    <app-filtros-check *ngFor="let filtro of checkFilter2" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+    <div #elemento class="elemento">
+        <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>
+        <app-filtros-color *ngFor="let filtro of colorFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-color>
+        <app-filtro-precio [nombre]="'Precio'"></app-filtro-precio>
+        <app-filtros-check *ngFor="let filtro of checkFilter" [active]="false" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+        <app-filtros-check *ngFor="let filtro of checkFilter2" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+    </div>
+    <div #aplicar class="aplicar" [ngClass]="{'show': botonFijo}">
+        <button class="btn-aplicar">
+            <span class="material-icons-outlined notranslate">filter_alt</span>
+            Aplicar filtro
+        </button>
+    </div>
+
 </div>

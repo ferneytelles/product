@@ -44,7 +44,7 @@
 
 /* estilos para el icono cuando esta seleccionado el checkbox */
 
-.color input[type=radio]:checked~.iconCheck {
+.color input[type=checkbox]:checked~.iconCheck {
     display: block;
 }
 

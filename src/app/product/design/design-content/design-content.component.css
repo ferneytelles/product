@@ -87,7 +87,7 @@
 .categorias {
     margin: 10px 0px 0px 0px;
     padding: 0px 5px;
-    max-height: calc(73vh - 46px);
+    max-height: calc(90vh - 150px);
     overflow-y: auto;
 }
 

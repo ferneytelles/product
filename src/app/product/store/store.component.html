@@ -1,4 +1,4 @@
-<div class="container-fdm">
+<div class="container-fdm" [ngClass]="{'noScroll': filtros}">
     <!-- contenedor de la seccion de busqueda -->
     <div class="row busqueda">
         <!-- contenedor del componente de los filtros -->
@@ -19,14 +19,14 @@
             <div class="slider">
                 <app-carousel-style [slides]="carousel"></app-carousel-style>
             </div>
-
+            <!-- contenedor del boton para abrir los filtros en movil -->
             <div class="boton-filtrar">
                 <button class="filtrar" (click)="openFiltros(true)">
                     <span class="material-icons-outlined notranslate">filter_alt</span>
                     <span>Filtrar</span>
                 </button>
             </div>
-
+            <!-- contenedor  -->
             <div class="ordenamiento">
                 <app-ordering (columnas)="setColumns($event)"></app-ordering>
             </div>
@@ -36,7 +36,15 @@
                     <app-card-store [url]="item" [height]="height"></app-card-store>
                 </div>
             </div>
+
+            <div class="paginacion">
+                <app-pagination></app-pagination>
+            </div>
+
         </div>
     </div>
 
+    <div class="row etiquetas">
+        <app-tags [tags]="tags"></app-tags>
+    </div>
 </div>

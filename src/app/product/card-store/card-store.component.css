@@ -57,7 +57,7 @@
 
 .img .estrella {
     position: absolute;
-    bottom: 120px;
+    bottom: 114px;
     left: 5px;
 }
 
@@ -67,7 +67,7 @@
 .img .new {
     position: absolute;
     left: 5px;
-    bottom: 127px;
+    bottom: 121px;
     width: 40px;
     z-index: 3;
     font-size: 14px;
@@ -95,7 +95,7 @@
     flex-direction: column;
     position: absolute;
     right: 0;
-    bottom: 113px;
+    bottom: 108px;
     z-index: 2;
     transition: all 0.5s ease;
 }
@@ -148,7 +148,7 @@
 /* estilospara el contenedor del cuerpo de la tarjeta */
 
 .card-body {
-    padding: 5px;
+    padding: 5px 5px 0px 5px;
     background: #d7d7d7;
     border-radius: 0 0 4px 4px;
 }
@@ -327,4 +327,16 @@
     font-size: 12px;
     font-weight: bold;
     color: #525252;
+}
+
+@media screen and (max-width: 960px) {
+    .opciones {
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card-body .tallas {
+        margin: 0px -3px;
+    }
 }
