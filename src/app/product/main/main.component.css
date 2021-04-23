@@ -66,116 +66,8 @@
     line-height: 14px;
 }
 
-
-/* estilos para el contenedor de la seccion de las garantias de venta */
-
-.info {
-    padding: 15px 30px;
-}
-
-
-/* estilos para las columnas de las secciones de garantias de venta, suscribirse y metodos de pago */
-
-.info .col-6,
-.pagos .pagos-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-
-
-/* estilos para los iconos de la seccion de garantias de venta */
-
-.info span {
-    width: auto;
-    text-align: center;
-    font-size: 45px;
-    color: #ff0000;
-}
-
-
-/* estilos de los titulos de las garantias */
-
-.info .bold {
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-
-/* estilos para los textos de las secciones de garantia y suscribirse */
-
-.info .texto,
-.pagos .texto {
-    font-size: 13px;
-    line-height: 14px;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-
-/* estilos para los links de mas informacion de las secciones de garantia y suscribirse */
-
-.info .mas-info,
-.pagos .mas-info {
-    color: #ff0000;
-    text-align: center;
-    font-size: 12px;
-    line-height: 13px;
-}
-
-
-/* estilos para el contenedor de la seccion de suscribirse y metodos de pago */
-
-.pagos {
-    padding: 15px 0px;
-    margin: 0 30px;
-    border-top: 1px solid #cccccc;
-}
-
-
-/* estilos para el contenedor de suscribirse y contenedor de metodos de pago */
-
-.pagos .pagos-col {
-    padding: 0 20px;
-}
-
-
-/* estilos para el borde separador entre la seccion suscribirse y metodos de pago */
-
-.pagos .borde {
-    border-right: 1px solid #cccccc;
-}
-
-
-/* estilos para los titulos de las secciones de suscribirse y metodos de pago */
-
-.pagos .titulo {
-    color: #555555;
-    text-align: center;
-}
-
-
-/* estilos para el boton de suscribirse */
-
-.pagos .input-group-text {
-    background: #ff0000;
-    border-color: #ff0000;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-/* estilos para el campo de texto para el correo */
-
-.pagos .form-control {
-    font-size: 14px;
-    border: 1px solid #555555;
-    border-right-color: #ff0000;
+.component {
+    width: 100%;
 }
 
 
@@ -205,17 +97,6 @@
 }
 
 
-/* estilos para movil con menos de 767 pixeles de ancho */
-
-@media screen and (max-width: 767px) {
-    /* estilos para del borde separador entre la seccion de suscribirse y metodos de pago */
-    .pagos .borde {
-        border-right: none;
-        border-bottom: 1px solid #cccccc;
-    }
-}
-
-
 /* estilos para movil con menos de 680 pixeles de ancho */
 
 @media screen and (max-width: 680px) {
@@ -226,29 +107,8 @@
     .otros {
         padding: 15px 5px;
     }
-    .info {
-        padding: 15px 5px;
-    }
-    .info .col-6 {
-        padding: 4px 3px;
-    }
     .fondo-img {
         padding: 15px 5px;
-    }
-    .pagos {
-        padding: 7px 0;
-        margin: 0 5px;
-    }
-    .pagos .pagos-col {
-        padding: 7px 0px;
-    }
-    /* estilos para campo de texto del correo y el boton suscribirse */
-    .pagos .form-control,
-    .pagos .input-group-text {
-        padding: 2px 6px;
-        font-size: 12px;
-        line-height: 13px;
-        height: 25px;
     }
 }
 

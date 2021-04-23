@@ -26,25 +26,30 @@
                     <span>Filtrar</span>
                 </button>
             </div>
-            <!-- contenedor  -->
+            <!-- contenedor del componente de ordenamiento de los resultados -->
             <div class="ordenamiento">
                 <app-ordering (columnas)="setColumns($event)"></app-ordering>
             </div>
-
+            <!-- contenedor de los productos encontrados -->
             <div class="resultados">
                 <div *ngFor="let item of productos" class="producto" [ngStyle]="{width: width}">
                     <app-card-store [url]="item" [height]="height"></app-card-store>
                 </div>
             </div>
-
+            <!-- contenedor del componente la paginacion -->
             <div class="paginacion">
                 <app-pagination></app-pagination>
             </div>
 
         </div>
     </div>
-
+    <!-- contenedor del componente de las etiquetas -->
     <div class="row etiquetas">
-        <app-tags [tags]="tags"></app-tags>
+        <app-tags [tags]="tags" class="component"></app-tags>
     </div>
+    <!-- contenedor del componente de la infomacion de venta -->
+    <div class="row informacion">
+        <app-information class="component"></app-information>
+    </div>
+
 </div>

@@ -67,9 +67,9 @@
     border-top: 1px solid #d7d7d7;
 }
 
-.etiquetas {
-    background-image: url("../../../assets/img/fondofdm.jpg");
-    padding: 15px 30px;
+.etiquetas .component,
+.informacion .component {
+    width: 100%;
 }
 
 @media screen and (max-width: 960px) {

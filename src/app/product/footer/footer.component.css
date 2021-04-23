@@ -1,0 +1,154 @@
+.contenedor {
+    width: 100%;
+    background-color: #000000;
+    padding: 15px 30px;
+}
+
+.contenedor a {
+    color: #ffffff;
+}
+
+.contenedor .opciones {
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 15px;
+}
+
+.opciones .encabezado {
+    margin-bottom: 16px;
+}
+
+.titulo {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.redes .titulo {
+    margin-bottom: 16px;
+}
+
+.menu .iconos {
+    display: flex;
+    flex-direction: column;
+}
+
+.iconos a {
+    padding: 3px 0px;
+}
+
+.menu .icono {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+
+.icono i {
+    font-size: 11px;
+    color: #000000;
+}
+
+.icono .fa-instagram {
+    font-weight: bold;
+}
+
+.inferior {
+    margin: 0px;
+    justify-content: center;
+}
+
+.inferior .logo {
+    position: absolute;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px 0px 15px;
+}
+
+.logo img {
+    width: 135px;
+    height: auto;
+}
+
+.inferior .copy-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.copy-right p {
+    width: 100%;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.links a {
+    display: inline-block;
+}
+
+@media screen and (max-width: 960px) {
+    .contenedor {
+        padding: 15px 10px;
+    }
+    .contenedor .opciones {
+        padding: 15px 0;
+    }
+    .opciones .redes {
+        min-width: 100%;
+        margin-top: 15px;
+        padding: 15px 0 0 0;
+        border-top: 1px solid #ffffff;
+    }
+    .redes .titulo {
+        text-align: center;
+    }
+    .redes .menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .menu .iconos {
+        width: fit-content;
+        padding: 0px 10px;
+    }
+    .inferior .logo {
+        position: initial;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-top: 0px;
+    }
+    .inferior .copy-right {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .opciones .col {
+        min-width: 100%;
+        margin-bottom: 15px;
+    }
+    .opciones .encabezado {
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: space-between;
+        border: 1px solid #555555;
+        border-radius: 4px;
+        padding: 2px 5px;
+        background-color: #55555581;
+    }
+}

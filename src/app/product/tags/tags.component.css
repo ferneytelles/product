@@ -1,6 +1,13 @@
+.fondo-fdm {
+    width: 100%;
+    padding: 15px 30px;
+    background-image: url("../../../assets/img/fondofdm.jpg");
+}
+
+
 /* estilos para el contenedor de las etiquetas */
 
-.container-tags {
+.fondo-fdm .container-tags {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -13,7 +20,7 @@
 .container-tags .tags {
     display: flex;
     background: #fff;
-    padding: 6px 18px;
+    padding: 0px;
     border: 2px solid #cccccc;
     border-radius: 8px;
     margin-right: 18px;
@@ -25,6 +32,34 @@
 
 .container-tags .tags .tag {
     font-size: 13px;
+    padding: 6px 18px;
     line-height: 14px;
     color: #555555;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    .titulo {
+        font-size: 18px;
+    }
+    /* estilos para el contenedor de las etiquetas del producto */
+    .fondo-fdm .container-tags {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    /* estilos para el scroll del contenedor de las etiquetas */
+    .container-tags::-webkit-scrollbar {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    .container-tags::-webkit-scrollbar:horizontal {
+        height: 0px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .fondo-fdm {
+        padding: 15px 5px;
+    }
 }

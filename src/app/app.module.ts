@@ -44,6 +44,8 @@ import { CardStoreComponent } from './product/card-store/card-store.component';
 import { ColoresRadioComponent } from './product/detalle/colores-radio/colores-radio.component';
 import { PaginationComponent } from './product/pagination/pagination.component';
 import { TagsComponent } from './product/tags/tags.component';
+import { InformationComponent } from './product/information/information.component';
+import { FooterComponent } from './product/footer/footer.component';
 
 
 
@@ -84,7 +86,9 @@ import { TagsComponent } from './product/tags/tags.component';
     CardStoreComponent,
     ColoresRadioComponent,
     PaginationComponent,
-    TagsComponent
+    TagsComponent,
+    InformationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
