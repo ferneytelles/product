@@ -19,6 +19,10 @@
     margin-bottom: 16px;
 }
 
+.col .material-icons {
+    display: none;
+}
+
 .titulo {
     color: #ffffff;
     margin-bottom: 0;
@@ -109,6 +113,9 @@
     .contenedor .opciones {
         padding: 15px 0;
     }
+    .menu {
+        padding: 0 5px;
+    }
     .opciones .redes {
         min-width: 100%;
         margin-top: 15px;
@@ -146,9 +153,26 @@
         display: flex;
         margin-bottom: 5px;
         justify-content: space-between;
+        align-items: center;
         border: 1px solid #555555;
         border-radius: 4px;
         padding: 2px 5px;
         background-color: #55555581;
+        cursor: pointer;
+    }
+    .col .material-icons {
+        display: block;
+        color: #ff0000;
+        font-size: 20px;
+        transform: rotate(0deg);
+    }
+    .col.show .material-icons {
+        transform: rotate(180deg);
+    }
+    .col:not(.show) .menu {
+        display: none;
+    }
+    .col.redes .menu {
+        display: flex;
     }
 }

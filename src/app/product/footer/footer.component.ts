@@ -11,6 +11,10 @@ export class FooterComponent implements OnInit {
   nosotros = ['Conoce fuera del molde', 'Lo que nos hace diferentes', 'Vende tu arte', 'Iniciativas sociales', 'Prensa', 'Nuestra historia', 'Carreras', 'Blog de arte'];
   ayuda = ['Como cotizar', 'Pedidos al por mayor', 'Recuperar deseos o borrados', 'Rastrea tu pedido', 'Preguntas frecuentes', 'Gastos de envío', 'Tiempos de entrega', 'Garantía de devolución', 'Calidad de los articulos'];
 
+  menuT = true;
+  menuN = true;
+  menuA = true;
+
   constructor() { }
 
   ngOnInit(): void {

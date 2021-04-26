@@ -1,5 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
+/**
+ * componente que contiene los filtros seleccionados
+ * y la sección deordenamiento de los resultados
+ */
 @Component({
   selector: 'app-ordering',
   templateUrl: './ordering.component.html',
@@ -7,7 +10,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class OrderingComponent implements OnInit {
 
+  /**
+   * numero que se emite con la cantidad de columnas seleccionadas
+   */
   @Output() columnas = new EventEmitter<number>();
+  @Output() vista = new EventEmitter<string>();
   /**
    * numero de columnas en las que se muestran ordenados los productos,
    * inicialmente se muestra en cuatro (4) columnas en version web
@@ -46,6 +53,9 @@ export class OrderingComponent implements OnInit {
    cambiarCols(col: number): void{
     this.cols = col;
     this.columnas.emit(this.cols);
+  }
+  changeView(valor: string): void{
+    this.vista.emit(valor);
   }
 
 }

@@ -87,6 +87,13 @@
 }
 
 
+/* estilos para el contenedor de los botones cuando ocurre el evento hover */
+
+.img:hover .opciones {
+    transform: translateX(0%);
+}
+
+
 /* estilos para el contenedor de los botones de opciones del producto */
 
 .opciones {
@@ -128,13 +135,6 @@
 
 .opcion span {
     font-size: 22px;
-}
-
-
-/* estilos para el contenedor de los botones cuando ocurre el evento hover */
-
-.img:hover .opciones {
-    transform: translateX(0%);
 }
 
 
@@ -296,6 +296,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    cursor: pointer;
 }
 
 

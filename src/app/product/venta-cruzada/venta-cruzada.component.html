@@ -1,0 +1,25 @@
+<!-- contenedor de la venta cruzada -->
+<div class="container-fluid">
+    <!-- contenedor del titulo de la venta cruzada -->
+    <div class="row">
+        <h4 class="titulo">Este diseño en otros productos</h4>
+    </div>
+    <!-- contenedor del componente del menu con los carousel de cada item del menu -->
+    <div class="row">
+        <app-menu class="w-100"></app-menu>
+    </div>
+    <div class="row">
+        <!-- contenedor de otros usuarios tambien compraron -->
+        <div class="col otros">
+            <h4 class="titulo mb-2">Otros usuarios también compraron:</h4>
+            <app-carousel></app-carousel>
+        </div>
+    </div>
+    <div class="row">
+        <!-- contenedor de diseños similares -->
+        <div class="col fondo-s">
+            <h4 class="titulo similares mb-2">Diseños similares:</h4>
+            <app-carousel></app-carousel>
+        </div>
+    </div>
+</div>

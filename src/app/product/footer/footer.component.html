@@ -1,24 +1,27 @@
 <div class="contenedor">
     <div class="row opciones">
-        <div class="col">
-            <div class="encabezado">
+        <div class="col" [ngClass]="{'show': menuT}">
+            <div class="encabezado" (click)="menuT=!menuT">
                 <h6 class="titulo">TIENDA</h6>
+                <span class="material-icons notranslate">expand_more</span>
             </div>
             <div class="menu">
                 <a href="" *ngFor="let item of tienda">{{item}}</a>
             </div>
         </div>
-        <div class="col">
-            <div class="encabezado">
+        <div class="col" [ngClass]="{'show': menuN}">
+            <div class="encabezado" (click)="menuN=!menuN">
                 <h6 class="titulo">NOSOTROS</h6>
+                <span class="material-icons notranslate">expand_more</span>
             </div>
             <div class="menu">
                 <a href="" *ngFor="let item of nosotros">{{item}}</a>
             </div>
         </div>
-        <div class="col">
-            <div class="encabezado">
+        <div class="col" [ngClass]="{'show': menuA}">
+            <div class="encabezado" (click)="menuA=!menuA">
                 <h6 class="titulo">AYUDA</h6>
+                <span class="material-icons notranslate">expand_more</span>
             </div>
             <div class="menu">
                 <a href="" *ngFor="let item of ayuda">{{item}}</a>

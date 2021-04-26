@@ -1,0 +1,85 @@
+<div class="container-fdm">
+    <div class="row detalle">
+        <div class="col producto">
+            <div class="vistas">
+                <button class="vista1" [ngClass]="{'selected': vista}" (click)="change(true)">
+                    <img src="assets/img/tshirt2.png" alt="">
+                </button>
+                <div *ngIf="vista" class="border-red"></div>
+                <button class="vista2" [ngClass]="{'selected': !vista}" (click)="change(false)">
+                    <img src="assets/img/diseño2.png" alt="">
+                </button>
+                <div *ngIf="!vista" class="border-red"></div>
+            </div>
+            <div class="imagen">
+                <img *ngIf="vista" src="assets/img/tshirt.png" alt="">
+                <img *ngIf="!vista" src="assets/img/diseño.png" alt="">
+            </div>
+        </div>
+        <div class="col informacion">
+            <div class="row info">
+                <div class="nombre">
+                    <p class="titulo">Camiseta básica hombre</p>
+                    <p class="coleccion">Fabulas de Colombia</p>
+                </div>
+                <div class="precio">
+                    <span class="valor">$25.000</span>
+                    <div class="descuento">
+                        <span>$50.000</span>
+                        <span>50% Off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0 colores">
+                <p>Colores: 12</p>
+                <app-colores-radio [colores]="colores"></app-colores-radio>
+            </div>
+            <div class="row m-0 tallas">
+                <p class="titulo">Tallas:</p>
+                <a href="" class="rojo">
+                    <span class="material-icons notranslate">straighten</span>Ver guia de tallas
+                </a>
+                <app-tallas></app-tallas>
+            </div>
+            <div class="row m-0 botones">
+                <div class="boton">
+                    <button class="btn-carrito">
+                        <span class="material-icons-outlined notranslate">shopping_cart</span>
+                        <span>Añadir a carrito</span>
+                    </button>
+                </div>
+                <div class="boton">
+                    <button class="btn-share">
+                        <span class="material-icons-outlined notranslate">share</span>
+                    </button>
+                </div>
+                <div class="boton">
+                    <button class="btn-deseos">
+                        <span class="material-icons-outlined notranslate">favorite_border</span>
+                        <span>Añadir a deseos</span>
+                    </button>
+                </div>
+                <button class="btn-personalizar">
+                    <span class="material-icons-outlined notranslate">edit</span>
+                    <span>Personalizar</span>
+                </button>
+                <button class="btn-comprar">
+                    <span class="material-icons-outlined notranslate">payment</span>
+                    <span>Comprar</span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <app-venta-cruzada class="component"></app-venta-cruzada>
+    </div> -->
+    <!-- contenedor del componente de las etiquetas -->
+    <div class="row etiquetas">
+        <app-tags [tags]="tags" class="component"></app-tags>
+    </div>
+    <!-- contenedor del componente de la infomacion de venta -->
+    <div class="row informacion">
+        <app-information class="component"></app-information>
+    </div>
+</div>

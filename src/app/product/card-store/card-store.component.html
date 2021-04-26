@@ -1,6 +1,6 @@
 <div class="card mx-1">
     <!-- contenedor de la imagen del producto -->
-    <a href="#" class="img" [ngStyle]="{height: height}">
+    <a [routerLink]="['/store/product']" class="img" [ngStyle]="{height: height}">
         <!-- etiqueta de descuento -->
         <span class="descuento"></span>
         <span class="porcentaje">-50%</span>
@@ -10,7 +10,8 @@
         </svg>
         <span class="new notranslate">new</span>
         <!-- imagen imagen del producto -->
-        <img [src]="url" class="card-img-top" alt="">
+        <img [src]="url" class="card-img-top" alt="" [ngStyle]="{'display': vista=='diseño' ? 'none' : 'block'}">
+        <img src="assets/img/2.png" class="card-img-top" alt="" [ngStyle]="{'display': vista=='producto' ? 'none' : 'block'}">
         <!-- contenedor de los botones del producto -->
         <div class="opciones">
             <!-- boton de añadir al carrito -->
@@ -37,22 +38,11 @@
         <!-- fila contenedora de los colores del producto -->
         <div class="row contenedor">
             <!-- contenedor de los colores cuando son 8 o menos -->
-            <!-- <div *ngIf="menorde8" class="col-auto colores">
-                <div *ngFor="let color of colores" [style.background]="color" class="color"></div>
-            </div> -->
             <div class="col-auto colores">
                 <div *ngFor="let color of colores1" [style.background]="color" class="color"></div>
-                <button *ngIf="colores.length > 5" class="color mas">{{cantidad}}</button>
+                <button *ngIf="colores.length > 5" [routerLink]="['/store/product']" class="color mas">{{cantidad}}</button>
             </div>
-            <!-- contenedor de los colores cuando son mas de 8 -->
-            <!-- <div *ngIf="mayorde8" class="col-auto colores">
-                <div *ngFor="let item of colores1" [style.background]="item" class="color"></div>
-                <div *ngIf="mostrarMas" [style.background]="colores[7]" class="color"></div>
-                <div *ngFor="let item of colores2" [style.background]="item" [class.ocultar]="!mostrarMas" class="color"></div>
-                <div *ngIf="mostrarMas && mayorde15" class="color mas if">Más...</div>
-                <button class="color mas" (click)="mas()">{{cantidad}}</button>
 
-            </div> -->
         </div>
         <!-- contenedor de las tallas del producto -->
         <div class="row tallas">
@@ -62,7 +52,7 @@
             </div>
         </div>
         <!-- nombre del producto -->
-        <p class="card-text nombre">Nombre del producto "camiseta personalizada"</p>
+        <p [routerLink]="['/store/product']" class="card-text nombre">Nombre del producto "camiseta personalizada"</p>
         <!-- coleccion a la que pertenece el producto -->
         <p class="card-text coleccion">Coleccion del producto</p>
         <!-- valor del producto con descuento -->

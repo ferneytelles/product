@@ -14,6 +14,7 @@ export class CardStoreComponent implements OnInit {
   /**
    * cadena que recibe la ruta de la imagen del producto
    */
+  @Input() vista: string;
   @Input() url: string;
   @Input() height: string;
   tallas = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'];

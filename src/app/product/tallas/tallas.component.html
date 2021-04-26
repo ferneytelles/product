@@ -1,0 +1,9 @@
+<div class="contenedor">
+    <div *ngFor="let item of tallas" class="talla">
+        <span class="nombre" [ngClass]="{'disabled': item.unds==0}">{{item.talla}}</span>
+        <input class="unidades" [disabled]="item.unds==0" [ngClass]="{'disabled': item.unds==0}" type="number" value="0" min="0" [max]="item.unds">
+        <span class="cant" *ngIf="!calcPocas(item.unds) && !calcUnds(item.unds)"></span>
+        <span class="cant" *ngIf="calcPocas(item.unds)">(pocas unidades)</span>
+        <span class="cant" *ngIf="calcUnds(item.unds)">({{item.unds}} unds)</span>
+    </div>
+</div>

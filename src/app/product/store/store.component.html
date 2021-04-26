@@ -28,12 +28,12 @@
             </div>
             <!-- contenedor del componente de ordenamiento de los resultados -->
             <div class="ordenamiento">
-                <app-ordering (columnas)="setColumns($event)"></app-ordering>
+                <app-ordering (columnas)="setColumns($event)" (vista)="changeView($event)"></app-ordering>
             </div>
             <!-- contenedor de los productos encontrados -->
             <div class="resultados">
                 <div *ngFor="let item of productos" class="producto" [ngStyle]="{width: width}">
-                    <app-card-store [url]="item" [height]="height"></app-card-store>
+                    <app-card-store [url]="item" [height]="height" [vista]="vista"></app-card-store>
                 </div>
             </div>
             <!-- contenedor del componente la paginacion -->

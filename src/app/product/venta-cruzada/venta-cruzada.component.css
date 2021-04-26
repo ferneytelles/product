@@ -1,0 +1,49 @@
+.container-fluid {
+    margin-top: 20px;
+}
+
+
+/* estilo para las filas */
+
+.row {
+    justify-content: center;
+}
+
+
+/* estilos para la seccion de otros usuarios tambien compraron */
+
+.otros {
+    padding: 15px 30px;
+    background-image: url("../../../assets/img/fondofdm.jpg");
+}
+
+
+/* estilos para el contenedor de diseños similares */
+
+.fondo-s {
+    background: #ffffff;
+    padding: 15px 30px;
+}
+
+
+/* estilos para movil con menos de 680 pixeles de ancho */
+
+@media screen and (max-width: 680px) {
+    /* estilos para los contenedores de las secciones: cambio de espacios en las pantallas mas pequeñas */
+    .fondo-s {
+        padding: 15px 5px;
+    }
+    .otros {
+        padding: 15px 5px;
+    }
+}
+
+
+/* estilos para movil con menos de 425 pixeles de ancho */
+
+@media screen and (max-width: 425px) {
+    /* estilos para los titulos en los dispositivos mas pequeños */
+    .titulo {
+        font-size: 18px;
+    }
+}

@@ -16,6 +16,7 @@ export class StoreComponent implements OnInit {
   width = '';
   height = '';
   columnas: number;
+  vista = 'producto';
   /**
    * variable que permite reiniciar el tiempo en la funcion onResize()
    */
@@ -40,6 +41,10 @@ export class StoreComponent implements OnInit {
   ngOnInit(): void {
     this.setCardWidth();
     this.setImgHeight();
+  }
+
+  changeView(valor: string): void{
+    this.vista = valor;
   }
 
   openFiltros(valor: boolean): void{
