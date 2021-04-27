@@ -49,6 +49,10 @@ import { FooterComponent } from './product/footer/footer.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { VentaCruzadaComponent } from './product/venta-cruzada/venta-cruzada.component';
 import { TallasComponent } from './product/tallas/tallas.component';
+import { ToShareComponent } from './product/to-share/to-share.component';
+import { ColorDetailComponent } from './product/product-detail/color-detail/color-detail.component';
+import { InfoDetailComponent } from './product/product-detail/info-detail/info-detail.component';
+import { ImageDetailComponent } from './product/product-detail/image-detail/image-detail.component';
 
 
 
@@ -94,7 +98,11 @@ import { TallasComponent } from './product/tallas/tallas.component';
     FooterComponent,
     ProductDetailComponent,
     VentaCruzadaComponent,
-    TallasComponent
+    TallasComponent,
+    ToShareComponent,
+    ColorDetailComponent,
+    InfoDetailComponent,
+    ImageDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,55 @@
+.container-fluid {
+    padding: 0;
+}
+
+.design,
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #d7d7d7;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    background: #d7d7d7;
+}
+
+.head .title {
+    width: auto;
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.head span {
+    color: #ff0000;
+}
+
+.head span.rot {
+    transform: rotate(180deg);
+}
+
+.body:not(.show) {
+    display: none;
+}
+
+.body .info {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.info .title {
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.body .info:nth-child(2n-1) {
+    background: #eeeeee;
+}

@@ -2,68 +2,8 @@
     margin-top: 20px;
 }
 
-
-/* estilo para las filas */
-
-.row {
+.modales {
     justify-content: center;
-}
-
-
-/* estilos para la seccion de otros usuarios tambien compraron */
-
-.otros {
-    padding: 15px 30px;
-    background-image: url("../../../assets/img/fondofdm.jpg");
-}
-
-
-/* estilos para el contenedor de diseños similares */
-
-.fondo-s {
-    background: #ffffff;
-    padding: 15px 30px;
-}
-
-
-/* estilos para contenedor de las etiquetas del producto actual */
-
-.fondo-img {
-    padding: 15px 30px;
-    background-image: url("../../../assets/img/fondofdm.jpg");
-    display: flex;
-    justify-content: start;
-}
-
-
-/* estilos para el contenedor de las etiquetas */
-
-.fondo-img .container-tags {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-
-/* estilos para las etiquetas mostradas */
-
-.fondo-img .tags {
-    display: flex;
-    background: #fff;
-    padding: 6px 18px;
-    border: 2px solid #cccccc;
-    border-radius: 8px;
-    margin-right: 18px;
-    margin-bottom: 5px;
-}
-
-
-/* estilo para el nombre de la etiqueta */
-
-.fondo-img .tags .tag {
-    font-size: 13px;
-    line-height: 14px;
 }
 
 .component {
@@ -81,43 +21,4 @@
         margin-top: 0px;
     }
     /* estilos para el contenedor de las etiquetas del producto */
-    .fondo-img .container-tags {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        list-style: none;
-    }
-    /* estilos para el scroll del contenedor de las etiquetas */
-    .fondo-img .container-tags::-webkit-scrollbar {
-        -webkit-appearance: none;
-        appearance: none;
-    }
-    .fondo-img .container-tags::-webkit-scrollbar:horizontal {
-        height: 0px;
-    }
-}
-
-
-/* estilos para movil con menos de 680 pixeles de ancho */
-
-@media screen and (max-width: 680px) {
-    /* estilos para los contenedores de las secciones: cambio de espacios en las pantallas mas pequeñas */
-    .fondo-s {
-        padding: 15px 5px;
-    }
-    .otros {
-        padding: 15px 5px;
-    }
-    .fondo-img {
-        padding: 15px 5px;
-    }
-}
-
-
-/* estilos para movil con menos de 425 pixeles de ancho */
-
-@media screen and (max-width: 425px) {
-    /* estilos para los titulos en los dispositivos mas pequeños */
-    .titulo {
-        font-size: 18px;
-    }
 }

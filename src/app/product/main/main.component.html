@@ -32,42 +32,17 @@
     </div>
 </div>
 
-<!-- contenedor de la venta cruzada -->
+<!-- contenedor de la venta cruzada y la infomacion de venta -->
 <div class="container-fluid" [ngClass]="{'noscroll': controlModal!='Null'}">
-    <!-- contenedor del titulo de la venta cruzada -->
+    <!-- contenedor de la venta cruzada -->
     <div class="row">
-        <h4 class="titulo">Este diseño en otros productos</h4>
-    </div>
-    <!-- contenedor del componente del menu con los carousel de cada item del menu -->
-    <div class="row">
-        <app-menu class="w-100"></app-menu>
-    </div>
-    <div class="row">
-        <!-- contenedor de otros usuarios tambien compraron -->
-        <div class="col otros">
-            <h4 class="titulo mb-2">Otros usuarios también compraron:</h4>
-            <app-carousel></app-carousel>
-        </div>
-    </div>
-    <div class="row">
-        <!-- contenedor de diseños similares -->
-        <div class="col fondo-s">
-            <h4 class="titulo similares mb-2">Diseños similares:</h4>
-            <app-carousel></app-carousel>
-        </div>
+        <app-venta-cruzada class="component"></app-venta-cruzada>
     </div>
     <!-- contenedor de las etiquetas del producto actual -->
-    <div class="row fondo-img">
-        <!-- titulo de las etiquetas -->
-        <h4 class="titulo w-100 mb-3">También te puede interesar:</h4>
-        <!-- contenedor de las etiquetas -->
-        <div class="container-tags">
-            <div *ngFor="let tag of tags" class="col-auto tags">
-                <span class="tag">{{tag}}</span>
-            </div>
-        </div>
-
+    <div class="row etiquetas">
+        <app-tags [tags]="tags" class="component"></app-tags>
     </div>
+    <!-- contenedor de la informacion de venta y pagos -->
     <div class="row informacion">
         <app-information class="component"></app-information>
     </div>

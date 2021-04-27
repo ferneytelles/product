@@ -11,60 +11,9 @@
 .producto {
     display: flex;
     flex-direction: row;
-    min-width: 60%;
-    background: linear-gradient(to right, #ffffff, #d7d7d7);
-    padding: 15px;
-}
-
-.producto .vistas {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 20px 0 20px;
-    width: auto;
-}
-
-.vistas .border-red {
-    width: 100%;
-    border: 1px solid #ff0000;
-}
-
-.vistas button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 60px;
+    width: 60%;
+    /* background: linear-gradient(to right, #ffffff, #d7d7d7); */
     padding: 0;
-    background: none;
-    border: 1px solid #d7d7d7;
-    margin: 5px 0 1px 0;
-    outline: none;
-}
-
-.vistas button.selected {
-    background: #d7d7d7;
-}
-
-.vistas img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
-}
-
-.producto .imagen {
-    width: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-right: 50px;
-    padding-left: 20px;
-}
-
-.imagen img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
 }
 
 .informacion {
@@ -82,15 +31,15 @@
 
 .nombre .titulo {
     margin: 0px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    line-height: 20px;
+    line-height: 22px;
     white-space: pre-wrap;
 }
 
 .nombre .coleccion {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .info .precio {
@@ -100,9 +49,9 @@
 }
 
 .precio .valor {
-    font-size: 20px;
+    font-size: 22px;
     margin-right: 5px;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 .precio .descuento {
@@ -111,12 +60,13 @@
 }
 
 .informacion .colores {
+    margin: 0;
     padding: 10px 0;
     border-bottom: 1px solid #d7d7d7;
 }
 
 .colores p {
-    font-size: 15px;
+    font-size: 16px;
     margin: 0;
 }
 
@@ -130,19 +80,23 @@
 }
 
 .informacion .tallas {
-    padding: 10px 0;
+    padding: 10px 0 0 0;
 }
 
-.tallas .titulo {
+.btn-tallas .titulo {
     display: inline-block;
-    font-size: 15px;
+    font-size: 16px;
     margin: 0 8px;
+}
+
+.btn-tallas span {
+    display: none;
 }
 
 .tallas .rojo {
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 16px;
     margin: 0;
     color: #ff0000;
     text-decoration: none;
@@ -154,11 +108,20 @@
 }
 
 .botones {
-    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4px;
     border-bottom: 1px solid #d7d7d7;
 }
 
-.botones button {
+.botones .boton {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 4px;
+}
+
+.boton button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,12 +133,122 @@
     color: #555555;
 }
 
-.botones .btn-share {
+.boton .text {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.botones .boton:nth-child(2) {
     display: none;
+}
+
+.boton .btn-personalizar {
+    background-color: #ffffff;
+    border-color: #555555;
+}
+
+.boton .btn-comprar {
+    background-color: #ffffff;
+    border-color: #ff0000;
+}
+
+.compartir {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.caracteristicas {
+    margin: 10px 0 0 0;
 }
 
 .component {
     width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    .detalle {
+        margin: 0;
+    }
+    .producto {
+        width: -webkit-fill-available;
+        margin: 0 -15px;
+    }
+    .informacion {
+        min-width: 100%;
+        padding-left: 0;
+    }
+    .info .nombre {
+        max-width: calc(100% - 105px);
+    }
+    .nombre .coleccion {
+        margin: 0;
+    }
+    .info .precio {
+        flex-direction: column;
+    }
+    .precio .valor {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .informacion .colores {
+        margin: 0 -15px;
+        border-bottom: none;
+    }
+    .colores p {
+        margin-left: 15px;
+    }
+    .tallas .btn-tallas {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 4px 0;
+        background: #d7d7d7;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+    .btn-tallas span {
+        display: block;
+        color: #ff0000;
+        margin-left: auto;
+    }
+    .btn-carrito .text,
+    .btn-deseos .text {
+        display: none;
+    }
+    .informacion .botones {
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    .botones .boton:nth-child(5) {
+        order: 1;
+        width: 100%;
+    }
+    .botones .boton:nth-child(4) {
+        order: 2;
+        width: 100%;
+    }
+    .botones .boton:nth-child(3) {
+        order: 3;
+        width: 50px;
+    }
+    .botones .boton:nth-child(2) {
+        display: block;
+        order: 4;
+        width: 50px;
+    }
+    .botones .boton:nth-child(1) {
+        order: 5;
+        width: 50px;
+    }
+    .boton .btn-comprar,
+    .boton .btn-personalizar {
+        width: 220px;
+    }
+    .boton .btn-carrito,
+    .boton .btn-deseos,
+    .boton .btn-share {
+        border: none;
+        background: none;
+    }
 }
 
 @media screen and (min-width: 1450px) {

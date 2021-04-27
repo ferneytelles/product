@@ -1,20 +1,7 @@
 <div class="container-fdm">
     <div class="row detalle">
-        <div class="col producto">
-            <div class="vistas">
-                <button class="vista1" [ngClass]="{'selected': vista}" (click)="change(true)">
-                    <img src="assets/img/tshirt2.png" alt="">
-                </button>
-                <div *ngIf="vista" class="border-red"></div>
-                <button class="vista2" [ngClass]="{'selected': !vista}" (click)="change(false)">
-                    <img src="assets/img/diseño2.png" alt="">
-                </button>
-                <div *ngIf="!vista" class="border-red"></div>
-            </div>
-            <div class="imagen">
-                <img *ngIf="vista" src="assets/img/tshirt.png" alt="">
-                <img *ngIf="!vista" src="assets/img/diseño.png" alt="">
-            </div>
+        <div class="producto">
+            <app-image-detail class="component" [webVersion]="webVersion"></app-image-detail>
         </div>
         <div class="col informacion">
             <div class="row info">
@@ -30,22 +17,25 @@
                     </div>
                 </div>
             </div>
-            <div class="row m-0 colores">
+            <div class="row colores">
                 <p>Colores: 12</p>
-                <app-colores-radio [colores]="colores"></app-colores-radio>
+                <app-color-detail [colores]="colores" class="component"></app-color-detail>
             </div>
             <div class="row m-0 tallas">
-                <p class="titulo">Tallas:</p>
+                <div class="btn-tallas">
+                    <p class="titulo">Tallas:</p>
+                    <span class="material-icons notranslate">chevron_right</span>
+                </div>
                 <a href="" class="rojo">
                     <span class="material-icons notranslate">straighten</span>Ver guia de tallas
                 </a>
-                <app-tallas></app-tallas>
+                <app-tallas *ngIf="webVersion"></app-tallas>
             </div>
             <div class="row m-0 botones">
                 <div class="boton">
                     <button class="btn-carrito">
                         <span class="material-icons-outlined notranslate">shopping_cart</span>
-                        <span>Añadir a carrito</span>
+                        <span class="text">Añadir a carrito</span>
                     </button>
                 </div>
                 <div class="boton">
@@ -56,18 +46,27 @@
                 <div class="boton">
                     <button class="btn-deseos">
                         <span class="material-icons-outlined notranslate">favorite_border</span>
-                        <span>Añadir a deseos</span>
+                        <span class="text">Añadir a deseos</span>
                     </button>
                 </div>
-                <button class="btn-personalizar">
-                    <span class="material-icons-outlined notranslate">edit</span>
-                    <span>Personalizar</span>
-                </button>
-                <button class="btn-comprar">
-                    <span class="material-icons-outlined notranslate">payment</span>
-                    <span>Comprar</span>
-                </button>
-
+                <div class="boton">
+                    <button class="btn-personalizar">
+                        <span class="material-icons-outlined notranslate">edit</span>
+                        <span class="text">Personalizar</span>
+                    </button>
+                </div>
+                <div class="boton">
+                    <button class="btn-comprar">
+                        <span class="material-icons-outlined notranslate">payment</span>
+                        <span class="text">Comprar</span>
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="webVersion" class="row m-0 compartir">
+                <app-to-share class="component"></app-to-share>
+            </div>
+            <div class="row caracteristicas">
+                <app-info-detail class="component"></app-info-detail>
             </div>
         </div>
     </div>
