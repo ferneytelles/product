@@ -1,0 +1,15 @@
+<ng-template #sizes let-modal class="sizes">
+    <div class="modal-header">
+        <h6 class="title">Tallas:</h6>
+        <!-- <h6 class="subtitle">Guía de tallas</h6> -->
+        <button type="button" class="cerrar" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span class="material-icons notranslate">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <app-tallas></app-tallas>
+        <button class="aplicar" (click)="modal.close('Cross click')">
+            Aplicar
+        </button>
+    </div>
+</ng-template>

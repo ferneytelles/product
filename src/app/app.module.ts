@@ -53,6 +53,10 @@ import { ToShareComponent } from './product/to-share/to-share.component';
 import { ColorDetailComponent } from './product/product-detail/color-detail/color-detail.component';
 import { InfoDetailComponent } from './product/product-detail/info-detail/info-detail.component';
 import { ImageDetailComponent } from './product/product-detail/image-detail/image-detail.component';
+import { SizeGuideComponent } from './product/product-detail/size-guide/size-guide.component';
+import { GuideContentComponent } from './product/product-detail/size-guide/guide-content/guide-content.component';
+import { SizesComponent } from './product/product-detail/sizes/sizes.component';
+import { ShareDetailComponent } from './product/product-detail/share-detail/share-detail.component';
 
 
 
@@ -102,7 +106,11 @@ import { ImageDetailComponent } from './product/product-detail/image-detail/imag
     ToShareComponent,
     ColorDetailComponent,
     InfoDetailComponent,
-    ImageDetailComponent
+    ImageDetailComponent,
+    SizeGuideComponent,
+    GuideContentComponent,
+    SizesComponent,
+    ShareDetailComponent
   ],
   imports: [
     BrowserModule,

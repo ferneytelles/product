@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,7 +16,7 @@ export class ProductDetailComponent implements OnInit {
   colores = ['#000000', '#ffffff', '#595959', '#009136', '#feed01', '#f29400', '#ff0000', '#e2017b', '#93117e', '#182983', '#009de0', '#e0ff77', '#b6e9ff'];
   webVersion = false;
 
-  constructor() {
+  constructor(private modalService: ModalService) {
     if (window.innerWidth > 960){
       this.webVersion = true;
     }else{
@@ -27,6 +28,19 @@ export class ProductDetailComponent implements OnInit {
   }
   change(valor: boolean): void{
     this.vista = valor;
+  }
+  modalSizesGuide(): void{
+    this.modalService.sizeGuide.next(true);
+  }
+  modalSizes(): void{
+    if (window.innerWidth <= 960){
+      this.modalService.sizes.next(true);
+    }
+  }
+  modalShare(): void{
+    if (window.innerWidth <= 960){
+      this.modalService.share.next(true);
+    }
   }
 
 }

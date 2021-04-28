@@ -22,13 +22,15 @@
                 <app-color-detail [colores]="colores" class="component"></app-color-detail>
             </div>
             <div class="row m-0 tallas">
-                <div class="btn-tallas">
+                <div class="btn-tallas" (click)="modalSizes()">
                     <p class="titulo">Tallas:</p>
                     <span class="material-icons notranslate">chevron_right</span>
+                    <app-sizes></app-sizes>
                 </div>
-                <a href="" class="rojo">
-                    <span class="material-icons notranslate">straighten</span>Ver guia de tallas
-                </a>
+                <button class="rojo" (click)="modalSizesGuide()">
+                    <span class="material-icons notranslate">straighten</span>Ver guía de tallas
+                    <app-size-guide></app-size-guide>
+                </button>
                 <app-tallas *ngIf="webVersion"></app-tallas>
             </div>
             <div class="row m-0 botones">
@@ -39,8 +41,9 @@
                     </button>
                 </div>
                 <div class="boton">
-                    <button class="btn-share">
+                    <button class="btn-share" (click)="modalShare()">
                         <span class="material-icons-outlined notranslate">share</span>
+                        <app-share-detail></app-share-detail>
                     </button>
                 </div>
                 <div class="boton">
@@ -63,6 +66,7 @@
                 </div>
             </div>
             <div *ngIf="webVersion" class="row m-0 compartir">
+                <p class="titulo">Compartir:</p>
                 <app-to-share class="component"></app-to-share>
             </div>
             <div class="row caracteristicas">
@@ -73,6 +77,7 @@
     <!-- <div class="row">
         <app-venta-cruzada class="component"></app-venta-cruzada>
     </div> -->
+
     <!-- contenedor del componente de las etiquetas -->
     <div class="row etiquetas">
         <app-tags [tags]="tags" class="component"></app-tags>

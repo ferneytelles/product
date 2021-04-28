@@ -64,7 +64,7 @@
 
 /* estilos para el contenedor del nombre del prooducto y los botones de descargar e imprimir */
 
-.titulo {
+.row.titulo {
     padding: 15px 0px 10px 0px;
     margin: 0;
 }
@@ -407,7 +407,7 @@
         display: flex;
     }
     /* estilos para el contenedor del boton de imprimir */
-    .titulo div:nth-child(3) {
+    .row.titulo div:nth-child(3) {
         display: none;
     }
     /* estilos para  las columnas del contenido de detalles */

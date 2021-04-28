@@ -1,0 +1,234 @@
+/* estilos para el contenedor del nombre del prooducto y los botones de descargar e imprimir */
+
+.row.titulo {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0px 10px 0px;
+    margin: 0;
+}
+
+
+/* estilos para el contenedor del nombre del producto */
+
+.nombre {
+    margin: 0px;
+    color: #555555;
+}
+
+
+/* estilos para los botones de descargar e imprimir */
+
+.imprimir,
+.descargar {
+    display: flex;
+    align-items: center;
+    color: #ff0000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+
+/* estilos para el icono de los botones de imprimir y descargar */
+
+.imprimir .icono,
+.descargar .icono {
+    font-size: 22px;
+    margin-right: 2px;
+}
+
+
+/* estilos para el texto de los botones imprimir y descargar */
+
+.imprimir .texto,
+.descargar .texto {
+    text-decoration: underline;
+}
+
+
+/* estilos para las dos columnas mostradas en version web */
+
+.contenido .col-izquierda,
+.contenido .col-derecha {
+    /* flex: 0 0 50%; */
+    max-width: 50%;
+}
+
+
+/* estilos para el contenedor de las tallas */
+
+.tallas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* estilos para la imagen de las tallas */
+
+.tallas img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* estilos para el texto de los cuidados de la prenda */
+
+.cuidados .texto {
+    font-size: 16px;
+    color: #555555;
+    margin: 10px 0px 0px 0px;
+}
+
+
+/* estilo para la imagen de lo cuidados de la prenda */
+
+.cuidados img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* estilos para el contenedor de los cuidados de la prenda mostrados en movil */
+
+.col-derecha .cuidados {
+    display: none;
+}
+
+
+/* estilos para el contenedor de la sugerencia de tallas */
+
+.col-izquierda .sugerencia {
+    font-size: 16px;
+    padding: 0px 4px;
+}
+
+
+/* estios para el titulo de la sugerencia de tallas */
+
+.sugerencia .titulo {
+    color: #000000;
+    font-weight: 500;
+}
+
+
+/* estilos para el texto de la sugerencia de tallas */
+
+.sugerencia .texto {
+    margin-left: 4px;
+    color: #555555;
+}
+
+
+/* estilos para el contenedor del ejemplo de las tallas */
+
+.tallas2 {
+    padding: 0px 4px 10px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* estilos para el titulo del ejempplo de las tallas  */
+
+.tallas2 .texto {
+    width: 100%;
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+
+/* estilos para la imagen del ejemplo de las tallas */
+
+.tallas2 img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* estilos para el contenedor del pie de pagina de los detalles del producto */
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 16px;
+    padding: 15px 0px;
+}
+
+
+/* estilos para el enlace de la web */
+
+.footer .link {
+    color: #ff0000;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+
+/* estilos para el numero telefonico */
+
+.footer .numero {
+    color: #ff0000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+/* estilos para la imagen del logo */
+
+.footer .logo {
+    width: 120px;
+    height: auto;
+}
+
+@media screen and (max-width: 960px) {
+    /* estilos para el contenedor del boton de imprimir */
+    .row.titulo div:nth-child(2) {
+        display: none;
+    }
+    /* estilos para  las columnas del contenido de detalles */
+    .contenido .col-izquierda,
+    .contenido .col-derecha {
+        /* flex: 0 0 100%; */
+        max-width: 100%;
+    }
+    .tallas2 {
+        padding: 0px 4px 10px 4px;
+    }
+    /* estilos para los contenedores de cuidados de la prenda y sugerencia de talla mostrados en movil */
+    .col-derecha .cuidados {
+        display: block;
+    }
+    /* estilos para los contenedores de cuidados de la prenda y sugerencia de talla mostrados en movil */
+    .col-izquierda .cuidados {
+        display: none;
+    }
+    /* estilo para los contenedores dentro del footer */
+    .footer div:nth-child(1),
+    .footer div:nth-child(2) {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    /* estilos para el contenedor del logo */
+    .footer div:nth-child(2) {
+        order: 1;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* estilos para el contenedor del enlace de la web y el numero telefonico */
+    .footer div:nth-child(1) {
+        display: flex;
+        flex-wrap: wrap;
+        order: 2;
+    }
+}

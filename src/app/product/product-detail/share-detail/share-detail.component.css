@@ -1,0 +1,55 @@
+::ng-deep.modal-open .modal.share {
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+::ng-deep.share .modal-dialog {
+    max-width: 100vh !important;
+    max-height: 80vh !important;
+    margin: auto 0 0 0 !important;
+}
+
+::ng-deep.share .modal-dialog .modal-content {
+    border-radius: 8px 8px 0 0;
+    /* height: 90vh; */
+    width: fit-content;
+    max-width: 100vh;
+    background: #d7d7d7;
+}
+
+.modal-header {
+    padding: 1px 10px;
+    justify-content: start;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: none;
+}
+
+.modal-header .title {
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    line-height: 30px;
+}
+
+.modal-header .cerrar {
+    padding: 5px;
+    margin-left: auto;
+    border: none;
+    background: none;
+    display: flex;
+    outline: none;
+}
+
+.modal-header .cerrar span {
+    font-size: 24px;
+}
+
+.modal-body {
+    padding: 0 15px 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

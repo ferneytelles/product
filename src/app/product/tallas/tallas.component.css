@@ -15,7 +15,7 @@
 }
 
 .talla .nombre.disabled {
-    color: #d7d7d7;
+    color: #c8c8c8;
 }
 
 .talla .unidades {
@@ -53,3 +53,12 @@ input:invalid+span:after {
     content: '✓';
     padding-left: 5px;
 } */
+
+@media screen and (max-width: 360px) {
+    .contenedor .talla {
+        margin: 0 5px 5px 0;
+    }
+    .talla .unidades {
+        width: 60px;
+    }
+}

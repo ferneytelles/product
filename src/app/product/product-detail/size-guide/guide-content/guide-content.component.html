@@ -1,0 +1,67 @@
+<div #contenedor class="container-fluid">
+    <!-- contenedor del nombre del pruducto y los botones para imprimir y descargar -->
+    <div class="row titulo">
+        <div class="col-auto px-2">
+            <!-- boton de descargar los detalles del producto -->
+            <a class="descargar" href="#">
+                <span class="material-icons-outlined icono notranslate">file_download</span>
+                <span class="texto">Descargar</span>
+            </a>
+        </div>
+        <div class="col-auto px-2">
+            <!-- boton de imprimir los detalles del producto -->
+            <a class="imprimir" href="#">
+                <span class="material-icons-outlined icono notranslate">print</span>
+                <span class="texto">Imprimir</span>
+            </a>
+        </div>
+    </div>
+    <!-- contenedor de la informacion del producto -->
+    <div class="row m-0 contenido">
+        <!-- contenedor de la columna izquierda en web -->
+        <div class="col-izquierda px-1">
+            <!-- contenedor de la sugerencia de tallas en movil -->
+            <div class="sugerencia">
+                <span class="titulo">Encontrar la talla adecuada:</span>
+                <span class="texto">{{ parrafo }}</span>
+            </div>
+
+            <!-- contenedor de las tallas -->
+            <div class="tallas">
+                <img [src]="tallas" class="" alt="">
+            </div>
+            <!-- contenedor de los cuidados del producto en web -->
+            <div class="cuidados">
+                <p class="texto">Cuidados de la prenda:</p>
+                <img src="assets/img/cuidados.png" alt="">
+            </div>
+        </div>
+        <!-- contenedor de la columna derecha en web -->
+        <div class="col-derecha px-1">
+
+            <!-- contenedor del ejemplo d las tallas -->
+            <div class="tallas2">
+                <p class="texto">Ejemplo de tallas:</p>
+                <img src="assets/img/tallas2.png" class="" alt="">
+            </div>
+            <!-- contenedor de los cuidados del producto en movil -->
+            <div class="cuidados">
+                <p class="texto">Cuidados de la prenda:</p>
+                <img src="assets/img/cuidados.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- contenedor del pie de pagina -->
+    <div class="row m-0 footer">
+        <!-- contenedor del enlace de la web y el contacto telefonico -->
+        <div class="col-auto mt-1">
+            <a href="http://www.fueradelmolde.com/" class="link">www.fueradelmolde.com</a>
+            <a href="#" class="numero">+573102836520</a>
+        </div>
+        <!-- contenedor del logo de fdm -->
+        <div class="col-auto">
+            <img src="assets/img/Logo.png" class="logo" alt="">
+        </div>
+    </div>
+</div>

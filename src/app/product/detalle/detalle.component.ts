@@ -14,7 +14,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   unsubscribe = new Subject();
   @ViewChild('detalle') detalle: any;
   seleccionar = false;
-  
+
   constructor(private modalDetalle: NgbModal, private modalService: ModalService) { }
 
   ngOnInit(): void {
@@ -31,16 +31,16 @@ export class DetalleComponent implements OnInit, OnDestroy {
   }
   openModal(): void{
     this.seleccionar = true;
-    this.modalDetalle.open(this.detalle, {windowClass: 'modal-detalle', backdropClass: 'backdrop-detalle'})
+    this.modalDetalle.open(this.detalle, {windowClass: 'modal-detalle', backdropClass: 'backdrop-detalle'});
   }
   openModal2(): void{
     this.seleccionar = false;
-    this.modalDetalle.open(this.detalle, {windowClass: 'modal-detalle'})
+    this.modalDetalle.open(this.detalle, {windowClass: 'modal-detalle'});
   }
 
   ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
+    // Called once, before the instance is destroyed.
+    // Add 'implements OnDestroy' to the class.
     this.unsubscribe.next();
     this.unsubscribe.complete();
   }

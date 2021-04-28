@@ -2,14 +2,6 @@
     padding: 10px 0;
 }
 
-.titulo {
-    font-size: 16px;
-    margin: 0;
-    width: 100%;
-    line-height: 16px;
-    margin-bottom: 8px;
-}
-
 .iconos {
     display: flex;
     flex-direction: row;
@@ -47,6 +39,21 @@
 }
 
 @media screen and (max-width: 960px) {
+    .container-fluid {
+        display: flex;
+        justify-content: center;
+    }
+    .iconos {
+        flex-wrap: wrap;
+    }
+    .iconos .icon-w,
+    .iconos .icon-b {
+        width: 55px;
+        min-width: 55px;
+        height: 55px;
+        min-height: 55px;
+        margin-bottom: 8px;
+    }
     .iconos .icon-b {
         background-color: #555555;
     }
@@ -55,10 +62,10 @@
     }
     .icon-b i {
         color: #d7d7d7;
-        font-size: 21px;
+        font-size: 34px;
     }
     .icon-w i {
-        font-size: 35px;
+        font-size: 55px;
         color: #555555;
     }
 }
