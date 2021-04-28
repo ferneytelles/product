@@ -18,6 +18,15 @@
     height: 34px;
     min-height: 34px;
     margin-right: 8px;
+    text-decoration: none;
+}
+
+.iconos .icon-b:hover {
+    background-color: #ff0000;
+}
+
+.iconos .icon-w:hover i {
+    color: #ff0000;
 }
 
 .iconos .icon-b {
@@ -44,14 +53,15 @@
         justify-content: center;
     }
     .iconos {
+        max-width: 100%;
         flex-wrap: wrap;
     }
     .iconos .icon-w,
     .iconos .icon-b {
-        width: 55px;
-        min-width: 55px;
-        height: 55px;
-        min-height: 55px;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
         margin-bottom: 8px;
     }
     .iconos .icon-b {
@@ -62,10 +72,10 @@
     }
     .icon-b i {
         color: #d7d7d7;
-        font-size: 34px;
+        font-size: 26px;
     }
     .icon-w i {
-        font-size: 55px;
+        font-size: 40px;
         color: #555555;
     }
 }
