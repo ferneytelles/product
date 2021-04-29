@@ -3,7 +3,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ModalService } from 'src/app/services/modal.service';
-
+/**
+ * componente que contiene la modal de la guía de tallas
+ */
 @Component({
   selector: 'app-size-guide',
   templateUrl: './size-guide.component.html',
@@ -11,9 +13,21 @@ import { ModalService } from 'src/app/services/modal.service';
 })
 export class SizeGuideComponent implements OnInit, OnDestroy {
 
+  /**
+   * subject que sirve para eliminar la suscripcion al servicio de las modales
+   */
   unsubscribe = new Subject();
+  /**
+   * elemento que contiene la modal
+   */
   @ViewChild('sizesGuide') sizesGuide: any;
 
+  /**
+   * contructor donde se llaman el componente de la modal
+   * y el servicio de las modales
+   * @param modalGuide componente que sirve para crear la modal
+   * @param modalService servicio que sirve para ejecutar las modales
+   */
   constructor(private modalGuide: NgbModal, private modalService: ModalService) { }
 
   ngOnInit(): void {
@@ -32,6 +46,7 @@ export class SizeGuideComponent implements OnInit, OnDestroy {
     // Add 'implements OnDestroy' to the class.
     this.unsubscribe.next();
     this.unsubscribe.complete();
+    
   }
 
 }

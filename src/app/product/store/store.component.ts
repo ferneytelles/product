@@ -1,11 +1,11 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.css']
 })
-export class StoreComponent implements OnInit {
+export class StoreComponent implements OnInit, OnDestroy {
 
   carousel = ['Cuello redondo', 'Cuello en "V"', 'Cuello tortuga', 'Manga corta', 'Manga 3/4', 'Manga larga', 'Regular Fit', 'Slim Fit', 'Muscle Fit'];
 
@@ -167,6 +167,10 @@ export class StoreComponent implements OnInit {
         this.height = '1000px';
       }
     }
+  }
+  ngOnDestroy(): void {
+    // Called once, before the instance is destroyed.
+    // Add 'implements OnDestroy' to the class.
   }
 
 }

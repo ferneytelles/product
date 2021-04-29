@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToShareComponent implements OnInit {
 
+  link = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  linkCopy(): void{
+    this.link = true;
+    setTimeout(() => {
+      this.link = false;
+    }, 3000);
   }
 
 }

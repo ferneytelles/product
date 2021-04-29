@@ -1,25 +1,34 @@
 <div class="container-fluid">
+    <!-- contenedor de los iconos de compartir -->
     <div class="iconos">
+        <!-- icono de correo -->
         <a href="https://mail.google.com/" target="_blank" class="icon-b">
             <i class="fas fa-envelope"></i>
         </a>
+        <!-- icono de facebook -->
         <a class="icon-w" href="https://www.facebook.com/" target="_blank">
             <i class="fab fa-facebook"></i>
         </a>
+        <!-- icono de instagram -->
         <a class="icon-b" href="https://www.instagram.com/" target="_blank">
             <i class="fab fa-instagram"></i>
         </a>
+        <!-- icono de twitter -->
         <a class="icon-b" href="https://www.twitter.com/" target="_blank">
             <i class="fab fa-twitter"></i>
         </a>
+        <!-- icono de whatsapp -->
         <a class="icon-b" href="https://web.whatsapp.com/" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
+        <!-- icono de messenger -->
         <a class="icon-b" href="https://www.facebook.com/" target="_blank">
             <i class="fab fa-facebook-messenger"></i>
         </a>
-        <a class="icon-b">
+        <!-- icono de copiar enlace -->
+        <a class="icon-b" (click)="linkCopy()">
             <i class="fas fa-link"></i>
         </a>
+        <span *ngIf="link" class="copy">Enlace copiado</span>
     </div>
 </div>

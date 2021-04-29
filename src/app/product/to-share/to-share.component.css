@@ -5,6 +5,7 @@
 .iconos {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .iconos .icon-w,
@@ -47,6 +48,16 @@
     color: #000000;
 }
 
+.iconos .copy {
+    padding: 3px 4px;
+    border-radius: 4px;
+    background: #eeeeee;
+    font-size: 14px;
+    line-height: 14px;
+    height: auto;
+    color: #555555;
+}
+
 @media screen and (max-width: 960px) {
     .container-fluid {
         display: flex;
@@ -77,5 +88,30 @@
     .icon-w i {
         font-size: 40px;
         color: #555555;
+    }
+    .iconos .copy {
+        position: fixed;
+        left: 50%;
+        margin-left: -51px;
+        bottom: 120px;
+        background: #d7d7d7;
+    }
+    .iconos .icon-b:hover {
+        background-color: #555555;
+    }
+    .iconos .icon-w:hover i {
+        color: #555555;
+    }
+    .iconos .icon-b:focus {
+        background-color: #ff0000;
+    }
+    .iconos .icon-w:focus i {
+        color: #ff0000;
+    }
+}
+
+@media screen and (max-width: 368px) {
+    .iconos .copy {
+        bottom: 168px;
     }
 }

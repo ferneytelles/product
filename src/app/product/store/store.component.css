@@ -3,19 +3,31 @@
     padding: 0px 15px;
 }
 
+
+/* estilos para el contenedor de la sección de busqueda */
+
 .busqueda {
     margin: 15px 0px;
 }
+
+
+/* estilos para el contenedor de los filtros */
 
 .busqueda .filtros {
     max-width: 25%;
     padding: 0px 15px;
 }
 
+
+/* estilos para el contenedor de la miga de pan */
+
 .busqueda .contenedor {
     max-width: 75%;
     padding: 0px 15px;
 }
+
+
+/* estilos para la miga de pan */
 
 .breadcrumb {
     justify-content: center;
@@ -25,16 +37,25 @@
     font-size: 12px;
 }
 
+
+/* estilos para los items de la miga de pan */
+
 .breadcrumb .active,
 .breadcrumb a {
     color: #555555;
 }
+
+
+/* estilos para el boton de abrir los filtros en movil */
 
 .boton-filtrar {
     display: none;
     padding-bottom: 4px;
     border-bottom: 1px solid #d7d7d7;
 }
+
+
+/*  */
 
 .boton-filtrar .filtrar {
     display: flex;
