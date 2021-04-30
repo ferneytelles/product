@@ -23,6 +23,12 @@
     height: auto;
     border-radius: 12px;
     box-shadow: 0px 2px 3px 0px #555555;
+    cursor: pointer;
+}
+
+.images img:hover {
+    filter: contrast(.7);
+    box-shadow: 0px -2px 3px 0px #555555;
 }
 
 .images .left {
