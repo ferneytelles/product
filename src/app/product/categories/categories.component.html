@@ -2,4 +2,50 @@
     <div class="row banner">
         <app-banner-top class="component"></app-banner-top>
     </div>
+    <div class="options">
+        <div class="images">
+            <div class="left">
+                <div class="camisetas">
+                    <img src="assets/img/camisetas.png" alt="">
+                </div>
+                <div class="sacos">
+                    <img src="assets/img/sacos.png" alt="">
+                </div>
+                <div class="gorras">
+                    <img src="assets/img/gorras.png" alt="">
+                </div>
+                <div class="tazas">
+                    <img src="assets/img/tazas.png" alt="">
+                </div>
+                <div class="libretas-bolsas">
+                    <div class="libretas">
+                        <img src="assets/img/libretas.png" alt="">
+                    </div>
+                    <div class="bolsas">
+                        <img src="assets/img/bolsas.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="hoodies">
+                    <img src="assets/img/hoodies.png" alt="">
+                </div>
+                <div class="polos">
+                    <img src="assets/img/polos.png" alt="">
+                </div>
+                <div class="tennis">
+                    <img src="assets/img/tennis.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bottons">
+            <button *ngFor="let item of menu">{{item}}</button>
+        </div>
+    </div>
+
+
+
+    <div class="row footer">
+        <app-footer class="component"></app-footer>
+    </div>
 </div>

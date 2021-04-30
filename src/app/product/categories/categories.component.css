@@ -5,6 +5,76 @@
     padding: 0px 15px;
 }
 
+.options {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 60px;
+}
+
+.options .images {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+}
+
+.images img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 2px 3px 0px #555555;
+}
+
+.images .left {
+    display: flex;
+    flex-wrap: wrap;
+    width: 66.6%;
+}
+
+.left .camisetas {
+    width: 100%;
+    padding: 5px;
+}
+
+.left .sacos,
+.left .gorras,
+.left .tazas {
+    width: 50%;
+    padding: 5px;
+}
+
+.left .libretas-bolsas {
+    width: 50%;
+}
+
+.libretas-bolsas .libretas,
+.libretas-bolsas .bolsas {
+    width: 100%;
+    padding: 5px;
+}
+
+.images .right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33.3%;
+}
+
+.right .hoodies,
+.right .polos,
+.right .tennis {
+    width: 100%;
+    padding: 5px;
+}
+
+.options .bottons {
+    width: 25%;
+    padding: 5px;
+}
+
+.options button {
+    width: 100%;
+}
+
 .component {
     width: 100%;
 }
