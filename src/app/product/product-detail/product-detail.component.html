@@ -1,14 +1,21 @@
+<!-- contenedor del componente -->
 <div class="container-fdm">
+    <!-- contenedor del detalle del producto -->
     <div class="row detalle">
+        <!-- contenedor de la columna de la imagen del producto -->
         <div class="producto">
             <app-image-detail class="component" [webVersion]="webVersion"></app-image-detail>
         </div>
+        <!-- Contenedor de la columna de la información del producto -->
         <div class="col informacion">
+            <!-- contenedor del nombre y precio del producto -->
             <div class="row info">
+                <!-- contenedor del nombre y la colección del producto -->
                 <div class="nombre">
                     <p class="titulo">Camiseta básica hombre</p>
                     <p class="coleccion">Fabulas de Colombia</p>
                 </div>
+                <!-- contenedor del precio del producto -->
                 <div class="precio">
                     <span class="valor">$25.000</span>
                     <div class="descuento">
@@ -17,47 +24,57 @@
                     </div>
                 </div>
             </div>
+            <!-- contenedor de los colores del producto -->
             <div class="row colores">
                 <p>Colores: 12</p>
                 <app-color-detail [colores]="colores" class="component"></app-color-detail>
             </div>
+            <!-- contenedor de las tallas del producto -->
             <div class="row m-0 tallas">
+                <!-- contenedor del botón de las tallas en móvil -->
                 <div class="btn-tallas" (click)="modalSizes()">
                     <p class="titulo">Tallas:</p>
                     <span class="material-icons notranslate">chevron_right</span>
                     <app-sizes></app-sizes>
                 </div>
+                <!-- contenedor del botón de la guía de tallas -->
                 <button class="rojo" (click)="modalSizesGuide()">
                     <span class="material-icons notranslate">straighten</span>Ver guía de tallas
                     <app-size-guide></app-size-guide>
                 </button>
                 <app-tallas *ngIf="webVersion"></app-tallas>
             </div>
+            <!-- Contenedor de los botones: comprar, carrito, compartir, personalizar y favorito -->
             <div class="row m-0 botones">
+                <!-- contenedor del botón añadir a carrito -->
                 <div class="boton">
                     <button class="btn-carrito">
                         <span class="material-icons-outlined notranslate">shopping_cart</span>
                         <span class="text">Añadir a carrito</span>
                     </button>
                 </div>
+                <!-- contenedor del botón de compartir -->
                 <div class="boton">
                     <button class="btn-share" (click)="modalShare()">
                         <span class="material-icons-outlined notranslate">share</span>
                         <app-share-detail></app-share-detail>
                     </button>
                 </div>
+                <!-- contenedor del botón de favorito -->
                 <div class="boton">
                     <button class="btn-deseos">
                         <span class="material-icons-outlined notranslate">favorite_border</span>
                         <span class="text">Añadir a deseos</span>
                     </button>
                 </div>
+                <!-- contenedor del botón personalizar -->
                 <div class="boton">
                     <button class="btn-personalizar">
                         <span class="material-icons-outlined notranslate">edit</span>
                         <span class="text">Personalizar</span>
                     </button>
                 </div>
+                <!-- contenedor del botón comprar -->
                 <div class="boton">
                     <button class="btn-comprar">
                         <span class="material-icons-outlined notranslate">payment</span>
@@ -65,18 +82,21 @@
                     </button>
                 </div>
             </div>
+            <!-- contenedor de las opciones de compratir -->
             <div *ngIf="webVersion" class="row m-0 compartir">
                 <p class="titulo">Compartir:</p>
                 <app-to-share class="component"></app-to-share>
             </div>
+            <!-- contenedor de las caracteristicas del producto -->
             <div class="row caracteristicas">
                 <app-info-detail class="component"></app-info-detail>
             </div>
         </div>
     </div>
-    <!-- <div class="row">
+    <!-- contenedor de la venta cruzada -->
+    <div class="row">
         <app-venta-cruzada class="component"></app-venta-cruzada>
-    </div> -->
+    </div>
 
     <!-- contenedor del componente de las etiquetas -->
     <div class="row etiquetas">
@@ -85,5 +105,10 @@
     <!-- contenedor del componente de la infomacion de venta -->
     <div class="row informacion">
         <app-information class="component"></app-information>
+    </div>
+
+
+    <div class="row footer">
+        <app-footer class="component"></app-footer>
     </div>
 </div>

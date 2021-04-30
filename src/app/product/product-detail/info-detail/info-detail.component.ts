@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Componente que contiene la información del producto
+ */
 @Component({
   selector: 'app-info-detail',
   templateUrl: './info-detail.component.html',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoDetailComponent implements OnInit {
 
+  /**
+   * Arreglo que contiene la información del diseño
+   */
   // tslint:disable-next-line: max-line-length
   design = [{name: '* Diseño de color editable:', attr: 'SI'}, {name: '* Diseño en multiples areas:', attr: 'NO'}, {name: '* Inspiración:', attr: 'Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem.'}];
-
+  /**
+   * Arreglo que contiene la información del producto
+   */
   product = [
     {name: '* Categoría:', attr: 'Camiseta básica hombre.'},
     {name: '* Atributos:', attr: 'cuello redondo, ajuste clásico, manga corta.'},
@@ -22,8 +30,13 @@ export class InfoDetailComponent implements OnInit {
     {name: '* Impresión admitida:', attr: 'DTG. serigrafía, vinilo téxtil.'},
     {name: '* Colores:', attr: '12 (Verifica existencias en tienda)'},
   ];
-
+  /**
+   * Booleano que indica si la información del diseño esta desplegada
+   */
   designOpen = true;
+  /**
+   * Booleano que indica si la información del producto esta desplegada
+   */
   productOpen = true;
 
   constructor() { }

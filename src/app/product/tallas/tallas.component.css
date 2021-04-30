@@ -1,3 +1,5 @@
+/* estilos para el contenedor de las tallas */
+
 .contenedor {
     display: flex;
     flex-direction: row;
@@ -5,6 +7,9 @@
     width: 100%;
     padding: 5px 0;
 }
+
+
+/* estilos para el contenedor de la talla */
 
 .contenedor .talla {
     display: flex;
@@ -14,9 +19,15 @@
     align-items: center;
 }
 
+
+/* estilos para la talla no disponible */
+
 .talla .nombre.disabled {
     color: #c8c8c8;
 }
+
+
+/* estilos para el input de la cantidad */
 
 .talla .unidades {
     width: 70px;
@@ -27,20 +38,32 @@
     border-radius: 4px;
 }
 
+
+/* estilos para el input desabilitado */
+
 .talla .unidades.disabled {
     color: #d7d7d7;
 }
+
+
+/* estilos para el texto de pocas tallas */
 
 .talla .cant {
     font-size: 14px;
     color: #555555;
 }
 
+
+/* estilo para los botones del input */
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+
+/* estilos para la validación de la cantidad */
 
 input:invalid+span:after {
     content: '✖';
@@ -54,10 +77,15 @@ input:invalid+span:after {
     padding-left: 5px;
 } */
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 360px) {
+    /* estilos para el contenedor de la talla */
     .contenedor .talla {
         margin: 0 5px 5px 0;
     }
+    /* estilos para el input de la cantidad */
     .talla .unidades {
         width: 60px;
     }

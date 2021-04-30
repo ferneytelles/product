@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+/**
+ * Componente que contiene el carrusel de los productos de la venta cruzada
+ */
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -7,26 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
+  /**
+   * Arreglo que contiene la ruta de las imagenes del carrusel
+   */
   slides = ['assets/img/1.png', 'assets/img/2.png', 'assets/img/3.png', 'assets/img/4.png', 'assets/img/6.png', 'assets/img/7.png', 'assets/img/8.png', 'assets/img/9.png', 'assets/img/4.png', 'assets/img/3.png', 'assets/img/7.png', 'assets/img/2.png', 'assets/img/8.png', 'assets/img/espirales.png'];
   imgs = ['assets/img/1.png', 'assets/img/8.png'];
-
+  /**
+   * Variable de configuración del carrusel
+   */
   productSlideConfig: any = {
     infinite: true,
     speed: 300,
-    slidesToShow: 7,
-    slidesToScroll: 7,
+    // slidesToShow: 7,
+    // slidesToScroll: 7,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     swipeToSlide: true,
     focusOnSelect: false,
     autoplay: true,
     autoplaySpeed: 5000,
     responsive: [
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 6
-        }
-      },
+      // {
+      //   breakpoint: 1600,
+      //   settings: {
+      //     slidesToShow: 6,
+      //     slidesToScroll: 6
+      //   }
+      // },
       {
         breakpoint: 1410,
         settings: {

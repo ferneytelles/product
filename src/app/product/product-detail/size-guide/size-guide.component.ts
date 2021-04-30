@@ -29,7 +29,9 @@ export class SizeGuideComponent implements OnInit, OnDestroy {
    * @param modalService servicio que sirve para ejecutar las modales
    */
   constructor(private modalGuide: NgbModal, private modalService: ModalService) { }
-
+  /**
+   * Función utilizada para ejecutar la función de abrir la modal
+   */
   ngOnInit(): void {
     this.modalService.sizeGuide
           .pipe(takeUntil(this.unsubscribe))
@@ -37,16 +39,20 @@ export class SizeGuideComponent implements OnInit, OnDestroy {
             this.openModal();
           });
   }
+  /**
+   * Función que ejecuta la modal
+   */
   openModal(): void{
     this.modalGuide.open(this.sizesGuide, {windowClass: 'modal-size'});
   }
-
+  /**
+   * Función utilizada para eliminar la suscripción al servicio de las modales
+   */
   ngOnDestroy(): void {
     // Called once, before the instance is destroyed.
     // Add 'implements OnDestroy' to the class.
     this.unsubscribe.next();
     this.unsubscribe.complete();
-    
   }
 
 }

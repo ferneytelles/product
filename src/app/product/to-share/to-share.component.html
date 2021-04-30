@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <!-- contenedor de los iconos de compartir -->
+    <!-- contenedor de los botones de compartir -->
     <div class="iconos">
         <!-- icono de correo -->
         <a href="https://mail.google.com/" target="_blank" class="icon-b">
@@ -29,6 +29,7 @@
         <a class="icon-b" (click)="linkCopy()">
             <i class="fas fa-link"></i>
         </a>
+        <!-- aviso de enlace copiado -->
         <span *ngIf="link" class="copy">Enlace copiado</span>
     </div>
 </div>

@@ -330,13 +330,21 @@
     color: #525252;
 }
 
+
+/* estilos para verión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el contenedor de los botones de la tarjeta */
     .opciones {
         transform: translateX(0%);
     }
 }
 
+
+/* estilos para moviles con ancho de pantalla menor a 400px */
+
 @media screen and (max-width: 400px) {
+    /* estilos para el contenedor de las tallas del producto */
     .card-body .tallas {
         margin: 0px -3px;
     }

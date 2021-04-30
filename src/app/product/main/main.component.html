@@ -1,8 +1,11 @@
-<div class="container-fluid" [ngClass]="{'noscroll': controlModal!='Null'}">
+<div class="container-fdm" [ngClass]="{'noscroll': controlModal!='Null'}">
     <!-- contenedor de los botones para las modales -->
     <div class="row modales">
         <div class="col-auto px-1">
-            <a [routerLink]="['/store']" class="btn btn-outline-primary">tienda</a>
+            <a [routerLink]="['/store']" class="btn btn-outline-primary">Tienda</a>
+        </div>
+        <div class="col-auto px-1">
+            <a [routerLink]="['/store/hombres']" class="btn btn-outline-primary">Hombres</a>
         </div>
         <div class="col-auto px-1">
             <button class="btn btn-outline-primary" (click)="modalProducto();modalMovile('cambiar')">Cambiar producto</button>
@@ -33,7 +36,7 @@
 </div>
 
 <!-- contenedor de la venta cruzada y la infomacion de venta -->
-<div class="container-fluid" [ngClass]="{'noscroll': controlModal!='Null'}">
+<div class="container-fdm" [ngClass]="{'noscroll': controlModal!='Null'}">
     <!-- contenedor de la venta cruzada -->
     <div class="row">
         <app-venta-cruzada class="component"></app-venta-cruzada>
@@ -45,6 +48,13 @@
     <!-- contenedor de la informacion de venta y pagos -->
     <div class="row informacion">
         <app-information class="component"></app-information>
+    </div>
+
+
+
+
+    <div class="row footer">
+        <app-footer class="component"></app-footer>
     </div>
 
 </div>

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Componente que contiene la paginación de los resultados
+ */
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',

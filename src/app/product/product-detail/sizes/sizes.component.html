@@ -1,13 +1,19 @@
+<!-- contenedor de la modal de las tallas -->
 <ng-template #sizes let-modal class="sizes">
+    <!-- contenedor del encabezado de la modal -->
     <div class="modal-header">
+        <!-- titulo de la modal -->
         <h6 class="title">Tallas:</h6>
-        <!-- <h6 class="subtitle">Guía de tallas</h6> -->
+        <!-- botón de cerrar modal -->
         <button type="button" class="cerrar" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span class="material-icons notranslate">close</span>
       </button>
     </div>
+    <!-- contenedor del cuerpo de la modal -->
     <div class="modal-body">
+        <!-- componente de las tallas del producto -->
         <app-tallas></app-tallas>
+        <!-- botón de aplicar la selección de tallas -->
         <button class="aplicar" (click)="modal.close('Cross click')">
             Aplicar
         </button>

@@ -1,3 +1,5 @@
+/* estilos para el fondo oscuro de los filtros en verón móvil */
+
 .fondo {
     display: none;
     position: fixed;
@@ -11,9 +13,15 @@
     transition: all .3s ease;
 }
 
+
+/* estilos para el Contenedor del boton de cerrar para móvil, los filtros y el boton de aplicar filtros  */
+
 .contenedor {
     width: 100%;
 }
+
+
+/* estilos del contenedor del encabezado de los filtros en móvil */
 
 .contenedor .cerrar {
     display: none;
@@ -21,11 +29,17 @@
     align-items: center;
 }
 
+
+/* estilos para el titulo del encabezado */
+
 .cerrar .titulo {
     color: #555555;
     text-transform: uppercase;
     font-weight: bold;
 }
+
+
+/* estilos para el boton de cerrar en movil */
 
 .cerrar .btn-cerrar {
     padding: 4px;
@@ -33,6 +47,9 @@
     background: #ffffff;
     border: none;
 }
+
+
+/* estilos para el icono del boton cerrar */
 
 .btn-cerrar span {
     font-size: 30px;
@@ -48,6 +65,9 @@
     display: flex;
     justify-content: center;
 }
+
+
+/* estilos para el contenedor del boton cuando está sobre los filtros */
 
 .aplicar.show {
     position: sticky;
@@ -73,10 +93,15 @@
     outline: none;
 }
 
+
+/* estilos para verión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el fondo oscuro */
     .fondo {
         display: block;
     }
+    /* estilos para el contenedor de los filtros y el boton aplicar */
     .contenedor {
         position: fixed;
         z-index: 8;
@@ -89,13 +114,16 @@
         transform: translateX(-100%);
         transition: all .3s ease;
     }
+    /* estilos para el contenedor del encabezado */
     .contenedor .cerrar {
         display: flex;
     }
+    /* estilos para los filtros cuando se muestran */
     .contenedor.active,
     .fondo.active {
         transform: translateX(0%);
     }
+    /* estilos para el contenedor de los filtros */
     .elemento {
         max-height: calc(100vh - 93px);
         overflow-y: auto;

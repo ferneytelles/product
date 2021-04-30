@@ -1,21 +1,27 @@
+ /* estilos para los iconos */
+ 
  span.notranslate {
      font-size: 17px;
  }
+ /* estilos para el contenedor de la paginación */
  
  ::ng-deep .pagination {
      margin-bottom: 0px;
  }
+ /* estilopara los botones siguiente y anterior */
  
  ::ng-deep .page-item:first-child .page-link,
  ::ng-deep .page-item:last-child .page-link {
      display: flex;
      align-items: center;
  }
+ /* estilos para el botón de la página actual */
  
  ::ng-deep .page-item.active .page-link {
      background-color: #ff0000;
      border-color: #ff0000;
  }
+ /* estilos para los botones de la paginacón */
  
  ::ng-deep .page-link {
      color: #555555;
@@ -26,6 +32,7 @@
      border: none;
      margin: 0px 2px;
  }
+ /* estilos para el enfoque de los botones */
  
  ::ng-deep .page-link:focus {
      box-shadow: none;

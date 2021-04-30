@@ -1,14 +1,21 @@
-<!-- contenedor de la modal de tallas en movil -->
+<!-- contenedor de la modal de guía de tallas -->
 <ng-template #sizesGuide let-modal class="sizes">
+    <!-- conttenedor del encabezado de la modal -->
     <div class="modal-header">
+        <!-- icono del encabezado -->
         <span class="material-icons-outlined">shopping_bag</span>
+        <!-- titulo de la modal -->
         <h6 class="title">Producto:</h6>
+        <!-- subtitulo de la modal -->
         <h6 class="subtitle">Guía de tallas</h6>
+        <!-- botón de cerrar modal -->
         <button type="button" class="cerrar" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span class="material-icons notranslate">close</span>
       </button>
     </div>
+    <!-- contenedor del cuerpo de la modal -->
     <div class="modal-body">
+        <!-- componente de la guía de tallas -->
         <app-guide-content></app-guide-content>
     </div>
 </ng-template>

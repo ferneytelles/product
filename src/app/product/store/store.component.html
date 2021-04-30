@@ -1,9 +1,9 @@
-<div class="container-fdm" [ngClass]="{'noScroll': filtros}">
+<div class="container-fdm" [ngClass]="{'noScroll': filters}">
     <!-- contenedor de la seccion de busqueda -->
     <div class="row busqueda">
         <!-- contenedor del componente de los filtros -->
         <div class="filtros">
-            <app-filtros [filtrar]="filtros" (close)="openFiltros(false)"></app-filtros>
+            <app-filtros [filtrar]="filters" (close)="openFiltros(false)"></app-filtros>
         </div>
         <!-- contenedor de la miga de pan -->
         <div class="contenedor">
@@ -15,7 +15,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Camisetas</li>
                 </ol>
             </nav>
-            <!-- contenedor del carrusel de los estilos -->
+            <!-- contenedor del componente del carrusel de los estilos -->
             <div class="slider">
                 <app-carousel-style [slides]="carousel"></app-carousel-style>
             </div>
@@ -30,13 +30,14 @@
             <div class="ordenamiento">
                 <app-ordering (columnas)="setColumns($event)" (vista)="changeView($event)"></app-ordering>
             </div>
-            <!-- contenedor de los productos encontrados -->
+            <!-- contenedor del componente de los resultados -->
             <div class="resultados">
-                <div *ngFor="let item of productos" class="producto" [ngStyle]="{width: width}">
-                    <app-card-store [url]="item" [height]="height" [vista]="vista"></app-card-store>
+                <!-- contenedor de la tarjeta del producto -->
+                <div *ngFor="let item of products" class="producto" [ngStyle]="{width: width}">
+                    <app-card-store [url]="item" [height]="height" [view]="view"></app-card-store>
                 </div>
             </div>
-            <!-- contenedor del componente la paginacion -->
+            <!-- contenedor del componente de la paginacion -->
             <div class="paginacion">
                 <app-pagination></app-pagination>
             </div>
@@ -50,6 +51,12 @@
     <!-- contenedor del componente de la infomacion de venta -->
     <div class="row informacion">
         <app-information class="component"></app-information>
+    </div>
+
+
+
+    <div class="row footer">
+        <app-footer class="component"></app-footer>
     </div>
 
 </div>

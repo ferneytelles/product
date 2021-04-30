@@ -1,13 +1,21 @@
+/* estilos para el contenedor de la modal de guía de tallas */
+
 ::ng-deep.modal-size .modal-dialog {
     max-width: 90% !important;
     max-height: 90vh !important;
     margin: 5vh auto !important;
 }
 
+
+/* estilos para el contenido de la modal */
+
 ::ng-deep.modal-size .modal-dialog .modal-content {
     border-radius: 8px;
     height: 90vh;
 }
+
+
+/* estilos para el encabezado de la modal */
 
 .modal-header {
     padding: 3px 5px 3px 20px;
@@ -17,9 +25,15 @@
     border-radius: 8px 8px 0px 0px;
 }
 
+
+/* estilos para el icono del encabezado */
+
 .modal-header .material-icons-outlined {
     font-size: 28px;
 }
+
+
+/* estilos para el titulo de la modal */
 
 .modal-header .title {
     font-size: 18px;
@@ -28,6 +42,9 @@
     line-height: 30px;
 }
 
+
+/* estilos para el subtitulo de la modal */
+
 .modal-header .subtitle {
     font-size: 18px;
     margin-bottom: 0;
@@ -35,6 +52,9 @@
     font-weight: normal;
     line-height: 30px;
 }
+
+
+/* estilos para el botón de cerrar la modal */
 
 .modal-header .cerrar {
     padding: 5px;
@@ -45,9 +65,15 @@
     outline: none;
 }
 
+
+/* estilos para el icono del botón de cerrar */
+
 .modal-header .cerrar span {
     font-size: 20px;
 }
+
+
+/* estilos para el cuerpo de la modal */
 
 .modal-body {
     padding: 0;
@@ -81,16 +107,22 @@
     border-radius: 10px;
 }
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el contenedor de la modal */
      ::ng-deep.modal-size .modal-dialog {
         max-width: 100vh !important;
         max-height: 80vh !important;
         margin: 20vh 0 0 0 !important;
     }
+    /* estilos para el contenido de la modal */
      ::ng-deep.modal-size .modal-dialog .modal-content {
         border-radius: 8px 8px 0px 0px;
         height: 80vh;
     }
+    /* estilos para el encabezado de la modal */
     .modal-header {
         padding: 1px 10px;
         justify-content: start;
@@ -98,9 +130,11 @@
         background: #d7d7d7;
         border-radius: 8px 8px 0px 0px;
     }
+    /* estilos para el titulo de la modal */
     .modal-header .title {
         margin-left: 5px;
     }
+    /* estilos para el icono del botón de cerrar */
     .modal-header .cerrar span {
         font-size: 24px;
     }

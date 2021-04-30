@@ -1,18 +1,32 @@
+/* estilos para el contenedor del carrusel */
+
 .carousel {
     margin: 10px 60px;
 }
+
+
+/* estilos para el ítem del carrusel */
 
 .carousel .slide {
     outline: none;
 }
 
+
+/* Contenido para el botón anterior */
+
 ::ng-deep .slick-prev:before {
     content: "<";
 }
 
+
+/* Contenido para el botón siguiente */
+
 ::ng-deep .slick-next:before {
     content: ">";
 }
+
+
+/* estilos para los botones de siguiente y anterior */
 
 ::ng-deep .slick-prev:before,
 ::ng-deep .slick-next:before {
@@ -30,10 +44,16 @@
     padding-bottom: 2px;
 }
 
+
+/* estilos para el efecto hover de los botones siguiente y anterior */
+
 ::ng-deep .slick-prev:hover,
 ::ng-deep .slick-next:hover {
     opacity: 0.75;
 }
+
+
+/* estilos para los botones de los estilos del producto */
 
 .estilos {
     width: 100%;
@@ -51,7 +71,11 @@
     outline: none;
 }
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el Contenedor del carrusel de los estilos del producto */
     .carousel {
         margin: 10px 0px;
     }

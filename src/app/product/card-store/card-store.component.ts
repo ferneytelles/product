@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 /**
- * componente que contiene la tarjeda de producto utilizada
+ * Componente que contiene la tarjeda de producto utilizada
  * en la tienda
  */
 @Component({
@@ -12,69 +12,53 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CardStoreComponent implements OnInit {
 
   /**
-   * cadena que recibe la ruta de la imagen del producto
+   * Cadena que recibe la opción de la vista del producto
    */
-  @Input() vista: string;
+  @Input() view: string;
+  /**
+   * Cadena que recibe la ruta de la imagen del producto
+   */
   @Input() url: string;
+  /**
+   * Cadena que recibe el alto del contenedor de la imagen del producto
+   */
   @Input() height: string;
-  tallas = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'];
-  disponible = [true, true, false, true, true, false, true];
+  /**
+   * Arreglo que contiene las tallas del producto
+   */
+  sizes = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'];
+  /**
+   * Arreglo que contiene la disponibilidad de las tallas del producto
+   */
+  available = [true, true, false, true, true, false, true];
+  /**
+   * Arreglo que contiene los colores del producto
+   */
   // colores = ["#000000","#ffffff","#009136","#ff0000","#feed01"];
   // colores = ["#000000","#ffffff","#009136","#ff0000","#feed01","#f29400","#e2017b","#93117e","#182983","#009de0"];
-  colores = ['#000000', '#ffffff', '#009136', '#ff0000', '#feed01', '#f29400', '#e2017b', '#93117e', '#182983', '#009de0', '#ffffff', '#009136', '#ff0000', '#feed01', '#f29400', '#e2017b', '#93117e', '#182983', '#009de0', '#009de0', '#ffffff', '#009136', '#ff0000'];
-  colores1 = [];
-  // colores2 = [];
-  // menorde8 = false;
-  // mayorde8 = false;
-  // mayorde15 = false;
-  // mostrarMas = false;
-  cantidad = '';
+  colors = ['#000000', '#ffffff', '#009136', '#ff0000', '#feed01', '#f29400', '#e2017b', '#93117e', '#182983', '#009de0', '#ffffff', '#009136', '#ff0000', '#feed01', '#f29400', '#e2017b', '#93117e', '#182983', '#009de0', '#009de0', '#ffffff', '#009136', '#ff0000'];
+  /**
+   * Arreglo que contine los colores del producto mostrados en la tarjeta
+   */
+  colors1 = [];
+
+  cant = '';
 
   constructor() { }
 
+  /**
+   * Función utilizada para verificar si el producto tiene más de 5 colores
+   * para asignar la cantidad mostrada en el boton de más colores
+   */
   ngOnInit(): void {
-    this.colores1 = this.colores.slice(0, 5);
-    if (this.colores.length > 5){
-      if (this.colores.length < 14){
-      this.cantidad = `${this.colores.length - 5}`;
+    this.colors1 = this.colors.slice(0, 5);
+    if (this.colors.length > 5){
+      if (this.colors.length < 14){
+      this.cant = `${this.colors.length - 5}`;
       }else{
-        this.cantidad = '+9';
+        this.cant = '+9';
       }
     }
-    // if (this.colores.length <= 8){
-    //   this.menorde8 = true;
-    // }
-    // if (this.colores.length > 8){
-    //   this.mayorde8 = true;
-    //   this.colores1 = this.colores.slice(0, 7);
-    //   this.colores2 = this.colores.slice(8, 15);
-    //   if (this.colores.length <= 15){
-    //     this.cantidad = `+${this.colores2.length + 1}`;
-    //   }else{
-    //     this.mayorde15 = true;
-    //     this.colores2 = this.colores.slice(8, 13);
-    //     if (this.colores.length > 16){
-    //       this.cantidad = '+9';
-    //     }else{
-    //       this.cantidad = `+${this.colores2.length + 2}`;
-    //     }
-    //   }
-    // }
   }
-
-  // mas(): void{
-  //   this.mostrarMas = !this.mostrarMas;
-  //   if (this.mostrarMas){
-  //     this.cantidad = '-';
-  //   }else if (!this.mostrarMas && this.mayorde15){
-  //     if (this.colores.length > 16){
-  //       this.cantidad = '+9';
-  //     }else{
-  //       this.cantidad = `+${this.colores2.length + 2}`;
-  //     }
-  //   }else{
-  //     this.cantidad = `+${this.colores2.length + 1}`;
-  //   }
-  // }
 
 }

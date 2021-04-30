@@ -1,11 +1,15 @@
+<!-- contenedor de la modal de compartir -->
 <ng-template #share let-modal class="share">
+    <!-- contenedor del encabezado de la modal -->
     <div class="modal-header">
+        <!-- titulo de la modal -->
         <h6 class="title">Compartir:</h6>
-        <!-- <h6 class="subtitle">Guía de tallas</h6> -->
+        <!-- Botón de cerrar modal -->
         <button type="button" class="cerrar" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span class="material-icons notranslate">close</span>
       </button>
     </div>
+    <!-- contenedor del cuerpo de la modal -->
     <div class="modal-body">
         <app-to-share class="component"></app-to-share>
     </div>

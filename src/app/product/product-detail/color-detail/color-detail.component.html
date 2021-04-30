@@ -1,5 +1,8 @@
+<!-- contenedor de los colores -->
 <div class="colores">
+    <!-- contenedor del color -->
     <div *ngFor="let item of colores" class="check">
+        <!-- contenedor del input rdaio y el icono -->
         <div class="color" [style.background]="item">
             <input type="radio" class="checkbox" name="color" value="item">
             <img src="assets/icons/check.png" alt="" id="" class="iconCheck">

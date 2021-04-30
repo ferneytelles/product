@@ -1,3 +1,5 @@
+/* estilos para el contenedor del componente */
+
 .container-fdm {
     width: 100%;
     padding: 0px 15px;
@@ -46,7 +48,7 @@
 }
 
 
-/* estilos para el boton de abrir los filtros en movil */
+/* estilos para el contenedor del boton de abrir los filtros en movil */
 
 .boton-filtrar {
     display: none;
@@ -55,7 +57,7 @@
 }
 
 
-/*  */
+/* estilos para el boton de abrir los filtros en movil */
 
 .boton-filtrar .filtrar {
     display: flex;
@@ -68,6 +70,9 @@
     outline: none;
 }
 
+
+/* estilos para el contenedor de los resultados */
+
 .resultados {
     display: flex;
     flex-direction: row;
@@ -75,10 +80,16 @@
     flex-wrap: wrap;
 }
 
+
+/* estilo para el contenedor de la tarjeta del producto */
+
 .resultados .producto {
     height: fit-content;
     padding: 4px;
 }
+
+
+/* estilos para el contenedor del componente de la paginacion */
 
 .paginacion {
     display: flex;
@@ -88,38 +99,55 @@
     border-top: 1px solid #d7d7d7;
 }
 
+
+/* estilos para los componentes de  las etiquetas y la informacion de ventas y pagos */
+
 .etiquetas .component,
 .informacion .component {
     width: 100%;
 }
 
+
+/* estilos para version movil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el contenedor del componente */
     .container-fdm.noScroll {
         height: 90vh;
         overflow: hidden;
     }
+    /* estilos para el contenedor de la miga de pan */
     .busqueda .contenedor {
         max-width: 100%;
         padding: 0px;
     }
-    .contenedor .slider {
-        margin: 0 -15px;
-    }
+    /* estilos para la miga de pan */
     .breadcrumb {
         margin: 0 -15px;
     }
+    /* estilos para el contenedor del componente del carousel de los estilos */
+    .contenedor .slider {
+        margin: 0 -15px;
+    }
+    /* estilos para el contenedor de abrir los filtros en movil */
     .boton-filtrar {
         display: block;
     }
+    /* estilos para el contenedor del componente de ordenamiento de los resultados */
     .ordenamiento {
         margin: 0 -5px;
     }
+    /* estilos del contenedor de los resultados */
     .resultados {
         margin: 0px -10px;
     }
 }
 
+
+/* estilos para pantallas con ancho mayor a 1450px */
+
 @media screen and (min-width: 1450px) {
+    /* estilos para el contenedor del componente */
     .container-fdm {
         max-width: 1450px;
         margin: 0px auto;

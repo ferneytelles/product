@@ -1,10 +1,13 @@
+<!-- contenedor de la paginación -->
 <ngb-pagination [collectionSize]="500" [pageSize]="40" [maxSize]="3" [rotate]="false">
+    <!-- contenedor del botón de Anterior -->
     <ng-template ngbPaginationPrevious>
         <span class="material-icons-outlined notranslate">
             arrow_back_ios
             </span>
         <span class="d-none d-md-block">Anterior</span>
     </ng-template>
+    <!-- contenedor del botón de Siguiente -->
     <ng-template ngbPaginationNext>
         <span class="d-none d-md-block">Siguiente</span>
         <span class="material-icons-outlined notranslate">

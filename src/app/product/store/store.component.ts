@@ -1,5 +1,8 @@
 import { Component, HostListener, OnInit, OnDestroy } from '@angular/core';
 
+/**
+ * Componente que contiene la página de la tienda
+ */
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -7,18 +10,40 @@ import { Component, HostListener, OnInit, OnDestroy } from '@angular/core';
 })
 export class StoreComponent implements OnInit, OnDestroy {
 
-  carousel = ['Cuello redondo', 'Cuello en "V"', 'Cuello tortuga', 'Manga corta', 'Manga 3/4', 'Manga larga', 'Regular Fit', 'Slim Fit', 'Muscle Fit'];
-
-  productos = ['assets/img/1.png', 'assets/img/11.png', 'assets/img/3.png', 'assets/img/4.png', 'assets/img/16.png', 'assets/img/7.png', 'assets/img/8.png', 'assets/img/9.png', 'assets/img/4.png', 'assets/img/3.png', 'assets/img/7.png', 'assets/img/16.png', 'assets/img/8.png', 'assets/img/11.png', 'assets/img/1.png', 'assets/img/11.png', 'assets/img/3.png', 'assets/img/4.png', 'assets/img/16.png', 'assets/img/7.png', 'assets/img/8.png', 'assets/img/9.png', 'assets/img/4.png', 'assets/img/3.png', 'assets/img/7.png', 'assets/img/16.png', 'assets/img/8.png', 'assets/img/15.png', 'assets/img/1.png', 'assets/img/15.png', 'assets/img/3.png', 'assets/img/4.png', 'assets/img/15.png', 'assets/img/7.png', 'assets/img/8.png', 'assets/img/9.png', 'assets/img/4.png', 'assets/img/3.png', 'assets/img/7.png', 'assets/img/15.png'];
-
-  tags = ['Cuentos', 'Anime', 'Comics', 'Ilustración', 'Manga'];
-  filtros = false;
-  width = '';
-  height = '';
-  columnas: number;
-  vista = 'producto';
   /**
-   * variable que permite reiniciar el tiempo en la funcion onResize()
+   * Arreglo que contiene los ítems que se envían al carrusel de los estilos
+   */
+  carousel = ['Cuello redondo', 'Cuello en "V"', 'Cuello tortuga', 'Manga corta', 'Manga 3/4', 'Manga larga', 'Regular Fit', 'Slim Fit', 'Muscle Fit'];
+  /**
+   * Arreglo que contiene las rutas de las imágenes de los productos
+   */
+  products = ['assets/img/1.png', 'assets/img/11.png', 'assets/img/3.png', 'assets/img/4.png', 'assets/img/16.png', 'assets/img/7.png', 'assets/img/8.png', 'assets/img/9.png', 'assets/img/4.png', 'assets/img/3.png', 'assets/img/7.png', 'assets/img/16.png', 'assets/img/8.png', 'assets/img/11.png', 'assets/img/1.png', 'assets/img/11.png', 'assets/img/3.png', 'assets/img/4.png', 'assets/img/16.png', 'assets/img/7.png', 'assets/img/8.png', 'assets/img/9.png', 'assets/img/4.png', 'assets/img/3.png', 'assets/img/7.png', 'assets/img/16.png', 'assets/img/8.png', 'assets/img/15.png', 'assets/img/1.png', 'assets/img/15.png', 'assets/img/3.png', 'assets/img/4.png', 'assets/img/15.png', 'assets/img/7.png', 'assets/img/8.png', 'assets/img/9.png', 'assets/img/4.png', 'assets/img/3.png', 'assets/img/7.png', 'assets/img/15.png'];
+  /**
+   * Arreglo que contiene las etiquetas de los producto
+   */
+  tags = ['Cuentos', 'Anime', 'Comics', 'Ilustración', 'Manga'];
+  /**
+   * Binario que indica si muestra los filtros en móvil
+   */
+  filters = false;
+  /**
+   * Cadena que contiene el ancho del contenedor de la tarjeta del producto
+   */
+  width = '';
+  /**
+   * Cadena que contiene el alto del contenedor de la tarjeta del producto
+   */
+  height = '';
+  /**
+   * Número que determina las columnas en que se muestran los resultados
+   */
+  columns: number;
+  /**
+   * Cadena que determina las vista entre la imagen del producto o el diseño
+   */
+  view = 'producto';
+  /**
+   * Variable que permite reiniciar el tiempo en la función onResize()
    */
    resizeTime: NodeJS.Timer;
 
@@ -26,51 +51,68 @@ export class StoreComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * funcion que escucha el cambio de los pixeles en el ancho de la ventana
+   * Función que escucha el cambio de los píxeles en el ancho de la ventana
    */
-   @HostListener('window:resize', ['$event'])
-   onResize(): any {
-     // funcion que detiene la ejecucion programada de la funcion asignada a la variable resizeTime
+  @HostListener('window:resize', ['$event'])
+  onResize(): any {
+     // Función que detiene la ejecución programada de la función asignada a la variable resizeTime
      clearTimeout(this.resizeTime);
-     // asignacion que permite ejecutar la funcion setImgHeight() despues de 200 milisegundos
+     // Asignación que permite ejecutar la función setImgHeight() después de 200 milisegundos
      this.resizeTime = setTimeout(() => {
        this.setImgHeight();
      }, 200);
-   }
-
+  }
+  /**
+   * Función utizada para la ejecución de las funciones de asignación de alto y ancho
+   * del contenedor de la imagen del producto
+   */
   ngOnInit(): void {
     this.setCardWidth();
     this.setImgHeight();
   }
-
-  changeView(valor: string): void{
-    this.vista = valor;
+  /**
+   * Función utilizada para cambiar la vista de los productos
+   * @param value Cadena que determina el cambio de vista de los productos
+   */
+  changeView(value: string): void{
+    this.view = value;
   }
-
-  openFiltros(valor: boolean): void{
-    this.filtros = valor;
+  /**
+   * Función para abrir o cerrar los filtros en móvil
+   * @param value Binario que indica si se abren los filtros en versión móvil
+   */
+  openFiltros(value: boolean): void{
+    this.filters = value;
   }
-
-  setColumns(valor: number): void{
-    this.columnas = valor;
+  /**
+   * Función que reasigna las número de columnas y los tamaños de la tarjeta del producto
+   * @param value Número que determina las columnas
+   */
+  setColumns(value: number): void{
+    this.columns = value;
     this.setCardWidth();
     this.setImgHeight();
   }
-
+  /**
+   * Función que asigna el ancho de la tarjeta del producto según el número de columnas
+   */
   setCardWidth(): void{
-    if (this.columnas === 4) {
+    if (this.columns === 4) {
       this.width = '25%';
-    }else if (this.columnas === 3) {
+    }else if (this.columns === 3) {
       this.width = '33.3%';
-    }else if (this.columnas === 2) {
+    }else if (this.columns === 2) {
       this.width = '50%';
-    }else if (this.columnas === 1) {
+    }else if (this.columns === 1) {
       this.width = '100%';
     }
   }
-
+  /**
+   * Función que asigna el alto del contenedor de la imagen del producto
+   * dependiendo del numero de colummnas y del ancho de la pantalla
+   */
   setImgHeight(): void{
-    if (this.columnas === 4){
+    if (this.columns === 4){
       if (window.innerWidth >= 960 && window.innerWidth < 1024){
         this.height = '181px';
       }else if (window.innerWidth >= 1024 && window.innerWidth < 1100){
@@ -84,7 +126,7 @@ export class StoreComponent implements OnInit, OnDestroy {
       }else if (window.innerWidth >= 1400){
         this.height = '280px';
       }
-    }else if (this.columnas === 3){
+    }else if (this.columns === 3){
       if (window.innerWidth >= 960 && window.innerWidth < 1024){
         this.height = '247px';
       }else if (window.innerWidth >= 1024 && window.innerWidth < 1100){
@@ -98,7 +140,7 @@ export class StoreComponent implements OnInit, OnDestroy {
       }else if (window.innerWidth >= 1400){
         this.height = '379px';
       }
-    }else if (this.columnas === 2){
+    }else if (this.columns === 2){
       if (window.innerWidth < 330){
         this.height = '153px';
       }else if (window.innerWidth >= 330 && window.innerWidth < 360){
@@ -138,7 +180,7 @@ export class StoreComponent implements OnInit, OnDestroy {
       }else if (window.innerWidth >= 1400){
         this.height = '579px';
       }
-    }else if (this.columnas === 1){
+    }else if (this.columns === 1){
       if (window.innerWidth < 330){
         this.height = '321px';
       }else if (window.innerWidth >= 330 && window.innerWidth < 360){

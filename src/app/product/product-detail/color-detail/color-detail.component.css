@@ -1,4 +1,4 @@
-/* estilos para el contenedor de los checkbox de colores */
+/* estilos para el contenedor de los colores */
 
 .colores {
     width: 100%;
@@ -17,7 +17,7 @@
 }
 
 
-/* estilos para el contenedor del check y el icono */
+/* estilos para el contenedor del input y el icono */
 
 .check .color {
     width: 100%;
@@ -27,7 +27,7 @@
 }
 
 
-/* estilos para el checkbox */
+/* estilos para el input radio */
 
 .checkbox {
     border: 0;
@@ -42,7 +42,7 @@
 }
 
 
-/* estilos para el icono cuando esta seleccionado el checkbox */
+/* estilos para el icono cuando esta seleccionado el botón radio */
 
 .color input[type=radio]:checked~.iconCheck {
     display: block;
@@ -57,7 +57,11 @@
     margin-top: -40px;
 }
 
+
+/* estilos para la versión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el contenedor de los colores */
     .colores {
         padding: 5px;
         background-color: #d7d7d7;
@@ -65,12 +69,14 @@
         flex-wrap: nowrap;
         overflow-x: auto;
     }
+    /* estilos para el scroll del contenedor de los colores */
     .colores::-webkit-scrollbar {
         appearance: none;
     }
     .colores::-webkit-scrollbar:horizontal {
         height: 0px;
     }
+    /* estilos para el contenedor del input rdaio y el icono */
     .check .color {
         border-color: #eeeeee;
     }

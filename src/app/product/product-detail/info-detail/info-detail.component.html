@@ -1,9 +1,13 @@
+<!-- contenedor del componente -->
 <div class="container-fluid">
+    <!-- contenedor de la información del diseño del producto -->
     <div class="design">
+        <!-- contenedor del encabezado del deplegable -->
         <div class="head" (click)="designOpen=!designOpen">
             <p class="title">Acerca del diseño</p>
             <span class="material-icons notranslate" [ngClass]="{'rot': designOpen}">expand_less</span>
         </div>
+        <!-- contendio del desplegable -->
         <div class="body" [ngClass]="{'show': designOpen}">
             <div *ngFor="let item of design" class="info">
                 <span class="title">{{item.name}}</span>
@@ -11,11 +15,14 @@
             </div>
         </div>
     </div>
+    <!-- contenedor de la información del producto -->
     <div class="product" (click)="productOpen=!productOpen">
+        <!-- contenedor del encabezado del deplegable -->
         <div class="head">
             <p class="title">Acerca del producto</p>
             <span class="material-icons notranslate" [ngClass]="{'rot': productOpen}">expand_less</span>
         </div>
+        <!-- contendio del desplegable -->
         <div class="body" [ngClass]="{'show': productOpen}">
             <div *ngFor="let item of product" class="info">
                 <span class="title">{{item.name}}</span>

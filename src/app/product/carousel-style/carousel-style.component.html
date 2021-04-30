@@ -1,5 +1,8 @@
+<!-- Contenedor del carrusel de los estilos del producto -->
 <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="productSlideConfig">
+    <!-- Contenedor del botón del estilo -->
     <div ngxSlickItem *ngFor="let slide of slides" class="slide d-flex justify-content-center">
+        <!-- Botón de estilo -->
         <button class="estilos">{{slide}}</button>
     </div>
 </ngx-slick-carousel>

@@ -1,3 +1,5 @@
+/* estilos contenedor del componente */
+
 .container-fluid {
     display: flex;
     height: 100%;
@@ -6,6 +8,9 @@
     padding: 15px;
 }
 
+
+/* estilos para el contenedor de los botones de las vistas */
+
 .vistas {
     display: flex;
     flex-direction: column;
@@ -13,10 +18,23 @@
     width: auto;
 }
 
-.vistas .border-red {
+
+/* estilos para el borde inferior del botón de la vista */
+
+.vistas .borde {
     width: 100%;
-    border: 1px solid #ff0000;
+    border: 1px solid transparent;
 }
+
+
+/* estilos para el borde inferior al botón de la vista seleccionada */
+
+.vistas .borde.red {
+    border-color: #ff0000;
+}
+
+
+/* estilos para los botones de las vistas */
 
 .vistas button {
     display: flex;
@@ -31,9 +49,15 @@
     outline: none;
 }
 
+
+/* estilos para el botón de la vista seleccionada */
+
 .vistas button.selected {
     background: #d7d7d7;
 }
+
+
+/* estilos para la imagen de los botones de vistas */
 
 .vistas img {
     width: auto;
@@ -41,6 +65,9 @@
     height: auto;
     max-height: 100%;
 }
+
+
+/* estilos para el contenedor de la imagen */
 
 .imagen {
     width: inherit;
@@ -51,13 +78,20 @@
     padding-left: 30px;
 }
 
+
+/* Estilos para la imagen */
+
 .imagen img {
     width: auto;
     max-width: 100%;
     height: auto;
 }
 
+
+/* Estilos para versión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos contenedor del componente */
     .container-fluid {
         display: flex;
         height: auto;
@@ -65,13 +99,16 @@
         background: none;
         padding: 0px;
     }
+    /* estilos para el contenedor del carrusel de la imagen del producto */
     .carousel {
         width: 100%;
         height: 60vh;
     }
+    /* estilos para el contenedor de las imagenes del carrusel */
     .carousel-inner {
         height: 100%;
     }
+    /* estilos para el contenedor de la imagen */
     .carousel-item {
         justify-content: center;
         align-items: center;
@@ -80,9 +117,11 @@
         padding: 10px;
         background: #d7d7d7;
     }
+    /* estilos para el contenedor de la imagen visible */
     .carousel-item.active {
         display: flex;
     }
+    /* estilos para la imagen */
     .carousel-item img {
         margin: auto;
         width: auto;
@@ -90,7 +129,7 @@
         height: auto;
         max-height: 100%;
     }
-    /* ::ng-deep  */
+    /* estilos para los indicadores de la imagen */
     .carousel-indicators li {
         width: 8px;
         height: 8px;
@@ -100,7 +139,7 @@
         opacity: .7;
         border-radius: 100%;
     }
-    /* ::ng-deep  */
+    /* estilos para el indicador de la imagen actual */
     .carousel-indicators li.active {
         background: #ff0000;
         border-color: #ff0000;

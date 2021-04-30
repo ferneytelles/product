@@ -2,11 +2,17 @@
     padding: 10px 0;
 }
 
+
+/* estilos para el contenedor de los botones de compartir */
+
 .iconos {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
+
+/* estilos para los botones de compartir */
 
 .iconos .icon-w,
 .iconos .icon-b {
@@ -22,31 +28,52 @@
     text-decoration: none;
 }
 
+
+/* estilos para el evento hover de los botones */
+
 .iconos .icon-b:hover {
     background-color: #ff0000;
 }
+
+
+/* estilos para el evento hover del boton de facebook */
 
 .iconos .icon-w:hover i {
     color: #ff0000;
 }
 
+
+/* color para los botones */
+
 .iconos .icon-b {
     background-color: #000000;
 }
 
+
+/* color para el boton de facebook */
+
 .iconos .icon-w {
     background-color: #ffffff;
 }
+
+
+/* estilos para los iconos de los botones */
 
 .icon-b i {
     color: #ffffff;
     font-size: 21px;
 }
 
+
+/* estilos para el icono de facebook */
+
 .icon-w i {
     font-size: 35px;
     color: #000000;
 }
+
+
+/* estilos para el aviso de enlace copiado */
 
 .iconos .copy {
     padding: 3px 4px;
@@ -58,15 +85,20 @@
     color: #555555;
 }
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 960px) {
     .container-fluid {
         display: flex;
         justify-content: center;
     }
+    /* estilos para el contenedor de los botones de compartir */
     .iconos {
         max-width: 100%;
         flex-wrap: wrap;
     }
+    /* estilos para los botones de compartir */
     .iconos .icon-w,
     .iconos .icon-b {
         width: 40px;
@@ -75,20 +107,25 @@
         min-height: 40px;
         margin-bottom: 8px;
     }
+    /* color para los botones */
     .iconos .icon-b {
         background-color: #555555;
     }
+    /* color para el boton de facebook */
     .iconos .icon-w {
         background-color: #d7d7d7;
     }
+    /* estilos para los iconos de los botones */
     .icon-b i {
         color: #d7d7d7;
         font-size: 26px;
     }
+    /* estilos para el icono de facebook */
     .icon-w i {
         font-size: 40px;
         color: #555555;
     }
+    /* estilos para el aviso de enlace copiado */
     .iconos .copy {
         position: fixed;
         left: 50%;
@@ -96,21 +133,20 @@
         bottom: 120px;
         background: #d7d7d7;
     }
+    /* estilospara el efecto hover de los botones */
     .iconos .icon-b:hover {
         background-color: #555555;
     }
     .iconos .icon-w:hover i {
         color: #555555;
     }
-    .iconos .icon-b:focus {
-        background-color: #ff0000;
-    }
-    .iconos .icon-w:focus i {
-        color: #ff0000;
-    }
 }
 
+
+/* estilos para moviles con menos de 368px de ancho */
+
 @media screen and (max-width: 368px) {
+    /* estilos para el aviso de enlace copiado */
     .iconos .copy {
         bottom: 168px;
     }

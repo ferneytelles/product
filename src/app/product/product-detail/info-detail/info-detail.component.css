@@ -1,6 +1,11 @@
+/* estilos para el contenedor del componente */
+
 .container-fluid {
     padding: 0;
 }
+
+
+/* estilos para los contenedores de la información del diseño y el producto */
 
 .design,
 .product {
@@ -12,6 +17,9 @@
     border: 1px solid #d7d7d7;
 }
 
+
+/* estilos para el encabezado de los desplegables */
+
 .head {
     display: flex;
     justify-content: space-between;
@@ -19,6 +27,9 @@
     padding: 4px;
     background: #d7d7d7;
 }
+
+
+/* estilos para el titulo en el encabezado */
 
 .head .title {
     width: auto;
@@ -28,27 +39,46 @@
     font-weight: 500;
 }
 
+
+/* estilos para el icono del encabezado */
+
 .head span {
     color: #ff0000;
-}
-
-.head span.rot {
     transform: rotate(180deg);
 }
+
+
+/* Estilos para el icono del encabezado cuando no esta desplegado el contenido */
+
+.head span.rot {
+    transform: rotate(0deg);
+}
+
+
+/* Estilos para el contendio cuando no esta desplegado */
 
 .body:not(.show) {
     display: none;
 }
+
+
+/* Estilos para los items de la información */
 
 .body .info {
     padding: 5px 0;
     font-size: 16px;
 }
 
+
+/* estilos para el titulo de la caracteristica */
+
 .info .title {
     font-weight: 500;
     margin-right: 5px;
 }
+
+
+/* color de fondo para los ítems */
 
 .body .info:nth-child(2n-1) {
     background: #eeeeee;

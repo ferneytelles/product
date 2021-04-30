@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 /**
- * componente que contiene los filtros seleccionados
- * y la sección deordenamiento de los resultados
+ * Componente que contiene los filtros seleccionados
+ * y la sección de ordenamiento de los resultados
  */
 @Component({
   selector: 'app-ordering',
@@ -11,27 +11,30 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class OrderingComponent implements OnInit {
 
   /**
-   * numero que se emite con la cantidad de columnas seleccionadas
+   * Número que se emite con la cantidad de columnas seleccionadas
    */
   @Output() columnas = new EventEmitter<number>();
+  /**
+   * Cadena que se emite con la vista seleccionada
+   */
   @Output() vista = new EventEmitter<string>();
   /**
-   * numero de columnas en las que se muestran ordenados los productos,
-   * inicialmente se muestra en cuatro (4) columnas en version web
+   * Número de columnas en las que se muestran ordenados los productos,
+   * inicialmente se muestra en cuatro (4) columnas en versión web
    */
    cols = 4;
    /**
-    * arreglo que contiene los filtros que se han aplicado
+    * Arreglo que contiene los filtros que se han aplicado
     */
    // filtros = [];
    filtros = ['Hombre', 'Camisetas', 'Negro', 'Blanco', 'M', 'XL'];
   /**
-   * cadena usada en version movil para definir las columnas a mostrar
+   * Cadena usada en versión móvil para definir las columnas a mostrar
    */
   dosCol = '';
 
   /**
-   * se define la cantidad de columnas inicial a mostrar en version movil
+   * Constructor donde se define la cantidad de columnas inicial a mostrar en version movil
    */
   constructor() {
     if (window.innerWidth <= 960){
@@ -42,20 +45,27 @@ export class OrderingComponent implements OnInit {
     }
    }
 
+   /**
+    * Función utilizada para emitir la cantidad de columnas seleccionada
+    */
   ngOnInit(): void {
     this.columnas.emit(this.cols);
   }
 
   /**
-   * funcion que asigna la cantidad de columnas a mostrar
-   * @param col cantidad de columnas seleccionadas
+   * Función que asigna la cantidad de columnas a mostrar
+   * @param col Cantidad de columnas seleccionadas
    */
    cambiarCols(col: number): void{
     this.cols = col;
     this.columnas.emit(this.cols);
   }
-  changeView(valor: string): void{
-    this.vista.emit(valor);
+  /**
+   * Función que emite la vista seleccinada para los productos
+   * @param value Cadena que determina la vista seleccionada
+   */
+  changeView(value: string): void{
+    this.vista.emit(value);
   }
 
 }

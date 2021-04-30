@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Componente que contiene la información de la venta y pagos
+ */
 @Component({
   selector: 'app-information',
   templateUrl: './information.component.html',

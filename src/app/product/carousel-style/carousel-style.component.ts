@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+/**
+ * Componente que contiene el carrusel de los estilos del producto
+ */
 @Component({
   selector: 'app-carousel-style',
   templateUrl: './carousel-style.component.html',
@@ -7,8 +10,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CarouselStyleComponent implements OnInit {
 
+  /**
+   * Arreglo que contiene los estilos del producto
+   */
   @Input() slides: Array<any>;
 
+  /**
+   * Variable que contiene la configuración del carrusel
+   */
   productSlideConfig: any = {
     infinite: true,
     speed: 300,

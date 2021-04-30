@@ -1,13 +1,18 @@
+<!-- contenedor del fondo oscuro de los filtros en móvil -->
 <div class="fondo" [ngClass]="{'active': filtrar}" (click)="closeFilters(false)">
 </div>
+<!-- Contenedor del boton de cerrar para móvil, los filtros y el boton de aplicar filtros -->
 <div class="contenedor" [ngClass]="{'active': filtrar}">
+    <!-- Contenedor del encabezado de los filtros en móvil -->
     <div class="cerrar">
+        <!-- Titulo -->
         <span class="titulo">Filtros</span>
+        <!-- boton de cerrar filtros -->
         <button class="btn-cerrar" (click)="closeFilters(false)">
             <span class="material-icons notranslate">close</span>
         </button>
-
     </div>
+    <!-- contenedor de los filtros -->
     <div #elemento class="elemento">
         <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>
         <app-filtros-color *ngFor="let filtro of colorFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-color>
@@ -15,6 +20,7 @@
         <app-filtros-check *ngFor="let filtro of checkFilter" [active]="false" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
         <app-filtros-check *ngFor="let filtro of checkFilter2" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
     </div>
+    <!-- contenedor del boton de palicar filtros -->
     <div #aplicar class="aplicar" [ngClass]="{'show': botonFijo}">
         <button class="btn-aplicar">
             <span class="material-icons-outlined notranslate">filter_alt</span>

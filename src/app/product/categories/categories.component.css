@@ -5,25 +5,8 @@
     padding: 0px 15px;
 }
 
-.modales {
-    justify-content: center;
-}
-
 .component {
     width: 100%;
-}
-
-
-/* estilos para la version movil */
-
-@media screen and (max-width: 960px) {
-    /* estilos para el contenedor de los botones y del contenido*/
-    .container-fdm.noscroll {
-        max-height: 50vh;
-        overflow: hidden;
-        margin-top: 0px;
-    }
-    /* estilos para el contenedor de las etiquetas del producto */
 }
 
 

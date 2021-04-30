@@ -1,3 +1,5 @@
+/* estilos para el contenedor de la modal */
+
 ::ng-deep.modal-open .modal.share {
     display: flex !important;
     align-items: flex-end;
@@ -12,11 +14,13 @@
 
 ::ng-deep.share .modal-dialog .modal-content {
     border-radius: 8px 8px 0 0;
-    /* height: 90vh; */
     width: fit-content;
     max-width: 100%;
     background: #d7d7d7;
 }
+
+
+/* estilos para el encabezado de la modal */
 
 .modal-header {
     padding: 1px 10px;
@@ -26,12 +30,18 @@
     border-bottom: none;
 }
 
+
+/* estilos para el titulo de la modal */
+
 .modal-header .title {
     font-size: 18px;
     margin-bottom: 0;
     margin-left: 5px;
     line-height: 30px;
 }
+
+
+/* estilos para el boton de cerrar modal */
 
 .modal-header .cerrar {
     padding: 5px;
@@ -42,9 +52,15 @@
     outline: none;
 }
 
+
+/* estilos para el icono del botón cerrar */
+
 .modal-header .cerrar span {
     font-size: 24px;
 }
+
+
+/* estilos para el contenedor del cuerpo de la modal */
 
 .modal-body {
     padding: 0 15px 10px;
@@ -54,6 +70,9 @@
     align-items: center;
     flex-direction: column;
 }
+
+
+/* estilos para el componente de compartir */
 
 .component {
     width: 100%;

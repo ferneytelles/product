@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 
 /**
- * componente principal que contiene las modales y la venta cruzada
+ * Componente principal que contiene las modales y la venta cruzada
  */
 @Component({
   selector: 'app-main',
@@ -16,12 +16,12 @@ export class MainComponent implements OnInit {
    */
   tags = ['Samurai X', 'Japan', 'Otaku', 'Paisaje japonés', 'Naruto', 'Manga', 'Anime'];
   /**
-   * variable de tiempo que permite reiniciar el tiempo de ejecucion
-   * en la funcion onResize()
+   * Variable de tiempo que permite reiniciar el tiempo de ejecución
+   * en la función onResize()
    */
    resizeTime: NodeJS.Timer;
   /**
-   * cadena que determina la modal abierta en movil
+   * Cadena que determina la modal abierta en móvil
    */
   controlModal = 'Null';
 
@@ -32,8 +32,8 @@ export class MainComponent implements OnInit {
   constructor(private modalService: ModalService) { }
 
   /**
-   * funcion que ejecuta la funcion seImgHeight() despues de 200 miliseguntos
-   * de que se cambien la cantidad de pixeles de ancho de la ventana
+   * función que ejecuta la función seImgHeight() después de 200 miliseguntos
+   * de que se cambien la cantidad de píxeles de ancho de la ventana
    */
   @HostListener('window:resize', ['$event'])
   onResize(): any {
@@ -48,7 +48,7 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
   /**
-   * funcion que ejecuta la modal de cambiar productos en version web
+   * Función que ejecuta la modal de cambiar productos en versión web
    */
   modalProducto(): void{
     if (window.innerWidth > 960) {
@@ -56,7 +56,7 @@ export class MainComponent implements OnInit {
     }
   }
   /**
-   * funcion que ejecuta la modal de diseños en version web
+   * Función que ejecuta la modal de diseños en versión web
    */
   modalDisenio(): void{
     if (window.innerWidth > 960) {
@@ -64,7 +64,7 @@ export class MainComponent implements OnInit {
     }
   }
   /**
-   * funcion que ejecuta la modal de borrador en version web
+   * Función que ejecuta la modal de borrador en versión web
    */
   modalBorrador(): void{
     if (window.innerWidth > 960) {
@@ -72,7 +72,7 @@ export class MainComponent implements OnInit {
     }
   }
   /**
-   * funcion que ejecuta la modal de borradores en version web
+   * Función que ejecuta la modal de borradores en versión web
    */
   modalBorradores(): void{
     if (window.innerWidth > 960) {
@@ -80,7 +80,7 @@ export class MainComponent implements OnInit {
     }
   }
   /**
-   * funcion que ejecuta la modal de detalles del producto en version web
+   * Función que ejecuta la modal de detalles del producto en versión web
    */
   modalDetalle(): void{
     if (window.innerWidth > 960) {
@@ -88,8 +88,8 @@ export class MainComponent implements OnInit {
     }
   }
   /**
-   * funcion que abre las modales en version movil
-   * @param valor cadena que contiene el nombre da la modal que se abre
+   * Función que abre las modales en versión móvil
+   * @param valor Cadena que contiene el nombre da la modal que se abre
    */
   modalMovile(valor: string): void{
     if (window.innerWidth <= 960) {

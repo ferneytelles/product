@@ -1,3 +1,5 @@
+/* estilos para el contenedor de la sección de las etiquetas */
+
 .fondo-fdm {
     width: 100%;
     padding: 15px 30px;
@@ -39,6 +41,9 @@
     cursor: pointer;
 }
 
+
+/* estilo para versión móvil */
+
 @media screen and (max-width: 960px) {
     .titulo {
         font-size: 18px;
@@ -58,7 +63,11 @@
     }
 }
 
+
+/* estilos para moviles con menos de 680px de ancho */
+
 @media screen and (max-width: 680px) {
+    /* estilos para el contenedor de la sección de las etiquetas */
     .fondo-fdm {
         padding: 15px 5px;
     }

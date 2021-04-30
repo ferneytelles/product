@@ -1,33 +1,52 @@
+/* estilos para el contenedor del componente */
+
 .container-fdm {
     width: 100%;
     padding: 0px 15px;
 }
+
+
+/* estilos para el contenedor del detalle del producto */
 
 .detalle {
     margin: 0 15px;
     border-bottom: 1px solid #d7d7d7;
 }
 
+
+/* estilos para el contenedor de la columna de la imagen del producto */
+
 .producto {
     display: flex;
     flex-direction: row;
     width: 60%;
-    /* background: linear-gradient(to right, #ffffff, #d7d7d7); */
     padding: 0;
 }
+
+
+/* estilos para el contenedor de la columna de la infomacion del producto */
 
 .informacion {
     min-width: 40%;
     padding: 15px 0 0 15px;
 }
 
+
+/* estilos para el contenedor de nombre y precio del producto */
+
 .informacion .info {
     margin: 0;
 }
 
+
+/* estilos para el contenedor del nombre y coleccion del producto */
+
 .info .nombre {
     width: 100%;
 }
+
+
+/* estilos para el nombre del producto */
 
 .nombre .titulo {
     margin: 0px;
@@ -37,10 +56,16 @@
     white-space: pre-wrap;
 }
 
+
+/* estilos para la colección del producto */
+
 .nombre .coleccion {
     margin-bottom: 10px;
     font-size: 18px;
 }
+
+
+/* estilos para el contenedor del precio del producto */
 
 .info .precio {
     display: flex;
@@ -48,16 +73,40 @@
     align-items: flex-end;
 }
 
+
+/* estilos para el precio con el decuento */
+
 .precio .valor {
     font-size: 22px;
     margin-right: 5px;
     line-height: 22px;
 }
 
+
+/* estilos para el contenedor del precio normal y el descuento */
+
 .precio .descuento {
     font-size: 14px;
-    line-height: 14px;
+    line-height: 16px;
 }
+
+
+/* estilos para el precio normal del producto */
+
+.descuento span:first-child {
+    text-decoration: line-through;
+    margin-right: 4px;
+}
+
+
+/* estilos para el procentaje de descuento */
+
+.descuento span:last-child {
+    color: #ff0000;
+}
+
+
+/* estilos para el contenedor de los colores del producto */
 
 .informacion .colores {
     margin: 0;
@@ -65,23 +114,23 @@
     border-bottom: 1px solid #d7d7d7;
 }
 
+
+/* estilos para el titulo de los colores */
+
 .colores p {
     font-size: 16px;
     margin: 0;
 }
 
-.descuento span:first-child {
-    text-decoration: line-through;
-    margin-right: 3px;
-}
 
-.descuento span:last-child {
-    color: #ff0000;
-}
+/* estilos para el contenedor de las tallas */
 
 .informacion .tallas {
     padding: 10px 0 0 0;
 }
+
+
+/* estilos para el botón de las tallas */
 
 .btn-tallas .titulo {
     display: inline-block;
@@ -89,9 +138,15 @@
     margin: 0 8px;
 }
 
+
+/* estilos para el icono del botón de las tallas en móvil */
+
 .btn-tallas span {
     display: none;
 }
+
+
+/* estilos para el contenedor del botón de la guía de tallas */
 
 .tallas .rojo {
     display: flex;
@@ -105,10 +160,16 @@
     outline: none;
 }
 
+
+/* estilos para el icono del botón de la guía de tallas */
+
 .rojo span {
     font-size: 20px;
     margin-right: 3px;
 }
+
+
+/* estilos para el contenedor de los botones */
 
 .botones {
     display: flex;
@@ -117,12 +178,18 @@
     border-bottom: 1px solid #d7d7d7;
 }
 
+
+/* estilos para el contenedor de cada botón */
+
 .botones .boton {
     display: flex;
     justify-content: center;
     width: 50%;
     padding: 4px;
 }
+
+
+/* estilos para los botones */
 
 .boton button {
     display: flex;
@@ -137,28 +204,46 @@
     outline: none;
 }
 
+
+/* estilos para el texto de los botones */
+
 .boton .text {
     font-size: 16px;
     line-height: 16px;
 }
 
+
+/* estilos para el botón de compartir */
+
 .botones .boton:nth-child(2) {
     display: none;
 }
+
+
+/* estilos para el botón personalizar */
 
 .boton .btn-personalizar {
     background-color: #ffffff;
     border-color: #555555;
 }
 
+
+/* estilos para el botón comprar */
+
 .boton .btn-comprar {
     background-color: #ffffff;
     border-color: #ff0000;
 }
 
+
+/* estilos para el contenedor de las opciones de compartir */
+
 .compartir {
     border-bottom: 1px solid #d7d7d7;
 }
+
+
+/* estilos para el titulo de compartir */
 
 .compartir .titulo {
     font-size: 16px;
@@ -166,46 +251,65 @@
     line-height: 16px;
 }
 
+
+/* estilos para el contenedor de las caracteristicas del producto */
+
 .caracteristicas {
     margin: 10px 0 0 0;
 }
+
+
+/* estilos para los componentes hijos */
 
 .component {
     width: 100%;
 }
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el contenedor del detalle del producto */
     .detalle {
         margin: 0;
     }
+    /* estilos para el contenedor de la columna de la imagen del producto */
     .producto {
         width: -webkit-fill-available;
         margin: 0 -15px;
     }
+    /* estilos para el Contenedor de la columna de la información del producto */
     .informacion {
         min-width: 100%;
         padding-left: 0;
     }
+    /* estilos para el contenedor del nombre y la colección del producto */
     .info .nombre {
         max-width: calc(100% - 105px);
     }
+    /* estilos para la colección del producto */
     .nombre .coleccion {
         margin: 0;
     }
+    /* estilos para el contenedor del precio del producto */
     .info .precio {
         flex-direction: column;
     }
+    /* estilos para el precio */
     .precio .valor {
         margin-right: 0;
         margin-bottom: 5px;
     }
+    /* estilos para el contenedor de los colores del producto */
     .informacion .colores {
         margin: 0 -15px;
         border-bottom: none;
     }
+    /* estilos para el titulo de los colores */
     .colores p {
         margin-left: 15px;
     }
+    /* estilos para el contenedor del botón de las tallas en móvil */
     .tallas .btn-tallas {
         display: flex;
         align-items: center;
@@ -215,19 +319,23 @@
         border-radius: 4px;
         margin-bottom: 5px;
     }
+    /* estilos para el icono del botón de las tallas */
     .btn-tallas span {
         display: block;
         color: #ff0000;
         margin-left: auto;
     }
+    /* estilos para el texto de los botones de carrito y favoritos */
     .btn-carrito .text,
     .btn-deseos .text {
         display: none;
     }
+    /* estilos para el contenedor de los botones */
     .informacion .botones {
         padding: 10px 0;
         margin-bottom: 10px;
     }
+    /* estilos para los contenedores de los botones */
     .botones .boton:nth-child(5) {
         order: 1;
         width: 100%;
@@ -249,10 +357,12 @@
         order: 5;
         width: 50px;
     }
+    /* estilos para el boton de comprar y personalizar */
     .boton .btn-comprar,
     .boton .btn-personalizar {
         width: 220px;
     }
+    /* estilos para el botón de carrito, deseos y compartir */
     .boton .btn-carrito,
     .boton .btn-deseos,
     .boton .btn-share {
@@ -261,7 +371,11 @@
     }
 }
 
+
+/* estilos para pantallas con mas de 1450px de ancho */
+
 @media screen and (min-width: 1450px) {
+    /* estilos para el contenedor del componente */
     .container-fdm {
         max-width: 1450px;
         margin: 0px auto;
