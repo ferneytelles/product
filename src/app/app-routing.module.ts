@@ -7,10 +7,10 @@ import { CategoriesComponent } from './product/categories/categories.component';
 
 
 const routes: Routes = [
-  {path: 'store', component: StoreComponent},
-  {path: 'store/hombres', component: CategoriesComponent},
-  {path: 'store/product', component: ProductDetailComponent},
   {path: 'main', component: MainComponent},
+  {path: 'store', component: StoreComponent},
+  {path: 'categories/:categori', component: CategoriesComponent},
+  {path: 'store/product', component: ProductDetailComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'main'}
 ];
 
