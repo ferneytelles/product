@@ -33,7 +33,7 @@
 }
 
 .contenedor .head {
-    padding: 20px 60px 0px 40px;
+    padding: 12px 60px 0px 40px;
 }
 
 .head .title {
@@ -67,4 +67,16 @@
 
 .btn-articles .material-icons {
     color: #ff0000;
+}
+
+
+/* estilos para versón móvil */
+
+@media screen and (max-width: 830px) {
+    .contain {
+        position: initial;
+        margin: 15px -5px;
+        height: fit-content;
+        display: block;
+    }
 }

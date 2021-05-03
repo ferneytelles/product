@@ -15,7 +15,11 @@ export class CategoriesComponent implements OnInit {
   constructor(private route: ActivatedRoute) {
     route.params.subscribe( data => {
       if (data.categori === 'hombres'){
-        this.images.banner = 'assets/img/BannerHombres.png';
+        if (window.innerWidth <= 960){
+          this.images.banner = 'assets/img/BannerHombresMovil.png';
+        }else{
+          this.images.banner = 'assets/img/BannerHombres.png';
+        }
         this.images.image1 = 'assets/img/camisetas.png';
         this.images.image2 = 'assets/img/sacos.png';
         this.images.image3 = 'assets/img/gorras.png';
@@ -26,8 +30,12 @@ export class CategoriesComponent implements OnInit {
         this.images.image8 = 'assets/img/polos.png';
         this.images.image9 = 'assets/img/tennis.png';
       }else if (data.categori === 'mujeres') {
+        if (window.innerWidth <= 960){
+          this.images.banner = 'assets/img/BannerMujeresMovil.png';
+        }else{
+          this.images.banner = 'assets/img/BannerMujeres.png';
+        }
         this.menu[4] = 'Crop Tops';
-        this.images.banner = 'assets/img/BannerMujeres.png';
         this.images.image1 = 'assets/img/camisetasMujer.png';
         this.images.image2 = 'assets/img/sacosMujer.png';
         this.images.image3 = 'assets/img/gorrasMujer.png';
