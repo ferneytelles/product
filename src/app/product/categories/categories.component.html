@@ -1,6 +1,6 @@
 <div class="container-fdm">
     <div class="row banner">
-        <app-banner-top class="component" [url]="images.banner"></app-banner-top>
+        <app-banner-top class="component" [url]="images.banner" [categori]="categori"></app-banner-top>
     </div>
     <div class="options">
         <div class="images">
@@ -8,38 +8,38 @@
                 <div class="camisetas">
                     <img [src]="images.image1" alt="">
                     <div class="label">
-                        <span>Camisetas</span>
+                        <span>{{menu[0]}}</span>
                     </div>
                 </div>
                 <div class="sacos">
                     <img [src]="images.image2" alt="">
                     <div class="label">
-                        <span>Sacos</span>
+                        <span>{{menu[1]}}</span>
                     </div>
                 </div>
                 <div class="gorras">
                     <img [src]="images.image3" alt="">
                     <div class="label">
-                        <span>Gorras</span>
+                        <span>{{menu[2]}}</span>
                     </div>
                 </div>
                 <div class="tazas">
                     <img [src]="images.image4" alt="">
                     <div class="label">
-                        <span>Tazas</span>
+                        <span>{{menu[5]}}</span>
                     </div>
                 </div>
                 <div class="libretas-bolsas">
                     <div class="libretas">
                         <img [src]="images.image5" alt="">
                         <div class="label">
-                            <span>Libretas</span>
+                            <span>{{menu[6]}}</span>
                         </div>
                     </div>
                     <div class="bolsas">
                         <img [src]="images.image6" alt="">
                         <div class="label">
-                            <span>Bolsas Ecológicas</span>
+                            <span>{{menu[7]}}</span>
                         </div>
                     </div>
                 </div>
@@ -48,19 +48,19 @@
                 <div class="hoodies">
                     <img [src]="images.image7" alt="">
                     <div class="label">
-                        <span>Hoodies</span>
+                        <span>{{menu[3]}}</span>
                     </div>
                 </div>
                 <div class="polos">
                     <img [src]="images.image8" alt="">
                     <div class="label">
-                        <span>Polos</span>
+                        <span>{{menu[4]}}</span>
                     </div>
                 </div>
                 <div class="tennis">
                     <img [src]="images.image9" alt="">
                     <div class="label">
-                        <span>Tennis</span>
+                        <span>{{menu[8]}}</span>
                     </div>
                 </div>
             </div>

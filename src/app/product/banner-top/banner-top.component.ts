@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BannerTopComponent implements OnInit {
 
+  @Input() categori: string;
   @Input() url: string;
   constructor() { }
 

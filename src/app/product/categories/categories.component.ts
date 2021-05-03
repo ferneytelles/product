@@ -10,6 +10,7 @@ export class CategoriesComponent implements OnInit {
 
   menu = ['Camisetas', 'Sacos', 'Gorras', 'Hoodies', 'Polos', 'Tazas', 'Libretas', 'Bolsas Ecológicas', 'Tennis', 'Posters', 'Mochila', 'Cubiertas de celular', 'Chaquetas'];
   images = {banner: '', image1: '', image2: '', image3: '', image4: '', image5: '', image6: '', image7: '', image8: '', image9: ''};
+  categori: string;
 
   constructor(private route: ActivatedRoute) {
     route.params.subscribe( data => {
@@ -25,17 +26,19 @@ export class CategoriesComponent implements OnInit {
         this.images.image8 = 'assets/img/polos.png';
         this.images.image9 = 'assets/img/tennis.png';
       }else if (data.categori === 'mujeres') {
+        this.menu[4] = 'Crop Tops';
         this.images.banner = 'assets/img/BannerMujeres.png';
-        this.images.image1 = 'assets/img/camisetasMujeres.png';
-        this.images.image2 = 'assets/img/sacosMujeres.png';
-        this.images.image3 = 'assets/img/gorrasMujeres.png';
-        this.images.image4 = 'assets/img/tazasMujeres.png';
-        this.images.image5 = 'assets/img/libretasMujeres.png';
-        this.images.image6 = 'assets/img/bolsasMujeres.png';
-        this.images.image7 = 'assets/img/hoodiesMujeres.png';
-        this.images.image8 = 'assets/img/polosMujeres.png';
-        this.images.image9 = 'assets/img/tennisMujeres.png';
+        this.images.image1 = 'assets/img/camisetasMujer.png';
+        this.images.image2 = 'assets/img/sacosMujer.png';
+        this.images.image3 = 'assets/img/gorrasMujer.png';
+        this.images.image4 = 'assets/img/tazas.png';
+        this.images.image5 = 'assets/img/libretasMujer.png';
+        this.images.image6 = 'assets/img/bolsas.png';
+        this.images.image7 = 'assets/img/hoodiesMujer.png';
+        this.images.image8 = 'assets/img/cropMujer.png';
+        this.images.image9 = 'assets/img/tennis.png';
       }
+      this.categori = data.categori;
     } );
   }
 
