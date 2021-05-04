@@ -99,7 +99,7 @@
     padding: 5px;
 }
 
-.options button {
+.bottons button {
     color: #555555;
     font-size: 16px;
     font-weight: 500;
@@ -111,15 +111,15 @@
     outline: none;
 }
 
-.options button:first-child {
+.bottons button:first-child {
     border-radius: 12px 12px 0 0;
 }
 
-.options button:last-child {
+.bottons button:last-child {
     border-radius: 0 0 12px 12px;
 }
 
-.options button:hover {
+.bottons button:hover {
     background: #d7d7d7;
 }
 
@@ -130,7 +130,78 @@
 
 /* estilos para versón móvil */
 
-@media screen and (max-width: 830px) {}
+@media screen and (max-width: 830px) {
+    .options {
+        padding: 0 15px;
+        flex-wrap: wrap;
+    }
+    .options .images {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .images img:hover {
+        filter: none;
+        box-shadow: none;
+    }
+    .images .camisetas-movil {
+        display: block;
+        padding: 2px;
+    }
+    .images .left,
+    .images .right {
+        width: 50%;
+    }
+    .left .camisetas {
+        display: none;
+    }
+    .left .sacos,
+    .left .gorras {
+        width: 100%;
+        padding: 2px;
+    }
+    .left .tazas {
+        order: 5;
+        width: 100%;
+        padding: 2px;
+    }
+    .left .libretas-bolsas {
+        order: 4;
+        width: 100%;
+    }
+    .libretas-bolsas .libretas,
+    .libretas-bolsas .bolsas {
+        padding: 2px;
+    }
+    .images .label {
+        margin-top: -32px;
+        padding: 6px;
+    }
+    .label span {
+        padding: 0;
+        min-width: 115px;
+        font-size: 14px;
+    }
+    .images .right {
+        height: fit-content;
+    }
+    .right .hoodies,
+    .right .polos,
+    .right .tennis {
+        padding: 2px;
+    }
+    .options .bottons {
+        width: 100%;
+        padding: 2px;
+        margin-bottom: 10px;
+    }
+    .bottons button {
+        margin-bottom: 2px;
+    }
+    .bottons button:hover {
+        background: #eeeeee;
+    }
+}
 
 
 /* estilos para pantallas con mas de 1450px de ancho */

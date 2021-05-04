@@ -73,10 +73,39 @@
 /* estilos para versón móvil */
 
 @media screen and (max-width: 830px) {
+    .banner {
+        justify-content: center;
+        height: 124px;
+    }
+    .banner img {
+        width: auto;
+        /* max-width: 100%; */
+        height: auto;
+        max-height: 100%;
+    }
     .contain {
         position: initial;
-        margin: 15px -5px;
+        margin: 0;
         height: fit-content;
         display: block;
+    }
+    .contain .contenedor {
+        width: 100%;
+        padding: 0;
+        height: fit-content;
+    }
+    .contenedor .head {
+        padding: 15px 0;
+    }
+    .head .title {
+        text-align: center;
+        font-size: 32px;
+    }
+    .head .text {
+        text-align: center;
+        font-size: 16px;
+    }
+    .contenedor .articles {
+        display: none;
     }
 }
