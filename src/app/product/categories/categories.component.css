@@ -127,6 +127,13 @@
     width: 100%;
 }
 
+@media screen and (min-width: 831) {
+    .images img:hover {
+        filter: contrast(.7);
+        box-shadow: 0px -2px 3px 0px #555555;
+    }
+}
+
 
 /* estilos para versón móvil */
 
@@ -140,9 +147,9 @@
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
-    .images img:hover {
-        filter: none;
-        box-shadow: none;
+    .images img:focus {
+        filter: contrast(.7);
+        box-shadow: 0px -2px 3px 0px #555555;
     }
     .images .camisetas-movil {
         display: block;
@@ -193,13 +200,16 @@
     .options .bottons {
         width: 100%;
         padding: 2px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     .bottons button {
         margin-bottom: 2px;
     }
     .bottons button:hover {
         background: #eeeeee;
+    }
+    .bottons button:focus {
+        background: #d7d7d7;
     }
 }
 

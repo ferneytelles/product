@@ -24,7 +24,8 @@
 .contain .contenedor {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
     height: 190px;
     width: 50%;
     background: #ffffffb6;
@@ -33,7 +34,7 @@
 }
 
 .contenedor .head {
-    padding: 12px 60px 0px 40px;
+    padding: 0px 60px 0px 40px;
 }
 
 .head .title {
@@ -47,7 +48,8 @@
     line-height: 24px;
 }
 
-.contenedor .articles {
+
+/* .contenedor .articles {
     display: flex;
     justify-content: flex-end;
 }
@@ -67,7 +69,7 @@
 
 .btn-articles .material-icons {
     color: #ff0000;
-}
+} */
 
 
 /* estilos para versón móvil */
@@ -100,10 +102,12 @@
     .head .title {
         text-align: center;
         font-size: 32px;
+        margin-bottom: 0;
     }
     .head .text {
         text-align: center;
         font-size: 16px;
+        line-height: 17px;
     }
     .contenedor .articles {
         display: none;

@@ -59,6 +59,7 @@ import { SizesComponent } from './product/product-detail/sizes/sizes.component';
 import { ShareDetailComponent } from './product/product-detail/share-detail/share-detail.component';
 import { CategoriesComponent } from './product/categories/categories.component';
 import { BannerTopComponent } from './product/banner-top/banner-top.component';
+import { OffersComponent } from './product/offers/offers.component';
 
 
 
@@ -114,7 +115,8 @@ import { BannerTopComponent } from './product/banner-top/banner-top.component';
     SizesComponent,
     ShareDetailComponent,
     CategoriesComponent,
-    BannerTopComponent
+    BannerTopComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,

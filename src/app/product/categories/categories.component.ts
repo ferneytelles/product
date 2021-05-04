@@ -11,6 +11,7 @@ export class CategoriesComponent implements OnInit {
   menu = ['Camisetas', 'Sacos', 'Gorras', 'Hoodies', 'Polos', 'Tazas', 'Libretas', 'Bolsas Ecológicas', 'Tennis', 'Posters', 'Mochila', 'Cubiertas de celular', 'Chaquetas'];
   images = {banner: '', image1: '', image2: '', image3: '', image4: '', image5: '', image6: '', image7: '', image8: '', image9: ''};
   categori: string;
+  text: string;
 
   constructor(private route: ActivatedRoute) {
     route.params.subscribe( data => {
@@ -47,6 +48,7 @@ export class CategoriesComponent implements OnInit {
         this.images.image9 = 'assets/img/tennis.png';
       }
       this.categori = data.categori;
+      this.text = `Encuentra los mejores diseños para ${this.categori} en camisetas, hoddies y mucho más.`;
     } );
   }
 
