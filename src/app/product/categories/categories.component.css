@@ -119,10 +119,6 @@
     border-radius: 0 0 12px 12px;
 }
 
-.bottons button:hover {
-    background: #d7d7d7;
-}
-
 .component {
     width: 100%;
 }
@@ -132,6 +128,9 @@
         opacity: .8;
         /* filter: contrast(.7); */
         box-shadow: 0px -2px 3px 0px #555555;
+    }
+    .bottons button:hover {
+        background: #d7d7d7;
     }
 }
 
@@ -205,9 +204,6 @@
     }
     .bottons button {
         margin-bottom: 2px;
-    }
-    .bottons button:hover {
-        background: #eeeeee;
     }
     .bottons button:focus {
         background: #d7d7d7;

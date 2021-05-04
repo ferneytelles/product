@@ -60,6 +60,7 @@ import { ShareDetailComponent } from './product/product-detail/share-detail/shar
 import { CategoriesComponent } from './product/categories/categories.component';
 import { BannerTopComponent } from './product/banner-top/banner-top.component';
 import { OffersComponent } from './product/offers/offers.component';
+import { GiftCardsComponent } from './product/gift-cards/gift-cards.component';
 
 
 
@@ -116,7 +117,8 @@ import { OffersComponent } from './product/offers/offers.component';
     ShareDetailComponent,
     CategoriesComponent,
     BannerTopComponent,
-    OffersComponent
+    OffersComponent,
+    GiftCardsComponent
   ],
   imports: [
     BrowserModule,
