@@ -10,13 +10,18 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Página de inicio</a></li>
-                    <li class="breadcrumb-item"><a href="#">Comprar</a></li>
-                    <li class="breadcrumb-item"><a href="#">Hombres</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Camisetas</li>
+                    <li *ngIf="params[0]!='ofertas'" class="breadcrumb-item"><a href="#">Comprar</a></li>
+                    <li class="breadcrumb-item"><a href="#">
+                        {{params[0].charAt(0).toUpperCase() + params[0].slice(1)}}
+                    </a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{routeActive}}</li>
                 </ol>
             </nav>
+            <div *ngIf="params[0]==='ofertas'" class="row ofertas">
+                <h3 class="text">{{routeActive}}</h3>
+            </div>
             <!-- contenedor del componente del carrusel de los estilos -->
-            <div class="slider">
+            <div *ngIf="params[0]!='ofertas'" class="slider">
                 <app-carousel-style [slides]="carousel"></app-carousel-style>
             </div>
             <!-- contenedor del boton para abrir los filtros en movil -->

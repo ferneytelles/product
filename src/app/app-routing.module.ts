@@ -8,13 +8,14 @@ import { OffersComponent } from './product/offers/offers.component';
 import { GiftCardsComponent } from './product/gift-cards/gift-cards.component';
 
 
+
 const routes: Routes = [
   {path: 'main', component: MainComponent},
-  {path: 'store', component: StoreComponent},
+  {path: 'store/:ofertas', component: StoreComponent},
   {path: 'offers', component: OffersComponent},
   {path: 'gift-cards', component: GiftCardsComponent},
   {path: 'categories/:categori', component: CategoriesComponent},
-  {path: 'store/product', component: ProductDetailComponent},
+  {path: 'product-detail', component: ProductDetailComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'main'}
 ];
 

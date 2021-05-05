@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 /**
  * Componente que contiene la página de la tienda
@@ -45,9 +46,20 @@ export class StoreComponent implements OnInit, OnDestroy {
   /**
    * Variable que permite reiniciar el tiempo en la función onResize()
    */
-   resizeTime: NodeJS.Timer;
+  resizeTime: NodeJS.Timer;
 
-  constructor() {
+  params: Array<string>;
+  routeActive: string;
+
+  constructor(private route: ActivatedRoute) {
+    route.params.subscribe((data) => {
+      this.params = data.ofertas.split('-');
+      if (this.params[0] === 'ofertas'){
+        this.routeActive = this.params[0].charAt(0).toUpperCase() + this.params[0].slice(1) + ' en ' + this.params[1];
+      }else{
+        this.routeActive = this.params[1].charAt(0).toUpperCase() + this.params[1].slice(1);
+      }
+    });
   }
 
   /**

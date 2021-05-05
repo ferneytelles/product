@@ -3,13 +3,13 @@
         <app-banner-top class="component" [url]="banner" [categori]="categori" [text]="text"></app-banner-top>
     </div>
     <div class="options">
-        <div class="product">
+        <div class="product" [routerLink]="['/store', 'ofertas-productos']">
             <img src="assets/img/OfertasProductos.png" alt="">
             <div class="label">
                 <span>Ver ofertas en productos</span>
             </div>
         </div>
-        <div class="design">
+        <div class="design" [routerLink]="['/store', 'ofertas-diseños']">
             <img src="assets/img/OfertasDiseños.png" alt="">
             <div class="label">
                 <span>Ver ofertas en diseños</span>

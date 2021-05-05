@@ -1,6 +1,6 @@
 <div class="card mx-1">
     <!-- contenedor de la imagen del producto -->
-    <a [routerLink]="['/store/product']" class="img" [ngStyle]="{height: height}">
+    <a [routerLink]="['/product-detail']" class="img" [ngStyle]="{height: height}">
         <!-- etiqueta de descuento -->
         <span class="descuento"></span>
         <span class="porcentaje">-50%</span>
@@ -40,7 +40,7 @@
             <!-- contenedor de los colores cuando son 8 o menos -->
             <div class="col-auto colores">
                 <div *ngFor="let color of colors1" [style.background]="color" class="color"></div>
-                <button *ngIf="colors.length > 5" [routerLink]="['/store/product']" class="color mas">{{cant}}</button>
+                <button *ngIf="colors.length > 5" [routerLink]="['/product-detail']" class="color mas">{{cant}}</button>
             </div>
 
         </div>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <!-- nombre del producto -->
-        <p [routerLink]="['/store/product']" class="card-text nombre">Nombre del producto "camiseta personalizada"</p>
+        <p [routerLink]="['/product-detail']" class="card-text nombre">Nombre del producto "camiseta personalizada"</p>
         <!-- coleccion a la que pertenece el producto -->
         <p class="card-text coleccion">Coleccion del producto</p>
         <!-- valor del producto con descuento -->

@@ -47,6 +47,18 @@
     color: #555555;
 }
 
+.contenedor .ofertas {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.ofertas .text {
+    margin: 0;
+}
+
 
 /* estilos para el contenedor del boton de abrir los filtros en movil */
 
