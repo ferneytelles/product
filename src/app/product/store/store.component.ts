@@ -50,11 +50,13 @@ export class StoreComponent implements OnInit, OnDestroy {
 
   params: Array<string>;
   routeActive: string;
+  filterOfertas: string;
 
   constructor(private route: ActivatedRoute) {
     route.params.subscribe((data) => {
       this.params = data.ofertas.split('-');
       if (this.params[0] === 'ofertas'){
+        this.filterOfertas = this.params[1];
         this.routeActive = this.params[0].charAt(0).toUpperCase() + this.params[0].slice(1) + ' en ' + this.params[1];
       }else{
         this.routeActive = this.params[1].charAt(0).toUpperCase() + this.params[1].slice(1);

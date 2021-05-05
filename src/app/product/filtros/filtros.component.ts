@@ -40,7 +40,8 @@ export class FiltrosComponent implements OnInit {
    * Elemento que contiene los filtros
    */
   @ViewChild('elemento', {static: true}) elem: ElementRef;
-  // @ViewChild('aplicar', {static: true}) aplicar: ElementRef;
+
+  @Input() ofertas: string;
   /**
    * Booleano que determina si el botón de aplicar filtros se sobrepone
    * a los filtros

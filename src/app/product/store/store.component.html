@@ -3,7 +3,7 @@
     <div class="row busqueda">
         <!-- contenedor del componente de los filtros -->
         <div class="filtros">
-            <app-filtros [filtrar]="filters" (close)="openFiltros(false)"></app-filtros>
+            <app-filtros [filtrar]="filters" [ofertas]="filterOfertas" (close)="openFiltros(false)"></app-filtros>
         </div>
         <!-- contenedor de la miga de pan -->
         <div class="contenedor">

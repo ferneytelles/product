@@ -14,11 +14,20 @@
     </div>
     <!-- contenedor de los filtros -->
     <div #elemento class="elemento">
-        <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>
-        <app-filtros-color *ngFor="let filtro of colorFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-color>
-        <app-filtro-precio [nombre]="'Precio'"></app-filtro-precio>
-        <app-filtros-check *ngFor="let filtro of checkFilter" [active]="false" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
-        <app-filtros-check *ngFor="let filtro of checkFilter2" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+        <div class="producto" *ngIf="ofertas != 'diseños'">
+            <app-filtros-radio *ngFor="let filtro of radioFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-radio>
+            <app-filtros-color *ngFor="let filtro of colorFilter" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-color>
+        </div>
+        <div class="precio" *ngIf="ofertas != 'diseños' && ofertas != 'productos'">
+            <app-filtro-precio [nombre]="'Precio'"></app-filtro-precio>
+        </div>
+        <div class="producto" *ngIf="ofertas != 'diseños'">
+            <app-filtros-check *ngFor="let filtro of checkFilter" [active]="false" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+        </div>
+        <div class="disenio" *ngIf="ofertas != 'productos'">
+            <app-filtros-check *ngFor="let filtro of checkFilter2" [active]="true" [nombre]="filtro.name" [items]="filtro.items"></app-filtros-check>
+        </div>
+
     </div>
     <!-- contenedor del boton de palicar filtros -->
     <div #aplicar class="aplicar" [ngClass]="{'show': botonFijo}">
