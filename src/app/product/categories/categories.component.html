@@ -1,47 +1,59 @@
 <div class="container-fdm">
+    <!-- contenedor del banner superior -->
     <div class="row banner">
         <app-banner-top class="component" [url]="images.banner" [categori]="categori" [text]="text"></app-banner-top>
     </div>
+    <!-- contenedor del menu de las subcategorías -->
     <div class="options">
+        <!-- contenedor de el menu con imagenes -->
         <div class="images">
+            <!-- contenedor de la opción camisetas en móvil -->
             <div class="camisetas-movil">
                 <img [src]="images.image1" alt="">
                 <div class="label">
                     <span>{{menu[0]}}</span>
                 </div>
             </div>
+            <!-- contenedor de la columna izquierda de imagenes -->
             <div class="left">
+                <!-- contenedor de la opción camisetas -->
                 <div class="camisetas">
                     <img [src]="images.image1" alt="">
                     <div class="label">
                         <span>{{menu[0]}}</span>
                     </div>
                 </div>
+                <!-- contenedor de la opción sacos -->
                 <div class="sacos">
                     <img [src]="images.image2" alt="">
                     <div class="label">
                         <span>{{menu[1]}}</span>
                     </div>
                 </div>
+                <!-- contenedor de la opción gorras -->
                 <div class="gorras">
                     <img [src]="images.image3" alt="">
                     <div class="label">
                         <span>{{menu[2]}}</span>
                     </div>
                 </div>
+                <!-- contenedor de la opción tazas -->
                 <div class="tazas">
                     <img [src]="images.image4" alt="">
                     <div class="label">
                         <span>{{menu[5]}}</span>
                     </div>
                 </div>
+                <!-- contenedor de las opciones libretas y bolsas -->
                 <div class="libretas-bolsas">
+                    <!-- contenedor de la opción libretas -->
                     <div class="libretas">
                         <img [src]="images.image5" alt="">
                         <div class="label">
                             <span>{{menu[6]}}</span>
                         </div>
                     </div>
+                    <!-- contenedor de la opción bolsas -->
                     <div class="bolsas">
                         <img [src]="images.image6" alt="">
                         <div class="label">
@@ -50,19 +62,23 @@
                     </div>
                 </div>
             </div>
+            <!-- contenedor de la columna derecha de imagenes -->
             <div class="right">
+                <!-- contenedor de la opción hoodies -->
                 <div class="hoodies">
                     <img [src]="images.image7" alt="">
                     <div class="label">
                         <span>{{menu[3]}}</span>
                     </div>
                 </div>
+                <!-- contenedor de la opción polos -->
                 <div class="polos">
                     <img [src]="images.image8" alt="">
                     <div class="label">
                         <span>{{menu[4]}}</span>
                     </div>
                 </div>
+                <!-- contenedor de la opción tennis -->
                 <div class="tennis">
                     <img [src]="images.image9" alt="">
                     <div class="label">
@@ -71,7 +87,9 @@
                 </div>
             </div>
         </div>
+        <!-- contenedor del menu de los productos -->
         <div class="bottons">
+            <!-- botones del menu -->
             <button *ngFor="let item of menu">{{item}}</button>
         </div>
     </div>

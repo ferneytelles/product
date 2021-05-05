@@ -5,17 +5,26 @@
     padding: 0px 15px;
 }
 
+
+/* estilos para el contenedor del menu de las subcategorías */
+
 .options {
     display: flex;
     flex-direction: row;
     padding: 15px 60px;
 }
 
+
+/* estilos para el contenedor de el menu con imagenes */
+
 .options .images {
     display: flex;
     flex-direction: row;
     width: 75%;
 }
+
+
+/* estilos para las imagenes */
 
 .images img {
     width: 100%;
@@ -27,10 +36,15 @@
     cursor: pointer;
 }
 
-.images img:hover {
-    filter: contrast(.7);
-    box-shadow: 0px -2px 3px 0px #555555;
+
+/* estilos para el contenedor de la opción camisetas en móvil */
+
+.images .camisetas-movil {
+    display: none;
 }
+
+
+/* estilos para el contenedor de la columna izquierda de imagenes */
 
 .images .left {
     display: flex;
@@ -38,14 +52,16 @@
     width: 66.6%;
 }
 
-.images .camisetas-movil {
-    display: none;
-}
+
+/* estilos para el contenedor de la opción camisetas */
 
 .left .camisetas {
     width: 100%;
     padding: 5px;
 }
+
+
+/* estilos para el contenedor del texto sobre la imagen */
 
 .images .label {
     display: flex;
@@ -56,6 +72,9 @@
     padding: 10px;
 }
 
+
+/* estilos para el texto sobre la imagen */
+
 .label span {
     min-width: 150px;
     text-align: center;
@@ -64,6 +83,9 @@
     background: #ffffffb2;
 }
 
+
+/* estilos para el los contenedores de las opciones sacos, gorras y tazas */
+
 .left .sacos,
 .left .gorras,
 .left .tazas {
@@ -71,9 +93,15 @@
     padding: 5px;
 }
 
+
+/* estilos para el contenedor de las opciones libretas y bolsas */
+
 .left .libretas-bolsas {
     width: 50%;
 }
+
+
+/* estilos para los contenedores de las opciones libretas y bolsas */
 
 .libretas-bolsas .libretas,
 .libretas-bolsas .bolsas {
@@ -81,11 +109,17 @@
     padding: 5px;
 }
 
+
+/* estilos para el contenedor de la columna derecha de imagenes */
+
 .images .right {
     display: flex;
     flex-wrap: wrap;
     width: 33.3%;
 }
+
+
+/* estilos para los contenedores de las opciones de hoodies, polos y tennis */
 
 .right .hoodies,
 .right .polos,
@@ -94,10 +128,16 @@
     padding: 5px;
 }
 
+
+/* estilos para el contenedor del menu de los productos */
+
 .options .bottons {
     width: 25%;
     padding: 5px;
 }
+
+
+/* estilos para los botones del menu */
 
 .bottons button {
     color: #555555;
@@ -111,24 +151,37 @@
     outline: none;
 }
 
+
+/* estilos para el primer boton del menu */
+
 .bottons button:first-child {
     border-radius: 12px 12px 0 0;
 }
+
+
+/* estilos para el ultimo boton del menu */
 
 .bottons button:last-child {
     border-radius: 0 0 12px 12px;
 }
 
+
+/* estilos para los componentes */
+
 .component {
     width: 100%;
 }
 
+
+/* estilos hover para versión web */
+
 @media screen and (min-width: 831px) {
+    /* estilos para el efecto hover de las imagenes */
     .images img:hover {
         opacity: .8;
-        /* filter: contrast(.7); */
         box-shadow: 0px -2px 3px 0px #555555;
     }
+    /* estilos para el efecto hover de los botones del menu */
     .bottons button:hover {
         background: #d7d7d7;
     }
@@ -138,73 +191,90 @@
 /* estilos para versón móvil */
 
 @media screen and (max-width: 830px) {
+    /* estilos para el contenedor del menu de las subcategorías */
     .options {
         padding: 0 15px;
         flex-wrap: wrap;
     }
+    /* estilos para el menu con imagenes */
     .options .images {
         width: 100%;
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
+    /* estilos para el focus sobre la imagen */
     .images img:focus {
-        filter: contrast(.7);
-        box-shadow: 0px -2px 3px 0px #555555;
+        opacity: .8;
+        /* box-shadow: 0px -2px 3px 0px #555555; */
     }
+    /* estilos para la opción de camisetas en móvil */
     .images .camisetas-movil {
         display: block;
         padding: 2px;
     }
+    /* estilos para las columnasde las imagenes */
     .images .left,
     .images .right {
         width: 50%;
     }
+    /* estilos para la opción de camisetas */
     .left .camisetas {
         display: none;
     }
+    /* estilos para el contenedor de las opciones de sacos y gorras */
     .left .sacos,
     .left .gorras {
         width: 100%;
         padding: 2px;
     }
+    /* estilos para el contenedor de la opción de tazas */
     .left .tazas {
         order: 5;
         width: 100%;
         padding: 2px;
     }
+    /* estilos para el contenedor de las opciones de bolsas y libretas */
     .left .libretas-bolsas {
         order: 4;
         width: 100%;
     }
+    /* estilos para los contenedores de las opciones de bolsas y libretas */
     .libretas-bolsas .libretas,
     .libretas-bolsas .bolsas {
         padding: 2px;
     }
+    /* estilos para el contenedor del texto sobre las imagenes */
     .images .label {
         margin-top: -32px;
         padding: 6px;
     }
+    /* estilos para el texto sobre las imagenes */
     .label span {
         padding: 0;
         min-width: 115px;
         font-size: 14px;
     }
+    /* estilos para la columna derecha de las imagenes */
     .images .right {
         height: fit-content;
     }
+    /* estilos para los contenedores de las opciones de hoodies, polos y tennis */
     .right .hoodies,
     .right .polos,
     .right .tennis {
         padding: 2px;
     }
+    /* estilos para el contenedor del menu de los productos */
     .options .bottons {
         width: 100%;
         padding: 2px;
         margin-bottom: 15px;
     }
+    /* estilos para los botones del menu */
     .bottons button {
         margin-bottom: 2px;
     }
+    /* estilos para el efecto focus de los botones del menu */
     .bottons button:focus {
         background: #d7d7d7;
     }
