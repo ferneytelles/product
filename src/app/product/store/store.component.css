@@ -47,6 +47,9 @@
     color: #555555;
 }
 
+
+/* estilos para el contenedor del titulo en ofertas */
+
 .contenedor .ofertas {
     width: 100%;
     margin: 0;
@@ -54,6 +57,9 @@
     margin-bottom: 8px;
     border-bottom: 1px solid #d7d7d7;
 }
+
+
+/* estilos para el titulo */
 
 .ofertas .text {
     margin: 0;
