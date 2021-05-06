@@ -1,11 +1,17 @@
 <div class="container-fdm">
+    <!-- contenedor del banner superior -->
     <div class="row banner">
         <app-banner-top class="component" [url]="banner" [categori]="categori" [text]="text"></app-banner-top>
     </div>
+    <!-- Contenedor de las tarjetas de regalo -->
     <div class="cards">
+        <!-- Contenedor de la tarjeta -->
         <div class="contenedor" *ngFor="let item of cards">
+            <!-- imagen de la tarjeta -->
             <img [src]="item" alt="">
+            <!-- contenedor del botón para añadir al carrito -->
             <div class="botton">
+                <!-- botó de añadir al carrito -->
                 <button class="btn-carrito">
                     <span class="material-icons-outlined notranslate">shopping_cart</span>
                     <span>Añadir al carrito</span>

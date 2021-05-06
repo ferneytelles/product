@@ -1,3 +1,5 @@
+/* estilos para el contenedor de la imagen del banner */
+
 .banner {
     display: flex;
     justify-content: flex-end;
@@ -6,12 +8,18 @@
     overflow: hidden;
 }
 
+
+/* estilos para la imagen del banner */
+
 .banner img {
     width: auto;
     /* max-width: 100%; */
     height: auto;
     max-height: 100%;
 }
+
+
+/* estilos para el contenedor del los textos del banner */
 
 .contain {
     position: relative;
@@ -20,6 +28,9 @@
     display: flex;
     align-items: center;
 }
+
+
+/* estilos para el contenedor del titulo y el texto del banner */
 
 .contain .contenedor {
     display: flex;
@@ -33,14 +44,23 @@
     padding: 10px 15px;
 }
 
+
+/* estilos para el contenedor centrado de los textos */
+
 .contenedor .head {
     padding: 0px 30px;
 }
+
+
+/* estilos para el titulo del banner */
 
 .head .title {
     font-size: 40px;
     font-weight: bold;
 }
+
+
+/* estilos para el texto del banner */
 
 .head .text {
     margin: 0;
@@ -75,42 +95,49 @@
 /* estilos para versón móvil */
 
 @media screen and (max-width: 830px) {
+    /* estilos para el contenedor de la imagen del banner */
     .banner {
         justify-content: center;
         height: 124px;
     }
+    /* estilos para la imagen del banner */
     .banner img {
         width: auto;
         /* max-width: 100%; */
         height: auto;
         max-height: 100%;
     }
+    /* estilos para el contenedor del los textos del banner */
     .contain {
         position: initial;
         margin: 0;
         height: fit-content;
         display: block;
     }
+    /* estilos para el contenedor del titulo y el texto del banner */
     .contain .contenedor {
         width: 100%;
         padding: 0;
         height: fit-content;
     }
+    /* estilos para el contenedor centrado de los textos */
     .contenedor .head {
         padding: 15px 0;
     }
+    /* estilos para el titulo del banner */
     .head .title {
         text-align: center;
         font-size: 32px;
         margin-bottom: 0;
         margin: 0 -5px;
     }
+    /* estilos para el texto del banner */
     .head .text {
         text-align: center;
         font-size: 16px;
         line-height: 17px;
     }
-    .contenedor .articles {
+    /* .contenedor .articles {
         display: none;
-    }
+    } */
 }

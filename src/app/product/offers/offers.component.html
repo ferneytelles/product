@@ -1,14 +1,18 @@
 <div class="container-fdm">
+    <!-- contenedor del banner superior -->
     <div class="row banner">
         <app-banner-top class="component" [url]="banner" [categori]="categori" [text]="text"></app-banner-top>
     </div>
+    <!-- contenedor de las opciones -->
     <div class="options">
+        <!-- contenedor de la opción de ofertas en productos -->
         <div class="product" [routerLink]="['/store', 'ofertas-productos']">
             <img src="assets/img/OfertasProductos.png" alt="">
             <div class="label">
                 <span>Ver ofertas en productos</span>
             </div>
         </div>
+        <!-- contenedor de la opción de ofertas en diseños -->
         <div class="design" [routerLink]="['/store', 'ofertas-diseños']">
             <img src="assets/img/OfertasDiseños.png" alt="">
             <div class="label">

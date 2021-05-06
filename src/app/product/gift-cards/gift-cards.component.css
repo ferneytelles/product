@@ -5,6 +5,9 @@
     padding: 0px 15px;
 }
 
+
+/* estilos para el contenedor de las terjetas */
+
 .cards {
     display: flex;
     flex-direction: row;
@@ -13,10 +16,16 @@
     padding: 15px 30px;
 }
 
+
+/* estilos para el contenedor de la tarjeta */
+
 .cards .contenedor {
     width: 33.3%;
     padding: 10px;
 }
+
+
+/* estilos para la imagen de las tarjetas */
 
 .contenedor img {
     width: 100%;
@@ -26,12 +35,18 @@
     box-shadow: 0px -2px 8px #555555;
 }
 
+
+/* estilos para el contenedor del botón de añadir  */
+
 .contenedor .botton {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 6px;
 }
+
+
+/* estilos para el botón */
 
 .botton button {
     display: flex;
@@ -42,15 +57,23 @@
     border: 1px solid #ff0000;
 }
 
+
+/* estilos para los componentes */
+
 .component {
     width: 100%;
 }
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 830px) {
+    /* estilos para el Contenedor de las tarjetas de regalo */
     .cards {
         padding: 0;
         margin-bottom: 15px;
     }
+    /* estilos para el Contenedor de la tarjeta */
     .cards .contenedor {
         width: 100%;
         padding: 5px;

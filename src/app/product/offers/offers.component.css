@@ -5,19 +5,28 @@
     padding: 0px 15px;
 }
 
+
+/* estilos para el contenedor de las opciones */
+
 .options {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding: 15px 30px;
+    padding: 15px 40px;
 }
+
+
+/* estilos para los contenedores de las opciones */
 
 .options .product,
 .options .design {
     width: 50%;
     padding: 8px;
 }
+
+
+/* estilos para las imagenes de las opciones */
 
 .options img {
     width: 100%;
@@ -26,6 +35,9 @@
     box-shadow: 0px 2px 3px 0px #555555;
     cursor: pointer;
 }
+
+
+/* estilos para el contenedor del texto de la opción */
 
 .options .label {
     display: flex;
@@ -36,35 +48,53 @@
     padding: 10px;
 }
 
+
+/* estilos para el texto de la opción */
+
 .label span {
     padding: 3px 6px;
     border-radius: 4px;
     background: #ffffffb2;
 }
 
+
+/* estilos para los componentes */
+
 .component {
     width: 100%;
 }
 
+
+/* estilos para los efectos hover de versión web */
+
 @media screen and (min-width: 831px) {
-    .options img:hover {
+    /* estilos parra el efecto hover de la imagen */
+    .options .product:hover img,
+    .options .design:hover img {
         opacity: .8;
         /* filter: contrast(.7); */
         /* box-shadow: 0px -2px 3px 0px #555555; */
     }
 }
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 830px) {
+    /* estilos para el conttenedor de las opciones */
     .options {
         padding: 0 15px;
         margin-bottom: 20px;
     }
+    /* estilos para los contenedores de las opciones */
     .options .product,
     .options .design {
         width: 100%;
         padding: 8px;
     }
-    .options img:focus {
+    /* estilos para el efecto focus en la imagen */
+    .options .product:focus img,
+    .options .design:focus img {
         opacity: .8;
     }
 }
