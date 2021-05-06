@@ -1,0 +1,29 @@
+.banner {
+    margin: 0px -27px;
+    height: fit-content;
+}
+
+.banner img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.banner .left,
+.banner .right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 360px;
+    transform: skewX( -41deg);
+}
+
+.banner .left {
+    background: #3d3aff85;
+    left: 0;
+}
+
+.banner .right {
+    right: 0;
+    background: #3aff6b85;
+}

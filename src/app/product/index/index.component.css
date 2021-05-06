@@ -1,0 +1,21 @@
+/* estilos para el contenedor del componente */
+
+.container-fdm {
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.component {
+    width: 100%;
+}
+
+
+/* estilos para pantallas con mas de 1450px de ancho */
+
+@media screen and (min-width: 1400px) {
+    /* estilos para el contenedor del componente */
+    .container-fdm {
+        max-width: 1400px;
+        margin: 0px auto;
+    }
+}

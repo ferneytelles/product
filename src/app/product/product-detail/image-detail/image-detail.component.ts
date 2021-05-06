@@ -16,8 +16,8 @@ export class ImageDetailComponent implements OnInit {
   @Input() webVersion: boolean;
   /**
    * Booleano que indica la vista seleccionada:
-   * true: vista del producto
-   * false: vista del diseño
+   * True: vista del producto
+   * False: vista del diseño
    */
   vista = true;
 

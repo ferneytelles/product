@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from './services/api.service';
 
 
 @Component({
@@ -7,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  constructor(){
 
+  constructor(private api: ApiService){
+    api.authentication();
   }
 
 }

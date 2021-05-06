@@ -1,6 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
-import { ApiService } from '../../services/api.service';
 
 /**
  * Componente principal que contiene las modales y la venta cruzada
@@ -30,7 +29,7 @@ export class MainComponent implements OnInit {
    * Constructor que llama el servicio de modales
    * @param modalService  servicio que permite ejecutar las modales
    */
-  constructor(private modalService: ModalService, private api: ApiService) { }
+  constructor(private modalService: ModalService) { }
 
   /**
    * función que ejecuta la función seImgHeight() después de 200 miliseguntos

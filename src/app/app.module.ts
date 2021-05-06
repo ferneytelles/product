@@ -62,6 +62,8 @@ import { BannerTopComponent } from './product/banner-top/banner-top.component';
 import { OffersComponent } from './product/offers/offers.component';
 import { GiftCardsComponent } from './product/gift-cards/gift-cards.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IndexComponent } from './product/index/index.component';
+import { BannerIndexTopComponent } from './product/index/banner-index-top/banner-index-top.component';
 
 
 
@@ -121,7 +123,9 @@ import { HttpClientModule } from '@angular/common/http';
     CategoriesComponent,
     BannerTopComponent,
     OffersComponent,
-    GiftCardsComponent
+    GiftCardsComponent,
+    IndexComponent,
+    BannerIndexTopComponent
   ],
   imports: [
     BrowserModule,
