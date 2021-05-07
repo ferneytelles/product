@@ -1,29 +1,136 @@
 .banner {
-    margin: 0px -27px;
     height: fit-content;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0px -205px;
 }
 
-.banner img {
-    width: auto;
-    max-width: 100%;
+.left,
+.right {
+    display: flex;
+    width: 50%;
+    position: relative;
     height: auto;
 }
 
-.banner .left,
-.banner .right {
+.left {
+    padding-right: 5px;
+    justify-content: flex-end;
+}
+
+.right {
+    padding-left: 5px;
+    justify-content: flex-start;
+}
+
+.left .diag,
+.right .diag {
+    transform: skewX(-41deg);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left .diag {
+    padding-left: 190px;
+}
+
+.right .diag {
+    padding-right: 190px;
+}
+
+.diag .image {
+    transform: skewX(41deg);
+}
+
+.left .image {
+    margin-right: -28%;
+}
+
+.right .image {
+    margin-left: -28%;
+}
+
+.diag img,
+.diag img {
+    width: 100%;
+    height: auto;
+}
+
+.left .content,
+.right .content {
     position: absolute;
-    top: 0;
-    width: 50%;
-    height: 360px;
-    transform: skewX( -41deg);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px;
+    width: 52%;
+    transform: skewX(41deg);
+    background: #ffffffd9;
 }
 
-.banner .left {
-    background: #3d3aff85;
-    left: 0;
-}
-
-.banner .right {
+.left .content {
+    margin-top: 30px;
+    margin-right: -52px;
     right: 0;
-    background: #3aff6b85;
+    z-index: 4;
+    padding: 10px 75px 10px 10px;
+    border-radius: 8px 0 0 8px;
+}
+
+.right .content {
+    margin-bottom: 30px;
+    margin-left: -44px;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    padding: 10px 10px 10px 75px;
+    border-radius: 0 8px 8px 0;
+}
+
+.content .title {
+    font-size: 24px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.content .text {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.right .content .title,
+.right .content .text {
+    text-align: end;
+}
+
+.content .botton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+.right .content .botton {
+    justify-content: flex-start;
+    padding: 0;
+    margin-left: -30px;
+}
+
+.botton .articles {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 6px;
+    border-radius: 8px;
+    border: 1px solid #555555;
+    background: none;
+    line-height: 16px;
+}
+
+.articles span {
+    font-size: 20px;
+    color: #ff0000;
 }

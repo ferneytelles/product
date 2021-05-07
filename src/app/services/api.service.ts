@@ -17,23 +17,30 @@ export class ApiService {
 
   authentication(): void {
     this.http
-      .post('http://192.168.1.178:8000/api/token/', {
+      .post('http://3.134.87.94/api/token/', {
         username: 'grupocato@gmail.com',
         password: 'grupocato',
       })
       .subscribe((data: any) => {
         this.token = data.token;
         console.log(this.token);
+        this.headers = new HttpHeaders({
+          Authorization: `token ${this.token}`
+        });
       });
-    this.headers = new HttpHeaders({ Authorization: `token ${this.token}` });
   }
 
-  getProductDesign(id: string): Observable<any> {
+  getProductDesignById(id: string): Observable<any> {
     return this.http
-      .get(`http://192.168.1.178:8000/api/product_designs/${id}/`, { headers: this.headers })
+      .get(`http://3.134.87.94/api/product_designs/${id}/`, {
+        headers: this.headers,
+      })
       .pipe(map((data) => data));
   }
+
   getProduct(id: string): Observable<any> {
-    return this.http.get(`http://192.168.1.178:8000/api/products/${id}/`, { headers: this.headers });
+    return this.http.get(`http://3.134.87.94/api/products/${id}/`, {
+      headers: this.headers,
+    });
   }
 }

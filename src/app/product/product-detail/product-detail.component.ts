@@ -56,14 +56,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   }
 
   getName(): string{
-    let productId: string;
     let name: string;
-    this.api.getProductDesign(this.id).subscribe(data => {
-      productId = data.product;
-    });
-    this.api.getProduct(productId).subscribe(data => {
-      name = data.name;
-    });
+    this.api.getProduct('');
     return name;
   }
 

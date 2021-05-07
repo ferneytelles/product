@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { setInterval } from 'node:timers';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-banner-index-top',
@@ -8,16 +8,9 @@ import { setInterval } from 'node:timers';
 })
 export class BannerIndexTopComponent implements OnInit {
 
-  // @ViewChild('imagen', {static: true}) imagen: ElementRef;
-  height = '';
-
   constructor() { }
 
   ngOnInit(): void {
-    // content.getBoundingClientRect()
-    // setInterval(() => {
-    //   this.imagen.nativeElement.getBoundingClientRect().height();
-    // }, 1000);
   }
 
 }

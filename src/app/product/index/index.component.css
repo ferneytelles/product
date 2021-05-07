@@ -5,7 +5,15 @@
     padding: 0px 15px;
 }
 
-.component {
+.banner {
+    overflow: hidden;
+}
+
+.section1 {
+    padding: 20px 80px;
+}
+
+.section1 .component {
     width: 100%;
 }
 
