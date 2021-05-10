@@ -65,6 +65,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IndexComponent } from './product/index/index.component';
 import { BannerIndexTopComponent } from './product/index/banner-index-top/banner-index-top.component';
 import { MenuIndexComponent } from './product/index/menu-index/menu-index.component';
+import { ProductsIndexComponent } from './product/index/products-index/products-index.component';
 
 
 
@@ -127,7 +128,8 @@ import { MenuIndexComponent } from './product/index/menu-index/menu-index.compon
     GiftCardsComponent,
     IndexComponent,
     BannerIndexTopComponent,
-    MenuIndexComponent
+    MenuIndexComponent,
+    ProductsIndexComponent
   ],
   imports: [
     BrowserModule,

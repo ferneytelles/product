@@ -10,10 +10,15 @@
 }
 
 .section1 {
-    padding: 20px 80px;
+    padding: 20px 90px;
 }
 
-.section1 .component {
+.section2 {
+    padding: 20px 50px;
+    background: #eeeeee;
+}
+
+.component {
     width: 100%;
 }
 
@@ -22,6 +27,9 @@
         padding: 15px 0;
         margin: 0;
         border-top: 1px solid #d7d7d7;
+    }
+    .section2 {
+        padding: 15px;
     }
 }
 

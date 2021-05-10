@@ -65,6 +65,7 @@
     justify-content: space-between;
     min-height: 100px;
     width: 52%;
+    z-index: 4;
     transform: skewX(41deg);
     background: #ffffffd9;
 }
@@ -73,7 +74,6 @@
     margin-top: 30px;
     margin-right: -52px;
     right: 0;
-    z-index: 4;
     padding: 10px 75px 10px 10px;
     border-radius: 8px 0 0 8px;
 }
@@ -83,7 +83,6 @@
     margin-left: -44px;
     left: 0;
     bottom: 0;
-    z-index: 4;
     padding: 10px 10px 10px 75px;
     border-radius: 0 8px 8px 0;
 }
@@ -91,6 +90,7 @@
 .content .title {
     font-size: 24px;
     line-height: 25px;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -146,24 +146,47 @@
     .right .diag {
         transform: skewX(0deg);
         padding: 0;
+        flex-direction: column;
     }
     .diag .image {
         display: flex;
+        flex-direction: column;
         transform: skewX(0deg);
         margin: 0;
         overflow: hidden;
-        width: 100%;
+        width: 100vw;
     }
     .left .image {
-        justify-content: flex-start;
+        align-items: flex-start;
     }
     .right .image {
-        justify-content: flex-end;
+        align-items: flex-end;
     }
     .diag img {
         width: auto;
         min-width: 100%;
-        height: auto;
+        height: 100%;
         min-height: 203px;
+    }
+    .left .content,
+    .right .content {
+        position: initial;
+        min-height: initial;
+        width: 100%;
+        transform: skewX(0deg);
+        background: none;
+        margin: 5px 0 15px 0;
+        padding: 0;
+    }
+    .content .title {
+        display: none;
+    }
+    .content .text {
+        text-align: center !important;
+        margin-bottom: 10px;
+    }
+    .content .botton {
+        justify-content: center !important;
+        margin: 0 !important;
     }
 }

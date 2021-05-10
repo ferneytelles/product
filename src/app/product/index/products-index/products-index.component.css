@@ -1,0 +1,81 @@
+.title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 2px 3px 0px #555555;
+}
+
+.shirt,
+.hoodies {
+    width: 33.3%;
+    padding: 8px;
+}
+
+.others {
+    width: 33.3%;
+    padding: 8px 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.bodies,
+.tops,
+.bolsas,
+.mascotas {
+    width: 50%;
+    padding: 0 8px;
+}
+
+.bodies,
+.tops {
+    margin-bottom: 5px;
+}
+
+.botton {
+    width: 100%;
+    color: #555555;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.botton .text {
+    margin-bottom: 0;
+    width: auto;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.botton span {
+    font-size: 23px;
+}
+
+@media screen and (min-width: 961px) {
+    .shirt:hover .botton,
+    .hoodies:hover .botton,
+    .bodies:hover .botton,
+    .tops:hover .botton,
+    .bolsas:hover .botton,
+    .mascotas:hover .botton {
+        color: #000000;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .shirt,
+    .hoodies,
+    .others {
+        width: 100%;
+    }
+}
