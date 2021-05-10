@@ -17,6 +17,14 @@
     width: 100%;
 }
 
+@media screen and (max-width: 830px) {
+    .section1 {
+        padding: 15px 0;
+        margin: 0;
+        border-top: 1px solid #d7d7d7;
+    }
+}
+
 
 /* estilos para pantallas con mas de 1450px de ancho */
 

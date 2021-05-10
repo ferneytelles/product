@@ -28,7 +28,6 @@
     transform: skewX(-41deg);
     overflow: hidden;
     width: 100%;
-    height: 100%;
     display: flex;
 }
 
@@ -52,7 +51,6 @@
     margin-left: -28%;
 }
 
-.diag img,
 .diag img {
     width: 100%;
     height: auto;
@@ -133,4 +131,39 @@
 .articles span {
     font-size: 20px;
     color: #ff0000;
+}
+
+@media screen and (max-width: 960px) {
+    .banner {
+        margin: 0px -15px;
+    }
+    .left,
+    .right {
+        width: 100%;
+        padding: 0;
+    }
+    .left .diag,
+    .right .diag {
+        transform: skewX(0deg);
+        padding: 0;
+    }
+    .diag .image {
+        display: flex;
+        transform: skewX(0deg);
+        margin: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+    .left .image {
+        justify-content: flex-start;
+    }
+    .right .image {
+        justify-content: flex-end;
+    }
+    .diag img {
+        width: auto;
+        min-width: 100%;
+        height: auto;
+        min-height: 203px;
+    }
 }
