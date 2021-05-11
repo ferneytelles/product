@@ -23,8 +23,20 @@
     background: #222222;
 }
 
+.section3 {
+    padding: 15px 50px;
+    margin-top: 15px;
+}
+
 .component {
     width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+    .section3 {
+        padding: 15px 5px;
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 830px) {

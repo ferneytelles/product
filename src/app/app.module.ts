@@ -68,6 +68,7 @@ import { MenuIndexComponent } from './product/index/menu-index/menu-index.compon
 import { ProductsIndexComponent } from './product/index/products-index/products-index.component';
 import { BannerIndexComponent } from './product/index/banner-index/banner-index.component';
 import { GuideCustomComponent } from './product/index/guide-custom/guide-custom.component';
+import { CardsIndexComponent } from './product/index/cards-index/cards-index.component';
 
 
 
@@ -133,7 +134,8 @@ import { GuideCustomComponent } from './product/index/guide-custom/guide-custom.
     MenuIndexComponent,
     ProductsIndexComponent,
     BannerIndexComponent,
-    GuideCustomComponent
+    GuideCustomComponent,
+    CardsIndexComponent
   ],
   imports: [
     BrowserModule,
