@@ -66,6 +66,8 @@ import { IndexComponent } from './product/index/index.component';
 import { BannerIndexTopComponent } from './product/index/banner-index-top/banner-index-top.component';
 import { MenuIndexComponent } from './product/index/menu-index/menu-index.component';
 import { ProductsIndexComponent } from './product/index/products-index/products-index.component';
+import { BannerIndexComponent } from './product/index/banner-index/banner-index.component';
+import { GuideCustomComponent } from './product/index/guide-custom/guide-custom.component';
 
 
 
@@ -129,7 +131,9 @@ import { ProductsIndexComponent } from './product/index/products-index/products-
     IndexComponent,
     BannerIndexTopComponent,
     MenuIndexComponent,
-    ProductsIndexComponent
+    ProductsIndexComponent,
+    BannerIndexComponent,
+    GuideCustomComponent
   ],
   imports: [
     BrowserModule,

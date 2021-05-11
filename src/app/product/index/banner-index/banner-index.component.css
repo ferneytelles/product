@@ -1,0 +1,128 @@
+.banner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner .image {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.banner .image.right {
+    justify-content: flex-end;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor {
+    width: 50%;
+    background: #ffffffce;
+    padding: 15px;
+    border-radius: 0 12px 12px 0;
+}
+
+.contenedor .head {
+    margin-right: 50px;
+}
+
+.head .title {
+    font-weight: bold;
+}
+
+.head .text {
+    margin-bottom: 8px;
+}
+
+.contenedor .text {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.contenedor .botton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botton .btn-articles {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #555555;
+    background: none;
+    outline: none;
+}
+
+.btn-articles .text {
+    padding-left: 6px;
+}
+
+.btn-articles .material-icons-outlined {
+    color: #ff0000;
+}
+
+.botton-movil {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .banner {
+        width: 100vw;
+        margin-bottom: 10px;
+    }
+    .image img {
+        width: auto;
+        height: 190px;
+    }
+    .image.right img {
+        margin-right: -50px;
+    }
+    .content {
+        position: relative;
+    }
+    .contenedor {
+        width: 100%;
+        padding: 10px;
+    }
+    .contenedor .head {
+        margin: 0;
+    }
+    .head .title {
+        font-weight: 500;
+        font-size: 26px;
+        text-align: center;
+    }
+    .head .text {
+        font-size: 17px;
+        text-align: center;
+        margin: 0;
+    }
+    .contenedor .botton {
+        display: none;
+    }
+    .botton-movil {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+    .botton-movil .btn-articles {
+        background: #ffffff;
+    }
+}

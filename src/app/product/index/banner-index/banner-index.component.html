@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <!-- Contenedor de la imagen del banner -->
+    <div class="row banner">
+        <!-- contenedor del los textos del banner -->
+        <div class="content">
+            <!-- contenedor del titulo y el texto del banner -->
+            <div class="contenedor">
+                <!-- contenedor centrado de los textos -->
+                <div class="head">
+                    <h1 class="title">{{categori.charAt(0).toUpperCase() + categori.slice(1)}}</h1>
+                    <p class="text">{{text}}</p>
+                </div>
+                <div class="botton">
+                    <button class="btn-articles">
+                        <span *ngIf="categori=='colecciones'" class="text">Ver {{categori}}</span>
+                        <span *ngIf="categori!='colecciones'" class="text">Mas información</span>
+                        <span class="material-icons-outlined notranslate">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="image" [ngClass]="{'right': categori!='colecciones'}">
+            <!-- imagen del banner -->
+            <img [src]="url" alt="">
+        </div>
+
+
+        <!-- contenedor del botón en versión móvil  -->
+        <div class="botton-movil">
+            <div class="botton">
+                <button class="btn-articles">
+                    <span *ngIf="categori=='colecciones'" class="text">Ver {{categori}}</span>
+                    <span *ngIf="categori!='colecciones'" class="text">Mas información</span>
+                    <span class="material-icons-outlined notranslate">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

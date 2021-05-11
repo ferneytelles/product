@@ -1,5 +1,5 @@
 <div class="container-fdm">
-    <div class="row banner">
+    <div class="row banner-top">
         <app-banner-index-top class="component"></app-banner-index-top>
     </div>
     <div class="row section1">
@@ -10,6 +10,17 @@
         <app-products-index class="component"></app-products-index>
     </div>
 
+    <div class="row banner">
+        <app-banner-index class="component" [categori]="colecciones.name" [text]="colecciones.text" [url]="colecciones.image"></app-banner-index>
+    </div>
+
+    <div class="row custom">
+        <app-guide-custom class="component"></app-guide-custom>
+    </div>
+
+    <div class="row banner">
+        <app-banner-index class="component" [categori]="arte.name" [text]="arte.text" [url]="arte.image"></app-banner-index>
+    </div>
 
 
 
