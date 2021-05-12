@@ -1,9 +1,14 @@
+/* esilos para el contenedor del banner */
+
 .banner {
     height: fit-content;
     flex-direction: row;
     overflow: hidden;
     margin: 0px -205px;
 }
+
+
+/* estilos para el contenedor de la izquierda y la derecha del banner  */
 
 .left,
 .right {
@@ -13,15 +18,24 @@
     height: auto;
 }
 
+
+/* estilos para el contenedor de la parte izquierda del banner */
+
 .left {
     padding-right: 5px;
     justify-content: flex-end;
 }
 
+
+/* estilos para el contenedor de la parte derecha del banner */
+
 .right {
     padding-left: 5px;
     justify-content: flex-start;
 }
+
+
+/* estilos para los contenedores diagonales del banner */
 
 .left .diag,
 .right .diag {
@@ -31,30 +45,51 @@
     display: flex;
 }
 
+
+/* estilos para el contenedor diagonal de la parte izquierda del banner */
+
 .left .diag {
     padding-left: 190px;
 }
+
+
+/* estilos para el contenedor diagonal de la parte derecha del banner */
 
 .right .diag {
     padding-right: 190px;
 }
 
+
+/* estilos para el contenedor de las imagenes del banner */
+
 .diag .image {
     transform: skewX(41deg);
 }
+
+
+/* estilos para el contenedor de la imagen de la izquierda */
 
 .left .image {
     margin-right: -28%;
 }
 
+
+/* estilos para el contenedor de la imagen de la derecha */
+
 .right .image {
     margin-left: -28%;
 }
+
+
+/* estilos para la imagen */
 
 .diag img {
     width: 100%;
     height: auto;
 }
+
+
+/* estilos para los contenedores del texto y el botón */
 
 .left .content,
 .right .content {
@@ -70,6 +105,9 @@
     background: #ffffffd9;
 }
 
+
+/* estilos para el contenedor del texto y el botón de la izquierda */
+
 .left .content {
     margin-top: 30px;
     margin-right: -52px;
@@ -77,6 +115,9 @@
     padding: 10px 75px 10px 10px;
     border-radius: 8px 0 0 8px;
 }
+
+
+/* estilos para el contenedor del texto y el botón de la derecha */
 
 .right .content {
     margin-bottom: 30px;
@@ -87,6 +128,9 @@
     border-radius: 0 8px 8px 0;
 }
 
+
+/* estilos para el titulo */
+
 .content .title {
     font-size: 24px;
     line-height: 25px;
@@ -94,16 +138,25 @@
     margin: 0;
 }
 
+
+/* estilos para el texto */
+
 .content .text {
     font-size: 16px;
     line-height: 16px;
     margin: 0;
 }
 
+
+/* estilos para el titulo y texto de la derecha */
+
 .right .content .title,
 .right .content .text {
     text-align: end;
 }
+
+
+/* estilos para el contenedor del botón */
 
 .content .botton {
     width: 100%;
@@ -112,13 +165,19 @@
     padding: 0 20px;
 }
 
+
+/* estilos para el contenedor del botón de la derecha */
+
 .right .content .botton {
     justify-content: flex-start;
     padding: 0;
     margin-left: -30px;
 }
 
-.botton .articles {
+
+/* estilos para el botón */
+
+.botton .btn-go {
     display: flex;
     align-items: center;
     padding: 0 0 0 6px;
@@ -128,26 +187,36 @@
     line-height: 16px;
 }
 
-.articles span {
+
+/* estilos para el icono del botón */
+
+.btn-go span {
     font-size: 20px;
     color: #ff0000;
 }
 
+
+/* estilos para la versión móvil */
+
 @media screen and (max-width: 960px) {
+    /* esilos para el contenedor del banner */
     .banner {
         margin: 0px -15px;
     }
+    /* estilos para el contenedor de la izquierda y la derecha del banner  */
     .left,
     .right {
         width: 100%;
         padding: 0;
     }
+    /* estilos para los contenedores diagonales del banner */
     .left .diag,
     .right .diag {
         transform: skewX(0deg);
         padding: 0;
         flex-direction: column;
     }
+    /* estilos para el contenedor de la imagen */
     .diag .image {
         display: flex;
         flex-direction: column;
@@ -156,18 +225,22 @@
         overflow: hidden;
         width: 100vw;
     }
+    /* estilos para el contenedor de la primera imagen */
     .left .image {
         align-items: flex-start;
     }
+    /* estilos para el contenedor de la segunda imagen */
     .right .image {
         align-items: flex-end;
     }
-    .diag img {
+    /* estilos para la imagen */
+    .image img {
         width: auto;
         min-width: 100%;
         /* height: 100%; */
         min-height: 203px;
     }
+    /* estilos para los contenedores del texto y el botón */
     .left .content,
     .right .content {
         position: initial;
@@ -178,13 +251,16 @@
         margin: 5px 0 15px 0;
         padding: 0;
     }
+    /* estilos para el titulo */
     .content .title {
         display: none;
     }
+    /* estilos para el texto */
     .content .text {
         text-align: center !important;
         margin-bottom: 10px;
     }
+    /* estilos para el contenedor del botón */
     .content .botton {
         justify-content: center !important;
         margin: 0 !important;

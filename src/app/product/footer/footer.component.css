@@ -71,13 +71,14 @@
 }
 
 .inferior {
+    position: relative;
     margin: 0px;
     justify-content: center;
 }
 
 .inferior .logo {
     position: absolute;
-    left: 30px;
+    left: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
