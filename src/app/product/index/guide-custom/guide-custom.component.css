@@ -132,6 +132,7 @@
     .content .text {
         font-size: 16px;
         line-height: 20px;
+        margin-right: 30px;
     }
     .card-body .btn-personalizar {
         margin-left: auto;

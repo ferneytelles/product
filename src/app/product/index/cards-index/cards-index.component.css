@@ -46,7 +46,7 @@ img {
     padding-right: 10px;
 }
 
-.cards .text p {
+.cards .text .texto {
     font-size: 16px;
     line-height: 20px;
     margin: 0;
@@ -99,7 +99,7 @@ img {
     font-weight: bold;
 }
 
-.orders .text p {
+.orders .text .texto {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
@@ -150,7 +150,10 @@ img {
         padding: 5px;
     }
     .orders .content {
-        padding: 5px 0 5px 5px;
+        padding: 8px 0 5px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .orders .text {
         padding-top: 0;
@@ -159,15 +162,16 @@ img {
         font-size: 16px;
         line-height: 16px;
     }
-    .text p {
-        font-size: 10px;
-        line-height: 11px;
+    .text .texto {
+        font-size: 14px !important;
+        line-height: 15px !important;
     }
     .botton {
-        font-size: 14px;
-        line-height: 16px;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: 20px;
     }
     .botton span {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
