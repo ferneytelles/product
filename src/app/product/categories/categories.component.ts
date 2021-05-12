@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class CategoriesComponent implements OnInit {
 
   /**
-   * Arreglo que contiene las opciones del menu
+   * Arreglo que contiene las opciones del menu.
    */
   menu = ['Camisetas', 'Sacos', 'Gorras', 'Hoodies', 'Polos', 'Tazas', 'Libretas', 'Bolsas Ecológicas', 'Tennis', 'Posters', 'Mochila', 'Cubiertas de celular', 'Chaquetas'];
   /**
@@ -36,7 +36,7 @@ export class CategoriesComponent implements OnInit {
   constructor(private route: ActivatedRoute) {
     route.params.subscribe( data => {
       if (data.categori === 'hombres'){
-        if (window.innerWidth <= 960){
+        if (window.innerWidth <= 830){
           this.images.banner = 'assets/img/BannerHombresMovil.png';
         }else{
           this.images.banner = 'assets/img/BannerHombres.png';
@@ -51,7 +51,7 @@ export class CategoriesComponent implements OnInit {
         this.images.image8 = 'assets/img/polos.png';
         this.images.image9 = 'assets/img/tennis.png';
       }else if (data.categori === 'mujeres') {
-        if (window.innerWidth <= 960){
+        if (window.innerWidth <= 830){
           this.images.banner = 'assets/img/BannerMujeresMovil.png';
         }else{
           this.images.banner = 'assets/img/BannerMujeres.png';

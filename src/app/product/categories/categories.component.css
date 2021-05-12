@@ -32,7 +32,7 @@
     max-width: 100%; */
     height: auto;
     border-radius: 12px;
-    box-shadow: 0px 2px 3px 0px #555555;
+    box-shadow: 0px 2px 3px 0px #555555a6;
     cursor: pointer;
 }
 
@@ -147,7 +147,7 @@
     padding: 6px;
     background: #eeeeee;
     border: none;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     outline: none;
 }
 
@@ -179,7 +179,7 @@
     /* estilos para el efecto hover de las imagenes */
     .images img:hover {
         opacity: .8;
-        box-shadow: 0px -2px 3px 0px #555555;
+        box-shadow: 0px -2px 3px 0px #555555a6;
     }
     /* estilos para el efecto hover de los botones del menu */
     .bottons button:hover {
@@ -211,6 +211,7 @@
     .images .camisetas-movil {
         display: block;
         padding: 2px;
+        width: 100%;
     }
     /* estilos para las columnasde las imagenes */
     .images .left,

@@ -1,0 +1,177 @@
+/* estilos para el contenedor del componente */
+
+.container-fdm {
+    width: 100%;
+    padding: 0px 15px;
+}
+
+
+/* estilos para el contenedor del menu de las subcategorías */
+
+.options {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 60px;
+}
+
+
+/* estilos para el contenedor de el menu con imagenes */
+
+.options .images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+.images img {
+    width: 100%;
+    /* width: auto;
+    max-width: 100%; */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 2px 3px 0px #555555a6;
+    cursor: pointer;
+}
+
+
+/* estilos para el contenedor del texto sobre la imagen */
+
+.images .label {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+    padding: 10px;
+}
+
+
+/* estilos para el texto sobre la imagen */
+
+.label span {
+    min-width: 160px;
+    text-align: center;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: #ffffffb2;
+}
+
+
+/* estilos para el contenedor de la columna izquierda de imagenes */
+
+.images .left {
+    display: flex;
+    flex-wrap: wrap;
+    width: 66.6%;
+    padding: 0 5px;
+}
+
+.left .ella,
+.left .el {
+    width: 50%;
+    padding: 5px;
+}
+
+.left .familia,
+.left .grupos {
+    width: 100%;
+    padding: 5px;
+}
+
+
+/* estilos para el contenedor de la columna derecha de imagenes */
+
+.images .right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33.3%;
+}
+
+.right .pareja,
+.right .ninos {
+    width: 100%;
+    padding: 5px;
+}
+
+.images .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 66.6%;
+    padding: 0 5px;
+}
+
+.bottom .mascotas {
+    width: 50%;
+    padding: 5px;
+}
+
+
+/* estilos para el contenedor del menu de los productos */
+
+.options .bottons {
+    width: 25%;
+    padding: 5px;
+}
+
+
+/* estilos para los botones del menu */
+
+.bottons button {
+    color: #555555;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    padding: 6px;
+    background: #eeeeee;
+    border: none;
+    margin-bottom: 3px;
+    outline: none;
+}
+
+
+/* estilos para el primer boton del menu */
+
+.bottons button:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+
+/* estilos para el ultimo boton del menu */
+
+.bottons button:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+
+/* estilos para los componentes */
+
+.component {
+    width: 100%;
+}
+
+
+/* estilos hover para versión web */
+
+@media screen and (min-width: 831px) {
+    /* estilos para el efecto hover de las imagenes */
+    .images img:hover {
+        opacity: .8;
+        box-shadow: 0px -2px 3px 0px #555555a6;
+    }
+    /* estilos para el efecto hover de los botones del menu */
+    .bottons button:hover {
+        background: #d7d7d7;
+    }
+}
+
+
+/* estilos para pantallas con mas de 1450px de ancho */
+
+@media screen and (min-width: 1450px) {
+    /* estilos para el contenedor del componente */
+    .container-fdm {
+        max-width: 1450px;
+        margin: 0px auto;
+    }
+}
