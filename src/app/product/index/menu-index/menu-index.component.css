@@ -1,33 +1,56 @@
+/* estilos para el titulo */
+
 .title {
     width: 100%;
     text-align: center;
 }
+
+
+/* estilos para las columnas derecha e izquierda */
 
 .column1,
 .column2 {
     width: 50%;
 }
 
+
+/* estilos de la columna izquierda de la primera sección del menu */
+
 .top .column1 {
     padding: 8px 4px 0 4px;
 }
+
+
+/* estilos de la columna derecha de la primera sección del menu */
 
 .top .column2 {
     padding: 8px 8px 0 8px;
 }
 
+
+/* estilos de la columna izquierda de la segunda sección del menu */
+
 .medium .column1 {
     padding: 0 4px;
 }
+
+
+/* estilos de la columna derecha de la segunda sección del menu */
 
 .medium .column2 {
     padding: 0 8px;
 }
 
+
+/* estilos de las columnas de la última sección */
+
 .bottom .column1,
 .bottom .column2 {
     padding: 0 6px;
 }
+
+
+/* estilos para el contenedor de la imagen y el texto */
 
 .column1 .image,
 .column2 .image {
@@ -43,12 +66,18 @@
     cursor: pointer;
 }
 
+
+/* estilos para la imagen */
+
 .image img {
     width: 100%;
     height: auto;
     transition: transform .3s;
     /* max-width: 100%; */
 }
+
+
+/* estilos para el contenedor del texto */
 
 .image .label {
     display: flex;
@@ -69,21 +98,33 @@
     border-radius: 4px;
 }
 
+
+/* contenedor del texto con fonto negro */
+
 .label .black {
     background: #000000c0;
     color: #ffffff;
 }
+
+
+/* contenedor del texto con fonto blanco */
 
 .label .white {
     background: #ffffffc0;
     color: #000000;
 }
 
+
+/* estilos para el hover de las imagenes */
+
 @media screen and (min-width: 961px) {
     .image:hover img {
         transform: scale(1.1);
     }
 }
+
+
+/* estilos para versión móvil */
 
 @media screen and (max-width: 960px) {
     .column1,

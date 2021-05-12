@@ -1,3 +1,5 @@
+/* contenedor del banner */
+
 .banner {
     position: relative;
     display: flex;
@@ -6,20 +8,32 @@
     overflow: hidden;
 }
 
+
+/* estilos para el contenedor de la imagen */
+
 .banner .image {
     width: 100vw;
     display: flex;
     justify-content: center;
 }
 
+
+/* estilos para el contenedor de la imagen de arte */
+
 .banner .image.right {
     justify-content: flex-end;
 }
+
+
+/* estilos para la imagen del banner */
 
 .image img {
     width: 100%;
     height: auto;
 }
+
+
+/* estilos para el contenedor de la información del banner */
 
 .content {
     position: absolute;
@@ -30,6 +44,9 @@
     align-items: center;
 }
 
+
+/* estilos para el contenedor de los textos y el botón del banner */
+
 .contenedor {
     width: 50%;
     background: #ffffffce;
@@ -37,17 +54,30 @@
     border-radius: 0 12px 12px 0;
 }
 
+
+/* estilos para el contenedor de los textos del banner */
+
 .contenedor .head {
     margin-right: 50px;
 }
 
+
+/* estilos para el titulo del banner */
+
 .head .title {
     font-weight: bold;
+    margin: 0;
 }
+
+
+/* estilos para el texto del banner */
 
 .head .text {
     margin-bottom: 8px;
 }
+
+
+/* estilos para los textos */
 
 .contenedor .text {
     font-size: 20px;
@@ -55,10 +85,16 @@
     font-weight: 500;
 }
 
+
+/* estilos para el contenedor del botón */
+
 .contenedor .botton {
     display: flex;
     justify-content: flex-end;
 }
+
+
+/* estilos para el botón */
 
 .botton .btn-articles {
     display: flex;
@@ -69,59 +105,82 @@
     outline: none;
 }
 
+
+/* estilos para el texto del botón */
+
 .btn-articles .text {
     padding-left: 6px;
 }
+
+
+/* estilos para el icono del botón */
 
 .btn-articles .material-icons-outlined {
     color: #ff0000;
 }
 
+
+/* estilos para el contenedor del botón en móvil */
+
 .botton-movil {
     display: none;
 }
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el Contenedor del banner */
     .banner {
         width: 100vw;
         margin-bottom: 10px;
     }
+    /* estilos para la imagen */
     .image img {
         width: auto;
         height: 190px;
     }
+    /* estilos para la imagen de arte */
     .image.right img {
         margin-right: -50px;
     }
+    /* estilos para el contenedor de la información del banner */
     .content {
         position: relative;
     }
+    /* estilos para el contenedor de los textos y el botón del banner */
     .contenedor {
         width: 100%;
         padding: 10px;
     }
+    /* estilos para el contenedor de los textos del banner */
     .contenedor .head {
         margin: 0;
     }
+    /* estilos para el titulo del banner */
     .head .title {
         font-weight: 500;
         font-size: 26px;
         text-align: center;
     }
+    /* estilos para el texto del banner */
     .head .text {
         font-size: 17px;
         text-align: center;
         margin: 0;
     }
+    /* estilos para el contenedor del botón */
     .contenedor .botton {
         display: none;
     }
+    /* estilos para el contenedor del botón en versión móvil */
     .botton-movil {
         display: flex;
         position: absolute;
         bottom: 0;
         margin-bottom: 10px;
     }
+    /* estilos para el botón en versión móvil */
     .botton-movil .btn-articles {
         background: #ffffff;
     }

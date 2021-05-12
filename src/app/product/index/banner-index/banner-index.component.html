@@ -1,37 +1,46 @@
 <div class="container-fluid">
-    <!-- Contenedor de la imagen del banner -->
+    <!-- Contenedor del banner -->
     <div class="row banner">
-        <!-- contenedor del los textos del banner -->
+        <!-- contenedor de la información del banner -->
         <div class="content">
-            <!-- contenedor del titulo y el texto del banner -->
+            <!-- contenedor de los textos y el botón del banner -->
             <div class="contenedor">
-                <!-- contenedor centrado de los textos -->
+                <!-- contenedor de los textos del banner -->
                 <div class="head">
+                    <!-- titulo del banner -->
                     <h1 class="title">{{categori.charAt(0).toUpperCase() + categori.slice(1)}}</h1>
+                    <!-- texto del banner -->
                     <p class="text">{{text}}</p>
                 </div>
+                <!-- contenedor del botón -->
                 <div class="botton">
+                    <!-- botón para ir -->
                     <button class="btn-articles">
+                        <!-- texto del botón -->
                         <span *ngIf="categori=='colecciones'" class="text">Ver {{categori}}</span>
                         <span *ngIf="categori!='colecciones'" class="text">Más información</span>
+                        <!-- icono del botón -->
                         <span class="material-icons-outlined notranslate">chevron_right</span>
                     </button>
                 </div>
             </div>
         </div>
-
+        <!-- contenedor de la imagen -->
         <div class="image" [ngClass]="{'right': categori!='colecciones'}">
             <!-- imagen del banner -->
             <img [src]="url" alt="">
         </div>
 
-
         <!-- contenedor del botón en versión móvil  -->
         <div class="botton-movil">
+            <!-- contenedor del botón -->
             <div class="botton">
+                <!-- botón para ir -->
                 <button class="btn-articles">
+                    <!-- texto del botón -->
                     <span *ngIf="categori=='colecciones'" class="text">Ver {{categori}}</span>
                     <span *ngIf="categori!='colecciones'" class="text">Más información</span>
+                    <!-- icono del botón -->
                     <span class="material-icons-outlined notranslate">chevron_right</span>
                 </button>
             </div>

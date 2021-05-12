@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+/**
+ * Componente que contiene los banner de colecciones y arte de la index.
+ */
 @Component({
   selector: 'app-banner-index',
   templateUrl: './banner-index.component.html',

@@ -34,7 +34,7 @@ img {
 
 .cards .contain .content {
     height: calc(100% - 26px);
-    padding-top: 28px;
+    padding-top: 26px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -89,7 +89,7 @@ img {
 
 .orders .text {
     height: calc(100% - 26px);
-    padding-top: 28px;
+    padding-top: 26px;
     display: flex;
     flex-direction: column;
     justify-content: center;

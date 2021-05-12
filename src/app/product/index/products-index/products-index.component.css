@@ -1,13 +1,21 @@
+/* estilos para el titulo */
+
 .title {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
 }
 
+
+/* estilos para el contenedor de la imagen */
+
 .image {
     border-radius: 12px;
     overflow: hidden;
 }
+
+
+/* estilos para la imagen */
 
 img {
     width: 100%;
@@ -15,11 +23,17 @@ img {
     /* box-shadow: 0px 2px 3px 0px #555555; */
 }
 
+
+/* estilos para los contenedores de las opciones de camisetas y hoodies */
+
 .shirt,
 .hoodies {
     width: 33.3%;
     padding: 8px;
 }
+
+
+/* estilos para el contenedor de las otras opciones */
 
 .others {
     width: 33.3%;
@@ -29,6 +43,9 @@ img {
     flex-wrap: wrap;
 }
 
+
+/* estilos para los contenedores de las opciones de bodies, tops, bolsas y mascotas */
+
 .bodies,
 .tops,
 .bolsas,
@@ -37,10 +54,16 @@ img {
     padding: 0 8px;
 }
 
+
+/* estilos para los contenedores de las opciones de bodies y tops */
+
 .bodies,
 .tops {
     margin-bottom: 5px;
 }
+
+
+/* estilos para el contenedor del texto */
 
 .botton {
     width: 100%;
@@ -50,6 +73,9 @@ img {
     flex-wrap: nowrap;
     overflow: hidden;
 }
+
+
+/* estilos para el texto */
 
 .botton .text {
     margin-bottom: 0;
@@ -62,9 +88,15 @@ img {
     overflow: hidden;
 }
 
+
+/* estilos para el icono */
+
 .botton span {
     font-size: 23px;
 }
+
+
+/* estilos para el efeecto hover de las opciones */
 
 @media screen and (min-width: 961px) {
     .shirt:hover .botton,
@@ -84,6 +116,9 @@ img {
         transform: scale(1.1);
     }
 }
+
+
+/* estilos para versión móvil */
 
 @media screen and (max-width: 830px) {
     .shirt,
