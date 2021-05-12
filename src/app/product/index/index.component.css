@@ -5,49 +5,76 @@
     padding: 0px 15px;
 }
 
+
+/* estilos para el contenedor del componente del banner superior */
+
 .banner-top {
     overflow: hidden;
 }
 
+
+/* estilos para el contenedor del componente del menu de subcategorías */
+
 .section1 {
     padding: 20px 90px;
 }
+
+
+/* estilos para el Contenedor del componente de la sección de productos en la index */
 
 .section2 {
     padding: 20px 50px;
     background: #eeeeee;
 }
 
+
+/* estilos para el Contenedor del componente de la sección del ejemplo del editor */
+
 .custom {
     padding: 15px 30px 25px 30px;
     background: #222222;
 }
+
+
+/* estilos para el contenedor del componente de las tarjetas de la parte inferior */
 
 .section3 {
     padding: 15px 50px;
     margin-top: 15px;
 }
 
+
+/* estilos para los componente hijos */
+
 .component {
     width: 100%;
 }
 
-@media screen and (max-width: 830px) {
+
+/* estilos para versión móvil */
+
+@media screen and (max-width: 960px) {
     .section3 {
         padding: 15px 5px;
         margin-top: 0;
     }
 }
 
+
+/* estilos para dispositivos con menos de 830px de ancho */
+
 @media screen and (max-width: 830px) {
+    /* estilos para el contenedor del componente del menu de subcategorías */
     .section1 {
         padding: 15px 0;
         margin: 0;
         border-top: 1px solid #d7d7d7;
     }
+    /* estilos para el Contenedor del componente de la sección de productos en la index */
     .section2 {
         padding: 15px;
     }
+    /* estilos para el Contenedor del componente de la sección del ejemplo del editor */
     .custom {
         padding: 15px 5px;
     }

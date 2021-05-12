@@ -1,7 +1,12 @@
+/* estilos para el contenedor de la tarjeta */
+
 .contenedor {
     width: 50%;
     padding: 0 5px;
 }
+
+
+/* estilos para las tajetas de pedido y de tarjetas de regalo */
 
 .cards,
 .orders {
@@ -11,10 +16,16 @@
     overflow: hidden;
 }
 
+
+/* estilos para la imagen */
+
 img {
     width: 100%;
     height: auto;
 }
+
+
+/* estilos para el contenedor de la información de la tarjeta */
 
 .contain {
     position: absolute;
@@ -24,6 +35,9 @@ img {
     top: 0;
 }
 
+
+/* estilos para el contenedor de la información de tarjetas de regalo */
+
 .cards .contain {
     background: #000000c2;
     padding: 15px;
@@ -31,6 +45,9 @@ img {
     flex-direction: column;
     justify-content: flex-end;
 }
+
+
+/* estilos para el contenedor de los textos y la imagen de tarjetas de regalo */
 
 .cards .contain .content {
     height: calc(100% - 26px);
@@ -40,11 +57,17 @@ img {
     align-items: center;
 }
 
+
+/* estilos para el contenedor de los textos de tarjetas */
+
 .cards .content .text {
     width: 50%;
     color: #ffffff;
     padding-right: 10px;
 }
+
+
+/* estilos para el texto de tarjetas */
 
 .cards .text .texto {
     font-size: 16px;
@@ -52,12 +75,18 @@ img {
     margin: 0;
 }
 
+
+/* estilos para la imagen de tarjetas */
+
 .cards .content .image {
     width: 50%;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid #ffffff;
 }
+
+
+/* estilos para el botón de tarjetas de regalo */
 
 .cards .contain .botton {
     display: flex;
@@ -72,20 +101,32 @@ img {
     outline: none;
 }
 
+
+/* estilos para el icono del botón */
+
 .botton span {
     font-size: 22px;
     color: #ff0000;
 }
+
+
+/* estilos para el contenedor de la información de la tarjeta de pedidos */
 
 .orders .contain {
     display: flex;
     flex-direction: row;
 }
 
+
+/* estilos para el contenedor de los textos y el botón de la tarjeta pedidos */
+
 .orders .content {
     width: 55%;
     padding: 15px 0 15px 15px;
 }
+
+
+/* estilos pata el contenedor de los textos de la tarjeta pedidos */
 
 .orders .text {
     height: calc(100% - 26px);
@@ -95,9 +136,15 @@ img {
     justify-content: center;
 }
 
+
+/* estilos para el titulo de la tarjeta pedidos */
+
 .orders .text .title {
     font-weight: bold;
 }
+
+
+/* estilos para el texto de la tarjeta pedidos */
 
 .orders .text .texto {
     font-weight: 500;
@@ -106,16 +153,25 @@ img {
     margin: 0;
 }
 
+
+/* estilos para el contenedor de la imagen de la tarjeta pedidos */
+
 .orders .image {
     width: 45%;
     display: flex;
     justify-content: flex-end;
 }
 
+
+/* estilos para la imagen de la tarjeta pedidos */
+
 .orders .image img {
     height: 100%;
     width: auto;
 }
+
+
+/* estilos para el botón de la tarjeta pedidos */
 
 .orders .content .botton {
     display: flex;
@@ -128,49 +184,63 @@ img {
     outline: none;
 }
 
+
+/* estilos para versión móvil */
+
 @media screen and (max-width: 960px) {
+    /* estilos para el contenedor de la tarjeta */
     .contenedor {
         width: 100%;
         padding: 0;
     }
+    /* estilos para el contenedor de la primera tarjeta */
     .contenedor:first-child {
         margin-bottom: 10px;
     }
+    /* estilos para el contenedor de la información de la tarjeta */
+    .cards .contain {
+        padding: 5px;
+    }
+    /* estilos para el contenedor de los textos y la imagen */
     .cards .contain .content {
         padding-top: 0;
+        height: calc(100% - 22px);
     }
+    /* estilos para el contenedor de los textos */
     .cards .content .text {
         padding-right: 0;
     }
+    /* estilos para el contenedor de la imagen */
     .cards .content .image {
         width: 45%;
         margin-left: auto;
     }
-    .cards .contain {
-        padding: 5px;
-    }
+    /* estilos para el contenedor de los textos y el botón de la tarjeta pedidos */
     .orders .content {
-        padding: 8px 0 5px 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        padding: 5px 0 5px 5px;
     }
+    /* estilos para el contenedor de los textos de la tarjeta pedidos */
     .orders .text {
         padding-top: 0;
+        height: calc(100% - 22px);
     }
+    /* estilos para el titulo de las tarjetas */
     .text .title {
         font-size: 16px;
         line-height: 16px;
     }
+    /* estilos para el texto de las tarjetas */
     .text .texto {
         font-size: 14px !important;
         line-height: 15px !important;
     }
+    /* estilos para el botón de las tarjetas */
     .botton {
         margin-right: auto;
         font-size: 16px;
         line-height: 20px;
     }
+    /* estilos para el icono de las tarjetas */
     .botton span {
         font-size: 20px;
     }

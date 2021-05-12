@@ -137,12 +137,13 @@
     }
     /* estilos para la imagen */
     .image img {
-        width: auto;
-        height: 190px;
+        width: 100%;
+        /* height: 190px; */
     }
     /* estilos para la imagen de arte */
     .image.right img {
         margin-right: -50px;
+        width: calc(100% + 50px);
     }
     /* estilos para el contenedor de la información del banner */
     .content {
@@ -183,5 +184,13 @@
     /* estilos para el botón en versión móvil */
     .botton-movil .btn-articles {
         background: #ffffff;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    /* estilos para la imagen */
+    .image img {
+        width: auto !important;
+        height: 190px;
     }
 }

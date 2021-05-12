@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 /**
- * Componente que contitne un menu de imagenes con algunas subcategorias
+ * Componente que contitne un menu de imagenes con algunas subcategorías
  * en la index.
  */
 @Component({

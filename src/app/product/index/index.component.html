@@ -1,36 +1,37 @@
 <div class="container-fdm">
+    <!-- contenedor del componente del banner superior -->
     <div class="row banner-top">
         <app-banner-index-top class="component"></app-banner-index-top>
     </div>
+    <!-- contenedor del componente del menu de subcategorías -->
     <div class="row section1">
         <app-menu-index class="component"></app-menu-index>
     </div>
-
+    <!-- Contenedor del componente de la sección de productos en la index -->
     <div class="row section2">
         <app-products-index class="component"></app-products-index>
     </div>
-
+    <!-- Contenedor del componente del banner de colecciones -->
     <div class="row banner">
         <app-banner-index class="component" [categori]="colecciones.name" [text]="colecciones.text" [url]="colecciones.image"></app-banner-index>
     </div>
-
+    <!-- Contenedor del componente de la sección del ejemplo del editor -->
     <div class="row custom">
         <app-guide-custom class="component"></app-guide-custom>
     </div>
-
+    <!-- contenedor del componente del banner de vende tu arte -->
     <div class="row banner">
         <app-banner-index class="component" [categori]="arte.name" [text]="arte.text" [url]="arte.image"></app-banner-index>
     </div>
+    <!-- contenedor del componente de las tarjetas de la parte inferior -->
     <div class="row section3">
         <app-cards-index class="component"></app-cards-index>
     </div>
-
-
-
     <!-- contenedor de la informacion de venta y pagos -->
     <div class="row informacion">
         <app-information class="component"></app-information>
     </div>
+
 
 
     <div class="row footer">
