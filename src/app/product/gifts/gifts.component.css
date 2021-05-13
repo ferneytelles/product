@@ -11,6 +11,7 @@
 .options {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 15px 60px;
 }
 
@@ -122,7 +123,7 @@
     font-size: 16px;
     font-weight: 500;
     width: 100%;
-    padding: 6px;
+    padding: 8px 6px;
     background: #eeeeee;
     border: none;
     margin-bottom: 3px;
@@ -162,6 +163,41 @@
     /* estilos para el efecto hover de los botones del menu */
     .bottons button:hover {
         background: #d7d7d7;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .options {
+        padding: 0;
+        margin: 0 -10px;
+    }
+    .options .images {
+        width: 100%;
+    }
+    .images .left {
+        width: 100%;
+    }
+    .images .right {
+        width: 100%;
+    }
+    .right .pareja,
+    .right .ninos {
+        width: 50%;
+    }
+    .images .bottom {
+        width: 100%;
+        justify-content: center;
+    }
+    .bottom .mascotas {
+        width: 70%;
+    }
+    .label span {
+        min-width: 137px;
+        padding: 3px 1px;
+    }
+    .options .bottons {
+        width: 100%;
+        padding: 10px 20px;
     }
 }
 

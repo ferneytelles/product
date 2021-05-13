@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="row banner">
+        <div class="containeer">
+            <div class="content">
+                <h2 class="title">{{title}}</h2>
+                <p class="text">{{text}}</p>
+                <div class="bottons">
+                    <button class="escoger">Escoger diseño</button>
+                    <button class="subir">Subir imagen</button>
+                </div>
+            </div>
+        </div>
+
+        <img class="textura" src="assets/img/gifts/textura.png" alt="">
+
+
+        <div class="images">
+            <div class="design">
+                <img class="img-design" src="assets/img/gifts/diseño.png" alt="">
+                <div class="arrow">
+                    <img src="assets/img/gifts/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="products">
+                <div class="pocillo">
+                    <img src="assets/img/gifts/pocillo.png" alt="">
+                    <div class="icono">
+                        <ng-template #contentPocillo>
+                            <p class="m-0 nombre">Mug</p>
+                            <a href="#" class="link">Ver detalle</a>
+                        </ng-template>
+                        <button class="text" placement="left" [closeDelay]="1000" [ngbTooltip]="contentPocillo">i</button>
+                    </div>
+                </div>
+                <div class="cel">
+                    <img src="assets/img/gifts/cel.png" alt="">
+                    <div class="icono">
+                        <ng-template #contentCel>
+                            <p class="m-0 nombre">Estuche iPhone</p>
+                            <a href="#" class="link">Ver detalle</a>
+                        </ng-template>
+                        <button class="text" placement="left" [closeDelay]="1000" [ngbTooltip]="contentCel">i</button>
+                    </div>
+                </div>
+                <div class="tshirt">
+                    <img src="assets/img/gifts/tshirt.png" alt="">
+                    <div class="icono">
+                        <ng-template #contentShirt>
+                            <p class="m-0 nombre">Camiseta sencilla</p>
+                            <a href="#" class="link">Ver detalle</a>
+                        </ng-template>
+                        <button class="text" placement="left" [closeDelay]="1000" [ngbTooltip]="contentShirt">i</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottons">
+                <button class="escoger">Escoger diseño</button>
+                <button class="subir">Subir imagen</button>
+            </div>
+        </div>
+
+    </div>
+</div>

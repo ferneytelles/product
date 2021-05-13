@@ -70,6 +70,8 @@ import { BannerIndexComponent } from './product/index/banner-index/banner-index.
 import { GuideCustomComponent } from './product/index/guide-custom/guide-custom.component';
 import { CardsIndexComponent } from './product/index/cards-index/cards-index.component';
 import { GiftsComponent } from './product/gifts/gifts.component';
+import { BannerDesignComponent } from './product/gifts/banner-design/banner-design.component';
+import { MoreGiftsComponent } from './product/gifts/more-gifts/more-gifts.component';
 
 
 
@@ -137,7 +139,9 @@ import { GiftsComponent } from './product/gifts/gifts.component';
     BannerIndexComponent,
     GuideCustomComponent,
     CardsIndexComponent,
-    GiftsComponent
+    GiftsComponent,
+    BannerDesignComponent,
+    MoreGiftsComponent
   ],
   imports: [
     BrowserModule,
