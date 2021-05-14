@@ -3,7 +3,7 @@
     <div class="row banner">
         <app-banner-top class="component" [url]="banner" [categori]="categori" [text]="text"></app-banner-top>
     </div>
-    <!-- contenedor del menu de las subcategorías -->
+    <!-- contenedor del menu -->
     <div class="options">
         <!-- contenedor de el menu con imagenes -->
         <div class="images">
@@ -11,28 +11,44 @@
             <div class="left">
                 <!-- contenedor de la opción para ella -->
                 <div class="ella">
-                    <img src="assets/img/gifts/ella.png" alt="">
+                    <!-- contenedor de la imagen -->
+                    <div class="image">
+                        <img src="assets/img/gifts/ella.png" alt="">
+                    </div>
+                    <!-- contenedor del texto -->
                     <div class="label">
                         <span>{{menu[0]}}</span>
                     </div>
                 </div>
                 <!-- contenedor de la opción para el -->
                 <div class="el">
-                    <img src="assets/img/gifts/el.png" alt="">
+                    <!-- contenedor de la imagen -->
+                    <div class="image">
+                        <img src="assets/img/gifts/el.png" alt="">
+                    </div>
+                    <!-- contenedor del texto -->
                     <div class="label">
                         <span>{{menu[1]}}</span>
                     </div>
                 </div>
                 <!-- contenedor de la opción para la familia -->
-                <div class="familia">
-                    <img src="assets/img/gifts/familia.png" alt="">
+                <div class="familia" [routerLink]="['/gifts-family']">
+                    <!-- contenedor de la imagen -->
+                    <div class="image">
+                        <img src="assets/img/gifts/familia.png" alt="">
+                    </div>
+                    <!-- contenedor del texto -->
                     <div class="label">
                         <span>{{menu[3]}}</span>
                     </div>
                 </div>
                 <!-- contenedor de la opción para grupos -->
                 <div class="grupos">
-                    <img src="assets/img/gifts/grupos.png" alt="">
+                    <!-- contenedor de la imagen -->
+                    <div class="image">
+                        <img src="assets/img/gifts/grupos.png" alt="">
+                    </div>
+                    <!-- contenedor del texto -->
                     <div class="label">
                         <span>{{menu[5]}}</span>
                     </div>
@@ -42,14 +58,22 @@
             <div class="right">
                 <!-- contenedor de la opción para la pareja -->
                 <div class="pareja">
-                    <img src="assets/img/gifts/pareja.png" alt="">
+                    <!-- contenedor de la imagen -->
+                    <div class="image">
+                        <img src="assets/img/gifts/pareja.png" alt="">
+                    </div>
+                    <!-- contenedor del texto -->
                     <div class="label">
                         <span>{{menu[2]}}</span>
                     </div>
                 </div>
                 <!-- contenedor de la opción para niños y bebes -->
                 <div class="ninos">
-                    <img src="assets/img/gifts/niños.png" alt="">
+                    <!-- contenedor de la imagen -->
+                    <div class="image">
+                        <img src="assets/img/gifts/niños.png" alt="">
+                    </div>
+                    <!-- contenedor del texto -->
                     <div class="label">
                         <span>{{menu[4]}}</span>
                     </div>
@@ -58,7 +82,11 @@
             <div class="bottom">
                 <!-- contenedor de la opción para mascotas -->
                 <div class="mascotas">
-                    <img src="assets/img/gifts/mascotas.png" alt="">
+                    <!-- contenedor de la imagen -->
+                    <div class="image">
+                        <img src="assets/img/gifts/mascotas.png" alt="">
+                    </div>
+                    <!-- contenedor del texto -->
                     <div class="label">
                         <span>{{menu[6]}}</span>
                     </div>
@@ -66,7 +94,7 @@
             </div>
 
         </div>
-        <!-- contenedor del menu de los productos -->
+        <!-- contenedor de las opciones -->
         <div class="bottons">
             <!-- botones del menu -->
             <button *ngFor="let item of menu">Regalos {{item.toLowerCase()}}</button>

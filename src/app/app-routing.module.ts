@@ -8,6 +8,7 @@ import { OffersComponent } from './product/offers/offers.component';
 import { GiftCardsComponent } from './product/gift-cards/gift-cards.component';
 import { IndexComponent } from './product/index/index.component';
 import { GiftsComponent } from './product/gifts/gifts.component';
+import { GiftsFamilyComponent } from './product/gifts/gifts-family/gifts-family.component';
 
 
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'store/:ofertas', component: StoreComponent},
   {path: 'offers', component: OffersComponent},
   {path: 'gifts', component: GiftsComponent},
+  {path: 'gifts-family', component: GiftsFamilyComponent},
   {path: 'gift-cards', component: GiftCardsComponent},
   {path: 'categories/:categori', component: CategoriesComponent},
   {path: 'product-detail', component: ProductDetailComponent},

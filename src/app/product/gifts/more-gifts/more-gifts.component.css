@@ -24,10 +24,10 @@
     height: auto;
 }
 
+.cards .containeer2,
 .custom .containeer {
     position: absolute;
     z-index: 4;
-    left: 0;
     width: 38%;
     height: 100%;
     display: flex;
@@ -35,10 +35,26 @@
     align-items: center;
 }
 
+.custom .containeer {
+    left: 0;
+}
+
+.cards .containeer2 {
+    right: 0;
+}
+
+.containeer2 .content,
 .containeer .content {
     padding: 20px;
     background: #ffffff9f;
+}
+
+.containeer .content {
     border-radius: 0 12px 12px 0;
+}
+
+.containeer2 .content {
+    border-radius: 12px 0 0 12px;
 }
 
 .content .title {
@@ -57,6 +73,14 @@
     margin-top: 10px;
 }
 
+.content .botton2 {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.botton2 .btn-custom,
+.botton2-movil .btn-custom,
 .bottons-movil .btn-custom,
 .bottons .btn-custom {
     display: flex;
@@ -74,24 +98,41 @@
     font-size: 20px;
 }
 
+.card50 .botton2-movil,
 .custom .bottons-movil {
     display: none;
 }
 
+.cards .card50,
 .custom .gif {
     position: absolute;
     z-index: 4;
-    right: 0;
     height: 100%;
     width: 62%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 60px;
+    justify-content: center;
+}
+
+.custom .gif {
+    right: 0;
+    padding-right: 40px;
+}
+
+.cards .card50 {
+    left: 0;
+    padding-left: 40px;
+}
+
+.card50 .image {
+    height: 100%;
+    padding: 35px 0;
 }
 
 .gif .image {
-    padding: 0 90px;
+    height: 100%;
+    padding: 15px 0;
 }
 
 .gif .image:last-child {
@@ -99,7 +140,17 @@
 }
 
 .image img {
+    height: auto;
+    max-height: 100%;
+    width: auto;
     border-radius: 8px;
+}
+
+.card50 .image img {
+    box-shadow: 0px 2px 10px #00000073;
+}
+
+.gif .image img {
     box-shadow: -1px 4px 3px #00000057;
 }
 
@@ -113,7 +164,7 @@
     background: #d7d7d7;
 }
 
-.cards img {
+.cards .textura {
     width: 100%;
     height: auto;
 }
@@ -122,16 +173,20 @@
     .designs .more {
         padding: 15px 0px;
     }
+    .cards .containeer2,
     .custom .containeer {
         position: relative;
         width: 100%;
     }
+    .containeer2 .content,
     .containeer .content {
+        width: 100%;
         padding: 10px;
         border-radius: 0;
         background: #ffffff;
         text-align: center;
     }
+    .content .botton2,
     .content .bottons {
         display: none;
     }
@@ -139,6 +194,11 @@
         height: 480px;
         width: auto;
     }
+    .cards .textura {
+        height: 300px;
+        width: auto;
+    }
+    .cards .card50,
     .custom .gif {
         width: 100%;
         padding: 10px;
@@ -149,13 +209,30 @@
         max-height: 480px;
         margin-bottom: 34px;
     }
+    .cards .card50 {
+        height: 300px;
+        max-height: 300px;
+        margin: 0;
+    }
     .gif .image {
         height: 100%;
         padding: 0;
     }
+    .card50 .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 44px);
+        width: 100%;
+        padding: 20px 0;
+    }
     .image img {
         height: 100%;
         width: auto;
+    }
+    .card50 .image img {
+        height: auto;
+        max-width: 100%;
     }
     .gif .image:last-child {
         display: block;
@@ -163,10 +240,18 @@
     .gif .image:first-child {
         display: none;
     }
+    .card50 .botton2-movil,
     .custom .bottons-movil {
         display: flex;
         justify-content: center;
         width: 100%;
         margin-top: 10px;
+    }
+    .card50 .botton2-movil {
+        margin: 0;
+        padding: 10px 0;
+    }
+    .botton2-movil .btn-custom {
+        background-color: #ffffff9e;
     }
 }
