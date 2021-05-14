@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GiftsPartnerComponent implements OnInit {
 
-  constructor() { }
+  categori = 'Regalos para la pareja';
+  text = 'Sorprende a esa persona especial dándole un regalo fuera del planeta.';
+  banner = '';
+
+  constructor() {
+    if (window.innerWidth <= 830){
+      this.banner = 'assets/img/gifts/bannerParejasMovil.png';
+    }else{
+      this.banner = 'assets/img/gifts/bannerParejas.png';
+    }
+   }
 
   ngOnInit(): void {
   }

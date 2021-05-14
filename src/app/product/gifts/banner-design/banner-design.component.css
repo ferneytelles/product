@@ -163,6 +163,10 @@
     border-left-color: #ffffff;
 }
 
+::ng-deep .bs-tooltip-right .arrow::before {
+    border-right-color: #ffffff;
+}
+
 ::ng-deep .tooltip-inner {
     color: #000000;
     background-color: #ffffff;

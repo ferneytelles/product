@@ -74,6 +74,7 @@ import { BannerDesignComponent } from './product/gifts/banner-design/banner-desi
 import { MoreGiftsComponent } from './product/gifts/more-gifts/more-gifts.component';
 import { GiftsFamilyComponent } from './product/gifts/gifts-family/gifts-family.component';
 import { GiftsPartnerComponent } from './product/gifts/gifts-partner/gifts-partner.component';
+import { GiftsGroupsComponent } from './product/gifts/gifts-groups/gifts-groups.component';
 
 
 
@@ -145,7 +146,8 @@ import { GiftsPartnerComponent } from './product/gifts/gifts-partner/gifts-partn
     BannerDesignComponent,
     MoreGiftsComponent,
     GiftsFamilyComponent,
-    GiftsPartnerComponent
+    GiftsPartnerComponent,
+    GiftsGroupsComponent
   ],
   imports: [
     BrowserModule,

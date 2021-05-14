@@ -43,7 +43,7 @@
 /* estilos para el texto sobre la imagen */
 
 .label span {
-    min-width: 140px;
+    min-width: 160px;
     text-align: center;
     padding: 3px 6px;
     border-radius: 4px;
@@ -66,21 +66,20 @@
 
 @media screen and (min-width: 831px) {
     /* estilos para el efecto hover de las imagenes */
-    .option1:hover img {
-        transform: scale(1.1) translateX(-4%);
-    }
+    .option1:hover img,
     .option2:hover img {
-        transform: scale(1.1) translateX(4%);
+        transform: scale(1.1);
     }
 }
 
 @media screen and (max-width: 960px) {
     .options {
         padding: 15px 0;
-        margin: 0 -10px;
+        margin: 0 -5px;
     }
     .options .option1,
     .options .option2 {
+        width: 100%;
         padding: 5px;
     }
 }
