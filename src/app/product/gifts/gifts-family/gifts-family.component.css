@@ -54,7 +54,7 @@
 .options .option2,
 .options .option3 {
     width: 33.3%;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -76,8 +76,13 @@
 
 @media screen and (max-width: 960px) {
     .options {
-        padding: 0;
+        padding: 15px 0;
         margin: 0 -5px;
+    }
+    .options .option1,
+    .options .option2,
+    .options .option3 {
+        width: 100%;
     }
 }
 
