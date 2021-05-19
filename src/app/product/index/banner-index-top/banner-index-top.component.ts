@@ -14,6 +14,7 @@ export class BannerIndexTopComponent implements OnInit {
    * Cadena que contiene la ruta de la primera imagen del banner.
    */
   banner1 = '';
+  video1 = '';
   /**
    * Cadena que contiene la ruta de la segunda imagen del banner.
    */
@@ -25,10 +26,12 @@ export class BannerIndexTopComponent implements OnInit {
    */
   constructor() {
     if (window.innerWidth > 960){
-      this.banner1 = 'assets/img/index/indexBannerLeft.png';
+      this.banner1 = 'assets/img/index/banner1.png';
+      this.video1 = 'assets/img/index/banner1.mp4';
       this.banner2 = 'assets/img/index/indexBannerRight.png';
     }else{
-      this.banner1 = 'assets/img/index/bannerMovil1.png';
+      this.banner1 = 'assets/img/index/banner1Movil.png';
+      this.video1 = 'assets/img/index/banner1Movil.mp4';
       this.banner2 = 'assets/img/index/bannerMovil2.png';
     }
    }

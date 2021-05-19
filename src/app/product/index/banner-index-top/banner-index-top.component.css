@@ -88,6 +88,11 @@
     height: auto;
 }
 
+.diag video {
+    width: 100%;
+    height: auto;
+}
+
 
 /* estilos para los contenedores del texto y el botón */
 

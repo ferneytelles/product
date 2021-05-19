@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 /**
- * componente que contiene la tarjeta del producto utilizada en venta cruzada
+ * componente que contiene la tarjeta del producto utilizada en el carrusel de la venta cruzada
  */
 @Component({
   selector: 'app-card',

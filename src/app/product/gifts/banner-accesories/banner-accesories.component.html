@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row banner">
+        <div class="containeer">
+            <div class="content">
+                <h2 class="title">{{title}}</h2>
+                <p class="text">{{text}}</p>
+                <div class="bottons">
+                    <button class="subir">Subir imagen</button>
+                </div>
+            </div>
+        </div>
+
+        <img class="textura" src="assets/img/gifts/textura.png" alt="">
+
+
+        <div class="images">
+
+            <div class="products">
+                <div class="product1">
+                    <img src="assets/img/gifts/libreta.png" alt="">
+                    <div class="icono">
+                        <ng-template #content1>
+                            <p class="m-0 nombre">Libreta anillada</p>
+                            <a href="#" class="link">Ver detalle</a>
+                        </ng-template>
+                        <button class="text" placement="right" triggers="manual" [ngbTooltip]="content1">i</button>
+                    </div>
+                </div>
+                <div class="product2">
+                    <img src="assets/img/gifts/gorra.png" alt="">
+                    <div class="icono">
+                        <ng-template #content2>
+                            <p class="m-0 nombre">Gorra</p>
+                            <a href="#" class="link">Ver detalle</a>
+                        </ng-template>
+                        <button class="text" placement="left" [closeDelay]="1000" [ngbTooltip]="content2">i</button>
+                    </div>
+                </div>
+                <div class="product3">
+                    <img src="assets/img/gifts/pocilloFdm.png" alt="">
+                    <div class="icono">
+                        <ng-template #content3>
+                            <p class="m-0 nombre">Mug</p>
+                            <a href="#" class="link">Ver detalle</a>
+                        </ng-template>
+                        <button class="text" placement="left" [closeDelay]="1000" [ngbTooltip]="content3">i</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottons">
+                <button class="subir">Subir imagen</button>
+            </div>
+        </div>
+
+    </div>
+</div>
