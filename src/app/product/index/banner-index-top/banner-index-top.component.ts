@@ -32,7 +32,6 @@ export class BannerIndexTopComponent implements OnInit {
     }else{
       this.banner1 = 'assets/img/index/banner1Movil.png';
       this.video1 = 'assets/img/index/banner1Movil.mp4';
-      
       this.banner2 = 'assets/img/index/bannerMovil2.png';
     }
    }
