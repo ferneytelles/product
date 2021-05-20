@@ -133,6 +133,10 @@
     border-radius: 0 8px 8px 0;
 }
 
+.content .info {
+    position: relative;
+}
+
 
 /* estilos para el titulo */
 
@@ -233,7 +237,7 @@
     }
     /* estilos para el contenedor de la primera imagen */
     .left .image {
-        align-items: flex-start;
+        align-items: center;
     }
     /* estilos para el contenedor de la segunda imagen */
     .right .image {
