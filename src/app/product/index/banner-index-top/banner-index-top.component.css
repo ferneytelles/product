@@ -276,3 +276,10 @@
         margin: 0 !important;
     }
 }
+
+@media screen and (max-width: 560px) {
+    .image video {
+        width: auto;
+        height: 203px;
+    }
+}
